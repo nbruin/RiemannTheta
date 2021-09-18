@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Numerical evaluation of Riemann theta functions &#8212; Computing with adèles and idèles</title>
+    <title>RiemannTheta &#8212; Computing with adèles and idèles</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/sage.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -37,7 +37,7 @@
   
         <li class="nav-item nav-item-0"><a href="#">Home</a> &#187;</li>
 
-        <li class="nav-item nav-item-this"><a href="">Numerical evaluation of Riemann theta functions</a></li> 
+        <li class="nav-item nav-item-this"><a href="">RiemannTheta</a></li> 
       </ul>
     </div>  
 
@@ -46,17 +46,138 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="numerical-evaluation-of-riemann-theta-functions">
-<h1>Numerical evaluation of Riemann theta functions<a class="headerlink" href="#numerical-evaluation-of-riemann-theta-functions" title="Permalink to this headline">¶</a></h1>
-<p>A <a class="reference external" href="https://sagemath.org">SageMath</a> package for numerically evaluating Riemann theta functions.</p>
+  <section id="riemanntheta">
+<h1>RiemannTheta<a class="headerlink" href="#riemanntheta" title="Permalink to this headline">¶</a></h1>
+<p>Numerical evaluation of Riemann theta functions.</p>
+<p>A <a class="reference external" href="https://sagemath.org">SageMath</a> package for numerically evaluating
+Riemann theta functions.</p>
+<p>See <a class="reference external" href="https://github.com/nbruin/RiemannTheta">https://github.com/nbruin/RiemannTheta</a> for the repository.</p>
 <section id="contents-of-the-package">
 <h2>Contents of the package<a class="headerlink" href="#contents-of-the-package" title="Permalink to this headline">¶</a></h2>
+<p>The package contains two modules. See each for their documentation.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="riemann_theta.html"><span class="doc">Numerical computation of Riemann theta functions</span></a></p></li>
 <li><p><a class="reference internal" href="siegel_reduction.html"><span class="doc">Siegel reduction of period and Riemann matrices</span></a></p></li>
 </ul>
 </div></blockquote>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>This package requires a functional installation of
+<a class="reference external" href="https://sagemath.org">SageMath</a>. Assuming that <code class="docutils literal notranslate"><span class="pre">sage</span></code> runs Sagemath
+and that you have write-permission on the sagemath install, you should
+be able to install this package into sage with something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span> <span class="o">--</span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nbruin</span><span class="o">/</span><span class="n">RiemannTheta</span>
+</pre></div>
+</div>
+<p>If you do not have write permission on the sagemath install itself, you
+can get a copy of the repository by something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nbruin</span><span class="o">/</span><span class="n">RiemannTheta</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>With a command like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span> <span class="o">--</span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>it is still possible to build the module. You will just have to make sure
+that in Sagemath, the variable <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> contains a path that allows the built
+<code class="docutils literal notranslate"><span class="pre">riemann_theta</span></code> directory to be found. The <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> environment variable
+may be useful for this. One can also install the package as a “user” package
+by executing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span> <span class="o">--</span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span>
+</pre></div>
+</div>
+<p>but pay attention to the warning: sage is by default configured to not
+look at per-user environments.</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>We give a not-quite-trivial example to show how high-precision
+computation of theta values of derivatives can be performed. We start
+out with computing the period matrix of a hyperelliptic curve. This
+part does not depend on the RiemannTheta package. Note that the routine
+in SageMath that we are using for it is not particularly optimized for
+hyperelliptic curves, but it does accurately compute the period matrix:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">A2</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">AffineSpace</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">C</span> <span class="o">=</span> <span class="n">Curve</span><span class="p">(</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">11</span><span class="p">))</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">S</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">riemann_surface</span><span class="p">(</span><span class="n">prec</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">P</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">period_matrix</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In the next step we compute a Siegel-reduced form of the period matrix
+and determine the associated Riemann matrix. We use the function
+<code class="docutils literal notranslate"><span class="pre">siegel_reduction</span></code> implemented in this package. Note that the Siegel-reduced
+Riemann matrix is (up to numerical noise) purely imaginary. This corresponds
+to the fact that the Jacobian of <code class="docutils literal notranslate"><span class="pre">C</span></code> has fully real 2-torsion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.riemann_theta</span> <span class="k">import</span> <span class="n">RiemannTheta</span>
+<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.siegel_reduction</span> <span class="k">import</span> <span class="n">siegel_reduction</span>
+<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.schemes.riemann_surfaces.riemann_surface</span> <span class="k">import</span> <span class="n">numerical_inverse</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Phat</span><span class="p">,</span><span class="n">_</span><span class="o">=</span><span class="n">siegel_reduction</span><span class="p">(</span><span class="n">S</span><span class="o">.</span><span class="n">period_matrix</span><span class="p">())</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Omega1</span><span class="o">=</span><span class="n">Phat</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Omega2</span><span class="o">=</span><span class="n">Phat</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Omega1i</span><span class="o">=</span><span class="n">numerical_inverse</span><span class="p">(</span><span class="n">Omega1</span><span class="p">)</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Omega</span><span class="o">=</span><span class="n">Omega1i</span><span class="o">*</span><span class="n">Omega2</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">Omega</span>
+<span class="p">[</span><span class="o">-</span><span class="mf">7.8011194289838531805073979567e-30</span> <span class="o">+</span> <span class="mf">1.1671310344746551076087021309</span><span class="o">*</span><span class="n">I</span> <span class="mf">3.4425762821394314634952390910e-30</span> <span class="o">-</span> <span class="mf">0.35345270733815781244031185050</span><span class="o">*</span><span class="n">I</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">2.8490278363936084454493573688e-30</span> <span class="o">-</span> <span class="mf">0.35345270733815781244031185049</span><span class="o">*</span><span class="n">I</span> <span class="o">-</span><span class="mf">4.4530071618106610318109075688e-30</span> <span class="o">+</span> <span class="mf">1.1671310344746551076087021308</span><span class="o">*</span><span class="n">I</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The core functionality for computing values of Riemann theta functions
+is wrapped in the <code class="docutils literal notranslate"><span class="pre">RiemannTheta</span></code> objects. It is straightforward to::
+define given a Riemann matrix:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">RT</span><span class="o">=</span><span class="n">RiemannTheta</span><span class="p">(</span><span class="n">Omega</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can now compute various theta values by calling <code class="docutils literal notranslate"><span class="pre">RT</span></code>. For instance,
+we can determine the Theta Nullwerte for all the characteristics of
+level two that are even. Note that we originally specified 100 bits of
+working precision for the computation of the period matrix. As a
+result, this is also the default working precision for theta function
+computations, and an error tolerance on that order is also used. See
+the documentation for a more precise description of accuracy. In this
+case it means we can expect accuracy to a scale of about <code class="docutils literal notranslate"><span class="pre">1e-30</span></code>, so
+the results below are consistent with the theta nullwerte being real:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">even</span><span class="o">=</span><span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">GF</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">4</span> <span class="k">if</span> <span class="n">v</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="p">[</span><span class="n">RT</span><span class="p">(</span><span class="n">char</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">even</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">1.1144371671760661900579907759</span> <span class="o">-</span> <span class="mf">2.2245209708379392604550740950e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.86939001225062635693112726895</span> <span class="o">-</span> <span class="mf">5.8332049656999151052278805475e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.86939001225062635693112726895</span> <span class="o">-</span> <span class="mf">4.2557999759650246442341624472e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.74295811145071079337199385061</span> <span class="o">-</span> <span class="mf">5.5388522690261500486640893531e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.98781776893257819408621995076</span> <span class="o">+</span> <span class="mf">8.1097128711817717691533867715e-31</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.73106694475893467472188756816</span> <span class="o">-</span> <span class="mf">1.3837409084796611764449360496e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.98781776893257819408621995075</span> <span class="o">-</span> <span class="mf">2.1060764585867519253398057132e-31</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.73106694475893467472188756815</span> <span class="o">-</span> <span class="mf">4.0361977670924148216473724000e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">0.90993413665803867386979701534</span> <span class="o">+</span> <span class="mf">1.8613200183141326366117968651e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="o">-</span><span class="mf">0.37147905572535539668599692531</span> <span class="o">+</span> <span class="mf">8.3661636800066730647588289922e-31</span><span class="o">*</span><span class="n">I</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To illustrate the evaluation of derivatives of theta functions, we also
+look at the gradients of the theta functions with odd characteristic at
+<code class="docutils literal notranslate"><span class="pre">z=0</span></code>. Note that we can specify the computation of a vector of
+derivatives for a particular characteristic and evaluation point. This
+is much more efficient than computing the values individually, because
+the terms in the relevant summation share a large, complicated, common
+factor:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="n">odd</span><span class="o">=</span><span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">GF</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">4</span> <span class="k">if</span> <span class="n">v</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">sage</span><span class="p">:</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="n">vector</span><span class="p">(</span><span class="n">RT</span><span class="p">(</span><span class="n">char</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="n">derivs</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">]]))</span><span class="o">*</span><span class="n">Omega1i</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">odd</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that we transform the vector back to the original cohomology basis
+with which we computed the period matrix (Siegel reduction does not
+affect that basis choice). Since that computation used the standard
+basis choice for holomorphic differentials on hyperelliptic curves, we
+can recover the original coordinates of the Weierstrass points from
+these vectors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">2.0000000000000000000000000000</span> <span class="o">-</span> <span class="mf">7.0091471215108059368876376563e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">3.0000000000000000000000000000</span> <span class="o">+</span> <span class="mf">6.5927991812884960712012450964e-31</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">7.0000000000000000000000000001</span> <span class="o">+</span> <span class="mf">8.8589481960431653437122937998e-30</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">4.9999999999999999999999999999</span> <span class="o">-</span> <span class="mf">1.8525695031325416894889966906e-29</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">1.0000000000000000000000000000</span> <span class="o">-</span> <span class="mf">3.3713670173205432864743721271e-32</span><span class="o">*</span><span class="n">I</span><span class="p">,</span>
+ <span class="mf">11.000000000000000000000000000</span> <span class="o">-</span> <span class="mf">4.8125082124651538238437865698e-29</span><span class="o">*</span><span class="n">I</span><span class="p">]</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -69,8 +190,10 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Numerical evaluation of Riemann theta functions</a><ul>
+<li><a class="reference internal" href="#">RiemannTheta</a><ul>
 <li><a class="reference internal" href="#contents-of-the-package">Contents of the package</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 </li>
 </ul>
@@ -113,7 +236,7 @@
   
         <li class="nav-item nav-item-0"><a href="#">Home</a> &#187;</li>
 
-        <li class="nav-item nav-item-this"><a href="">Numerical evaluation of Riemann theta functions</a></li> 
+        <li class="nav-item nav-item-this"><a href="">RiemannTheta</a></li> 
       </ul>
     </div>
     

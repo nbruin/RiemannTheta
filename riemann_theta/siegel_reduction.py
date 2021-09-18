@@ -20,9 +20,11 @@ with the transformation matrix.
 
 EXAMPLES::
 
+    sage: from riemann_theta.siegel_reduction import siegel_reduction
+    sage: from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse
     sage: CC = ComplexField(20)
     sage: P = matrix(CC,2,4,[1,3,1+5*I,12+10*I,0,1,I,4+3*I])
-    sage: sage: Phat, Gamma = siegel_reduction(P)
+    sage: Phat, Gamma = siegel_reduction(P)
     sage: Phat
     [  1.0000   3.0000 5.0000*I 10.000*I]
     [ 0.00000   1.0000 1.0000*I 3.0000*I]
@@ -31,12 +33,13 @@ EXAMPLES::
     [ 0  1  0 -4]
     [ 0  0  1  0]
     [ 0  0  0  1]
-    sage: Phat[:,:2]^(-1)*Phat[:,2:]
+    sage: numerical_inverse(Phat[:,:2])*Phat[:,2:]
     [2.0000*I 1.0000*I]
     [1.0000*I 3.0000*I]
 
 We can also pass in a Riemann matrix::
 
+    sage: Omega = numerical_inverse(P[:,:2])*P[:,2:]
     sage: Omega_hat , Gamma2 = siegel_reduction(Omega)
     sage: Phat[:,:2]^(-1)*Phat[:,2:] == Omega_hat
     True
@@ -82,11 +85,12 @@ def _siegel_big_period_matrix(big_omega):
 
     An example from a genus 2 curve::
 
+        sage: from riemann_theta.siegel_reduction import _siegel_big_period_matrix
         sage: R.<X,Y>=QQ[]
         sage: C = Curve(Y^2-(X^6+X+1))
         sage: RS = C.riemann_surface()
         sage: PM = RS.period_matrix()
-        sage: M, G = siegel_big_period_matrix(PM)
+        sage: M, G = _siegel_big_period_matrix(PM)
 
     An example from a genus 5 curve::
 
@@ -94,7 +98,7 @@ def _siegel_big_period_matrix(big_omega):
         sage: C = Curve(Y^2-(X^10+3))
         sage: RS = C.riemann_surface()
         sage: PM = RS.period_matrix()
-        sage: M, G = siegel_big_period_matrix(PM)
+        sage: M, G = _siegel_big_period_matrix(PM)
 
     REFERENCES:
 
@@ -173,6 +177,7 @@ def siegel_reduction(M):
 
     EXAMPLES::
 
+        sage: from riemann_theta.siegel_reduction import siegel_reduction
         sage: omega = (-1/(2*CC.pi()*CC.gen())) * Matrix(CC, [[111.207, 96.616],[96.616, 83.943]])
         sage: M, G = siegel_reduction(omega)
 

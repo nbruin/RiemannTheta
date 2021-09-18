@@ -31,8 +31,6 @@ The main features of the present implementation are:
 
 * The implementation is particularly optimized for computing multiple partial derivatives of a Riemann theta function with given characteristic and evaluation point.
 
-EXAMPLES:
-
 AUTHORS:
 
  - Nils Bruin, Sohrab Ganjian (2021-09-08): initial version
@@ -107,7 +105,7 @@ cdef class Vector_long:
 
         EXAMPLE::
 
-        sage: from riemann_theta import Vector_long
+        sage: from riemann_theta.riemann_theta import Vector_long
         sage: V = Vector_long(10)
         """
         cdef long i
@@ -119,7 +117,7 @@ cdef class Vector_long:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_long
+            sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(10)
             sage: del V
 
@@ -133,7 +131,7 @@ cdef class Vector_long:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_long
+            sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(10)
             sage: len(V)
             10
@@ -148,7 +146,7 @@ cdef class Vector_long:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_long
+            sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(4)
             sage: repr(V) # random
             '<Vector_long [139766604523248, 139774110506560, 1, 8704]>'
@@ -166,7 +164,7 @@ cdef class Vector_long:
         OUTPUT: entry value.
 
         EXAMPLE::
-            sage: from riemann_theta import Vector_long
+            sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(4)
             sage: V[0] # random
             139766604523248
@@ -255,7 +253,7 @@ cdef class Vector_mpfr:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_mpfr
+            sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR=RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: V
@@ -276,7 +274,7 @@ cdef class Vector_mpfr:
 
          EXAMPLE::
 
-            sage: from riemann_theta import Vector_mpfr
+            sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR=RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: del V
@@ -292,7 +290,7 @@ cdef class Vector_mpfr:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_mpfr
+            sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR=RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: len(V)
@@ -311,7 +309,7 @@ cdef class Vector_mpfr:
         OUTPUT: entry value.
 
         EXAMPLE::
-            sage: from riemann_theta import Vector_mpfr
+            sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR=RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: V[0]
@@ -333,7 +331,7 @@ cdef class Vector_mpfr:
         OUTPUT: string representation
 
         EXAMPLE::
-            sage: from riemann_theta import Vector_mpfr
+            sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR=RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: repr(V)
@@ -421,7 +419,7 @@ cdef class Vector_mpc:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_mpfr
+            sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR=RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: V
@@ -440,7 +438,7 @@ cdef class Vector_mpc:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_mpc
+            sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
             sage: V=Vector_mpc(CC,3)
             sage: del V
@@ -455,7 +453,7 @@ cdef class Vector_mpc:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_mpc
+            sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
             sage: V=Vector_mpc(CC,3)
             sage: len(V)
@@ -474,7 +472,7 @@ cdef class Vector_mpc:
 
         EXAMPLE::
 
-            sage: from riemann_theta import Vector_mpc
+            sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
             sage: V=Vector_mpc(CC,3)
             sage: V[0]
@@ -493,7 +491,7 @@ cdef class Vector_mpc:
         OUTPUT: string representation
 
         EXAMPLE::
-            sage: from riemann_theta import Vector_mpc
+            sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
             sage: V=Vector_mpc(CC,3)
             sage: repr(V)
@@ -526,7 +524,7 @@ cdef class NormCholesky:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormCholesky
+            sage: from riemann_theta.riemann_theta import NormCholesky
             sage: RR=RealField(40)
             sage: nm=NormCholesky(RR,3)
         """
@@ -548,7 +546,7 @@ cdef class NormCholesky:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormCholesky
+            sage: from riemann_theta.riemann_theta import NormCholesky
             sage: RR=RealField(40)
             sage: nm=NormCholesky(RR,3)
             sage: del nm
@@ -610,7 +608,7 @@ cdef class NormCholesky:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormCholesky
+            sage: from riemann_theta.riemann_theta import NormCholesky
             sage: RR=RealField(40)
             sage: C=matrix(RR,2,2,[1,0,1,1])
             sage: nm=NormCholesky.init(C)
@@ -653,7 +651,7 @@ cdef class NormCholesky:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormCholesky
+            sage: from riemann_theta.riemann_theta import NormCholesky
             sage: RR=RealField(40)
             sage: C=matrix(RR,2,2,[1,0,1,1])
             sage: nm=NormCholesky.init(C)
@@ -695,7 +693,7 @@ cdef class NormGramInt:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormGramInt
+            sage: from riemann_theta.riemann_theta import NormGramInt
             sage: RR=RealField(40)
             sage: nm=NormGramInt(RR,3)
         """
@@ -715,7 +713,7 @@ cdef class NormGramInt:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormGramInt
+            sage: from riemann_theta.riemann_theta import NormGramInt
             sage: RR=RealField(40)
             sage: nm=NormGramInt(RR,3)
             sage: del nm
@@ -782,7 +780,7 @@ cdef class NormGramInt:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormGramInit
+            sage: from riemann_theta.riemann_theta import NormGramInt
             sage: RR=RealField(40)
             sage: G=matrix(RR,2,2,[1,2,2,1])
             sage: nm=NormGramInt.init(G)
@@ -842,7 +840,7 @@ cdef class NormGramInt:
 
         EXAMPLE::
 
-            sage: from riemann_theta import NormGramInt
+            sage: from riemann_theta.riemann_theta import NormGramInt
             sage: RR=RealField(40)
             sage: G=matrix(RR,2,2,[1,2,2,1])
             sage: nm=NormGramInt.init(G)
@@ -870,7 +868,7 @@ def imag_func(a):
 
     EXAMPLE::
 
-        sage: from riemann_theta import imag_func
+        sage: from riemann_theta.riemann_theta import imag_func
         sage: imag_func(CC.0)
         1.00000000000000
     """
@@ -887,7 +885,7 @@ def real_func(a):
 
     EXAMPLE::
 
-        sage: from riemann_theta import real_func
+        sage: from riemann_theta.riemann_theta import real_func
         sage: real_func(CC.0)
         0.000000000000000
     """
@@ -904,7 +902,7 @@ def round_func(a):
 
     EXAMPLE::
 
-        sage: from riemann_theta import round_func
+        sage: from riemann_theta.riemann_theta import round_func
         sage: round_func(2.7)
         3
 
@@ -925,7 +923,7 @@ def Rbound(Y, tol):
 
     EXAMPLE::
 
-        sage: from riemann_theta import Rbound
+        sage: from riemann_theta.riemann_theta import Rbound
         sage: Y = matrix(RR,2,2,[1,0,0,1])
         sage: Rbound(Y,10^(-10))
         5.70985786129...
@@ -978,7 +976,7 @@ def Rbound_deriv(Y, N, tol):
 
     EXAMPLE::
 
-        sage: from riemann_theta import Rbound_deriv
+        sage: from riemann_theta.riemann_theta import Rbound_deriv
         sage: Y = matrix(RR,2,2,[1,0,0,1])
         sage: Rbound_deriv(Y,3,10^(-10))
         6.6689474473...
@@ -1037,7 +1035,7 @@ def cholesky_decomposition(G):
 
     EXAMPLE::
 
-        sage: from riemann_theta import cholesky_decomposition
+        sage: from riemann_theta.riemann_theta import cholesky_decomposition
         sage: RR = RealField(100)
         sage: G = matrix(RR, 3,3, [1,1/2,1/4,1/2,1,1/5,1/4,1/5,1])
         sage: C = cholesky_decomposition(G)
@@ -1066,7 +1064,7 @@ cdef class RiemannTheta:
     We go through a very simple example that illustrates the basic features.
     First we define the Riemann matrix and its RiemannTheta object::
 
-        sage: from riemann_theta import RiemannTheta
+        sage: from riemann_theta.riemann_theta import RiemannTheta
         sage: CC=ComplexField(80)
         sage: Omega = matrix(CC,2,2,[3*I,0,0,5*I])
         sage: RT=RiemannTheta(Omega)
@@ -1113,14 +1111,18 @@ cdef class RiemannTheta:
         sage: RT(char=c, derivs=[[0],[1]]) # abs_tol = 1e-24
         (-0.59552188399685576910149 - 1.1412196198763623205771e-49*I, -3.5185834728040112058953e-32 + 2.5226254523149252440284e-56*I)
 
-    We check that for the genus 2 curve `C: y^2=(x-2)*(x-3)*(x-5)*(x-7)*(x-11)*(x-13)`,
+    We check that for the genus 2 curve
+    
+    .. MATH::
+        C: y^2=(x-2)(x-3)(x-5)(x-7)(x-11)(x-13),
+
     the gradients of the odd theta characteristics of level 2 are proportional to the
     roots `2, 3, 5, 7, 11, 13`. We give a period matrix for this curve relative to a
     cohomology basis that is defined over `Q`, derive the Riemann matrix, compute the
     gradients of the odd characteristics (with respect to the original cohomology basis!)
     and check that the ratios give us back the roots listed::
 
-        sage: from riemann_theta import RiemannTheta
+        sage: from riemann_theta.riemann_theta import RiemannTheta
         sage: from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse
         sage: A = matrix(CC,2,4,[ -0.100985221999616*I, -0.0576741242160428*I, 0.170602500958820, 0.137052375058957, -0.257755342052576*I, -0.684089137456259*I, 0.685128296898840, 1.18843441146637])
         sage: Omega1 = A[:, :2]
@@ -1159,7 +1161,7 @@ cdef class RiemannTheta:
 
         EXAMPLE::
 
-            sage: from riemann_theta import RiemannTheta
+            sage: from riemann_theta.riemann_theta import RiemannTheta
             sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
 
         """
@@ -1259,7 +1261,7 @@ cdef class RiemannTheta:
 
         EXAMPLE::
 
-            sage: from riemann_theta import RiemannTheta
+            sage: from riemann_theta.riemann_theta import RiemannTheta
             sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
             sage: RT(z=(0,0),char=[[1,0],[0,1],2],derivs=[0,0,0]).abs() # abs_tol = 1e-15
             2.88494706892332e-16

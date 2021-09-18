@@ -14,8 +14,8 @@
         "libraries": [
             "gmp",
             "mpfr",
-            "pari",
-            "mpc"
+            "mpc",
+            "pari"
         ],
         "name": "riemann_theta.riemann_theta",
         "sources": [
@@ -2179,7 +2179,7 @@ struct __pyx_obj_7cypari2_3gen_Gen {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":88
+/* "riemann_theta/riemann_theta.pyx":86
  * from sage.modules.vector_modn_dense import Vector_modn_dense
  * 
  * cdef class Vector_long:             # <<<<<<<<<<<<<<
@@ -2194,7 +2194,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":234
+/* "riemann_theta/riemann_theta.pyx":232
  *             self.vec[i]=scaling*v.vec[i]-w.vec[i]
  * 
  * cdef class Vector_mpfr:             # <<<<<<<<<<<<<<
@@ -2212,7 +2212,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":401
+/* "riemann_theta/riemann_theta.pyx":399
  *             mpfr_add_si(self.vec[i], v.vec[i], w.vec[i], self.rnd)
  * 
  * cdef class Vector_mpc:             # <<<<<<<<<<<<<<
@@ -2228,7 +2228,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpc {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":504
+/* "riemann_theta/riemann_theta.pyx":502
  *         return "<Vector_mpc {}>".format(list(self))
  * 
  * cdef class NormCholesky:             # <<<<<<<<<<<<<<
@@ -2248,7 +2248,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":673
+/* "riemann_theta/riemann_theta.pyx":671
  *         return s
  * 
  * cdef class NormGramInt:             # <<<<<<<<<<<<<<
@@ -2268,7 +2268,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1056
+/* "riemann_theta/riemann_theta.pyx":1054
  *     return C
  * 
  * cdef class RiemannTheta:             # <<<<<<<<<<<<<<
@@ -2301,7 +2301,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta_RiemannTheta {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":914
+/* "riemann_theta/riemann_theta.pyx":912
  *     return a.round()
  * 
  * def Rbound(Y, tol):             # <<<<<<<<<<<<<<
@@ -2318,7 +2318,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":966
+/* "riemann_theta/riemann_theta.pyx":964
  *     return R
  * 
  * def Rbound_deriv(Y, N, tol):             # <<<<<<<<<<<<<<
@@ -2338,7 +2338,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_der
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1006
+/* "riemann_theta/riemann_theta.pyx":1004
  *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g
  *     def f(R):             # <<<<<<<<<<<<<<
@@ -2352,7 +2352,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1007
+/* "riemann_theta/riemann_theta.pyx":1005
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol             # <<<<<<<<<<<<<<
@@ -2369,7 +2369,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1008
+/* "riemann_theta/riemann_theta.pyx":1006
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
@@ -2383,7 +2383,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1009
+/* "riemann_theta/riemann_theta.pyx":1007
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):
  *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))             # <<<<<<<<<<<<<<
@@ -2400,7 +2400,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1233
+/* "riemann_theta/riemann_theta.pyx":1235
  *             return r
  * 
  *     def __call__(self, z = None, object char = None, derivs = [], tol=None):             # <<<<<<<<<<<<<<
@@ -2414,7 +2414,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__ {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1303
+/* "riemann_theta/riemann_theta.pyx":1305
  *                 derivs=[derivs]
  * 
  *         if any( d<0 or d>=self.g for l in derivs for d in l):             # <<<<<<<<<<<<<<
@@ -2429,7 +2429,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr {
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1340
+/* "riemann_theta/riemann_theta.pyx":1342
  *         return R
  * 
  *     cdef _eval_vector_(self, FreeModuleElement_generic_dense z, Vector_integer_dense eps, Vector_integer_dense delta, long N, list derivs, RealNumber tol):             # <<<<<<<<<<<<<<
@@ -2442,7 +2442,7 @@ struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vect
 };
 
 
-/* "riemann_theta/riemann_theta.pyx":1400
+/* "riemann_theta/riemann_theta.pyx":1402
  * 
  *         #compute the enumeration radius
  *         cdef long maxnderiv = max((<Vector_long> l).n for l in derivs)             # <<<<<<<<<<<<<<
@@ -3391,7 +3391,7 @@ static CYTHON_INLINE pari_sp __pyx_f_7cypari2_3gen_3Gen_sp(struct __pyx_obj_7cyp
 static CYTHON_INLINE int __pyx_f_7cypari2_3gen_3Gen_cache(struct __pyx_obj_7cypari2_3gen_Gen *, PyObject *, PyObject *);
 
 
-/* "riemann_theta/riemann_theta.pyx":88
+/* "riemann_theta/riemann_theta.pyx":86
  * from sage.modules.vector_modn_dense import Vector_modn_dense
  * 
  * cdef class Vector_long:             # <<<<<<<<<<<<<<
@@ -3407,7 +3407,7 @@ struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_long {
 static struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_long *__pyx_vtabptr_13riemann_theta_13riemann_theta_Vector_long;
 
 
-/* "riemann_theta/riemann_theta.pyx":234
+/* "riemann_theta/riemann_theta.pyx":232
  *             self.vec[i]=scaling*v.vec[i]-w.vec[i]
  * 
  * cdef class Vector_mpfr:             # <<<<<<<<<<<<<<
@@ -3423,7 +3423,7 @@ struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_mpfr {
 static struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_mpfr *__pyx_vtabptr_13riemann_theta_13riemann_theta_Vector_mpfr;
 
 
-/* "riemann_theta/riemann_theta.pyx":504
+/* "riemann_theta/riemann_theta.pyx":502
  *         return "<Vector_mpc {}>".format(list(self))
  * 
  * cdef class NormCholesky:             # <<<<<<<<<<<<<<
@@ -3439,7 +3439,7 @@ struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky {
 static struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky *__pyx_vtabptr_13riemann_theta_13riemann_theta_NormCholesky;
 
 
-/* "riemann_theta/riemann_theta.pyx":673
+/* "riemann_theta/riemann_theta.pyx":671
  *         return s
  * 
  * cdef class NormGramInt:             # <<<<<<<<<<<<<<
@@ -3456,7 +3456,7 @@ struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt {
 static struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *__pyx_vtabptr_13riemann_theta_13riemann_theta_NormGramInt;
 
 
-/* "riemann_theta/riemann_theta.pyx":1056
+/* "riemann_theta/riemann_theta.pyx":1054
  *     return C
  * 
  * cdef class RiemannTheta:             # <<<<<<<<<<<<<<
@@ -4649,7 +4649,7 @@ static const char __pyx_k_sage_rings_integer_ring[] = "sage.rings.integer_ring";
 static const char __pyx_k_Vector_dimension_mismatch[] = "Vector dimension mismatch";
 static const char __pyx_k_riemann_theta_riemann_theta[] = "riemann_theta.riemann_theta";
 static const char __pyx_k_sage_modules_vector_modn_dense[] = "sage.modules.vector_modn_dense";
-static const char __pyx_k_Numerical_computation_of_Rieman[] = "\nNumerical computation of Riemann theta functions\n================================================\n\nThis module implements arbitrary precision numerical computation of Riemann\ntheta functions with characteristics and their derivatives. We consider the following\ndefinitions.\n\n* Let `g` be a positive integer\n\n* Let `\\Omega` be a `g\\times g` *Riemann matrix*, i.e., a symmetric complex matrix with positive definite imaginary part.\n\n* A *characteristic* of level `N`, where `N` is a positive integer is a `2\\times g` matrix with rows `\\epsilon/N` and `\\delta/N`. One normally only considers *reduced* characteristics, where the entries of `\\epsilon,\\delta` are in `\\{0,\\ldots,N-1\\}`.\n\nFor a row vector `z\\in \\Bold{C}^g` the *Riemann theta function* of `\\Omega` evaluated\nat `z` is\n\n.. MATH::\n    \\theta\\begin{bmatrix} \\epsilon/N\\\\\\delta/N\\end{bmatrix}(z,\\Omega)=\\sum_{n\\in\\Bold{Z}^g}e^{\\pi i\\left((n+\\epsilon/N)\\Omega(n+\\epsilon/N)^T+2(n+\\epsilon/N)(z+\\delta/N)^T\\right)}\n\nIn addition, we also consider partial derivatives of Riemann theta functions with respect\nto the components of `z`.\n\nSee [DHBvHS2004]_ and [AC2019]_ for a description of the basic description of the summation\nstrategy and the relevant error bounds that allow for efficient computation.\nThe main features of the present implementation are:\n\n* It allows for multiprecision computations\n\n* It allows for characteristics and derivatives\n\n* The implementation is particularly optimized for computing multiple partial derivatives of a Riemann theta function with given characteristic and evaluation point.\n\nEXAMPLES:\n\nAUTHORS:\n\n - Nils Bruin, Sohrab Ganjian (2021-09-08): initial version\n\nREFERENCES:\n\n.. [DHBvHS2004] \\Bernard Deconinck, Matthias Heil, Alexander Bobenko, Mark van Hoeij, Marcus Schmies,\n        Computing Riemann Theta functions,\n        Math. Comp. 73-247 (2004): 1417-1442.\n\n.. [AC2019] \\Daniele Agostini, Lynn Chua,\n        Computing ""theta functions with Julia,\n        Journal of Software for Algebra and Geometry 11 (2021): 41-51\n\n";
+static const char __pyx_k_Numerical_computation_of_Rieman[] = "\nNumerical computation of Riemann theta functions\n================================================\n\nThis module implements arbitrary precision numerical computation of Riemann\ntheta functions with characteristics and their derivatives. We consider the following\ndefinitions.\n\n* Let `g` be a positive integer\n\n* Let `\\Omega` be a `g\\times g` *Riemann matrix*, i.e., a symmetric complex matrix with positive definite imaginary part.\n\n* A *characteristic* of level `N`, where `N` is a positive integer is a `2\\times g` matrix with rows `\\epsilon/N` and `\\delta/N`. One normally only considers *reduced* characteristics, where the entries of `\\epsilon,\\delta` are in `\\{0,\\ldots,N-1\\}`.\n\nFor a row vector `z\\in \\Bold{C}^g` the *Riemann theta function* of `\\Omega` evaluated\nat `z` is\n\n.. MATH::\n    \\theta\\begin{bmatrix} \\epsilon/N\\\\\\delta/N\\end{bmatrix}(z,\\Omega)=\\sum_{n\\in\\Bold{Z}^g}e^{\\pi i\\left((n+\\epsilon/N)\\Omega(n+\\epsilon/N)^T+2(n+\\epsilon/N)(z+\\delta/N)^T\\right)}\n\nIn addition, we also consider partial derivatives of Riemann theta functions with respect\nto the components of `z`.\n\nSee [DHBvHS2004]_ and [AC2019]_ for a description of the basic description of the summation\nstrategy and the relevant error bounds that allow for efficient computation.\nThe main features of the present implementation are:\n\n* It allows for multiprecision computations\n\n* It allows for characteristics and derivatives\n\n* The implementation is particularly optimized for computing multiple partial derivatives of a Riemann theta function with given characteristic and evaluation point.\n\nAUTHORS:\n\n - Nils Bruin, Sohrab Ganjian (2021-09-08): initial version\n\nREFERENCES:\n\n.. [DHBvHS2004] \\Bernard Deconinck, Matthias Heil, Alexander Bobenko, Mark van Hoeij, Marcus Schmies,\n        Computing Riemann Theta functions,\n        Math. Comp. 73-247 (2004): 1417-1442.\n\n.. [AC2019] \\Daniele Agostini, Lynn Chua,\n        Computing theta functio""ns with Julia,\n        Journal of Software for Algebra and Geometry 11 (2021): 41-51\n\n";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_riemann_theta_riemann_theta_pyx[] = "riemann_theta/riemann_theta.pyx";
 static const char __pyx_k_Invalid_characteristic_specifica[] = "Invalid characteristic specification";
@@ -4951,7 +4951,7 @@ static PyObject *__pyx_codeobj__51;
 static PyObject *__pyx_codeobj__53;
 /* Late includes */
 
-/* "riemann_theta/riemann_theta.pyx":99
+/* "riemann_theta/riemann_theta.pyx":97
  *     cdef long *vec
  * 
  *     def __cinit__(self, long n):             # <<<<<<<<<<<<<<
@@ -4988,18 +4988,18 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_11Vector_long_1__cinit__(PyO
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 99, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 97, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
     }
-    __pyx_v_n = __Pyx_PyInt_As_long(values[0]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyInt_As_long(values[0]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 97, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 99, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 97, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.Vector_long.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5017,7 +5017,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long___cinit__(stru
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":114
+  /* "riemann_theta/riemann_theta.pyx":112
  *         """
  *         cdef long i
  *         self.n = n             # <<<<<<<<<<<<<<
@@ -5026,7 +5026,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long___cinit__(stru
  */
   __pyx_v_self->n = __pyx_v_n;
 
-  /* "riemann_theta/riemann_theta.pyx":115
+  /* "riemann_theta/riemann_theta.pyx":113
  *         cdef long i
  *         self.n = n
  *         self.vec = <long *> PyMem_Malloc(n * sizeof(long))             # <<<<<<<<<<<<<<
@@ -5035,7 +5035,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long___cinit__(stru
  */
   __pyx_v_self->vec = ((long *)PyMem_Malloc((__pyx_v_n * (sizeof(long)))));
 
-  /* "riemann_theta/riemann_theta.pyx":99
+  /* "riemann_theta/riemann_theta.pyx":97
  *     cdef long *vec
  * 
  *     def __cinit__(self, long n):             # <<<<<<<<<<<<<<
@@ -5049,7 +5049,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long___cinit__(stru
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":117
+/* "riemann_theta/riemann_theta.pyx":115
  *         self.vec = <long *> PyMem_Malloc(n * sizeof(long))
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -5072,7 +5072,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_2__dealloc__(
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":127
+  /* "riemann_theta/riemann_theta.pyx":125
  * 
  *         """
  *         PyMem_Free(self.vec)             # <<<<<<<<<<<<<<
@@ -5081,7 +5081,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_2__dealloc__(
  */
   PyMem_Free(__pyx_v_self->vec);
 
-  /* "riemann_theta/riemann_theta.pyx":117
+  /* "riemann_theta/riemann_theta.pyx":115
  *         self.vec = <long *> PyMem_Malloc(n * sizeof(long))
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -5093,7 +5093,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_2__dealloc__(
   __Pyx_RefNannyFinishContext();
 }
 
-/* "riemann_theta/riemann_theta.pyx":129
+/* "riemann_theta/riemann_theta.pyx":127
  *         PyMem_Free(self.vec)
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -5103,7 +5103,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_2__dealloc__(
 
 /* Python wrapper */
 static Py_ssize_t __pyx_pw_13riemann_theta_13riemann_theta_11Vector_long_5__len__(PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_4__len__[] = "Return length of vector.\n\n        OUTPUT: Length of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import Vector_long\n            sage: V = Vector_long(10)\n            sage: len(V)\n            10\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_4__len__[] = "Return length of vector.\n\n        OUTPUT: Length of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import Vector_long\n            sage: V = Vector_long(10)\n            sage: len(V)\n            10\n\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_4__len__;
 #endif
@@ -5123,7 +5123,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_4__len_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__len__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":142
+  /* "riemann_theta/riemann_theta.pyx":140
  * 
  *         """
  *         return self.n             # <<<<<<<<<<<<<<
@@ -5133,7 +5133,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_4__len_
   __pyx_r = __pyx_v_self->n;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":129
+  /* "riemann_theta/riemann_theta.pyx":127
  *         PyMem_Free(self.vec)
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -5147,7 +5147,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_4__len_
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":144
+/* "riemann_theta/riemann_theta.pyx":142
  *         return self.n
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -5157,7 +5157,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_4__len_
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11Vector_long_7__repr__(PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_6__repr__[] = "Return string representation of vector.\n\n        OUTPUT: String representation of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import Vector_long\n            sage: V = Vector_long(4)\n            sage: repr(V) # random\n            '<Vector_long [139766604523248, 139774110506560, 1, 8704]>'\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_6__repr__[] = "Return string representation of vector.\n\n        OUTPUT: String representation of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import Vector_long\n            sage: V = Vector_long(4)\n            sage: repr(V) # random\n            '<Vector_long [139766604523248, 139774110506560, 1, 8704]>'\n\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_6__repr__;
 #endif
@@ -5184,7 +5184,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_6__repr_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":157
+  /* "riemann_theta/riemann_theta.pyx":155
  * 
  *         """
  *         return "<Vector_long {}>".format(list(self))             # <<<<<<<<<<<<<<
@@ -5192,9 +5192,9 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_6__repr_
  *     def __getitem__(self, i):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Vector_long, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Vector_long, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PySequence_List(((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_3 = PySequence_List(((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -5209,14 +5209,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_6__repr_
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":144
+  /* "riemann_theta/riemann_theta.pyx":142
  *         return self.n
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -5238,7 +5238,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_6__repr_
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":159
+/* "riemann_theta/riemann_theta.pyx":157
  *         return "<Vector_long {}>".format(list(self))
  * 
  *     def __getitem__(self, i):             # <<<<<<<<<<<<<<
@@ -5248,7 +5248,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_6__repr_
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11Vector_long_9__getitem__(PyObject *__pyx_v_self, PyObject *__pyx_v_i); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_8__getitem__[] = "Return an entry from vector.\n\n        INPUT:\n\n        - ``i`` -- integer. Index of entry to retrieve.\n\n        OUTPUT: entry value.\n\n        EXAMPLE::\n            sage: from riemann_theta import Vector_long\n            sage: V = Vector_long(4)\n            sage: V[0] # random\n            139766604523248\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_8__getitem__[] = "Return an entry from vector.\n\n        INPUT:\n\n        - ``i`` -- integer. Index of entry to retrieve.\n\n        OUTPUT: entry value.\n\n        EXAMPLE::\n            sage: from riemann_theta.riemann_theta import Vector_long\n            sage: V = Vector_long(4)\n            sage: V[0] # random\n            139766604523248\n\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_8__getitem__;
 #endif
@@ -5276,45 +5276,45 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_8__getit
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__getitem__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":176
+  /* "riemann_theta/riemann_theta.pyx":174
  *         """
  * 
  *         if i < 0 or i >= self.n:             # <<<<<<<<<<<<<<
  *             raise IndexError("Index out of range")
  *         else:
  */
-  __pyx_t_2 = PyObject_RichCompare(__pyx_v_i, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_v_i, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (!__pyx_t_3) {
   } else {
     __pyx_t_1 = __pyx_t_3;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_v_i, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_4 = PyObject_RichCompare(__pyx_v_i, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_1 = __pyx_t_3;
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_1)) {
 
-    /* "riemann_theta/riemann_theta.pyx":177
+    /* "riemann_theta/riemann_theta.pyx":175
  * 
  *         if i < 0 or i >= self.n:
  *             raise IndexError("Index out of range")             # <<<<<<<<<<<<<<
  *         else:
  *             return self.vec[i]
  */
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_Raise(__pyx_t_4, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 177, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":176
+    /* "riemann_theta/riemann_theta.pyx":174
  *         """
  * 
  *         if i < 0 or i >= self.n:             # <<<<<<<<<<<<<<
@@ -5323,7 +5323,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_8__getit
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":179
+  /* "riemann_theta/riemann_theta.pyx":177
  *             raise IndexError("Index out of range")
  *         else:
  *             return self.vec[i]             # <<<<<<<<<<<<<<
@@ -5332,15 +5332,15 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_8__getit
  */
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_v_i); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 179, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_self->vec[__pyx_t_5])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_v_i); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_self->vec[__pyx_t_5])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_r = __pyx_t_4;
     __pyx_t_4 = 0;
     goto __pyx_L0;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":159
+  /* "riemann_theta/riemann_theta.pyx":157
  *         return "<Vector_long {}>".format(list(self))
  * 
  *     def __getitem__(self, i):             # <<<<<<<<<<<<<<
@@ -5360,7 +5360,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_8__getit
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":181
+/* "riemann_theta/riemann_theta.pyx":179
  *             return self.vec[i]
  * 
  *     cdef assign(self, L):             # <<<<<<<<<<<<<<
@@ -5384,31 +5384,31 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("assign", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":190
+  /* "riemann_theta/riemann_theta.pyx":188
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         if len(L) != self.n:             # <<<<<<<<<<<<<<
  *             raise ValueError("Mismatch in length")
  *         for i in range(self.n):
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_L); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_L); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 188, __pyx_L1_error)
   __pyx_t_2 = ((__pyx_t_1 != __pyx_v_self->n) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "riemann_theta/riemann_theta.pyx":191
+    /* "riemann_theta/riemann_theta.pyx":189
  *         """
  *         if len(L) != self.n:
  *             raise ValueError("Mismatch in length")             # <<<<<<<<<<<<<<
  *         for i in range(self.n):
  *             self.vec[i] = L[i]
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 191, __pyx_L1_error)
+    __PYX_ERR(0, 189, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":190
+    /* "riemann_theta/riemann_theta.pyx":188
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         if len(L) != self.n:             # <<<<<<<<<<<<<<
@@ -5417,7 +5417,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign(st
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":192
+  /* "riemann_theta/riemann_theta.pyx":190
  *         if len(L) != self.n:
  *             raise ValueError("Mismatch in length")
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -5429,21 +5429,21 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign(st
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
     __pyx_v_i = __pyx_t_6;
 
-    /* "riemann_theta/riemann_theta.pyx":193
+    /* "riemann_theta/riemann_theta.pyx":191
  *             raise ValueError("Mismatch in length")
  *         for i in range(self.n):
  *             self.vec[i] = L[i]             # <<<<<<<<<<<<<<
  * 
  *     @staticmethod
  */
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_L, __pyx_v_i, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_L, __pyx_v_i, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_7 = __Pyx_PyInt_As_long(__pyx_t_3); if (unlikely((__pyx_t_7 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_As_long(__pyx_t_3); if (unlikely((__pyx_t_7 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     (__pyx_v_self->vec[__pyx_v_i]) = __pyx_t_7;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":181
+  /* "riemann_theta/riemann_theta.pyx":179
  *             return self.vec[i]
  * 
  *     cdef assign(self, L):             # <<<<<<<<<<<<<<
@@ -5464,7 +5464,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign(st
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":196
+/* "riemann_theta/riemann_theta.pyx":194
  * 
  *     @staticmethod
  *     cdef from_list(object L):             # <<<<<<<<<<<<<<
@@ -5484,34 +5484,34 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("from_list", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":211
+  /* "riemann_theta/riemann_theta.pyx":209
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         cdef Vector_long v = Vector_long(len(L))             # <<<<<<<<<<<<<<
  *         v.assign(L)
  *         return v
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_L); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 211, __pyx_L1_error)
-  __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_L); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_long), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_long), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_v = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":212
+  /* "riemann_theta/riemann_theta.pyx":210
  *         """
  *         cdef Vector_long v = Vector_long(len(L))
  *         v.assign(L)             # <<<<<<<<<<<<<<
  *         return v
  * 
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_long *)__pyx_v_v->__pyx_vtab)->assign(__pyx_v_v, __pyx_v_L); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_long *)__pyx_v_v->__pyx_vtab)->assign(__pyx_v_v, __pyx_v_L); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":213
+  /* "riemann_theta/riemann_theta.pyx":211
  *         cdef Vector_long v = Vector_long(len(L))
  *         v.assign(L)
  *         return v             # <<<<<<<<<<<<<<
@@ -5523,7 +5523,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list
   __pyx_r = ((PyObject *)__pyx_v_v);
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":196
+  /* "riemann_theta/riemann_theta.pyx":194
  * 
  *     @staticmethod
  *     cdef from_list(object L):             # <<<<<<<<<<<<<<
@@ -5544,7 +5544,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":215
+/* "riemann_theta/riemann_theta.pyx":213
  *         return v
  * 
  *     cdef assign_scaled_diff(self, long scaling, Vector_long v, Vector_long w):             # <<<<<<<<<<<<<<
@@ -5567,7 +5567,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign_sc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("assign_scaled_diff", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":228
+  /* "riemann_theta/riemann_theta.pyx":226
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         if self.n != v.n or self.n != w.n:             # <<<<<<<<<<<<<<
@@ -5585,20 +5585,20 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign_sc
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_1)) {
 
-    /* "riemann_theta/riemann_theta.pyx":229
+    /* "riemann_theta/riemann_theta.pyx":227
  *         """
  *         if self.n != v.n or self.n != w.n:
  *             raise ValueError("Dimension mismatch")             # <<<<<<<<<<<<<<
  *         cdef long i
  *         for i in range(self.n):
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 229, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 227, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 229, __pyx_L1_error)
+    __PYX_ERR(0, 227, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":228
+    /* "riemann_theta/riemann_theta.pyx":226
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         if self.n != v.n or self.n != w.n:             # <<<<<<<<<<<<<<
@@ -5607,7 +5607,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign_sc
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":231
+  /* "riemann_theta/riemann_theta.pyx":229
  *             raise ValueError("Dimension mismatch")
  *         cdef long i
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -5619,7 +5619,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign_sc
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
     __pyx_v_i = __pyx_t_6;
 
-    /* "riemann_theta/riemann_theta.pyx":232
+    /* "riemann_theta/riemann_theta.pyx":230
  *         cdef long i
  *         for i in range(self.n):
  *             self.vec[i]=scaling*v.vec[i]-w.vec[i]             # <<<<<<<<<<<<<<
@@ -5629,7 +5629,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign_sc
     (__pyx_v_self->vec[__pyx_v_i]) = ((__pyx_v_scaling * (__pyx_v_v->vec[__pyx_v_i])) - (__pyx_v_w->vec[__pyx_v_i]));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":215
+  /* "riemann_theta/riemann_theta.pyx":213
  *         return v
  * 
  *     cdef assign_scaled_diff(self, long scaling, Vector_long v, Vector_long w):             # <<<<<<<<<<<<<<
@@ -5763,7 +5763,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_long_12__sets
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":248
+/* "riemann_theta/riemann_theta.pyx":246
  *     cdef long prec
  * 
  *     def __cinit__(self, RealField_class RR, long n):             # <<<<<<<<<<<<<<
@@ -5805,11 +5805,11 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_11Vector_mpfr_1__cinit__(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_n)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 248, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 246, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 248, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 246, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5818,17 +5818,17 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_11Vector_mpfr_1__cinit__(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_RR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealField_class *)values[0]);
-    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 248, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 248, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 246, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.Vector_mpfr.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_RR), __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class, 1, "RR", 0))) __PYX_ERR(0, 248, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_RR), __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class, 1, "RR", 0))) __PYX_ERR(0, 246, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_v_self), __pyx_v_RR, __pyx_v_n);
 
   /* function exit code */
@@ -5851,7 +5851,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
   long __pyx_t_5;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":266
+  /* "riemann_theta/riemann_theta.pyx":264
  *         """
  *         cdef long i
  *         self.RR = RR             # <<<<<<<<<<<<<<
@@ -5864,7 +5864,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
   __Pyx_DECREF(((PyObject *)__pyx_v_self->RR));
   __pyx_v_self->RR = __pyx_v_RR;
 
-  /* "riemann_theta/riemann_theta.pyx":267
+  /* "riemann_theta/riemann_theta.pyx":265
  *         cdef long i
  *         self.RR = RR
  *         self.rnd = RR.rnd             # <<<<<<<<<<<<<<
@@ -5874,7 +5874,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
   __pyx_t_1 = __pyx_v_RR->rnd;
   __pyx_v_self->rnd = __pyx_t_1;
 
-  /* "riemann_theta/riemann_theta.pyx":268
+  /* "riemann_theta/riemann_theta.pyx":266
  *         self.RR = RR
  *         self.rnd = RR.rnd
  *         self.prec = RR.__prec             # <<<<<<<<<<<<<<
@@ -5884,7 +5884,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
   __pyx_t_2 = __pyx_v_RR->__pyx___prec;
   __pyx_v_self->prec = __pyx_t_2;
 
-  /* "riemann_theta/riemann_theta.pyx":269
+  /* "riemann_theta/riemann_theta.pyx":267
  *         self.rnd = RR.rnd
  *         self.prec = RR.__prec
  *         self.n = n             # <<<<<<<<<<<<<<
@@ -5893,7 +5893,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
  */
   __pyx_v_self->n = __pyx_v_n;
 
-  /* "riemann_theta/riemann_theta.pyx":270
+  /* "riemann_theta/riemann_theta.pyx":268
  *         self.prec = RR.__prec
  *         self.n = n
  *         self.vec = <mpfr_t *> PyMem_Malloc(n * sizeof(mpfr_t))             # <<<<<<<<<<<<<<
@@ -5902,7 +5902,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
  */
   __pyx_v_self->vec = ((mpfr_t *)PyMem_Malloc((__pyx_v_n * (sizeof(mpfr_t)))));
 
-  /* "riemann_theta/riemann_theta.pyx":271
+  /* "riemann_theta/riemann_theta.pyx":269
  *         self.n = n
  *         self.vec = <mpfr_t *> PyMem_Malloc(n * sizeof(mpfr_t))
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -5914,7 +5914,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "riemann_theta/riemann_theta.pyx":272
+    /* "riemann_theta/riemann_theta.pyx":270
  *         self.vec = <mpfr_t *> PyMem_Malloc(n * sizeof(mpfr_t))
  *         for i in range(self.n):
  *             mpfr_init2(self.vec[i], self.prec)             # <<<<<<<<<<<<<<
@@ -5924,7 +5924,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
     mpfr_init2((__pyx_v_self->vec[__pyx_v_i]), __pyx_v_self->prec);
   }
 
-  /* "riemann_theta/riemann_theta.pyx":248
+  /* "riemann_theta/riemann_theta.pyx":246
  *     cdef long prec
  * 
  *     def __cinit__(self, RealField_class RR, long n):             # <<<<<<<<<<<<<<
@@ -5938,7 +5938,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr___cinit__(stru
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":274
+/* "riemann_theta/riemann_theta.pyx":272
  *             mpfr_init2(self.vec[i], self.prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -5965,7 +5965,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_2__dealloc__(
   long __pyx_t_3;
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":286
+  /* "riemann_theta/riemann_theta.pyx":284
  *         """
  *         cdef long i
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -5977,7 +5977,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_2__dealloc__(
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "riemann_theta/riemann_theta.pyx":287
+    /* "riemann_theta/riemann_theta.pyx":285
  *         cdef long i
  *         for i in range(self.n):
  *             mpfr_clear(self.vec[i])             # <<<<<<<<<<<<<<
@@ -5987,7 +5987,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_2__dealloc__(
     mpfr_clear((__pyx_v_self->vec[__pyx_v_i]));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":288
+  /* "riemann_theta/riemann_theta.pyx":286
  *         for i in range(self.n):
  *             mpfr_clear(self.vec[i])
  *         PyMem_Free(self.vec)             # <<<<<<<<<<<<<<
@@ -5996,7 +5996,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_2__dealloc__(
  */
   PyMem_Free(__pyx_v_self->vec);
 
-  /* "riemann_theta/riemann_theta.pyx":274
+  /* "riemann_theta/riemann_theta.pyx":272
  *             mpfr_init2(self.vec[i], self.prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -6008,7 +6008,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_2__dealloc__(
   __Pyx_RefNannyFinishContext();
 }
 
-/* "riemann_theta/riemann_theta.pyx":290
+/* "riemann_theta/riemann_theta.pyx":288
  *         PyMem_Free(self.vec)
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -6018,7 +6018,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_2__dealloc__(
 
 /* Python wrapper */
 static Py_ssize_t __pyx_pw_13riemann_theta_13riemann_theta_11Vector_mpfr_5__len__(PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len__[] = "Return length of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import Vector_mpfr\n            sage: RR=RealField(40)\n            sage: V=Vector_mpfr(RR,3)\n            sage: len(V)\n            3\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len__[] = "Return length of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import Vector_mpfr\n            sage: RR=RealField(40)\n            sage: V=Vector_mpfr(RR,3)\n            sage: len(V)\n            3\n\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len__;
 #endif
@@ -6038,7 +6038,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__len__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":302
+  /* "riemann_theta/riemann_theta.pyx":300
  * 
  *         """
  *         return self.n             # <<<<<<<<<<<<<<
@@ -6048,7 +6048,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len_
   __pyx_r = __pyx_v_self->n;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":290
+  /* "riemann_theta/riemann_theta.pyx":288
  *         PyMem_Free(self.vec)
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -6062,7 +6062,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len_
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":304
+/* "riemann_theta/riemann_theta.pyx":302
  *         return self.n
  * 
  *     def __getitem__(self, i):             # <<<<<<<<<<<<<<
@@ -6072,7 +6072,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len_
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11Vector_mpfr_7__getitem__(PyObject *__pyx_v_self, PyObject *__pyx_v_i); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getitem__[] = "Return an entry from vector.\n\n        INPUT:\n\n        - ``i`` -- integer. Index of entry to retrieve.\n\n        OUTPUT: entry value.\n\n        EXAMPLE::\n            sage: from riemann_theta import Vector_mpfr\n            sage: RR=RealField(40)\n            sage: V=Vector_mpfr(RR,3)\n            sage: V[0]\n            NaN\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getitem__[] = "Return an entry from vector.\n\n        INPUT:\n\n        - ``i`` -- integer. Index of entry to retrieve.\n\n        OUTPUT: entry value.\n\n        EXAMPLE::\n            sage: from riemann_theta.riemann_theta import Vector_mpfr\n            sage: RR=RealField(40)\n            sage: V=Vector_mpfr(RR,3)\n            sage: V[0]\n            NaN\n\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getitem__;
 #endif
@@ -6101,45 +6101,45 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getit
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__getitem__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":323
+  /* "riemann_theta/riemann_theta.pyx":321
  * 
  *         cdef RealNumber a
  *         if i < 0 or i >= self.n:             # <<<<<<<<<<<<<<
  *             raise IndexError("Index out of range")
  *         else:
  */
-  __pyx_t_2 = PyObject_RichCompare(__pyx_v_i, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_v_i, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 321, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (!__pyx_t_3) {
   } else {
     __pyx_t_1 = __pyx_t_3;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_v_i, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_4 = PyObject_RichCompare(__pyx_v_i, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_1 = __pyx_t_3;
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_1)) {
 
-    /* "riemann_theta/riemann_theta.pyx":324
+    /* "riemann_theta/riemann_theta.pyx":322
  *         cdef RealNumber a
  *         if i < 0 or i >= self.n:
  *             raise IndexError("Index out of range")             # <<<<<<<<<<<<<<
  *         else:
  *             a = self.RR._new()
  */
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 322, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_Raise(__pyx_t_4, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 324, __pyx_L1_error)
+    __PYX_ERR(0, 322, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":323
+    /* "riemann_theta/riemann_theta.pyx":321
  * 
  *         cdef RealNumber a
  *         if i < 0 or i >= self.n:             # <<<<<<<<<<<<<<
@@ -6148,7 +6148,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getit
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":326
+  /* "riemann_theta/riemann_theta.pyx":324
  *             raise IndexError("Index out of range")
  *         else:
  *             a = self.RR._new()             # <<<<<<<<<<<<<<
@@ -6156,22 +6156,22 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getit
  *             return a
  */
   /*else*/ {
-    __pyx_t_4 = ((PyObject *)__pyx_f_4sage_5rings_9real_mpfr_15RealField_class__new(__pyx_v_self->RR)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 326, __pyx_L1_error)
+    __pyx_t_4 = ((PyObject *)__pyx_f_4sage_5rings_9real_mpfr_15RealField_class__new(__pyx_v_self->RR)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_v_a = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":327
+    /* "riemann_theta/riemann_theta.pyx":325
  *         else:
  *             a = self.RR._new()
  *             mpfr_set(a.value,self.vec[i],self.rnd)             # <<<<<<<<<<<<<<
  *             return a
  * 
  */
-    __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_v_i); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_v_i); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 325, __pyx_L1_error)
     (void)(mpfr_set(__pyx_v_a->value, (__pyx_v_self->vec[__pyx_t_5]), __pyx_v_self->rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":328
+    /* "riemann_theta/riemann_theta.pyx":326
  *             a = self.RR._new()
  *             mpfr_set(a.value,self.vec[i],self.rnd)
  *             return a             # <<<<<<<<<<<<<<
@@ -6184,7 +6184,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getit
     goto __pyx_L0;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":304
+  /* "riemann_theta/riemann_theta.pyx":302
  *         return self.n
  * 
  *     def __getitem__(self, i):             # <<<<<<<<<<<<<<
@@ -6205,7 +6205,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getit
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":330
+/* "riemann_theta/riemann_theta.pyx":328
  *             return a
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -6215,7 +6215,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getit
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11Vector_mpfr_9__repr__(PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr__[] = "Return string representation of vector\n\n        OUTPUT: string representation\n\n        EXAMPLE::\n            sage: from riemann_theta import Vector_mpfr\n            sage: RR=RealField(40)\n            sage: V=Vector_mpfr(RR,3)\n            sage: repr(V)\n            '<Vector_mpfr [NaN, NaN, NaN]>'\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr__[] = "Return string representation of vector\n\n        OUTPUT: string representation\n\n        EXAMPLE::\n            sage: from riemann_theta.riemann_theta import Vector_mpfr\n            sage: RR=RealField(40)\n            sage: V=Vector_mpfr(RR,3)\n            sage: repr(V)\n            '<Vector_mpfr [NaN, NaN, NaN]>'\n\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr__;
 #endif
@@ -6242,7 +6242,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":343
+  /* "riemann_theta/riemann_theta.pyx":341
  * 
  *         """
  *         return "<Vector_mpfr {}>".format(list(self))             # <<<<<<<<<<<<<<
@@ -6250,9 +6250,9 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr_
  *     cdef assign(self, FreeModuleElement_generic_dense L):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Vector_mpfr, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Vector_mpfr, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PySequence_List(((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_3 = PySequence_List(((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6267,14 +6267,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr_
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":330
+  /* "riemann_theta/riemann_theta.pyx":328
  *             return a
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -6296,7 +6296,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr_
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":345
+/* "riemann_theta/riemann_theta.pyx":343
  *         return "<Vector_mpfr {}>".format(list(self))
  * 
  *     cdef assign(self, FreeModuleElement_generic_dense L):             # <<<<<<<<<<<<<<
@@ -6323,14 +6323,14 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("assign", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":356
+  /* "riemann_theta/riemann_theta.pyx":354
  *         cdef long i
  *         cdef RealNumber a
  *         if self.RR is not L.base_ring():             # <<<<<<<<<<<<<<
  *             raise ValueError("Parent mismatch")
  *         if self.n != len(L):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_L), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 356, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_L), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6344,7 +6344,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 356, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = (((PyObject *)__pyx_v_self->RR) != __pyx_t_1);
@@ -6352,20 +6352,20 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "riemann_theta/riemann_theta.pyx":357
+    /* "riemann_theta/riemann_theta.pyx":355
  *         cdef RealNumber a
  *         if self.RR is not L.base_ring():
  *             raise ValueError("Parent mismatch")             # <<<<<<<<<<<<<<
  *         if self.n != len(L):
  *             raise ValueError("Dimension mismatch")
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 355, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 357, __pyx_L1_error)
+    __PYX_ERR(0, 355, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":356
+    /* "riemann_theta/riemann_theta.pyx":354
  *         cdef long i
  *         cdef RealNumber a
  *         if self.RR is not L.base_ring():             # <<<<<<<<<<<<<<
@@ -6374,31 +6374,31 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":358
+  /* "riemann_theta/riemann_theta.pyx":356
  *         if self.RR is not L.base_ring():
  *             raise ValueError("Parent mismatch")
  *         if self.n != len(L):             # <<<<<<<<<<<<<<
  *             raise ValueError("Dimension mismatch")
  *         for i in range(self.n):
  */
-  __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_L)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 358, __pyx_L1_error)
+  __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_L)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 356, __pyx_L1_error)
   __pyx_t_5 = ((__pyx_v_self->n != __pyx_t_6) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "riemann_theta/riemann_theta.pyx":359
+    /* "riemann_theta/riemann_theta.pyx":357
  *             raise ValueError("Parent mismatch")
  *         if self.n != len(L):
  *             raise ValueError("Dimension mismatch")             # <<<<<<<<<<<<<<
  *         for i in range(self.n):
  *             a = L[i]
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 359, __pyx_L1_error)
+    __PYX_ERR(0, 357, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":358
+    /* "riemann_theta/riemann_theta.pyx":356
  *         if self.RR is not L.base_ring():
  *             raise ValueError("Parent mismatch")
  *         if self.n != len(L):             # <<<<<<<<<<<<<<
@@ -6407,7 +6407,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":360
+  /* "riemann_theta/riemann_theta.pyx":358
  *         if self.n != len(L):
  *             raise ValueError("Dimension mismatch")
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -6419,20 +6419,20 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
   for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
     __pyx_v_i = __pyx_t_9;
 
-    /* "riemann_theta/riemann_theta.pyx":361
+    /* "riemann_theta/riemann_theta.pyx":359
  *             raise ValueError("Dimension mismatch")
  *         for i in range(self.n):
  *             a = L[i]             # <<<<<<<<<<<<<<
  *             mpfr_set(self.vec[i], a.value, self.rnd)
  * 
  */
-    __pyx_t_1 = __Pyx_GetItemInt(((PyObject *)__pyx_v_L), __pyx_v_i, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(((PyObject *)__pyx_v_L), __pyx_v_i, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 361, __pyx_L1_error)
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 359, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_a, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":362
+    /* "riemann_theta/riemann_theta.pyx":360
  *         for i in range(self.n):
  *             a = L[i]
  *             mpfr_set(self.vec[i], a.value, self.rnd)             # <<<<<<<<<<<<<<
@@ -6442,7 +6442,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
     (void)(mpfr_set((__pyx_v_self->vec[__pyx_v_i]), __pyx_v_a->value, __pyx_v_self->rnd));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":345
+  /* "riemann_theta/riemann_theta.pyx":343
  *         return "<Vector_mpfr {}>".format(list(self))
  * 
  *     cdef assign(self, FreeModuleElement_generic_dense L):             # <<<<<<<<<<<<<<
@@ -6466,7 +6466,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign(st
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":365
+/* "riemann_theta/riemann_theta.pyx":363
  * 
  *     @staticmethod
  *     cdef Vector_mpfr from_vector(FreeModuleElement_generic_dense L):             # <<<<<<<<<<<<<<
@@ -6487,14 +6487,14 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *__pyx_f_13r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("from_vector", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":381
+  /* "riemann_theta/riemann_theta.pyx":379
  *         """
  * 
  *         cdef Vector_mpfr v = Vector_mpfr(L.base_ring(),len(L))             # <<<<<<<<<<<<<<
  *         v.assign(L)
  *         return v
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_L), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_L), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6508,13 +6508,13 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *__pyx_f_13r
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 381, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = PyObject_Length(((PyObject *)__pyx_v_L)); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 381, __pyx_L1_error)
-  __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_4 = PyObject_Length(((PyObject *)__pyx_v_L)); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -6522,24 +6522,24 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *__pyx_f_13r
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpfr), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpfr), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_v = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":382
+  /* "riemann_theta/riemann_theta.pyx":380
  * 
  *         cdef Vector_mpfr v = Vector_mpfr(L.base_ring(),len(L))
  *         v.assign(L)             # <<<<<<<<<<<<<<
  *         return v
  * 
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_v_v->__pyx_vtab)->assign(__pyx_v_v, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_v_v->__pyx_vtab)->assign(__pyx_v_v, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 380, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":383
+  /* "riemann_theta/riemann_theta.pyx":381
  *         cdef Vector_mpfr v = Vector_mpfr(L.base_ring(),len(L))
  *         v.assign(L)
  *         return v             # <<<<<<<<<<<<<<
@@ -6551,7 +6551,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *__pyx_f_13r
   __pyx_r = __pyx_v_v;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":365
+  /* "riemann_theta/riemann_theta.pyx":363
  * 
  *     @staticmethod
  *     cdef Vector_mpfr from_vector(FreeModuleElement_generic_dense L):             # <<<<<<<<<<<<<<
@@ -6573,7 +6573,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *__pyx_f_13r
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":385
+/* "riemann_theta/riemann_theta.pyx":383
  *         return v
  * 
  *     cdef assign_sum_si(self, Vector_mpfr v, Vector_long w):             # <<<<<<<<<<<<<<
@@ -6596,7 +6596,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign_su
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("assign_sum_si", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":396
+  /* "riemann_theta/riemann_theta.pyx":394
  *         """
  *         cdef long i
  *         if self.n != v.n or self.n != w.n:             # <<<<<<<<<<<<<<
@@ -6614,20 +6614,20 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign_su
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_1)) {
 
-    /* "riemann_theta/riemann_theta.pyx":397
+    /* "riemann_theta/riemann_theta.pyx":395
  *         cdef long i
  *         if self.n != v.n or self.n != w.n:
  *             raise ValueError("Dimension mismatch")             # <<<<<<<<<<<<<<
  *         for i in range(self.n):
  *             mpfr_add_si(self.vec[i], v.vec[i], w.vec[i], self.rnd)
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 395, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 397, __pyx_L1_error)
+    __PYX_ERR(0, 395, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":396
+    /* "riemann_theta/riemann_theta.pyx":394
  *         """
  *         cdef long i
  *         if self.n != v.n or self.n != w.n:             # <<<<<<<<<<<<<<
@@ -6636,7 +6636,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign_su
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":398
+  /* "riemann_theta/riemann_theta.pyx":396
  *         if self.n != v.n or self.n != w.n:
  *             raise ValueError("Dimension mismatch")
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -6648,7 +6648,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign_su
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
     __pyx_v_i = __pyx_t_6;
 
-    /* "riemann_theta/riemann_theta.pyx":399
+    /* "riemann_theta/riemann_theta.pyx":397
  *             raise ValueError("Dimension mismatch")
  *         for i in range(self.n):
  *             mpfr_add_si(self.vec[i], v.vec[i], w.vec[i], self.rnd)             # <<<<<<<<<<<<<<
@@ -6658,7 +6658,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign_su
     (void)(mpfr_add_si((__pyx_v_self->vec[__pyx_v_i]), (__pyx_v_v->vec[__pyx_v_i]), (__pyx_v_w->vec[__pyx_v_i]), __pyx_v_self->rnd));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":385
+  /* "riemann_theta/riemann_theta.pyx":383
  *         return v
  * 
  *     cdef assign_sum_si(self, Vector_mpfr v, Vector_long w):             # <<<<<<<<<<<<<<
@@ -6792,7 +6792,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11Vector_mpfr_12__sets
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":414
+/* "riemann_theta/riemann_theta.pyx":412
  *     cdef ComplexNumber z
  * 
  *     def __cinit__(self, CC, long n):             # <<<<<<<<<<<<<<
@@ -6834,11 +6834,11 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_10Vector_mpc_1__cinit__(PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_n)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 414, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 412, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 414, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 412, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6847,11 +6847,11 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_10Vector_mpc_1__cinit__(PyOb
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_CC = values[0];
-    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 414, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 412, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 414, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 412, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.Vector_mpc.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6880,7 +6880,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":431
+  /* "riemann_theta/riemann_theta.pyx":429
  *         """
  *         cdef long i
  *         self.n = n             # <<<<<<<<<<<<<<
@@ -6889,14 +6889,14 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
  */
   __pyx_v_self->n = __pyx_v_n;
 
-  /* "riemann_theta/riemann_theta.pyx":432
+  /* "riemann_theta/riemann_theta.pyx":430
  *         cdef long i
  *         self.n = n
  *         self.z = CC.zero()             # <<<<<<<<<<<<<<
  *         self.rnd = (<RealField_class> CC._real_field()).rnd
  *         self.vec = <mpc_t *> PyMem_Malloc(n * sizeof(mpc_t))
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_CC, __pyx_n_s_zero); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_CC, __pyx_n_s_zero); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6910,24 +6910,24 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_12complex_mpfr_ComplexNumber))))) __PYX_ERR(0, 432, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_12complex_mpfr_ComplexNumber))))) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->z);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->z));
   __pyx_v_self->z = ((struct __pyx_obj_4sage_5rings_12complex_mpfr_ComplexNumber *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":433
+  /* "riemann_theta/riemann_theta.pyx":431
  *         self.n = n
  *         self.z = CC.zero()
  *         self.rnd = (<RealField_class> CC._real_field()).rnd             # <<<<<<<<<<<<<<
  *         self.vec = <mpc_t *> PyMem_Malloc(n * sizeof(mpc_t))
  *         for i in range(self.n):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_CC, __pyx_n_s_real_field); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_CC, __pyx_n_s_real_field); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6941,14 +6941,14 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealField_class *)__pyx_t_1)->rnd;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_self->rnd = __pyx_t_4;
 
-  /* "riemann_theta/riemann_theta.pyx":434
+  /* "riemann_theta/riemann_theta.pyx":432
  *         self.z = CC.zero()
  *         self.rnd = (<RealField_class> CC._real_field()).rnd
  *         self.vec = <mpc_t *> PyMem_Malloc(n * sizeof(mpc_t))             # <<<<<<<<<<<<<<
@@ -6957,7 +6957,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
  */
   __pyx_v_self->vec = ((mpc_t *)PyMem_Malloc((__pyx_v_n * (sizeof(mpc_t)))));
 
-  /* "riemann_theta/riemann_theta.pyx":435
+  /* "riemann_theta/riemann_theta.pyx":433
  *         self.rnd = (<RealField_class> CC._real_field()).rnd
  *         self.vec = <mpc_t *> PyMem_Malloc(n * sizeof(mpc_t))
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -6969,7 +6969,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
   for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "riemann_theta/riemann_theta.pyx":436
+    /* "riemann_theta/riemann_theta.pyx":434
  *         self.vec = <mpc_t *> PyMem_Malloc(n * sizeof(mpc_t))
  *         for i in range(self.n):
  *             mpc_init2(self.vec[i], self.z._prec)             # <<<<<<<<<<<<<<
@@ -6979,7 +6979,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
     mpc_init2((__pyx_v_self->vec[__pyx_v_i]), __pyx_v_self->z->_prec);
   }
 
-  /* "riemann_theta/riemann_theta.pyx":414
+  /* "riemann_theta/riemann_theta.pyx":412
  *     cdef ComplexNumber z
  * 
  *     def __cinit__(self, CC, long n):             # <<<<<<<<<<<<<<
@@ -7001,7 +7001,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc___cinit__(struc
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":438
+/* "riemann_theta/riemann_theta.pyx":436
  *             mpc_init2(self.vec[i], self.z._prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7028,7 +7028,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_2__dealloc__(s
   long __pyx_t_3;
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":449
+  /* "riemann_theta/riemann_theta.pyx":447
  *         """
  *         cdef long i
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -7040,7 +7040,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_2__dealloc__(s
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "riemann_theta/riemann_theta.pyx":450
+    /* "riemann_theta/riemann_theta.pyx":448
  *         cdef long i
  *         for i in range(self.n):
  *             mpc_clear(self.vec[i])             # <<<<<<<<<<<<<<
@@ -7050,7 +7050,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_2__dealloc__(s
     mpc_clear((__pyx_v_self->vec[__pyx_v_i]));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":451
+  /* "riemann_theta/riemann_theta.pyx":449
  *         for i in range(self.n):
  *             mpc_clear(self.vec[i])
  *         PyMem_Free(self.vec)             # <<<<<<<<<<<<<<
@@ -7059,7 +7059,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_2__dealloc__(s
  */
   PyMem_Free(__pyx_v_self->vec);
 
-  /* "riemann_theta/riemann_theta.pyx":438
+  /* "riemann_theta/riemann_theta.pyx":436
  *             mpc_init2(self.vec[i], self.z._prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7071,7 +7071,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_2__dealloc__(s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "riemann_theta/riemann_theta.pyx":453
+/* "riemann_theta/riemann_theta.pyx":451
  *         PyMem_Free(self.vec)
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -7081,7 +7081,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_2__dealloc__(s
 
 /* Python wrapper */
 static Py_ssize_t __pyx_pw_13riemann_theta_13riemann_theta_10Vector_mpc_5__len__(PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__[] = "Return length of vector\n\n        EXAMPLE::\n\n            sage: from riemann_theta import Vector_mpc\n            sage: CC=ComplexField(40)\n            sage: V=Vector_mpc(CC,3)\n            sage: len(V)\n            3\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__[] = "Return length of vector\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import Vector_mpc\n            sage: CC=ComplexField(40)\n            sage: V=Vector_mpc(CC,3)\n            sage: len(V)\n            3\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__;
 #endif
@@ -7101,7 +7101,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__len__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":464
+  /* "riemann_theta/riemann_theta.pyx":462
  *             3
  *         """
  *         return self.n             # <<<<<<<<<<<<<<
@@ -7111,7 +7111,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__
   __pyx_r = __pyx_v_self->n;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":453
+  /* "riemann_theta/riemann_theta.pyx":451
  *         PyMem_Free(self.vec)
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -7125,7 +7125,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":466
+/* "riemann_theta/riemann_theta.pyx":464
  *         return self.n
  * 
  *     def __getitem__(self, long i):             # <<<<<<<<<<<<<<
@@ -7135,7 +7135,7 @@ static Py_ssize_t __pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_10Vector_mpc_7__getitem__(PyObject *__pyx_v_self, PyObject *__pyx_arg_i); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_6__getitem__[] = "Return an entry from vector.\n\n        INPUT:\n\n        - ``i`` -- integer. Index of entry to retrieve.\n\n        OUTPUT: entry value.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import Vector_mpc\n            sage: CC=ComplexField(40)\n            sage: V=Vector_mpc(CC,3)\n            sage: V[0]\n            NaN + NaN*I\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_6__getitem__[] = "Return an entry from vector.\n\n        INPUT:\n\n        - ``i`` -- integer. Index of entry to retrieve.\n\n        OUTPUT: entry value.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import Vector_mpc\n            sage: CC=ComplexField(40)\n            sage: V=Vector_mpc(CC,3)\n            sage: V[0]\n            NaN + NaN*I\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_6__getitem__;
 #endif
@@ -7148,7 +7148,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_10Vector_mpc_7__getite
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__getitem__ (wrapper)", 0);
   assert(__pyx_arg_i); {
-    __pyx_v_i = __Pyx_PyInt_As_long(__pyx_arg_i); if (unlikely((__pyx_v_i == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 466, __pyx_L3_error)
+    __pyx_v_i = __Pyx_PyInt_As_long(__pyx_arg_i); if (unlikely((__pyx_v_i == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 464, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7175,7 +7175,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__getitem__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":483
+  /* "riemann_theta/riemann_theta.pyx":481
  *             NaN + NaN*I
  *         """
  *         if i < 0 or i >= self.n:             # <<<<<<<<<<<<<<
@@ -7193,20 +7193,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_1)) {
 
-    /* "riemann_theta/riemann_theta.pyx":484
+    /* "riemann_theta/riemann_theta.pyx":482
  *         """
  *         if i < 0 or i >= self.n:
  *             raise IndexError("Index out of bounds")             # <<<<<<<<<<<<<<
  *         cdef ComplexNumber r = self.z._new()
  *         mpfr_set(r.__re, self.vec[i].re,self.rnd)
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 484, __pyx_L1_error)
+    __PYX_ERR(0, 482, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":483
+    /* "riemann_theta/riemann_theta.pyx":481
  *             NaN + NaN*I
  *         """
  *         if i < 0 or i >= self.n:             # <<<<<<<<<<<<<<
@@ -7215,19 +7215,19 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":485
+  /* "riemann_theta/riemann_theta.pyx":483
  *         if i < 0 or i >= self.n:
  *             raise IndexError("Index out of bounds")
  *         cdef ComplexNumber r = self.z._new()             # <<<<<<<<<<<<<<
  *         mpfr_set(r.__re, self.vec[i].re,self.rnd)
  *         mpfr_set(r.__im, self.vec[i].im,self.rnd)
  */
-  __pyx_t_3 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_12complex_mpfr_ComplexNumber *)__pyx_v_self->z->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->_new(__pyx_v_self->z)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 485, __pyx_L1_error)
+  __pyx_t_3 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_12complex_mpfr_ComplexNumber *)__pyx_v_self->z->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->_new(__pyx_v_self->z)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_r = ((struct __pyx_obj_4sage_5rings_12complex_mpfr_ComplexNumber *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":486
+  /* "riemann_theta/riemann_theta.pyx":484
  *             raise IndexError("Index out of bounds")
  *         cdef ComplexNumber r = self.z._new()
  *         mpfr_set(r.__re, self.vec[i].re,self.rnd)             # <<<<<<<<<<<<<<
@@ -7236,7 +7236,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
  */
   (void)(mpfr_set(__pyx_v_r->__pyx___re, (__pyx_v_self->vec[__pyx_v_i])->re, __pyx_v_self->rnd));
 
-  /* "riemann_theta/riemann_theta.pyx":487
+  /* "riemann_theta/riemann_theta.pyx":485
  *         cdef ComplexNumber r = self.z._new()
  *         mpfr_set(r.__re, self.vec[i].re,self.rnd)
  *         mpfr_set(r.__im, self.vec[i].im,self.rnd)             # <<<<<<<<<<<<<<
@@ -7245,7 +7245,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
  */
   (void)(mpfr_set(__pyx_v_r->__pyx___im, (__pyx_v_self->vec[__pyx_v_i])->im, __pyx_v_self->rnd));
 
-  /* "riemann_theta/riemann_theta.pyx":488
+  /* "riemann_theta/riemann_theta.pyx":486
  *         mpfr_set(r.__re, self.vec[i].re,self.rnd)
  *         mpfr_set(r.__im, self.vec[i].im,self.rnd)
  *         return r             # <<<<<<<<<<<<<<
@@ -7257,7 +7257,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
   __pyx_r = ((PyObject *)__pyx_v_r);
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":466
+  /* "riemann_theta/riemann_theta.pyx":464
  *         return self.n
  * 
  *     def __getitem__(self, long i):             # <<<<<<<<<<<<<<
@@ -7277,7 +7277,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":490
+/* "riemann_theta/riemann_theta.pyx":488
  *         return r
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -7287,7 +7287,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_6__getite
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_10Vector_mpc_9__repr__(PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__[] = "Return string representation of vector\n\n        OUTPUT: string representation\n\n        EXAMPLE::\n            sage: from riemann_theta import Vector_mpc\n            sage: CC=ComplexField(40)\n            sage: V=Vector_mpc(CC,3)\n            sage: repr(V)\n            '<Vector_mpc [NaN + NaN*I, NaN + NaN*I, NaN + NaN*I]>'\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__[] = "Return string representation of vector\n\n        OUTPUT: string representation\n\n        EXAMPLE::\n            sage: from riemann_theta.riemann_theta import Vector_mpc\n            sage: CC=ComplexField(40)\n            sage: V=Vector_mpc(CC,3)\n            sage: repr(V)\n            '<Vector_mpc [NaN + NaN*I, NaN + NaN*I, NaN + NaN*I]>'\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__;
 #endif
@@ -7314,7 +7314,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":502
+  /* "riemann_theta/riemann_theta.pyx":500
  *             '<Vector_mpc [NaN + NaN*I, NaN + NaN*I, NaN + NaN*I]>'
  *         """
  *         return "<Vector_mpc {}>".format(list(self))             # <<<<<<<<<<<<<<
@@ -7322,9 +7322,9 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__
  * cdef class NormCholesky:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Vector_mpc, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Vector_mpc, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PySequence_List(((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __pyx_t_3 = PySequence_List(((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7339,14 +7339,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 502, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":490
+  /* "riemann_theta/riemann_theta.pyx":488
  *         return r
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -7481,7 +7481,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10Vector_mpc_12__setst
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":519
+/* "riemann_theta/riemann_theta.pyx":517
  *     cdef mpfr_t *Clist
  * 
  *     def __cinit__(self, RealField_class RR, long n):             # <<<<<<<<<<<<<<
@@ -7523,11 +7523,11 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_1__cinit__(Py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_n)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 519, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 517, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 519, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 517, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7536,17 +7536,17 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_1__cinit__(Py
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_RR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealField_class *)values[0]);
-    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 519, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 517, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 519, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 517, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.NormCholesky.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_RR), __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class, 1, "RR", 0))) __PYX_ERR(0, 519, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_RR), __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class, 1, "RR", 0))) __PYX_ERR(0, 517, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(((struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_self), __pyx_v_RR, __pyx_v_n);
 
   /* function exit code */
@@ -7570,7 +7570,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
   long __pyx_t_5;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":535
+  /* "riemann_theta/riemann_theta.pyx":533
  *         cdef long k
  *         cdef long Clength
  *         self.n = n             # <<<<<<<<<<<<<<
@@ -7579,7 +7579,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
  */
   __pyx_v_self->n = __pyx_v_n;
 
-  /* "riemann_theta/riemann_theta.pyx":536
+  /* "riemann_theta/riemann_theta.pyx":534
  *         cdef long Clength
  *         self.n = n
  *         self.RR = RR             # <<<<<<<<<<<<<<
@@ -7592,7 +7592,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
   __Pyx_DECREF(((PyObject *)__pyx_v_self->RR));
   __pyx_v_self->RR = __pyx_v_RR;
 
-  /* "riemann_theta/riemann_theta.pyx":537
+  /* "riemann_theta/riemann_theta.pyx":535
  *         self.n = n
  *         self.RR = RR
  *         self.prec = RR.__prec             # <<<<<<<<<<<<<<
@@ -7602,7 +7602,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
   __pyx_t_1 = __pyx_v_RR->__pyx___prec;
   __pyx_v_self->prec = __pyx_t_1;
 
-  /* "riemann_theta/riemann_theta.pyx":538
+  /* "riemann_theta/riemann_theta.pyx":536
  *         self.RR = RR
  *         self.prec = RR.__prec
  *         self.rnd = RR.rnd             # <<<<<<<<<<<<<<
@@ -7612,7 +7612,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
   __pyx_t_2 = __pyx_v_RR->rnd;
   __pyx_v_self->rnd = __pyx_t_2;
 
-  /* "riemann_theta/riemann_theta.pyx":539
+  /* "riemann_theta/riemann_theta.pyx":537
  *         self.prec = RR.__prec
  *         self.rnd = RR.rnd
  *         mpfr_init2(self.r1, self.prec) #initialize two registers r1,r2             # <<<<<<<<<<<<<<
@@ -7621,7 +7621,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
  */
   mpfr_init2(__pyx_v_self->r1, __pyx_v_self->prec);
 
-  /* "riemann_theta/riemann_theta.pyx":540
+  /* "riemann_theta/riemann_theta.pyx":538
  *         self.rnd = RR.rnd
  *         mpfr_init2(self.r1, self.prec) #initialize two registers r1,r2
  *         mpfr_init2(self.r2, self.prec)             # <<<<<<<<<<<<<<
@@ -7630,7 +7630,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
  */
   mpfr_init2(__pyx_v_self->r2, __pyx_v_self->prec);
 
-  /* "riemann_theta/riemann_theta.pyx":541
+  /* "riemann_theta/riemann_theta.pyx":539
  *         mpfr_init2(self.r1, self.prec) #initialize two registers r1,r2
  *         mpfr_init2(self.r2, self.prec)
  *         Clength = (n*(n+1))//2             # <<<<<<<<<<<<<<
@@ -7639,7 +7639,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
  */
   __pyx_v_Clength = __Pyx_div_long((__pyx_v_n * (__pyx_v_n + 1)), 2);
 
-  /* "riemann_theta/riemann_theta.pyx":542
+  /* "riemann_theta/riemann_theta.pyx":540
  *         mpfr_init2(self.r2, self.prec)
  *         Clength = (n*(n+1))//2
  *         self.Clist = <mpfr_t*> PyMem_Malloc(Clength * sizeof(mpfr_t))             # <<<<<<<<<<<<<<
@@ -7648,7 +7648,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
  */
   __pyx_v_self->Clist = ((mpfr_t *)PyMem_Malloc((__pyx_v_Clength * (sizeof(mpfr_t)))));
 
-  /* "riemann_theta/riemann_theta.pyx":543
+  /* "riemann_theta/riemann_theta.pyx":541
  *         Clength = (n*(n+1))//2
  *         self.Clist = <mpfr_t*> PyMem_Malloc(Clength * sizeof(mpfr_t))
  *         for k in range(Clength):             # <<<<<<<<<<<<<<
@@ -7660,7 +7660,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_k = __pyx_t_5;
 
-    /* "riemann_theta/riemann_theta.pyx":544
+    /* "riemann_theta/riemann_theta.pyx":542
  *         self.Clist = <mpfr_t*> PyMem_Malloc(Clength * sizeof(mpfr_t))
  *         for k in range(Clength):
  *             mpfr_init2(self.Clist[k],self.prec)             # <<<<<<<<<<<<<<
@@ -7670,7 +7670,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
     mpfr_init2((__pyx_v_self->Clist[__pyx_v_k]), __pyx_v_self->prec);
   }
 
-  /* "riemann_theta/riemann_theta.pyx":519
+  /* "riemann_theta/riemann_theta.pyx":517
  *     cdef mpfr_t *Clist
  * 
  *     def __cinit__(self, RealField_class RR, long n):             # <<<<<<<<<<<<<<
@@ -7684,7 +7684,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky___cinit__(str
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":546
+/* "riemann_theta/riemann_theta.pyx":544
  *             mpfr_init2(self.Clist[k],self.prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7711,7 +7711,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_2__dealloc__
   long __pyx_t_3;
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":557
+  /* "riemann_theta/riemann_theta.pyx":555
  *         """
  *         cdef long k
  *         mpfr_clear(self.r1)             # <<<<<<<<<<<<<<
@@ -7720,7 +7720,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_2__dealloc__
  */
   mpfr_clear(__pyx_v_self->r1);
 
-  /* "riemann_theta/riemann_theta.pyx":558
+  /* "riemann_theta/riemann_theta.pyx":556
  *         cdef long k
  *         mpfr_clear(self.r1)
  *         mpfr_clear(self.r2)             # <<<<<<<<<<<<<<
@@ -7729,7 +7729,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_2__dealloc__
  */
   mpfr_clear(__pyx_v_self->r2);
 
-  /* "riemann_theta/riemann_theta.pyx":559
+  /* "riemann_theta/riemann_theta.pyx":557
  *         mpfr_clear(self.r1)
  *         mpfr_clear(self.r2)
  *         for k in range((self.n*(self.n+1))//2):             # <<<<<<<<<<<<<<
@@ -7741,7 +7741,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_2__dealloc__
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_k = __pyx_t_3;
 
-    /* "riemann_theta/riemann_theta.pyx":560
+    /* "riemann_theta/riemann_theta.pyx":558
  *         mpfr_clear(self.r2)
  *         for k in range((self.n*(self.n+1))//2):
  *             mpfr_clear(self.Clist[k])             # <<<<<<<<<<<<<<
@@ -7751,7 +7751,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_2__dealloc__
     mpfr_clear((__pyx_v_self->Clist[__pyx_v_k]));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":561
+  /* "riemann_theta/riemann_theta.pyx":559
  *         for k in range((self.n*(self.n+1))//2):
  *             mpfr_clear(self.Clist[k])
  *         PyMem_Free(self.Clist)             # <<<<<<<<<<<<<<
@@ -7760,7 +7760,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_2__dealloc__
  */
   PyMem_Free(__pyx_v_self->Clist);
 
-  /* "riemann_theta/riemann_theta.pyx":546
+  /* "riemann_theta/riemann_theta.pyx":544
  *             mpfr_init2(self.Clist[k],self.prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -7772,7 +7772,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_2__dealloc__
   __Pyx_RefNannyFinishContext();
 }
 
-/* "riemann_theta/riemann_theta.pyx":563
+/* "riemann_theta/riemann_theta.pyx":561
  *         PyMem_Free(self.Clist)
  * 
  *     cdef assign(self, Matrix_generic_dense C):             # <<<<<<<<<<<<<<
@@ -7802,14 +7802,65 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("assign", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":574
+  /* "riemann_theta/riemann_theta.pyx":572
  *         cdef long i,j,k
  * 
  *         if self.RR is not C.base_ring():             # <<<<<<<<<<<<<<
  *             raise ValueError("parent mismatch")
  *         if C.nrows() != self.n or C.ncols() != self.n:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 574, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 572, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 572, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_4 = (((PyObject *)__pyx_v_self->RR) != __pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_5 = (__pyx_t_4 != 0);
+  if (unlikely(__pyx_t_5)) {
+
+    /* "riemann_theta/riemann_theta.pyx":573
+ * 
+ *         if self.RR is not C.base_ring():
+ *             raise ValueError("parent mismatch")             # <<<<<<<<<<<<<<
+ *         if C.nrows() != self.n or C.ncols() != self.n:
+ *             raise ValueError("matrix not square or not of right dimension")
+ */
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 573, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 573, __pyx_L1_error)
+
+    /* "riemann_theta/riemann_theta.pyx":572
+ *         cdef long i,j,k
+ * 
+ *         if self.RR is not C.base_ring():             # <<<<<<<<<<<<<<
+ *             raise ValueError("parent mismatch")
+ *         if C.nrows() != self.n or C.ncols() != self.n:
+ */
+  }
+
+  /* "riemann_theta/riemann_theta.pyx":574
+ *         if self.RR is not C.base_ring():
+ *             raise ValueError("parent mismatch")
+ *         if C.nrows() != self.n or C.ncols() != self.n:             # <<<<<<<<<<<<<<
+ *             raise ValueError("matrix not square or not of right dimension")
+ * 
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_nrows); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7826,70 +7877,19 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
   if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = (((PyObject *)__pyx_v_self->RR) != __pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_5 = (__pyx_t_4 != 0);
-  if (unlikely(__pyx_t_5)) {
-
-    /* "riemann_theta/riemann_theta.pyx":575
- * 
- *         if self.RR is not C.base_ring():
- *             raise ValueError("parent mismatch")             # <<<<<<<<<<<<<<
- *         if C.nrows() != self.n or C.ncols() != self.n:
- *             raise ValueError("matrix not square or not of right dimension")
- */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 575, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 575, __pyx_L1_error)
-
-    /* "riemann_theta/riemann_theta.pyx":574
- *         cdef long i,j,k
- * 
- *         if self.RR is not C.base_ring():             # <<<<<<<<<<<<<<
- *             raise ValueError("parent mismatch")
- *         if C.nrows() != self.n or C.ncols() != self.n:
- */
-  }
-
-  /* "riemann_theta/riemann_theta.pyx":576
- *         if self.RR is not C.base_ring():
- *             raise ValueError("parent mismatch")
- *         if C.nrows() != self.n or C.ncols() != self.n:             # <<<<<<<<<<<<<<
- *             raise ValueError("matrix not square or not of right dimension")
- * 
- */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_nrows); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (!__pyx_t_4) {
   } else {
     __pyx_t_5 = __pyx_t_4;
     goto __pyx_L5_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_ncols); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_ncols); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7903,34 +7903,34 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
   }
   __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 576, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 576, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_5 = __pyx_t_4;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_5)) {
 
-    /* "riemann_theta/riemann_theta.pyx":577
+    /* "riemann_theta/riemann_theta.pyx":575
  *             raise ValueError("parent mismatch")
  *         if C.nrows() != self.n or C.ncols() != self.n:
  *             raise ValueError("matrix not square or not of right dimension")             # <<<<<<<<<<<<<<
  * 
  *         k = 0
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 577, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 575, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 577, __pyx_L1_error)
+    __PYX_ERR(0, 575, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":576
+    /* "riemann_theta/riemann_theta.pyx":574
  *         if self.RR is not C.base_ring():
  *             raise ValueError("parent mismatch")
  *         if C.nrows() != self.n or C.ncols() != self.n:             # <<<<<<<<<<<<<<
@@ -7939,7 +7939,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":579
+  /* "riemann_theta/riemann_theta.pyx":577
  *             raise ValueError("matrix not square or not of right dimension")
  * 
  *         k = 0             # <<<<<<<<<<<<<<
@@ -7948,7 +7948,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
  */
   __pyx_v_k = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":580
+  /* "riemann_theta/riemann_theta.pyx":578
  * 
  *         k = 0
  *         for j in range(self.n):             # <<<<<<<<<<<<<<
@@ -7960,7 +7960,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_j = __pyx_t_8;
 
-    /* "riemann_theta/riemann_theta.pyx":581
+    /* "riemann_theta/riemann_theta.pyx":579
  *         k = 0
  *         for j in range(self.n):
  *             for i in range(j,self.n):             # <<<<<<<<<<<<<<
@@ -7972,19 +7972,19 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
     for (__pyx_t_11 = __pyx_v_j; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v_i = __pyx_t_11;
 
-      /* "riemann_theta/riemann_theta.pyx":582
+      /* "riemann_theta/riemann_theta.pyx":580
  *         for j in range(self.n):
  *             for i in range(j,self.n):
  *                 mpfr_set(self.Clist[k],(<RealNumber> C.get_unsafe(i,j)).value, self.rnd)             # <<<<<<<<<<<<<<
  *                 k+=1
  * 
  */
-      __pyx_t_1 = ((struct __pyx_vtabstruct_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_v_C->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.__pyx_base.__pyx_base.get_unsafe(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_C), __pyx_v_i, __pyx_v_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 582, __pyx_L1_error)
+      __pyx_t_1 = ((struct __pyx_vtabstruct_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_v_C->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.__pyx_base.__pyx_base.get_unsafe(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_C), __pyx_v_i, __pyx_v_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 580, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       (void)(mpfr_set((__pyx_v_self->Clist[__pyx_v_k]), ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1)->value, __pyx_v_self->rnd));
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":583
+      /* "riemann_theta/riemann_theta.pyx":581
  *             for i in range(j,self.n):
  *                 mpfr_set(self.Clist[k],(<RealNumber> C.get_unsafe(i,j)).value, self.rnd)
  *                 k+=1             # <<<<<<<<<<<<<<
@@ -7995,7 +7995,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
     }
   }
 
-  /* "riemann_theta/riemann_theta.pyx":563
+  /* "riemann_theta/riemann_theta.pyx":561
  *         PyMem_Free(self.Clist)
  * 
  *     cdef assign(self, Matrix_generic_dense C):             # <<<<<<<<<<<<<<
@@ -8018,7 +8018,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign(s
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":586
+/* "riemann_theta/riemann_theta.pyx":584
  * 
  *     @staticmethod
  *     cdef NormCholesky from_cholesky_matrix(Matrix_generic_dense C):             # <<<<<<<<<<<<<<
@@ -8039,14 +8039,14 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *__pyx_f_13
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("from_cholesky_matrix", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":597
+  /* "riemann_theta/riemann_theta.pyx":595
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         cdef NormCholesky NC = NormCholesky(C.base_ring(), C.nrows())             # <<<<<<<<<<<<<<
  *         NC.assign(C)
  *         return NC
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8060,10 +8060,10 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *__pyx_f_13
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_C), __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -8077,10 +8077,10 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *__pyx_f_13
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 597, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -8088,24 +8088,24 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *__pyx_f_13
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_NC = ((struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":598
+  /* "riemann_theta/riemann_theta.pyx":596
  *         """
  *         cdef NormCholesky NC = NormCholesky(C.base_ring(), C.nrows())
  *         NC.assign(C)             # <<<<<<<<<<<<<<
  *         return NC
  * 
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_NC->__pyx_vtab)->assign(__pyx_v_NC, __pyx_v_C); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_NC->__pyx_vtab)->assign(__pyx_v_NC, __pyx_v_C); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":599
+  /* "riemann_theta/riemann_theta.pyx":597
  *         cdef NormCholesky NC = NormCholesky(C.base_ring(), C.nrows())
  *         NC.assign(C)
  *         return NC             # <<<<<<<<<<<<<<
@@ -8117,7 +8117,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *__pyx_f_13
   __pyx_r = __pyx_v_NC;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":586
+  /* "riemann_theta/riemann_theta.pyx":584
  * 
  *     @staticmethod
  *     cdef NormCholesky from_cholesky_matrix(Matrix_generic_dense C):             # <<<<<<<<<<<<<<
@@ -8140,7 +8140,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *__pyx_f_13
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":602
+/* "riemann_theta/riemann_theta.pyx":600
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense C):             # <<<<<<<<<<<<<<
@@ -8150,7 +8150,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *__pyx_f_13
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_5init(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_12NormCholesky_4init[] = "Allocate and initialize norm from lower triangular Cholesky decomposition.\n\n        Python-level wrapper.\n\n        INPUT:\n\n        - ``C`` -- real matrix. Matrix is assumed to be lower triangular.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import NormCholesky\n            sage: RR=RealField(40)\n            sage: C=matrix(RR,2,2,[1,0,1,1])\n            sage: nm=NormCholesky.init(C)\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_12NormCholesky_4init[] = "Allocate and initialize norm from lower triangular Cholesky decomposition.\n\n        Python-level wrapper.\n\n        INPUT:\n\n        - ``C`` -- real matrix. Matrix is assumed to be lower triangular.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import NormCholesky\n            sage: RR=RealField(40)\n            sage: C=matrix(RR,2,2,[1,0,1,1])\n            sage: nm=NormCholesky.init(C)\n\n        ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_12NormCholesky_5init = {"init", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_5init, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13riemann_theta_13riemann_theta_12NormCholesky_4init};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_5init(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *__pyx_v_C = 0;
@@ -8179,7 +8179,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_5init(C
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "init") < 0)) __PYX_ERR(0, 602, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "init") < 0)) __PYX_ERR(0, 600, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -8190,13 +8190,13 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_5init(C
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("init", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 602, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("init", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 600, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.NormCholesky.init", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_C), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "C", 0))) __PYX_ERR(0, 602, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_C), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "C", 0))) __PYX_ERR(0, 600, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_4init(__pyx_v_C);
 
   /* function exit code */
@@ -8217,7 +8217,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_4init(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("init", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":619
+  /* "riemann_theta/riemann_theta.pyx":617
  * 
  *         """
  *         return NormCholesky.from_cholesky_matrix(C)             # <<<<<<<<<<<<<<
@@ -8225,13 +8225,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_4init(s
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_from_cholesky_matrix(__pyx_v_C)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 619, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_from_cholesky_matrix(__pyx_v_C)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":602
+  /* "riemann_theta/riemann_theta.pyx":600
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense C):             # <<<<<<<<<<<<<<
@@ -8250,7 +8250,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_4init(s
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":622
+/* "riemann_theta/riemann_theta.pyx":620
  * 
  * 
  *     cdef mpfr_norm(self, mpfr_t s, mpfr_t *v):             # <<<<<<<<<<<<<<
@@ -8272,7 +8272,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
   long __pyx_t_6;
   __Pyx_RefNannySetupContext("mpfr_norm", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":634
+  /* "riemann_theta/riemann_theta.pyx":632
  *         cdef long i,j,k
  * 
  *         mpfr_set_zero(s,+1)             # <<<<<<<<<<<<<<
@@ -8281,7 +8281,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
  */
   mpfr_set_zero(__pyx_v_s, 1);
 
-  /* "riemann_theta/riemann_theta.pyx":635
+  /* "riemann_theta/riemann_theta.pyx":633
  * 
  *         mpfr_set_zero(s,+1)
  *         k=0             # <<<<<<<<<<<<<<
@@ -8290,7 +8290,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
  */
   __pyx_v_k = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":636
+  /* "riemann_theta/riemann_theta.pyx":634
  *         mpfr_set_zero(s,+1)
  *         k=0
  *         for j in range(self.n):             # <<<<<<<<<<<<<<
@@ -8302,7 +8302,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_j = __pyx_t_3;
 
-    /* "riemann_theta/riemann_theta.pyx":637
+    /* "riemann_theta/riemann_theta.pyx":635
  *         k=0
  *         for j in range(self.n):
  *             mpfr_set_zero(self.r2,+1)             # <<<<<<<<<<<<<<
@@ -8311,7 +8311,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
  */
     mpfr_set_zero(__pyx_v_self->r2, 1);
 
-    /* "riemann_theta/riemann_theta.pyx":638
+    /* "riemann_theta/riemann_theta.pyx":636
  *         for j in range(self.n):
  *             mpfr_set_zero(self.r2,+1)
  *             for i in range(j,self.n):             # <<<<<<<<<<<<<<
@@ -8323,7 +8323,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
     for (__pyx_t_6 = __pyx_v_j; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "riemann_theta/riemann_theta.pyx":639
+      /* "riemann_theta/riemann_theta.pyx":637
  *             mpfr_set_zero(self.r2,+1)
  *             for i in range(j,self.n):
  *                 mpfr_mul(self.r1,v[i],self.Clist[k],self.rnd)             # <<<<<<<<<<<<<<
@@ -8332,7 +8332,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
  */
       (void)(mpfr_mul(__pyx_v_self->r1, (__pyx_v_v[__pyx_v_i]), (__pyx_v_self->Clist[__pyx_v_k]), __pyx_v_self->rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":640
+      /* "riemann_theta/riemann_theta.pyx":638
  *             for i in range(j,self.n):
  *                 mpfr_mul(self.r1,v[i],self.Clist[k],self.rnd)
  *                 k+=1             # <<<<<<<<<<<<<<
@@ -8341,7 +8341,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
  */
       __pyx_v_k = (__pyx_v_k + 1);
 
-      /* "riemann_theta/riemann_theta.pyx":641
+      /* "riemann_theta/riemann_theta.pyx":639
  *                 mpfr_mul(self.r1,v[i],self.Clist[k],self.rnd)
  *                 k+=1
  *                 mpfr_add(self.r2, self.r2 ,self.r1, self.rnd)             # <<<<<<<<<<<<<<
@@ -8351,7 +8351,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
       (void)(mpfr_add(__pyx_v_self->r2, __pyx_v_self->r2, __pyx_v_self->r1, __pyx_v_self->rnd));
     }
 
-    /* "riemann_theta/riemann_theta.pyx":642
+    /* "riemann_theta/riemann_theta.pyx":640
  *                 k+=1
  *                 mpfr_add(self.r2, self.r2 ,self.r1, self.rnd)
  *             mpfr_sqr(self.r1, self.r2, self.rnd)             # <<<<<<<<<<<<<<
@@ -8360,7 +8360,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
  */
     (void)(mpfr_sqr(__pyx_v_self->r1, __pyx_v_self->r2, __pyx_v_self->rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":643
+    /* "riemann_theta/riemann_theta.pyx":641
  *                 mpfr_add(self.r2, self.r2 ,self.r1, self.rnd)
  *             mpfr_sqr(self.r1, self.r2, self.rnd)
  *             mpfr_add(s, s, self.r1, self.rnd)             # <<<<<<<<<<<<<<
@@ -8370,7 +8370,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
     (void)(mpfr_add(__pyx_v_s, __pyx_v_s, __pyx_v_self->r1, __pyx_v_self->rnd));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":622
+  /* "riemann_theta/riemann_theta.pyx":620
  * 
  * 
  *     cdef mpfr_norm(self, mpfr_t s, mpfr_t *v):             # <<<<<<<<<<<<<<
@@ -8385,7 +8385,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":645
+/* "riemann_theta/riemann_theta.pyx":643
  *             mpfr_add(s, s, self.r1, self.rnd)
  * 
  *     def __call__(self, FreeModuleElement_generic_dense v):             # <<<<<<<<<<<<<<
@@ -8395,7 +8395,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_nor
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_7__call__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_12NormCholesky_6__call__[] = "Return norm of vector.\n\n        INPUT:\n\n        - ``v`` -- vector. Vector to compute norm of.\n\n        OUTPUT: Norm of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import NormCholesky\n            sage: RR=RealField(40)\n            sage: C=matrix(RR,2,2,[1,0,1,1])\n            sage: nm=NormCholesky.init(C)\n            sage: v=vector(RR,2,[2,3])\n            sage: nm(v)\n            34.000000000\n            sage: v*C*C.T*v\n            34.000000000\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_12NormCholesky_6__call__[] = "Return norm of vector.\n\n        INPUT:\n\n        - ``v`` -- vector. Vector to compute norm of.\n\n        OUTPUT: Norm of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import NormCholesky\n            sage: RR=RealField(40)\n            sage: C=matrix(RR,2,2,[1,0,1,1])\n            sage: nm=NormCholesky.init(C)\n            sage: v=vector(RR,2,[2,3])\n            sage: nm(v)\n            34.000000000\n            sage: v*C*C.T*v\n            34.000000000\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_12NormCholesky_6__call__;
 #endif
@@ -8426,7 +8426,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_7__call
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) __PYX_ERR(0, 645, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) __PYX_ERR(0, 643, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -8437,13 +8437,13 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12NormCholesky_7__call
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__call__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 645, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__call__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 643, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.NormCholesky.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense, 1, "v", 0))) __PYX_ERR(0, 645, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_v), __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense, 1, "v", 0))) __PYX_ERR(0, 643, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_6__call__(((struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_self), __pyx_v_v);
 
   /* function exit code */
@@ -8466,42 +8466,42 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_6__call
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__call__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":668
+  /* "riemann_theta/riemann_theta.pyx":666
  *         cdef RealNumber s
  *         cdef Vector_mpfr w
  *         s = self.RR._new()             # <<<<<<<<<<<<<<
  *         w = Vector_mpfr.from_vector(v)
  *         self.mpfr_norm(s.value, w.vec)
  */
-  __pyx_t_1 = ((PyObject *)__pyx_f_4sage_5rings_9real_mpfr_15RealField_class__new(__pyx_v_self->RR)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 668, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_4sage_5rings_9real_mpfr_15RealField_class__new(__pyx_v_self->RR)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 666, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_s = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":669
+  /* "riemann_theta/riemann_theta.pyx":667
  *         cdef Vector_mpfr w
  *         s = self.RR._new()
  *         w = Vector_mpfr.from_vector(v)             # <<<<<<<<<<<<<<
  *         self.mpfr_norm(s.value, w.vec)
  *         return s
  */
-  __pyx_t_1 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_from_vector(__pyx_v_v)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 669, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_from_vector(__pyx_v_v)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_w = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":670
+  /* "riemann_theta/riemann_theta.pyx":668
  *         s = self.RR._new()
  *         w = Vector_mpfr.from_vector(v)
  *         self.mpfr_norm(s.value, w.vec)             # <<<<<<<<<<<<<<
  *         return s
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_self->__pyx_vtab)->mpfr_norm(__pyx_v_self, __pyx_v_s->value, __pyx_v_w->vec); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 670, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_self->__pyx_vtab)->mpfr_norm(__pyx_v_self, __pyx_v_s->value, __pyx_v_w->vec); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 668, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":671
+  /* "riemann_theta/riemann_theta.pyx":669
  *         w = Vector_mpfr.from_vector(v)
  *         self.mpfr_norm(s.value, w.vec)
  *         return s             # <<<<<<<<<<<<<<
@@ -8513,7 +8513,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_6__call
   __pyx_r = ((PyObject *)__pyx_v_s);
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":645
+  /* "riemann_theta/riemann_theta.pyx":643
  *             mpfr_add(s, s, self.r1, self.rnd)
  * 
  *     def __call__(self, FreeModuleElement_generic_dense v):             # <<<<<<<<<<<<<<
@@ -8647,7 +8647,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12NormCholesky_10__set
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":688
+/* "riemann_theta/riemann_theta.pyx":686
  *     cdef mpfr_t *Glist
  * 
  *     def __cinit__(self, RealField_class RR, long n):             # <<<<<<<<<<<<<<
@@ -8689,11 +8689,11 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_1__cinit__(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_n)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 688, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, 1); __PYX_ERR(0, 686, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 688, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 686, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -8702,17 +8702,17 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_1__cinit__(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_RR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealField_class *)values[0]);
-    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 688, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyInt_As_long(values[1]); if (unlikely((__pyx_v_n == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 686, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 688, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 686, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.NormGramInt.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_RR), __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class, 1, "RR", 0))) __PYX_ERR(0, 688, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_RR), __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class, 1, "RR", 0))) __PYX_ERR(0, 686, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_v_self), __pyx_v_RR, __pyx_v_n);
 
   /* function exit code */
@@ -8736,7 +8736,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
   long __pyx_t_5;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":703
+  /* "riemann_theta/riemann_theta.pyx":701
  *         """
  *         cdef long k, Glength
  *         self.n = n             # <<<<<<<<<<<<<<
@@ -8745,7 +8745,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
  */
   __pyx_v_self->n = __pyx_v_n;
 
-  /* "riemann_theta/riemann_theta.pyx":704
+  /* "riemann_theta/riemann_theta.pyx":702
  *         cdef long k, Glength
  *         self.n = n
  *         self.RR = RR             # <<<<<<<<<<<<<<
@@ -8758,7 +8758,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
   __Pyx_DECREF(((PyObject *)__pyx_v_self->RR));
   __pyx_v_self->RR = __pyx_v_RR;
 
-  /* "riemann_theta/riemann_theta.pyx":705
+  /* "riemann_theta/riemann_theta.pyx":703
  *         self.n = n
  *         self.RR = RR
  *         self.rnd = RR.rnd             # <<<<<<<<<<<<<<
@@ -8768,7 +8768,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
   __pyx_t_1 = __pyx_v_RR->rnd;
   __pyx_v_self->rnd = __pyx_t_1;
 
-  /* "riemann_theta/riemann_theta.pyx":706
+  /* "riemann_theta/riemann_theta.pyx":704
  *         self.RR = RR
  *         self.rnd = RR.rnd
  *         self.prec = RR.__prec             # <<<<<<<<<<<<<<
@@ -8778,7 +8778,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
   __pyx_t_2 = __pyx_v_RR->__pyx___prec;
   __pyx_v_self->prec = __pyx_t_2;
 
-  /* "riemann_theta/riemann_theta.pyx":707
+  /* "riemann_theta/riemann_theta.pyx":705
  *         self.rnd = RR.rnd
  *         self.prec = RR.__prec
  *         mpfr_init2(self.r, self.prec)             # <<<<<<<<<<<<<<
@@ -8787,7 +8787,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
  */
   mpfr_init2(__pyx_v_self->r, __pyx_v_self->prec);
 
-  /* "riemann_theta/riemann_theta.pyx":708
+  /* "riemann_theta/riemann_theta.pyx":706
  *         self.prec = RR.__prec
  *         mpfr_init2(self.r, self.prec)
  *         Glength = (n*(n+1))//2             # <<<<<<<<<<<<<<
@@ -8796,7 +8796,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
  */
   __pyx_v_Glength = __Pyx_div_long((__pyx_v_n * (__pyx_v_n + 1)), 2);
 
-  /* "riemann_theta/riemann_theta.pyx":709
+  /* "riemann_theta/riemann_theta.pyx":707
  *         mpfr_init2(self.r, self.prec)
  *         Glength = (n*(n+1))//2
  *         self.Glist = <mpfr_t*> PyMem_Malloc(Glength * sizeof(mpfr_t))             # <<<<<<<<<<<<<<
@@ -8805,7 +8805,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
  */
   __pyx_v_self->Glist = ((mpfr_t *)PyMem_Malloc((__pyx_v_Glength * (sizeof(mpfr_t)))));
 
-  /* "riemann_theta/riemann_theta.pyx":710
+  /* "riemann_theta/riemann_theta.pyx":708
  *         Glength = (n*(n+1))//2
  *         self.Glist = <mpfr_t*> PyMem_Malloc(Glength * sizeof(mpfr_t))
  *         for k in range(Glength):             # <<<<<<<<<<<<<<
@@ -8817,7 +8817,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_k = __pyx_t_5;
 
-    /* "riemann_theta/riemann_theta.pyx":711
+    /* "riemann_theta/riemann_theta.pyx":709
  *         self.Glist = <mpfr_t*> PyMem_Malloc(Glength * sizeof(mpfr_t))
  *         for k in range(Glength):
  *             mpfr_init2(self.Glist[k],self.prec)             # <<<<<<<<<<<<<<
@@ -8827,7 +8827,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
     mpfr_init2((__pyx_v_self->Glist[__pyx_v_k]), __pyx_v_self->prec);
   }
 
-  /* "riemann_theta/riemann_theta.pyx":688
+  /* "riemann_theta/riemann_theta.pyx":686
  *     cdef mpfr_t *Glist
  * 
  *     def __cinit__(self, RealField_class RR, long n):             # <<<<<<<<<<<<<<
@@ -8841,7 +8841,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt___cinit__(stru
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":713
+/* "riemann_theta/riemann_theta.pyx":711
  *             mpfr_init2(self.Glist[k],self.prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -8868,7 +8868,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_2__dealloc__(
   long __pyx_t_3;
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":724
+  /* "riemann_theta/riemann_theta.pyx":722
  *         """
  *         cdef long k
  *         mpfr_clear(self.r)             # <<<<<<<<<<<<<<
@@ -8877,7 +8877,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_2__dealloc__(
  */
   mpfr_clear(__pyx_v_self->r);
 
-  /* "riemann_theta/riemann_theta.pyx":725
+  /* "riemann_theta/riemann_theta.pyx":723
  *         cdef long k
  *         mpfr_clear(self.r)
  *         for k in range( (self.n*(self.n+1))//2):             # <<<<<<<<<<<<<<
@@ -8889,7 +8889,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_2__dealloc__(
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_k = __pyx_t_3;
 
-    /* "riemann_theta/riemann_theta.pyx":726
+    /* "riemann_theta/riemann_theta.pyx":724
  *         mpfr_clear(self.r)
  *         for k in range( (self.n*(self.n+1))//2):
  *             mpfr_clear(self.Glist[k])             # <<<<<<<<<<<<<<
@@ -8899,7 +8899,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_2__dealloc__(
     mpfr_clear((__pyx_v_self->Glist[__pyx_v_k]));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":727
+  /* "riemann_theta/riemann_theta.pyx":725
  *         for k in range( (self.n*(self.n+1))//2):
  *             mpfr_clear(self.Glist[k])
  *         PyMem_Free(self.Glist)             # <<<<<<<<<<<<<<
@@ -8908,7 +8908,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_2__dealloc__(
  */
   PyMem_Free(__pyx_v_self->Glist);
 
-  /* "riemann_theta/riemann_theta.pyx":713
+  /* "riemann_theta/riemann_theta.pyx":711
  *             mpfr_init2(self.Glist[k],self.prec)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -8920,7 +8920,7 @@ static void __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_2__dealloc__(
   __Pyx_RefNannyFinishContext();
 }
 
-/* "riemann_theta/riemann_theta.pyx":729
+/* "riemann_theta/riemann_theta.pyx":727
  *         PyMem_Free(self.Glist)
  * 
  *     cdef assign(self, Matrix_generic_dense G):             # <<<<<<<<<<<<<<
@@ -8950,14 +8950,65 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("assign", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":740
+  /* "riemann_theta/riemann_theta.pyx":738
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         if self.RR is not G.base_ring():             # <<<<<<<<<<<<<<
  *             raise ValueError("Base ring mismatch")
  *         if G.nrows() != self.n or G.ncols() != self.n:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 738, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 738, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_4 = (((PyObject *)__pyx_v_self->RR) != __pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_5 = (__pyx_t_4 != 0);
+  if (unlikely(__pyx_t_5)) {
+
+    /* "riemann_theta/riemann_theta.pyx":739
+ *         """
+ *         if self.RR is not G.base_ring():
+ *             raise ValueError("Base ring mismatch")             # <<<<<<<<<<<<<<
+ *         if G.nrows() != self.n or G.ncols() != self.n:
+ *             raise ValueError("Dimension mismatch")
+ */
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 739, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __PYX_ERR(0, 739, __pyx_L1_error)
+
+    /* "riemann_theta/riemann_theta.pyx":738
+ *         This method is cdef only, so cannot be tested from python.
+ *         """
+ *         if self.RR is not G.base_ring():             # <<<<<<<<<<<<<<
+ *             raise ValueError("Base ring mismatch")
+ *         if G.nrows() != self.n or G.ncols() != self.n:
+ */
+  }
+
+  /* "riemann_theta/riemann_theta.pyx":740
+ *         if self.RR is not G.base_ring():
+ *             raise ValueError("Base ring mismatch")
+ *         if G.nrows() != self.n or G.ncols() != self.n:             # <<<<<<<<<<<<<<
+ *             raise ValueError("Dimension mismatch")
+ *         cdef long k = 0
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_nrows); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8974,70 +9025,19 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
   if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = (((PyObject *)__pyx_v_self->RR) != __pyx_t_1);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_5 = (__pyx_t_4 != 0);
-  if (unlikely(__pyx_t_5)) {
-
-    /* "riemann_theta/riemann_theta.pyx":741
- *         """
- *         if self.RR is not G.base_ring():
- *             raise ValueError("Base ring mismatch")             # <<<<<<<<<<<<<<
- *         if G.nrows() != self.n or G.ncols() != self.n:
- *             raise ValueError("Dimension mismatch")
- */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 741, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 741, __pyx_L1_error)
-
-    /* "riemann_theta/riemann_theta.pyx":740
- *         This method is cdef only, so cannot be tested from python.
- *         """
- *         if self.RR is not G.base_ring():             # <<<<<<<<<<<<<<
- *             raise ValueError("Base ring mismatch")
- *         if G.nrows() != self.n or G.ncols() != self.n:
- */
-  }
-
-  /* "riemann_theta/riemann_theta.pyx":742
- *         if self.RR is not G.base_ring():
- *             raise ValueError("Base ring mismatch")
- *         if G.nrows() != self.n or G.ncols() != self.n:             # <<<<<<<<<<<<<<
- *             raise ValueError("Dimension mismatch")
- *         cdef long k = 0
- */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_nrows); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 742, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (!__pyx_t_4) {
   } else {
     __pyx_t_5 = __pyx_t_4;
     goto __pyx_L5_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_ncols); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_ncols); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9051,34 +9051,34 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
   }
   __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_5 = __pyx_t_4;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_5)) {
 
-    /* "riemann_theta/riemann_theta.pyx":743
+    /* "riemann_theta/riemann_theta.pyx":741
  *             raise ValueError("Base ring mismatch")
  *         if G.nrows() != self.n or G.ncols() != self.n:
  *             raise ValueError("Dimension mismatch")             # <<<<<<<<<<<<<<
  *         cdef long k = 0
  *         for i in range(self.n):
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 743, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 741, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 743, __pyx_L1_error)
+    __PYX_ERR(0, 741, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":742
+    /* "riemann_theta/riemann_theta.pyx":740
  *         if self.RR is not G.base_ring():
  *             raise ValueError("Base ring mismatch")
  *         if G.nrows() != self.n or G.ncols() != self.n:             # <<<<<<<<<<<<<<
@@ -9087,7 +9087,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":744
+  /* "riemann_theta/riemann_theta.pyx":742
  *         if G.nrows() != self.n or G.ncols() != self.n:
  *             raise ValueError("Dimension mismatch")
  *         cdef long k = 0             # <<<<<<<<<<<<<<
@@ -9096,7 +9096,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
  */
   __pyx_v_k = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":745
+  /* "riemann_theta/riemann_theta.pyx":743
  *             raise ValueError("Dimension mismatch")
  *         cdef long k = 0
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -9108,19 +9108,19 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "riemann_theta/riemann_theta.pyx":746
+    /* "riemann_theta/riemann_theta.pyx":744
  *         cdef long k = 0
  *         for i in range(self.n):
  *             mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i,i)).value, self.rnd)             # <<<<<<<<<<<<<<
  *             k += 1
  *         for i in range(1, self.n):
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_v_G->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.__pyx_base.__pyx_base.get_unsafe(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_G), __pyx_v_i, __pyx_v_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 746, __pyx_L1_error)
+    __pyx_t_1 = ((struct __pyx_vtabstruct_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_v_G->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.__pyx_base.__pyx_base.get_unsafe(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_G), __pyx_v_i, __pyx_v_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 744, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     (void)(mpfr_set((__pyx_v_self->Glist[__pyx_v_k]), ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1)->value, __pyx_v_self->rnd));
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":747
+    /* "riemann_theta/riemann_theta.pyx":745
  *         for i in range(self.n):
  *             mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i,i)).value, self.rnd)
  *             k += 1             # <<<<<<<<<<<<<<
@@ -9130,7 +9130,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
     __pyx_v_k = (__pyx_v_k + 1);
   }
 
-  /* "riemann_theta/riemann_theta.pyx":748
+  /* "riemann_theta/riemann_theta.pyx":746
  *             mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i,i)).value, self.rnd)
  *             k += 1
  *         for i in range(1, self.n):             # <<<<<<<<<<<<<<
@@ -9142,7 +9142,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
   for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "riemann_theta/riemann_theta.pyx":749
+    /* "riemann_theta/riemann_theta.pyx":747
  *             k += 1
  *         for i in range(1, self.n):
  *             for j in range(i):             # <<<<<<<<<<<<<<
@@ -9154,19 +9154,19 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v_j = __pyx_t_11;
 
-      /* "riemann_theta/riemann_theta.pyx":750
+      /* "riemann_theta/riemann_theta.pyx":748
  *         for i in range(1, self.n):
  *             for j in range(i):
  *                 mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i,j)).value, self.rnd)             # <<<<<<<<<<<<<<
  *                 #note that we multiply the off-diagonal coefficients by 2
  *                 mpfr_mul_si(self.Glist[k], self.Glist[k], 2, self.rnd)
  */
-      __pyx_t_1 = ((struct __pyx_vtabstruct_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_v_G->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.__pyx_base.__pyx_base.get_unsafe(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_G), __pyx_v_i, __pyx_v_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 750, __pyx_L1_error)
+      __pyx_t_1 = ((struct __pyx_vtabstruct_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_v_G->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.__pyx_base.__pyx_base.__pyx_base.get_unsafe(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_G), __pyx_v_i, __pyx_v_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 748, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       (void)(mpfr_set((__pyx_v_self->Glist[__pyx_v_k]), ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1)->value, __pyx_v_self->rnd));
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":752
+      /* "riemann_theta/riemann_theta.pyx":750
  *                 mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i,j)).value, self.rnd)
  *                 #note that we multiply the off-diagonal coefficients by 2
  *                 mpfr_mul_si(self.Glist[k], self.Glist[k], 2, self.rnd)             # <<<<<<<<<<<<<<
@@ -9175,7 +9175,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
  */
       (void)(mpfr_mul_si((__pyx_v_self->Glist[__pyx_v_k]), (__pyx_v_self->Glist[__pyx_v_k]), 2, __pyx_v_self->rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":753
+      /* "riemann_theta/riemann_theta.pyx":751
  *                 #note that we multiply the off-diagonal coefficients by 2
  *                 mpfr_mul_si(self.Glist[k], self.Glist[k], 2, self.rnd)
  *                 k += 1             # <<<<<<<<<<<<<<
@@ -9186,7 +9186,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
     }
   }
 
-  /* "riemann_theta/riemann_theta.pyx":729
+  /* "riemann_theta/riemann_theta.pyx":727
  *         PyMem_Free(self.Glist)
  * 
  *     cdef assign(self, Matrix_generic_dense G):             # <<<<<<<<<<<<<<
@@ -9209,7 +9209,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign(st
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":756
+/* "riemann_theta/riemann_theta.pyx":754
  * 
  *     @staticmethod
  *     cdef NormGramInt from_gram_matrix(Matrix_generic_dense G):             # <<<<<<<<<<<<<<
@@ -9230,14 +9230,14 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("from_gram_matrix", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":769
+  /* "riemann_theta/riemann_theta.pyx":767
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         cdef NormGramInt NG = NormGramInt(G.base_ring(), G.nrows())             # <<<<<<<<<<<<<<
  *         NG.assign(G)
  *         return NG
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 769, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9251,10 +9251,10 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 769, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 769, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_G), __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -9268,10 +9268,10 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 769, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 769, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -9279,24 +9279,24 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2);
   __pyx_t_1 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 769, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_NG = ((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":770
+  /* "riemann_theta/riemann_theta.pyx":768
  *         """
  *         cdef NormGramInt NG = NormGramInt(G.base_ring(), G.nrows())
  *         NG.assign(G)             # <<<<<<<<<<<<<<
  *         return NG
  * 
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_v_NG->__pyx_vtab)->assign(__pyx_v_NG, __pyx_v_G); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 770, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_v_NG->__pyx_vtab)->assign(__pyx_v_NG, __pyx_v_G); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 768, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":771
+  /* "riemann_theta/riemann_theta.pyx":769
  *         cdef NormGramInt NG = NormGramInt(G.base_ring(), G.nrows())
  *         NG.assign(G)
  *         return NG             # <<<<<<<<<<<<<<
@@ -9308,7 +9308,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   __pyx_r = __pyx_v_NG;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":756
+  /* "riemann_theta/riemann_theta.pyx":754
  * 
  *     @staticmethod
  *     cdef NormGramInt from_gram_matrix(Matrix_generic_dense G):             # <<<<<<<<<<<<<<
@@ -9331,7 +9331,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":774
+/* "riemann_theta/riemann_theta.pyx":772
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense G):             # <<<<<<<<<<<<<<
@@ -9341,7 +9341,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_5init(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11NormGramInt_4init[] = "Allocate and initialize norm from Gram matrix.\n\n        Python-level wrapper.\n\n        INPUT:\n\n        - ``G`` -- real matrix. Matrix is assumed to be lower triangular.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import NormGramInit\n            sage: RR=RealField(40)\n            sage: G=matrix(RR,2,2,[1,2,2,1])\n            sage: nm=NormGramInt.init(G)\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11NormGramInt_4init[] = "Allocate and initialize norm from Gram matrix.\n\n        Python-level wrapper.\n\n        INPUT:\n\n        - ``G`` -- real matrix. Matrix is assumed to be lower triangular.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import NormGramInt\n            sage: RR=RealField(40)\n            sage: G=matrix(RR,2,2,[1,2,2,1])\n            sage: nm=NormGramInt.init(G)\n\n        ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_11NormGramInt_5init = {"init", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_5init, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13riemann_theta_13riemann_theta_11NormGramInt_4init};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_5init(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *__pyx_v_G = 0;
@@ -9370,7 +9370,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_5init(CY
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "init") < 0)) __PYX_ERR(0, 774, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "init") < 0)) __PYX_ERR(0, 772, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -9381,13 +9381,13 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_5init(CY
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("init", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 774, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("init", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 772, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.NormGramInt.init", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_G), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "G", 0))) __PYX_ERR(0, 774, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_G), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "G", 0))) __PYX_ERR(0, 772, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_4init(__pyx_v_G);
 
   /* function exit code */
@@ -9408,7 +9408,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_4init(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("init", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":791
+  /* "riemann_theta/riemann_theta.pyx":789
  * 
  *         """
  *         return NormGramInt.from_gram_matrix(G)             # <<<<<<<<<<<<<<
@@ -9416,13 +9416,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_4init(st
  *     cdef NormGramInt scaled_by(self, long C):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_from_gram_matrix(__pyx_v_G)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 791, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_from_gram_matrix(__pyx_v_G)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 789, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":774
+  /* "riemann_theta/riemann_theta.pyx":772
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense G):             # <<<<<<<<<<<<<<
@@ -9441,7 +9441,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_4init(st
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":793
+/* "riemann_theta/riemann_theta.pyx":791
  *         return NormGramInt.from_gram_matrix(G)
  * 
  *     cdef NormGramInt scaled_by(self, long C):             # <<<<<<<<<<<<<<
@@ -9464,16 +9464,16 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("scaled_by", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":803
+  /* "riemann_theta/riemann_theta.pyx":801
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         cdef NormGramInt NG = NormGramInt(self.RR, self.n)             # <<<<<<<<<<<<<<
  *         cdef long k
  *         for k in range( (self.n*(self.n+1))//2 ):
  */
-  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 803, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_self->n); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 801, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 803, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 801, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->RR));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->RR));
@@ -9481,13 +9481,13 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 803, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 801, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_NG = ((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":805
+  /* "riemann_theta/riemann_theta.pyx":803
  *         cdef NormGramInt NG = NormGramInt(self.RR, self.n)
  *         cdef long k
  *         for k in range( (self.n*(self.n+1))//2 ):             # <<<<<<<<<<<<<<
@@ -9499,7 +9499,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_k = __pyx_t_5;
 
-    /* "riemann_theta/riemann_theta.pyx":806
+    /* "riemann_theta/riemann_theta.pyx":804
  *         cdef long k
  *         for k in range( (self.n*(self.n+1))//2 ):
  *             mpfr_div_si(NG.Glist[k],self.Glist[k], C, self.rnd)             # <<<<<<<<<<<<<<
@@ -9509,7 +9509,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
     (void)(mpfr_div_si((__pyx_v_NG->Glist[__pyx_v_k]), (__pyx_v_self->Glist[__pyx_v_k]), __pyx_v_C, __pyx_v_self->rnd));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":807
+  /* "riemann_theta/riemann_theta.pyx":805
  *         for k in range( (self.n*(self.n+1))//2 ):
  *             mpfr_div_si(NG.Glist[k],self.Glist[k], C, self.rnd)
  *         return NG             # <<<<<<<<<<<<<<
@@ -9521,7 +9521,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   __pyx_r = __pyx_v_NG;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":793
+  /* "riemann_theta/riemann_theta.pyx":791
  *         return NormGramInt.from_gram_matrix(G)
  * 
  *     cdef NormGramInt scaled_by(self, long C):             # <<<<<<<<<<<<<<
@@ -9542,7 +9542,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":809
+/* "riemann_theta/riemann_theta.pyx":807
  *         return NG
  * 
  *     cdef mpfr_norm(self, mpfr_t result, long* v):             # <<<<<<<<<<<<<<
@@ -9568,7 +9568,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
   long __pyx_t_8;
   __Pyx_RefNannySetupContext("mpfr_norm", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":820
+  /* "riemann_theta/riemann_theta.pyx":818
  *         """
  *         cdef long i,j,k
  *         cdef mpfr_t * Glist = self.Glist             # <<<<<<<<<<<<<<
@@ -9578,7 +9578,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
   __pyx_t_1 = __pyx_v_self->Glist;
   __pyx_v_Glist = __pyx_t_1;
 
-  /* "riemann_theta/riemann_theta.pyx":821
+  /* "riemann_theta/riemann_theta.pyx":819
  *         cdef long i,j,k
  *         cdef mpfr_t * Glist = self.Glist
  *         cdef mpfr_rnd_t rnd = self.rnd             # <<<<<<<<<<<<<<
@@ -9588,7 +9588,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
   __pyx_t_2 = __pyx_v_self->rnd;
   __pyx_v_rnd = __pyx_t_2;
 
-  /* "riemann_theta/riemann_theta.pyx":822
+  /* "riemann_theta/riemann_theta.pyx":820
  *         cdef mpfr_t * Glist = self.Glist
  *         cdef mpfr_rnd_t rnd = self.rnd
  *         mpfr_set_zero(result,+1)             # <<<<<<<<<<<<<<
@@ -9597,7 +9597,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
  */
   mpfr_set_zero(__pyx_v_result, 1);
 
-  /* "riemann_theta/riemann_theta.pyx":823
+  /* "riemann_theta/riemann_theta.pyx":821
  *         cdef mpfr_rnd_t rnd = self.rnd
  *         mpfr_set_zero(result,+1)
  *         k=0             # <<<<<<<<<<<<<<
@@ -9606,7 +9606,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
  */
   __pyx_v_k = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":824
+  /* "riemann_theta/riemann_theta.pyx":822
  *         mpfr_set_zero(result,+1)
  *         k=0
  *         for i in range(self.n):             # <<<<<<<<<<<<<<
@@ -9618,7 +9618,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "riemann_theta/riemann_theta.pyx":825
+    /* "riemann_theta/riemann_theta.pyx":823
  *         k=0
  *         for i in range(self.n):
  *             mpfr_mul_si(self.r, Glist[k], v[i]**2, rnd)             # <<<<<<<<<<<<<<
@@ -9627,7 +9627,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
  */
     (void)(mpfr_mul_si(__pyx_v_self->r, (__pyx_v_Glist[__pyx_v_k]), __Pyx_pow_long((__pyx_v_v[__pyx_v_i]), 2), __pyx_v_rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":826
+    /* "riemann_theta/riemann_theta.pyx":824
  *         for i in range(self.n):
  *             mpfr_mul_si(self.r, Glist[k], v[i]**2, rnd)
  *             k+=1             # <<<<<<<<<<<<<<
@@ -9636,7 +9636,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
  */
     __pyx_v_k = (__pyx_v_k + 1);
 
-    /* "riemann_theta/riemann_theta.pyx":827
+    /* "riemann_theta/riemann_theta.pyx":825
  *             mpfr_mul_si(self.r, Glist[k], v[i]**2, rnd)
  *             k+=1
  *             mpfr_add(result, result, self.r, rnd)             # <<<<<<<<<<<<<<
@@ -9646,7 +9646,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
     (void)(mpfr_add(__pyx_v_result, __pyx_v_result, __pyx_v_self->r, __pyx_v_rnd));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":828
+  /* "riemann_theta/riemann_theta.pyx":826
  *             k+=1
  *             mpfr_add(result, result, self.r, rnd)
  *         for i in range(1,self.n):             # <<<<<<<<<<<<<<
@@ -9658,7 +9658,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
   for (__pyx_t_5 = 1; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "riemann_theta/riemann_theta.pyx":829
+    /* "riemann_theta/riemann_theta.pyx":827
  *             mpfr_add(result, result, self.r, rnd)
  *         for i in range(1,self.n):
  *             for j in range(i):             # <<<<<<<<<<<<<<
@@ -9670,7 +9670,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_j = __pyx_t_8;
 
-      /* "riemann_theta/riemann_theta.pyx":830
+      /* "riemann_theta/riemann_theta.pyx":828
  *         for i in range(1,self.n):
  *             for j in range(i):
  *                 mpfr_mul_si(self.r, Glist[k], v[i]*v[j], rnd)             # <<<<<<<<<<<<<<
@@ -9679,7 +9679,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
  */
       (void)(mpfr_mul_si(__pyx_v_self->r, (__pyx_v_Glist[__pyx_v_k]), ((__pyx_v_v[__pyx_v_i]) * (__pyx_v_v[__pyx_v_j])), __pyx_v_rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":831
+      /* "riemann_theta/riemann_theta.pyx":829
  *             for j in range(i):
  *                 mpfr_mul_si(self.r, Glist[k], v[i]*v[j], rnd)
  *                 k+=1             # <<<<<<<<<<<<<<
@@ -9688,7 +9688,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
  */
       __pyx_v_k = (__pyx_v_k + 1);
 
-      /* "riemann_theta/riemann_theta.pyx":832
+      /* "riemann_theta/riemann_theta.pyx":830
  *                 mpfr_mul_si(self.r, Glist[k], v[i]*v[j], rnd)
  *                 k+=1
  *                 mpfr_add(result, result, self.r, rnd)             # <<<<<<<<<<<<<<
@@ -9699,7 +9699,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
     }
   }
 
-  /* "riemann_theta/riemann_theta.pyx":809
+  /* "riemann_theta/riemann_theta.pyx":807
  *         return NG
  * 
  *     cdef mpfr_norm(self, mpfr_t result, long* v):             # <<<<<<<<<<<<<<
@@ -9714,7 +9714,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":834
+/* "riemann_theta/riemann_theta.pyx":832
  *                 mpfr_add(result, result, self.r, rnd)
  * 
  *     def __call__(self, w):             # <<<<<<<<<<<<<<
@@ -9724,7 +9724,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_7__call__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_11NormGramInt_6__call__[] = "Return norm of vector.\n\n        INPUT:\n\n        - ``v`` -- vector. Vector to compute norm of.\n\n        OUTPUT: Norm of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import NormGramInt\n            sage: RR=RealField(40)\n            sage: G=matrix(RR,2,2,[1,2,2,1])\n            sage: nm=NormGramInt.init(G)\n            sage: v=vector(ZZ,2,[2,3])\n            sage: nm(v)\n            37.000000000\n            sage: v*G*v\n            37.000000000\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_11NormGramInt_6__call__[] = "Return norm of vector.\n\n        INPUT:\n\n        - ``v`` -- vector. Vector to compute norm of.\n\n        OUTPUT: Norm of vector.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import NormGramInt\n            sage: RR=RealField(40)\n            sage: G=matrix(RR,2,2,[1,2,2,1])\n            sage: nm=NormGramInt.init(G)\n            sage: v=vector(ZZ,2,[2,3])\n            sage: nm(v)\n            37.000000000\n            sage: v*G*v\n            37.000000000\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_11NormGramInt_6__call__;
 #endif
@@ -9755,7 +9755,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_7__call_
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) __PYX_ERR(0, 834, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) __PYX_ERR(0, 832, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -9766,7 +9766,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11NormGramInt_7__call_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__call__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 834, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__call__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 832, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.NormGramInt.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9792,31 +9792,31 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_6__call_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__call__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":855
+  /* "riemann_theta/riemann_theta.pyx":853
  *             37.000000000
  *         """
  *         if len(w) != self.n:             # <<<<<<<<<<<<<<
  *             raise ValueError("Vector dimension mismatch")
  *         cdef Vector_long v = Vector_long.from_list(w)
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_w); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 855, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_w); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 853, __pyx_L1_error)
   __pyx_t_2 = ((__pyx_t_1 != __pyx_v_self->n) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "riemann_theta/riemann_theta.pyx":856
+    /* "riemann_theta/riemann_theta.pyx":854
  *         """
  *         if len(w) != self.n:
  *             raise ValueError("Vector dimension mismatch")             # <<<<<<<<<<<<<<
  *         cdef Vector_long v = Vector_long.from_list(w)
  *         cdef RealNumber s = self.RR._new() #reserve space for our sum
  */
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 856, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 854, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_Raise(__pyx_t_3, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 856, __pyx_L1_error)
+    __PYX_ERR(0, 854, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":855
+    /* "riemann_theta/riemann_theta.pyx":853
  *             37.000000000
  *         """
  *         if len(w) != self.n:             # <<<<<<<<<<<<<<
@@ -9825,43 +9825,43 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_6__call_
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":857
+  /* "riemann_theta/riemann_theta.pyx":855
  *         if len(w) != self.n:
  *             raise ValueError("Vector dimension mismatch")
  *         cdef Vector_long v = Vector_long.from_list(w)             # <<<<<<<<<<<<<<
  *         cdef RealNumber s = self.RR._new() #reserve space for our sum
  *         self.mpfr_norm(s.value, v.vec)
  */
-  __pyx_t_3 = __pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list(__pyx_v_w); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 857, __pyx_L1_error)
+  __pyx_t_3 = __pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list(__pyx_v_w); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 855, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 857, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 855, __pyx_L1_error)
   __pyx_v_v = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":858
+  /* "riemann_theta/riemann_theta.pyx":856
  *             raise ValueError("Vector dimension mismatch")
  *         cdef Vector_long v = Vector_long.from_list(w)
  *         cdef RealNumber s = self.RR._new() #reserve space for our sum             # <<<<<<<<<<<<<<
  *         self.mpfr_norm(s.value, v.vec)
  *         return s
  */
-  __pyx_t_3 = ((PyObject *)__pyx_f_4sage_5rings_9real_mpfr_15RealField_class__new(__pyx_v_self->RR)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 858, __pyx_L1_error)
+  __pyx_t_3 = ((PyObject *)__pyx_f_4sage_5rings_9real_mpfr_15RealField_class__new(__pyx_v_self->RR)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 856, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_s = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":859
+  /* "riemann_theta/riemann_theta.pyx":857
  *         cdef Vector_long v = Vector_long.from_list(w)
  *         cdef RealNumber s = self.RR._new() #reserve space for our sum
  *         self.mpfr_norm(s.value, v.vec)             # <<<<<<<<<<<<<<
  *         return s
  * 
  */
-  __pyx_t_3 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_v_self->__pyx_vtab)->mpfr_norm(__pyx_v_self, __pyx_v_s->value, __pyx_v_v->vec); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 859, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_v_self->__pyx_vtab)->mpfr_norm(__pyx_v_self, __pyx_v_s->value, __pyx_v_v->vec); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 857, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":860
+  /* "riemann_theta/riemann_theta.pyx":858
  *         cdef RealNumber s = self.RR._new() #reserve space for our sum
  *         self.mpfr_norm(s.value, v.vec)
  *         return s             # <<<<<<<<<<<<<<
@@ -9873,7 +9873,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_6__call_
   __pyx_r = ((PyObject *)__pyx_v_s);
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":834
+  /* "riemann_theta/riemann_theta.pyx":832
  *                 mpfr_add(result, result, self.r, rnd)
  * 
  *     def __call__(self, w):             # <<<<<<<<<<<<<<
@@ -10007,7 +10007,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_10__sets
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":862
+/* "riemann_theta/riemann_theta.pyx":860
  *         return s
  * 
  * def imag_func(a):             # <<<<<<<<<<<<<<
@@ -10017,7 +10017,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_11NormGramInt_10__sets
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_1imag_func(PyObject *__pyx_self, PyObject *__pyx_v_a); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_imag_func[] = "Return result of calling ``imag`` method on argument.\n\n    INPUT:\n\n    - ``a`` -- object\n\n    OUTPUT: ``a.imag()``\n\n    EXAMPLE::\n\n        sage: from riemann_theta import imag_func\n        sage: imag_func(CC.0)\n        1.00000000000000\n    ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_imag_func[] = "Return result of calling ``imag`` method on argument.\n\n    INPUT:\n\n    - ``a`` -- object\n\n    OUTPUT: ``a.imag()``\n\n    EXAMPLE::\n\n        sage: from riemann_theta.riemann_theta import imag_func\n        sage: imag_func(CC.0)\n        1.00000000000000\n    ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_1imag_func = {"imag_func", (PyCFunction)__pyx_pw_13riemann_theta_13riemann_theta_1imag_func, METH_O, __pyx_doc_13riemann_theta_13riemann_theta_imag_func};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_1imag_func(PyObject *__pyx_self, PyObject *__pyx_v_a) {
   PyObject *__pyx_r = 0;
@@ -10041,7 +10041,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_imag_func(CYTHON_UNUSE
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("imag_func", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":877
+  /* "riemann_theta/riemann_theta.pyx":875
  *         1.00000000000000
  *     """
  *     return a.imag()             # <<<<<<<<<<<<<<
@@ -10049,7 +10049,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_imag_func(CYTHON_UNUSE
  * def real_func(a):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_imag); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 877, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_imag); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 875, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -10063,14 +10063,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_imag_func(CYTHON_UNUSE
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 877, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 875, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":862
+  /* "riemann_theta/riemann_theta.pyx":860
  *         return s
  * 
  * def imag_func(a):             # <<<<<<<<<<<<<<
@@ -10091,7 +10091,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_imag_func(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":879
+/* "riemann_theta/riemann_theta.pyx":877
  *     return a.imag()
  * 
  * def real_func(a):             # <<<<<<<<<<<<<<
@@ -10101,7 +10101,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_imag_func(CYTHON_UNUSE
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_3real_func(PyObject *__pyx_self, PyObject *__pyx_v_a); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_2real_func[] = "Return result of calling ``real`` method on argument.\n\n    INPUT:\n\n    - ``a`` -- object\n\n    OUTPUT: ``a.real()``\n\n    EXAMPLE::\n\n        sage: from riemann_theta import real_func\n        sage: real_func(CC.0)\n        0.000000000000000\n    ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_2real_func[] = "Return result of calling ``real`` method on argument.\n\n    INPUT:\n\n    - ``a`` -- object\n\n    OUTPUT: ``a.real()``\n\n    EXAMPLE::\n\n        sage: from riemann_theta.riemann_theta import real_func\n        sage: real_func(CC.0)\n        0.000000000000000\n    ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_3real_func = {"real_func", (PyCFunction)__pyx_pw_13riemann_theta_13riemann_theta_3real_func, METH_O, __pyx_doc_13riemann_theta_13riemann_theta_2real_func};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_3real_func(PyObject *__pyx_self, PyObject *__pyx_v_a) {
   PyObject *__pyx_r = 0;
@@ -10125,7 +10125,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_2real_func(CYTHON_UNUS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("real_func", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":894
+  /* "riemann_theta/riemann_theta.pyx":892
  *         0.000000000000000
  *     """
  *     return a.real()             # <<<<<<<<<<<<<<
@@ -10133,7 +10133,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_2real_func(CYTHON_UNUS
  * def round_func(a):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_real); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 894, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_real); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 892, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -10147,14 +10147,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_2real_func(CYTHON_UNUS
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 894, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 892, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":879
+  /* "riemann_theta/riemann_theta.pyx":877
  *     return a.imag()
  * 
  * def real_func(a):             # <<<<<<<<<<<<<<
@@ -10175,7 +10175,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_2real_func(CYTHON_UNUS
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":896
+/* "riemann_theta/riemann_theta.pyx":894
  *     return a.real()
  * 
  * def round_func(a):             # <<<<<<<<<<<<<<
@@ -10185,7 +10185,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_2real_func(CYTHON_UNUS
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_5round_func(PyObject *__pyx_self, PyObject *__pyx_v_a); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_4round_func[] = "Return result of calling ``round`` method on argument.\n\n    INPUT:\n\n    - ``a`` -- object\n\n    OUTPUT: ``a.round()``\n\n    EXAMPLE::\n\n        sage: from riemann_theta import round_func\n        sage: round_func(2.7)\n        3\n\n    ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_4round_func[] = "Return result of calling ``round`` method on argument.\n\n    INPUT:\n\n    - ``a`` -- object\n\n    OUTPUT: ``a.round()``\n\n    EXAMPLE::\n\n        sage: from riemann_theta.riemann_theta import round_func\n        sage: round_func(2.7)\n        3\n\n    ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_5round_func = {"round_func", (PyCFunction)__pyx_pw_13riemann_theta_13riemann_theta_5round_func, METH_O, __pyx_doc_13riemann_theta_13riemann_theta_4round_func};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_5round_func(PyObject *__pyx_self, PyObject *__pyx_v_a) {
   PyObject *__pyx_r = 0;
@@ -10209,7 +10209,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_4round_func(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("round_func", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":912
+  /* "riemann_theta/riemann_theta.pyx":910
  * 
  *     """
  *     return a.round()             # <<<<<<<<<<<<<<
@@ -10217,7 +10217,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_4round_func(CYTHON_UNU
  * def Rbound(Y, tol):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_round); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 912, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_round); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 910, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -10231,14 +10231,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_4round_func(CYTHON_UNU
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 912, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 910, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":896
+  /* "riemann_theta/riemann_theta.pyx":894
  *     return a.real()
  * 
  * def round_func(a):             # <<<<<<<<<<<<<<
@@ -10259,7 +10259,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_4round_func(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":914
+/* "riemann_theta/riemann_theta.pyx":912
  *     return a.round()
  * 
  * def Rbound(Y, tol):             # <<<<<<<<<<<<<<
@@ -10269,7 +10269,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_4round_func(CYTHON_UNU
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_7Rbound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_6Rbound[] = "Compute radius for Riemann theta function summation.\n\n    See Theorem 2 in [DHBvHS2004]_.\n\n    INPUT:\n\n    - ``Y`` -- real matrix. Positive definite (imaginary part of a Riemann matrix)\n    - ``tol`` -- real number. Tolerance for error allowed in theta function summation.\n\n    OUTPUT: radius for summation to restrict error term to be within specified tolerance.\n\n    EXAMPLE::\n\n        sage: from riemann_theta import Rbound\n        sage: Y = matrix(RR,2,2,[1,0,0,1])\n        sage: Rbound(Y,10^(-10))\n        5.70985786129...\n\n    ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_6Rbound[] = "Compute radius for Riemann theta function summation.\n\n    See Theorem 2 in [DHBvHS2004]_.\n\n    INPUT:\n\n    - ``Y`` -- real matrix. Positive definite (imaginary part of a Riemann matrix)\n    - ``tol`` -- real number. Tolerance for error allowed in theta function summation.\n\n    OUTPUT: radius for summation to restrict error term to be within specified tolerance.\n\n    EXAMPLE::\n\n        sage: from riemann_theta.riemann_theta import Rbound\n        sage: Y = matrix(RR,2,2,[1,0,0,1])\n        sage: Rbound(Y,10^(-10))\n        5.70985786129...\n\n    ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_7Rbound = {"Rbound", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13riemann_theta_13riemann_theta_7Rbound, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13riemann_theta_13riemann_theta_6Rbound};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_7Rbound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_Y = 0;
@@ -10303,11 +10303,11 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_7Rbound(PyObject *__py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tol)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("Rbound", 1, 2, 2, 1); __PYX_ERR(0, 914, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("Rbound", 1, 2, 2, 1); __PYX_ERR(0, 912, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "Rbound") < 0)) __PYX_ERR(0, 914, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "Rbound") < 0)) __PYX_ERR(0, 912, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -10320,7 +10320,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_7Rbound(PyObject *__py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("Rbound", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 914, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("Rbound", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 912, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.Rbound", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -10333,7 +10333,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_7Rbound(PyObject *__py
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":944
+/* "riemann_theta/riemann_theta.pyx":942
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()
  *     def f(R):             # <<<<<<<<<<<<<<
@@ -10375,7 +10375,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(PyObject *__
   __pyx_outer_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "riemann_theta/riemann_theta.pyx":945
+  /* "riemann_theta/riemann_theta.pyx":943
  *     rho = (pi*rho).sqrt()
  *     def f(R):
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol             # <<<<<<<<<<<<<<
@@ -10383,22 +10383,22 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(PyObject *__
  *         return -2*(2*R-rho)**(g-1) *g* ( -(2*R-rho)**2/4).exp()/rho**g
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_cur_scope->__pyx_v_g * __Pyx_pow_long(2, (__pyx_cur_scope->__pyx_v_g - 1)))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_cur_scope->__pyx_v_g * __Pyx_pow_long(2, (__pyx_cur_scope->__pyx_v_g - 1)))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_RR)) { __Pyx_RaiseClosureNameError("RR"); __PYX_ERR(0, 945, __pyx_L1_error) }
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_pari); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 945, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_RR)) { __Pyx_RaiseClosureNameError("RR"); __PYX_ERR(0, 943, __pyx_L1_error) }
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_pari); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_incgam); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_incgam); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_half_g)) { __Pyx_RaiseClosureNameError("half_g"); __PYX_ERR(0, 945, __pyx_L1_error) }
-  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 945, __pyx_L1_error) }
-  __pyx_t_4 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 945, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_half_g)) { __Pyx_RaiseClosureNameError("half_g"); __PYX_ERR(0, 943, __pyx_L1_error) }
+  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 943, __pyx_L1_error) }
+  __pyx_t_4 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = PyNumber_Subtract(__pyx_v_R, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_6 = PyNumber_Subtract(__pyx_v_R, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Power(__pyx_t_6, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Power(__pyx_t_6, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -10416,7 +10416,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(PyObject *__
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[3] = {__pyx_t_6, ((PyObject *)__pyx_cur_scope->__pyx_v_half_g), __pyx_t_4};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 943, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -10425,14 +10425,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(PyObject *__
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[3] = {__pyx_t_6, ((PyObject *)__pyx_cur_scope->__pyx_v_half_g), __pyx_t_4};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 943, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 945, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 943, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -10443,7 +10443,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(PyObject *__
     __Pyx_GIVEREF(__pyx_t_4);
     PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 943, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
@@ -10462,32 +10462,32 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(PyObject *__
   __pyx_t_2 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_8, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 945, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 945, __pyx_L1_error) }
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 945, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 943, __pyx_L1_error) }
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyNumber_Power(((PyObject *)__pyx_cur_scope->__pyx_v_rho), __pyx_t_5, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Power(((PyObject *)__pyx_cur_scope->__pyx_v_rho), __pyx_t_5, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_tol)) { __Pyx_RaiseClosureNameError("tol"); __PYX_ERR(0, 945, __pyx_L1_error) }
-  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_cur_scope->__pyx_v_tol); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 945, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_tol)) { __Pyx_RaiseClosureNameError("tol"); __PYX_ERR(0, 943, __pyx_L1_error) }
+  __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_cur_scope->__pyx_v_tol); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_5;
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":944
+  /* "riemann_theta/riemann_theta.pyx":942
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()
  *     def f(R):             # <<<<<<<<<<<<<<
@@ -10512,7 +10512,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(PyObject *__
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":946
+/* "riemann_theta/riemann_theta.pyx":944
  *     def f(R):
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
@@ -10550,7 +10550,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_2df(PyObject *
   __pyx_outer_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "riemann_theta/riemann_theta.pyx":947
+  /* "riemann_theta/riemann_theta.pyx":945
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  *     def df(R):
  *         return -2*(2*R-rho)**(g-1) *g* ( -(2*R-rho)**2/4).exp()/rho**g             # <<<<<<<<<<<<<<
@@ -10558,43 +10558,43 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_2df(PyObject *
  *     Rmin = (RR(2*g).sqrt()+rho)/2
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_int_2, __pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_int_2, __pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 947, __pyx_L1_error) }
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 947, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 945, __pyx_L1_error) }
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_cur_scope->__pyx_v_g - 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_cur_scope->__pyx_v_g - 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyNumber_Power(__pyx_t_2, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Power(__pyx_t_2, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_int_neg_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_int_neg_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_int_2, __pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_int_2, __pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 947, __pyx_L1_error) }
-  __pyx_t_4 = PyNumber_Subtract(__pyx_t_1, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 947, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 945, __pyx_L1_error) }
+  __pyx_t_4 = PyNumber_Subtract(__pyx_t_1, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Power(__pyx_t_4, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Power(__pyx_t_4, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Negative(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Negative(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_exp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_exp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -10609,20 +10609,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_2df(PyObject *
   }
   __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 947, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Multiply(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 947, __pyx_L1_error) }
-  __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 947, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 945, __pyx_L1_error) }
+  __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyNumber_Power(((PyObject *)__pyx_cur_scope->__pyx_v_rho), __pyx_t_3, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Power(((PyObject *)__pyx_cur_scope->__pyx_v_rho), __pyx_t_3, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -10630,7 +10630,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_2df(PyObject *
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":946
+  /* "riemann_theta/riemann_theta.pyx":944
  *     def f(R):
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
@@ -10652,7 +10652,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound_2df(PyObject *
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":914
+/* "riemann_theta/riemann_theta.pyx":912
  *     return a.round()
  * 
  * def Rbound(Y, tol):             # <<<<<<<<<<<<<<
@@ -10688,7 +10688,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 914, __pyx_L1_error)
+    __PYX_ERR(0, 912, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -10696,7 +10696,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_tol);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_tol);
 
-  /* "riemann_theta/riemann_theta.pyx":938
+  /* "riemann_theta/riemann_theta.pyx":936
  *     cdef long g
  * 
  *     RR = RealField(53)             # <<<<<<<<<<<<<<
@@ -10705,21 +10705,21 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.prec = 53;
-  __pyx_t_1 = __pyx_f_4sage_5rings_9real_mpfr_RealField(0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 938, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4sage_5rings_9real_mpfr_RealField(0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 936, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class))))) __PYX_ERR(0, 938, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class))))) __PYX_ERR(0, 936, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_RR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealField_class *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":939
+  /* "riemann_theta/riemann_theta.pyx":937
  * 
  *     RR = RealField(53)
  *     pi = RR.pi()             # <<<<<<<<<<<<<<
  *     g = Y.nrows()
  *     half_g = RR(g)/2
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_cur_scope->__pyx_v_RR), __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 939, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_cur_scope->__pyx_v_RR), __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 937, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -10733,21 +10733,21 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   }
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 939, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 937, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 939, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 937, __pyx_L1_error)
   __pyx_v_pi = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":940
+  /* "riemann_theta/riemann_theta.pyx":938
  *     RR = RealField(53)
  *     pi = RR.pi()
  *     g = Y.nrows()             # <<<<<<<<<<<<<<
  *     half_g = RR(g)/2
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_Y, __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 940, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_Y, __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 938, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -10761,21 +10761,21 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   }
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 940, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 938, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_5 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 940, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_5 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 938, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_cur_scope->__pyx_v_g = __pyx_t_5;
 
-  /* "riemann_theta/riemann_theta.pyx":941
+  /* "riemann_theta/riemann_theta.pyx":939
  *     pi = RR.pi()
  *     g = Y.nrows()
  *     half_g = RR(g)/2             # <<<<<<<<<<<<<<
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()
  */
-  __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 941, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_RR));
   __pyx_t_4 = ((PyObject *)__pyx_cur_scope->__pyx_v_RR); __pyx_t_6 = NULL;
@@ -10791,43 +10791,43 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_6, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 941, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 941, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 941, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 939, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_cur_scope->__pyx_v_half_g = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":942
+  /* "riemann_theta/riemann_theta.pyx":940
  *     g = Y.nrows()
  *     half_g = RR(g)/2
  *     rho = RR(pari.qfminim(Y,flag=2)[1])             # <<<<<<<<<<<<<<
  *     rho = (pi*rho).sqrt()
  *     def f(R):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_pari); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_pari); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_qfminim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 942, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_qfminim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_Y);
   __Pyx_GIVEREF(__pyx_v_Y);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_Y);
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 942, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_flag, __pyx_int_2) < 0) __PYX_ERR(0, 942, __pyx_L1_error)
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 942, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_flag, __pyx_int_2) < 0) __PYX_ERR(0, 940, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_7, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 942, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_7, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_RR));
@@ -10844,24 +10844,24 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   __pyx_t_4 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 942, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 940, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_cur_scope->__pyx_v_rho = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":943
+  /* "riemann_theta/riemann_theta.pyx":941
  *     half_g = RR(g)/2
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()             # <<<<<<<<<<<<<<
  *     def f(R):
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  */
-  __pyx_t_7 = PyNumber_Multiply(((PyObject *)__pyx_v_pi), ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 943, __pyx_L1_error)
+  __pyx_t_7 = PyNumber_Multiply(((PyObject *)__pyx_v_pi), ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 943, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = NULL;
@@ -10876,47 +10876,47 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   }
   __pyx_t_4 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 943, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 943, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(((PyObject *)__pyx_cur_scope->__pyx_v_rho));
   __Pyx_DECREF_SET(__pyx_cur_scope->__pyx_v_rho, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_4));
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":944
+  /* "riemann_theta/riemann_theta.pyx":942
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()
  *     def f(R):             # <<<<<<<<<<<<<<
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  *     def df(R):
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_6Rbound_1f, 0, __pyx_n_s_Rbound_locals_f, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 944, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_6Rbound_1f, 0, __pyx_n_s_Rbound_locals_f, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_f = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":946
+  /* "riemann_theta/riemann_theta.pyx":944
  *     def f(R):
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
  *         return -2*(2*R-rho)**(g-1) *g* ( -(2*R-rho)**2/4).exp()/rho**g
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_6Rbound_3df, 0, __pyx_n_s_Rbound_locals_df, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 946, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_6Rbound_3df, 0, __pyx_n_s_Rbound_locals_df, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 944, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_df = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":949
+  /* "riemann_theta/riemann_theta.pyx":947
  *         return -2*(2*R-rho)**(g-1) *g* ( -(2*R-rho)**2/4).exp()/rho**g
  * 
  *     Rmin = (RR(2*g).sqrt()+rho)/2             # <<<<<<<<<<<<<<
  *     R = Rmin
  *     fR = f(R)
  */
-  __pyx_t_7 = __Pyx_PyInt_From_long((2 * __pyx_cur_scope->__pyx_v_g)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 949, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_long((2 * __pyx_cur_scope->__pyx_v_g)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 947, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_RR));
   __pyx_t_1 = ((PyObject *)__pyx_cur_scope->__pyx_v_RR); __pyx_t_3 = NULL;
@@ -10932,10 +10932,10 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   __pyx_t_6 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_3, __pyx_t_7) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 949, __pyx_L1_error)
+  if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 947, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 949, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -10950,20 +10950,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   }
   __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 949, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 947, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Add(__pyx_t_4, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 949, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_4, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 949, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 947, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 949, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 947, __pyx_L1_error)
   __pyx_v_Rmin = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":950
+  /* "riemann_theta/riemann_theta.pyx":948
  * 
  *     Rmin = (RR(2*g).sqrt()+rho)/2
  *     R = Rmin             # <<<<<<<<<<<<<<
@@ -10973,32 +10973,32 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   __Pyx_INCREF(((PyObject *)__pyx_v_Rmin));
   __pyx_v_R = __pyx_v_Rmin;
 
-  /* "riemann_theta/riemann_theta.pyx":951
+  /* "riemann_theta/riemann_theta.pyx":949
  *     Rmin = (RR(2*g).sqrt()+rho)/2
  *     R = Rmin
  *     fR = f(R)             # <<<<<<<<<<<<<<
  *     #because the Gamma function is so highly convex, newton iteration rather severely underestimates where the
  *     #zero lies. That means Newton iteration is actually pretty slow. It would help if we could start
  */
-  __pyx_t_4 = __pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 951, __pyx_L1_error)
+  __pyx_t_4 = __pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 949, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 951, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 949, __pyx_L1_error)
   __pyx_v_fR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":955
+  /* "riemann_theta/riemann_theta.pyx":953
  *     #zero lies. That means Newton iteration is actually pretty slow. It would help if we could start
  *     #with a much better initial approximation.
  *     if fR > 0:             # <<<<<<<<<<<<<<
  *         while True:
  *             fRo = fR
  */
-  __pyx_t_4 = PyObject_RichCompare(((PyObject *)__pyx_v_fR), __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 955, __pyx_L1_error)
-  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 955, __pyx_L1_error)
+  __pyx_t_4 = PyObject_RichCompare(((PyObject *)__pyx_v_fR), __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 953, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 953, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_8) {
 
-    /* "riemann_theta/riemann_theta.pyx":956
+    /* "riemann_theta/riemann_theta.pyx":954
  *     #with a much better initial approximation.
  *     if fR > 0:
  *         while True:             # <<<<<<<<<<<<<<
@@ -11007,7 +11007,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
  */
     while (1) {
 
-      /* "riemann_theta/riemann_theta.pyx":957
+      /* "riemann_theta/riemann_theta.pyx":955
  *     if fR > 0:
  *         while True:
  *             fRo = fR             # <<<<<<<<<<<<<<
@@ -11017,67 +11017,67 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
       __Pyx_INCREF(((PyObject *)__pyx_v_fR));
       __Pyx_XDECREF_SET(__pyx_v_fRo, __pyx_v_fR);
 
-      /* "riemann_theta/riemann_theta.pyx":958
+      /* "riemann_theta/riemann_theta.pyx":956
  *         while True:
  *             fRo = fR
  *             dfR = df(R)             # <<<<<<<<<<<<<<
  *             R = R - fR/dfR
  *             fR = f(R)
  */
-      __pyx_t_4 = __pyx_pf_13riemann_theta_13riemann_theta_6Rbound_2df(__pyx_v_df, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __pyx_t_4 = __pyx_pf_13riemann_theta_13riemann_theta_6Rbound_2df(__pyx_v_df, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 956, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 958, __pyx_L1_error)
+      if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 956, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_dfR, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_4));
       __pyx_t_4 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":959
+      /* "riemann_theta/riemann_theta.pyx":957
  *             fRo = fR
  *             dfR = df(R)
  *             R = R - fR/dfR             # <<<<<<<<<<<<<<
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():
  */
-      __pyx_t_4 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_fR), ((PyObject *)__pyx_v_dfR)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 959, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_fR), ((PyObject *)__pyx_v_dfR)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 957, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_1 = PyNumber_Subtract(((PyObject *)__pyx_v_R), __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 959, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Subtract(((PyObject *)__pyx_v_R), __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 957, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 959, __pyx_L1_error)
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 957, __pyx_L1_error)
       __Pyx_DECREF_SET(__pyx_v_R, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1));
       __pyx_t_1 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":960
+      /* "riemann_theta/riemann_theta.pyx":958
  *             dfR = df(R)
  *             R = R - fR/dfR
  *             fR = f(R)             # <<<<<<<<<<<<<<
  *             if fR.abs() >= fRo.abs():
  *                 break
  */
-      __pyx_t_1 = __pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 960, __pyx_L1_error)
+      __pyx_t_1 = __pyx_pf_13riemann_theta_13riemann_theta_6Rbound_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 958, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 960, __pyx_L1_error)
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 958, __pyx_L1_error)
       __Pyx_DECREF_SET(__pyx_v_fR, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1));
       __pyx_t_1 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":961
+      /* "riemann_theta/riemann_theta.pyx":959
  *             R = R - fR/dfR
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():             # <<<<<<<<<<<<<<
  *                 break
  *         assert R > Rmin
  */
-      __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fR->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fR)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 961, __pyx_L1_error)
+      __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fR->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fR)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 959, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fRo->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fRo)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 961, __pyx_L1_error)
+      __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fRo->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fRo)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 959, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_GE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 961, __pyx_L1_error)
+      __pyx_t_6 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_GE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 959, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 961, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 959, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (__pyx_t_8) {
 
-        /* "riemann_theta/riemann_theta.pyx":962
+        /* "riemann_theta/riemann_theta.pyx":960
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():
  *                 break             # <<<<<<<<<<<<<<
@@ -11086,7 +11086,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
  */
         goto __pyx_L5_break;
 
-        /* "riemann_theta/riemann_theta.pyx":961
+        /* "riemann_theta/riemann_theta.pyx":959
  *             R = R - fR/dfR
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():             # <<<<<<<<<<<<<<
@@ -11097,7 +11097,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
     }
     __pyx_L5_break:;
 
-    /* "riemann_theta/riemann_theta.pyx":963
+    /* "riemann_theta/riemann_theta.pyx":961
  *             if fR.abs() >= fRo.abs():
  *                 break
  *         assert R > Rmin             # <<<<<<<<<<<<<<
@@ -11106,17 +11106,17 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
  */
     #ifndef CYTHON_WITHOUT_ASSERTIONS
     if (unlikely(!Py_OptimizeFlag)) {
-      __pyx_t_6 = PyObject_RichCompare(((PyObject *)__pyx_v_R), ((PyObject *)__pyx_v_Rmin), Py_GT); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 963, __pyx_L1_error)
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 963, __pyx_L1_error)
+      __pyx_t_6 = PyObject_RichCompare(((PyObject *)__pyx_v_R), ((PyObject *)__pyx_v_Rmin), Py_GT); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 961, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 961, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (unlikely(!__pyx_t_8)) {
         PyErr_SetNone(PyExc_AssertionError);
-        __PYX_ERR(0, 963, __pyx_L1_error)
+        __PYX_ERR(0, 961, __pyx_L1_error)
       }
     }
     #endif
 
-    /* "riemann_theta/riemann_theta.pyx":955
+    /* "riemann_theta/riemann_theta.pyx":953
  *     #zero lies. That means Newton iteration is actually pretty slow. It would help if we could start
  *     #with a much better initial approximation.
  *     if fR > 0:             # <<<<<<<<<<<<<<
@@ -11125,7 +11125,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":964
+  /* "riemann_theta/riemann_theta.pyx":962
  *                 break
  *         assert R > Rmin
  *     return R             # <<<<<<<<<<<<<<
@@ -11137,7 +11137,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   __pyx_r = ((PyObject *)__pyx_v_R);
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":914
+  /* "riemann_theta/riemann_theta.pyx":912
  *     return a.round()
  * 
  * def Rbound(Y, tol):             # <<<<<<<<<<<<<<
@@ -11169,7 +11169,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":966
+/* "riemann_theta/riemann_theta.pyx":964
  *     return R
  * 
  * def Rbound_deriv(Y, N, tol):             # <<<<<<<<<<<<<<
@@ -11179,7 +11179,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_6Rbound(CYTHON_UNUSED 
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_9Rbound_deriv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_8Rbound_deriv[] = "Compute radius for Riemann theta function summation with derivatives.\n\n    See Theorem 3.1 in [AC2019]_.\n\n    INPUT:\n\n    - ``Y`` -- real matrix. Positive definite (imaginary part of a Riemann matrix)\n    - ``N`` -- integer. Order of derivative.\n    - ``tol`` -- real number. Tolerance for error allowed in theta function summation.\n\n    OUTPUT: radius for summation to restrict error term to be within specified tolerance.\n\n    EXAMPLE::\n\n        sage: from riemann_theta import Rbound_deriv\n        sage: Y = matrix(RR,2,2,[1,0,0,1])\n        sage: Rbound_deriv(Y,3,10^(-10))\n        6.6689474473...\n\n    ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_8Rbound_deriv[] = "Compute radius for Riemann theta function summation with derivatives.\n\n    See Theorem 3.1 in [AC2019]_.\n\n    INPUT:\n\n    - ``Y`` -- real matrix. Positive definite (imaginary part of a Riemann matrix)\n    - ``N`` -- integer. Order of derivative.\n    - ``tol`` -- real number. Tolerance for error allowed in theta function summation.\n\n    OUTPUT: radius for summation to restrict error term to be within specified tolerance.\n\n    EXAMPLE::\n\n        sage: from riemann_theta.riemann_theta import Rbound_deriv\n        sage: Y = matrix(RR,2,2,[1,0,0,1])\n        sage: Rbound_deriv(Y,3,10^(-10))\n        6.6689474473...\n\n    ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_9Rbound_deriv = {"Rbound_deriv", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13riemann_theta_13riemann_theta_9Rbound_deriv, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13riemann_theta_13riemann_theta_8Rbound_deriv};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_9Rbound_deriv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_Y = 0;
@@ -11216,17 +11216,17 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_9Rbound_deriv(PyObject
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_N)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("Rbound_deriv", 1, 3, 3, 1); __PYX_ERR(0, 966, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("Rbound_deriv", 1, 3, 3, 1); __PYX_ERR(0, 964, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_tol)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("Rbound_deriv", 1, 3, 3, 2); __PYX_ERR(0, 966, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("Rbound_deriv", 1, 3, 3, 2); __PYX_ERR(0, 964, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "Rbound_deriv") < 0)) __PYX_ERR(0, 966, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "Rbound_deriv") < 0)) __PYX_ERR(0, 964, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -11241,7 +11241,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_9Rbound_deriv(PyObject
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("Rbound_deriv", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 966, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("Rbound_deriv", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 964, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.Rbound_deriv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11254,7 +11254,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_9Rbound_deriv(PyObject
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1006
+/* "riemann_theta/riemann_theta.pyx":1004
  *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g
  *     def f(R):             # <<<<<<<<<<<<<<
@@ -11277,7 +11277,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12Rbound_deriv_1f(PyOb
 }
 static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "riemann_theta/riemann_theta.pyx":1007
+/* "riemann_theta/riemann_theta.pyx":1005
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol             # <<<<<<<<<<<<<<
@@ -11297,7 +11297,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_gene
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1007, __pyx_L1_error)
+    __PYX_ERR(0, 1005, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -11305,7 +11305,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_gene
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_Rbound_deriv_locals_f_locals_gen, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_Rbound_deriv_locals_f_locals_gen, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1005, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -11337,6 +11337,374 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_2gen
   PyObject *__pyx_t_10 = NULL;
   int __pyx_t_11;
   PyObject *__pyx_t_12 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("genexpr", 0);
+  switch (__pyx_generator->resume_label) {
+    case 0: goto __pyx_L3_first_run;
+    case 1: goto __pyx_L6_resume_from_yield;
+    default: /* CPython raises the right error here */
+    __Pyx_RefNannyFinishContext();
+    return NULL;
+  }
+  __pyx_L3_first_run:;
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_N)) { __Pyx_RaiseClosureNameError("N"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_N, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
+    __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_3 = 0;
+    __pyx_t_4 = NULL;
+  } else {
+    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  for (;;) {
+    if (likely(!__pyx_t_4)) {
+      if (likely(PyList_CheckExact(__pyx_t_1))) {
+        if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_1)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 1005, __pyx_L1_error)
+        #else
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        #endif
+      } else {
+        if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 1005, __pyx_L1_error)
+        #else
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        #endif
+      }
+    } else {
+      __pyx_t_2 = __pyx_t_4(__pyx_t_1);
+      if (unlikely(!__pyx_t_2)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 1005, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_2);
+    }
+    __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_i);
+    __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_i, __pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    __pyx_t_2 = 0;
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_C)) { __Pyx_RaiseClosureNameError("C"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+    if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_C == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+      __PYX_ERR(0, 1005, __pyx_L1_error)
+    }
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_C, __pyx_cur_scope->__pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_RR)) { __Pyx_RaiseClosureNameError("RR"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_pari); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_incgam); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_gRR)) { __Pyx_RaiseClosureNameError("gRR"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+    __pyx_t_7 = PyNumber_Add(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_gRR, __pyx_cur_scope->__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __pyx_t_9 = __Pyx_PyNumber_Divide(__pyx_t_7, __pyx_int_2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_R)) { __Pyx_RaiseClosureNameError("R"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+    __pyx_t_7 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __pyx_t_10 = PyNumber_Subtract(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_R, __pyx_t_7); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_t_7 = PyNumber_Power(__pyx_t_10, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    __pyx_t_10 = NULL;
+    __pyx_t_11 = 0;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_8))) {
+      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_8);
+      if (likely(__pyx_t_10)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_8);
+        __Pyx_INCREF(__pyx_t_10);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_8, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_8)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_9, __pyx_t_7};
+      __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_9, __pyx_t_7};
+      __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_12);
+      if (__pyx_t_10) {
+        __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_10); __pyx_t_10 = NULL;
+      }
+      __Pyx_GIVEREF(__pyx_t_9);
+      PyTuple_SET_ITEM(__pyx_t_12, 0+__pyx_t_11, __pyx_t_9);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_t_7);
+      __pyx_t_9 = 0;
+      __pyx_t_7 = 0;
+      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_12, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_RR));
+    __pyx_t_8 = ((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_RR); __pyx_t_12 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_8))) {
+      __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_8);
+      if (likely(__pyx_t_12)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_8);
+        __Pyx_INCREF(__pyx_t_12);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_8, function);
+      }
+    }
+    __pyx_t_5 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_12, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __pyx_t_8 = PyNumber_Multiply(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_r = __pyx_t_8;
+    __pyx_t_8 = 0;
+    __Pyx_XGIVEREF(__pyx_t_1);
+    __pyx_cur_scope->__pyx_t_0 = __pyx_t_1;
+    __pyx_cur_scope->__pyx_t_1 = __pyx_t_3;
+    __pyx_cur_scope->__pyx_t_2 = __pyx_t_4;
+    __Pyx_XGIVEREF(__pyx_r);
+    __Pyx_RefNannyFinishContext();
+    __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
+    /* return from generator, yielding value */
+    __pyx_generator->resume_label = 1;
+    return __pyx_r;
+    __pyx_L6_resume_from_yield:;
+    __pyx_t_1 = __pyx_cur_scope->__pyx_t_0;
+    __pyx_cur_scope->__pyx_t_0 = 0;
+    __Pyx_XGOTREF(__pyx_t_1);
+    __pyx_t_3 = __pyx_cur_scope->__pyx_t_1;
+    __pyx_t_4 = __pyx_cur_scope->__pyx_t_2;
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
+
+  /* function exit code */
+  PyErr_SetNone(PyExc_StopIteration);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_10);
+  __Pyx_XDECREF(__pyx_t_12);
+  __Pyx_AddTraceback("genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_r); __pyx_r = 0;
+  #if !CYTHON_USE_EXC_INFO_STACK
+  __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
+  #endif
+  __pyx_generator->resume_label = -1;
+  __Pyx_Coroutine_clear((PyObject*)__pyx_generator);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "riemann_theta/riemann_theta.pyx":1004
+ *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
+ *     LC = (2*pi)**N * g_over_two * (2/rho)**g
+ *     def f(R):             # <<<<<<<<<<<<<<
+ *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
+ *     def df(R):
+ */
+
+static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_f(PyObject *__pyx_self, PyObject *__pyx_v_R) {
+  struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f *__pyx_cur_scope;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("f", 0);
+  __pyx_cur_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f *)__pyx_tp_new_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f(__pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f, __pyx_empty_tuple, NULL);
+  if (unlikely(!__pyx_cur_scope)) {
+    __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f *)Py_None);
+    __Pyx_INCREF(Py_None);
+    __PYX_ERR(0, 1004, __pyx_L1_error)
+  } else {
+    __Pyx_GOTREF(__pyx_cur_scope);
+  }
+  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
+  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
+  __pyx_cur_scope->__pyx_v_R = __pyx_v_R;
+  __Pyx_INCREF(__pyx_cur_scope->__pyx_v_R);
+  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_R);
+
+  /* "riemann_theta/riemann_theta.pyx":1005
+ *     LC = (2*pi)**N * g_over_two * (2/rho)**g
+ *     def f(R):
+ *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol             # <<<<<<<<<<<<<<
+ *     def df(R):
+ *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
+ */
+  __Pyx_XDECREF(__pyx_r);
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC)) { __Pyx_RaiseClosureNameError("LC"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+  __pyx_t_1 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = PyNumber_Multiply(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_tol)) { __Pyx_RaiseClosureNameError("tol"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, __pyx_cur_scope->__pyx_outer_scope->__pyx_v_tol); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
+  goto __pyx_L0;
+
+  /* "riemann_theta/riemann_theta.pyx":1004
+ *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
+ *     LC = (2*pi)**N * g_over_two * (2/rho)**g
+ *     def f(R):             # <<<<<<<<<<<<<<
+ *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
+ *     def df(R):
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_AddTraceback("riemann_theta.riemann_theta.Rbound_deriv.f", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "riemann_theta/riemann_theta.pyx":1006
+ *     def f(R):
+ *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
+ *     def df(R):             # <<<<<<<<<<<<<<
+ *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12Rbound_deriv_3df(PyObject *__pyx_self, PyObject *__pyx_v_R); /*proto*/
+static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_12Rbound_deriv_3df = {"df", (PyCFunction)__pyx_pw_13riemann_theta_13riemann_theta_12Rbound_deriv_3df, METH_O, 0};
+static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12Rbound_deriv_3df(PyObject *__pyx_self, PyObject *__pyx_v_R) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("df (wrapper)", 0);
+  __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(__pyx_self, ((PyObject *)__pyx_v_R));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
+
+/* "riemann_theta/riemann_theta.pyx":1007
+ *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
+ *     def df(R):
+ *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))             # <<<<<<<<<<<<<<
+ * 
+ *     R = Rmin
+ */
+
+static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_genexpr(PyObject *__pyx_self) {
+  struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *__pyx_cur_scope;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("genexpr", 0);
+  __pyx_cur_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *)__pyx_tp_new_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr(__pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr, __pyx_empty_tuple, NULL);
+  if (unlikely(!__pyx_cur_scope)) {
+    __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *)Py_None);
+    __Pyx_INCREF(Py_None);
+    __PYX_ERR(0, 1007, __pyx_L1_error)
+  } else {
+    __Pyx_GOTREF(__pyx_cur_scope);
+  }
+  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df *) __pyx_self;
+  __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
+  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
+  {
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_2generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_Rbound_deriv_locals_df_locals_ge, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_cur_scope);
+    __Pyx_RefNannyFinishContext();
+    return (PyObject *) gen;
+  }
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("riemann_theta.riemann_theta.Rbound_deriv.df.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
+{
+  struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *__pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *)__pyx_generator->closure);
+  PyObject *__pyx_r = NULL;
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  Py_ssize_t __pyx_t_3;
+  PyObject *(*__pyx_t_4)(PyObject *);
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_7 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -11408,100 +11776,31 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_2gen
     }
     __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_C, __pyx_cur_scope->__pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1007, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_RR)) { __Pyx_RaiseClosureNameError("RR"); __PYX_ERR(0, 1007, __pyx_L1_error) }
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_pari); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_incgam); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_gRR)) { __Pyx_RaiseClosureNameError("gRR"); __PYX_ERR(0, 1007, __pyx_L1_error) }
-    __pyx_t_7 = PyNumber_Add(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_gRR, __pyx_cur_scope->__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_9 = __Pyx_PyNumber_Divide(__pyx_t_7, __pyx_int_2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_9);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_R)) { __Pyx_RaiseClosureNameError("R"); __PYX_ERR(0, 1007, __pyx_L1_error) }
     if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 1007, __pyx_L1_error) }
-    __pyx_t_7 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_10 = PyNumber_Subtract(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_R, __pyx_t_7); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Power(__pyx_t_10, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_10 = NULL;
-    __pyx_t_11 = 0;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_8))) {
-      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_8);
-      if (likely(__pyx_t_10)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_8);
-        __Pyx_INCREF(__pyx_t_10);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_8, function);
-        __pyx_t_11 = 1;
-      }
-    }
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_8)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_9, __pyx_t_7};
-      __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1007, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_9, __pyx_t_7};
-      __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1007, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1007, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      if (__pyx_t_10) {
-        __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_10); __pyx_t_10 = NULL;
-      }
-      __Pyx_GIVEREF(__pyx_t_9);
-      PyTuple_SET_ITEM(__pyx_t_12, 0+__pyx_t_11, __pyx_t_9);
-      __Pyx_GIVEREF(__pyx_t_7);
-      PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_t_7);
-      __pyx_t_9 = 0;
-      __pyx_t_7 = 0;
-      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_12, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1007, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_RR));
-    __pyx_t_8 = ((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_RR); __pyx_t_12 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_8))) {
-      __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_8);
-      if (likely(__pyx_t_12)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_8);
-        __Pyx_INCREF(__pyx_t_12);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_8, function);
-      }
-    }
-    __pyx_t_5 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_12, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1007, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyNumber_Multiply(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1007, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_6 = PyNumber_Subtract(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_R, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_r = __pyx_t_8;
-    __pyx_t_8 = 0;
+    __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_7 = PyNumber_Add(__pyx_t_5, __pyx_cur_scope->__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = __Pyx_PyInt_SubtractObjC(__pyx_t_7, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_t_7 = PyNumber_Power(__pyx_t_6, __pyx_t_5, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = PyNumber_Multiply(__pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_r = __pyx_t_5;
+    __pyx_t_5 = 0;
     __Pyx_XGIVEREF(__pyx_t_1);
     __pyx_cur_scope->__pyx_t_0 = __pyx_t_1;
     __pyx_cur_scope->__pyx_t_1 = __pyx_t_3;
@@ -11532,10 +11831,6 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_2gen
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_XDECREF(__pyx_t_12);
   __Pyx_AddTraceback("genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_r); __pyx_r = 0;
@@ -11549,301 +11844,6 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_2gen
 }
 
 /* "riemann_theta/riemann_theta.pyx":1006
- *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
- *     LC = (2*pi)**N * g_over_two * (2/rho)**g
- *     def f(R):             # <<<<<<<<<<<<<<
- *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
- *     def df(R):
- */
-
-static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_f(PyObject *__pyx_self, PyObject *__pyx_v_R) {
-  struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f *__pyx_cur_scope;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("f", 0);
-  __pyx_cur_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f *)__pyx_tp_new_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f(__pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f, __pyx_empty_tuple, NULL);
-  if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f *)Py_None);
-    __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1006, __pyx_L1_error)
-  } else {
-    __Pyx_GOTREF(__pyx_cur_scope);
-  }
-  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv *) __Pyx_CyFunction_GetClosure(__pyx_self);
-  __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
-  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
-  __pyx_cur_scope->__pyx_v_R = __pyx_v_R;
-  __Pyx_INCREF(__pyx_cur_scope->__pyx_v_R);
-  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_R);
-
-  /* "riemann_theta/riemann_theta.pyx":1007
- *     LC = (2*pi)**N * g_over_two * (2/rho)**g
- *     def f(R):
- *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol             # <<<<<<<<<<<<<<
- *     def df(R):
- *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
- */
-  __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC)) { __Pyx_RaiseClosureNameError("LC"); __PYX_ERR(0, 1007, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_1f_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1007, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_tol)) { __Pyx_RaiseClosureNameError("tol"); __PYX_ERR(0, 1007, __pyx_L1_error) }
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, __pyx_cur_scope->__pyx_outer_scope->__pyx_v_tol); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1007, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_r = __pyx_t_2;
-  __pyx_t_2 = 0;
-  goto __pyx_L0;
-
-  /* "riemann_theta/riemann_theta.pyx":1006
- *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
- *     LC = (2*pi)**N * g_over_two * (2/rho)**g
- *     def f(R):             # <<<<<<<<<<<<<<
- *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
- *     def df(R):
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("riemann_theta.riemann_theta.Rbound_deriv.f", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "riemann_theta/riemann_theta.pyx":1008
- *     def f(R):
- *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
- *     def df(R):             # <<<<<<<<<<<<<<
- *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
- * 
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12Rbound_deriv_3df(PyObject *__pyx_self, PyObject *__pyx_v_R); /*proto*/
-static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_12Rbound_deriv_3df = {"df", (PyCFunction)__pyx_pw_13riemann_theta_13riemann_theta_12Rbound_deriv_3df, METH_O, 0};
-static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12Rbound_deriv_3df(PyObject *__pyx_self, PyObject *__pyx_v_R) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("df (wrapper)", 0);
-  __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(__pyx_self, ((PyObject *)__pyx_v_R));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
-
-/* "riemann_theta/riemann_theta.pyx":1009
- *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
- *     def df(R):
- *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))             # <<<<<<<<<<<<<<
- * 
- *     R = Rmin
- */
-
-static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_genexpr(PyObject *__pyx_self) {
-  struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *__pyx_cur_scope;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("genexpr", 0);
-  __pyx_cur_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *)__pyx_tp_new_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr(__pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr, __pyx_empty_tuple, NULL);
-  if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *)Py_None);
-    __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1009, __pyx_L1_error)
-  } else {
-    __Pyx_GOTREF(__pyx_cur_scope);
-  }
-  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df *) __pyx_self;
-  __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
-  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
-  {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_2generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_Rbound_deriv_locals_df_locals_ge, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_cur_scope);
-    __Pyx_RefNannyFinishContext();
-    return (PyObject *) gen;
-  }
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("riemann_theta.riemann_theta.Rbound_deriv.df.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
-{
-  struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *__pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr *)__pyx_generator->closure);
-  PyObject *__pyx_r = NULL;
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  Py_ssize_t __pyx_t_3;
-  PyObject *(*__pyx_t_4)(PyObject *);
-  PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("genexpr", 0);
-  switch (__pyx_generator->resume_label) {
-    case 0: goto __pyx_L3_first_run;
-    case 1: goto __pyx_L6_resume_from_yield;
-    default: /* CPython raises the right error here */
-    __Pyx_RefNannyFinishContext();
-    return NULL;
-  }
-  __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1009, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_N)) { __Pyx_RaiseClosureNameError("N"); __PYX_ERR(0, 1009, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_N, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
-    __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_3 = 0;
-    __pyx_t_4 = NULL;
-  } else {
-    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1009, __pyx_L1_error)
-  }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  for (;;) {
-    if (likely(!__pyx_t_4)) {
-      if (likely(PyList_CheckExact(__pyx_t_1))) {
-        if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_1)) break;
-        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 1009, __pyx_L1_error)
-        #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        #endif
-      } else {
-        if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
-        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 1009, __pyx_L1_error)
-        #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        #endif
-      }
-    } else {
-      __pyx_t_2 = __pyx_t_4(__pyx_t_1);
-      if (unlikely(!__pyx_t_2)) {
-        PyObject* exc_type = PyErr_Occurred();
-        if (exc_type) {
-          if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 1009, __pyx_L1_error)
-        }
-        break;
-      }
-      __Pyx_GOTREF(__pyx_t_2);
-    }
-    __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_i);
-    __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_i, __pyx_t_2);
-    __Pyx_GIVEREF(__pyx_t_2);
-    __pyx_t_2 = 0;
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_C)) { __Pyx_RaiseClosureNameError("C"); __PYX_ERR(0, 1009, __pyx_L1_error) }
-    if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_C == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 1009, __pyx_L1_error)
-    }
-    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_C, __pyx_cur_scope->__pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_R)) { __Pyx_RaiseClosureNameError("R"); __PYX_ERR(0, 1009, __pyx_L1_error) }
-    if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 1009, __pyx_L1_error) }
-    __pyx_t_5 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyNumber_Subtract(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_R, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_outer_scope->__pyx_outer_scope->__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = PyNumber_Add(__pyx_t_5, __pyx_cur_scope->__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyInt_SubtractObjC(__pyx_t_7, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Power(__pyx_t_6, __pyx_t_5, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyNumber_Multiply(__pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1009, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_r = __pyx_t_5;
-    __pyx_t_5 = 0;
-    __Pyx_XGIVEREF(__pyx_t_1);
-    __pyx_cur_scope->__pyx_t_0 = __pyx_t_1;
-    __pyx_cur_scope->__pyx_t_1 = __pyx_t_3;
-    __pyx_cur_scope->__pyx_t_2 = __pyx_t_4;
-    __Pyx_XGIVEREF(__pyx_r);
-    __Pyx_RefNannyFinishContext();
-    __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
-    /* return from generator, yielding value */
-    __pyx_generator->resume_label = 1;
-    return __pyx_r;
-    __pyx_L6_resume_from_yield:;
-    __pyx_t_1 = __pyx_cur_scope->__pyx_t_0;
-    __pyx_cur_scope->__pyx_t_0 = 0;
-    __Pyx_XGOTREF(__pyx_t_1);
-    __pyx_t_3 = __pyx_cur_scope->__pyx_t_1;
-    __pyx_t_4 = __pyx_cur_scope->__pyx_t_2;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1009, __pyx_L1_error)
-  }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
-
-  /* function exit code */
-  PyErr_SetNone(PyExc_StopIteration);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_L0:;
-  __Pyx_XDECREF(__pyx_r); __pyx_r = 0;
-  #if !CYTHON_USE_EXC_INFO_STACK
-  __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
-  #endif
-  __pyx_generator->resume_label = -1;
-  __Pyx_Coroutine_clear((PyObject*)__pyx_generator);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "riemann_theta/riemann_theta.pyx":1008
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
@@ -11867,7 +11867,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(PyO
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1008, __pyx_L1_error)
+    __PYX_ERR(0, 1006, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -11878,7 +11878,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(PyO
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_R);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_R);
 
-  /* "riemann_theta/riemann_theta.pyx":1009
+  /* "riemann_theta/riemann_theta.pyx":1007
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):
  *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))             # <<<<<<<<<<<<<<
@@ -11886,22 +11886,22 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(PyO
  *     R = Rmin
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC)) { __Pyx_RaiseClosureNameError("LC"); __PYX_ERR(0, 1009, __pyx_L1_error) }
-  __pyx_t_1 = PyNumber_Multiply(__pyx_int_neg_2, __pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC)) { __Pyx_RaiseClosureNameError("LC"); __PYX_ERR(0, 1007, __pyx_L1_error) }
+  __pyx_t_1 = PyNumber_Multiply(__pyx_int_neg_2, __pyx_cur_scope->__pyx_outer_scope->__pyx_v_LC); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 1009, __pyx_L1_error) }
-  __pyx_t_3 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_rho)) { __Pyx_RaiseClosureNameError("rho"); __PYX_ERR(0, 1007, __pyx_L1_error) }
+  __pyx_t_3 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_cur_scope->__pyx_outer_scope->__pyx_v_rho), __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyNumber_Subtract(__pyx_cur_scope->__pyx_v_R, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Subtract(__pyx_cur_scope->__pyx_v_R, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Power(__pyx_t_4, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Power(__pyx_t_4, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Negative(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Negative(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exp); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exp); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -11916,19 +11916,19 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(PyO
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_2 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1007, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -11936,7 +11936,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(PyO
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":1008
+  /* "riemann_theta/riemann_theta.pyx":1006
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
@@ -11959,7 +11959,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(PyO
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":966
+/* "riemann_theta/riemann_theta.pyx":964
  *     return R
  * 
  * def Rbound_deriv(Y, N, tol):             # <<<<<<<<<<<<<<
@@ -12005,7 +12005,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 966, __pyx_L1_error)
+    __PYX_ERR(0, 964, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -12016,7 +12016,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_tol);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_tol);
 
-  /* "riemann_theta/riemann_theta.pyx":991
+  /* "riemann_theta/riemann_theta.pyx":989
  *     cdef long g
  * 
  *     RR = RealField(53)             # <<<<<<<<<<<<<<
@@ -12025,21 +12025,21 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.prec = 53;
-  __pyx_t_1 = __pyx_f_4sage_5rings_9real_mpfr_RealField(0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 991, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4sage_5rings_9real_mpfr_RealField(0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 989, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class))))) __PYX_ERR(0, 991, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class))))) __PYX_ERR(0, 989, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_RR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealField_class *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":992
+  /* "riemann_theta/riemann_theta.pyx":990
  * 
  *     RR = RealField(53)
  *     pi = RR.pi()             # <<<<<<<<<<<<<<
  *     g = Y.nrows()
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_cur_scope->__pyx_v_RR), __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 992, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_cur_scope->__pyx_v_RR), __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -12053,21 +12053,21 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 992, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 992, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 990, __pyx_L1_error)
   __pyx_v_pi = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":993
+  /* "riemann_theta/riemann_theta.pyx":991
  *     RR = RealField(53)
  *     pi = RR.pi()
  *     g = Y.nrows()             # <<<<<<<<<<<<<<
  * 
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_Y, __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 993, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_Y, __pyx_n_s_nrows); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 991, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -12081,39 +12081,39 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 993, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 991, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_5 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 993, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_5 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 991, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_cur_scope->__pyx_v_g = __pyx_t_5;
 
-  /* "riemann_theta/riemann_theta.pyx":995
+  /* "riemann_theta/riemann_theta.pyx":993
  *     g = Y.nrows()
  * 
  *     rho = RR(pari.qfminim(Y,flag=2)[1])             # <<<<<<<<<<<<<<
  *     rho = (pi*rho).sqrt()
  *     Rmin = (((RR(g**2+8*N)).sqrt() + g + 2*N).sqrt() + rho)/2
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_pari); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 995, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_pari); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_qfminim); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 995, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_qfminim); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 995, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_Y);
   __Pyx_GIVEREF(__pyx_v_Y);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_Y);
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 995, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_flag, __pyx_int_2) < 0) __PYX_ERR(0, 995, __pyx_L1_error)
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 995, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_flag, __pyx_int_2) < 0) __PYX_ERR(0, 993, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_7, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 995, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_7, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_RR));
@@ -12130,24 +12130,24 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_3, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 995, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 995, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 993, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_rho = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":996
+  /* "riemann_theta/riemann_theta.pyx":994
  * 
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()             # <<<<<<<<<<<<<<
  *     Rmin = (((RR(g**2+8*N)).sqrt() + g + 2*N).sqrt() + rho)/2
  *     Yinv_norm=RR(1/min(Y.change_ring(RDF).SVD()[1].diagonal()).sqrt())
  */
-  __pyx_t_7 = PyNumber_Multiply(((PyObject *)__pyx_v_pi), ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 996, __pyx_L1_error)
+  __pyx_t_7 = PyNumber_Multiply(((PyObject *)__pyx_v_pi), ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 994, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 996, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 994, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = NULL;
@@ -12162,27 +12162,27 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 996, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 994, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 996, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 994, __pyx_L1_error)
   __Pyx_GOTREF(((PyObject *)__pyx_cur_scope->__pyx_v_rho));
   __Pyx_DECREF_SET(__pyx_cur_scope->__pyx_v_rho, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1));
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":997
+  /* "riemann_theta/riemann_theta.pyx":995
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()
  *     Rmin = (((RR(g**2+8*N)).sqrt() + g + 2*N).sqrt() + rho)/2             # <<<<<<<<<<<<<<
  *     Yinv_norm=RR(1/min(Y.change_ring(RDF).SVD()[1].diagonal()).sqrt())
  * 
  */
-  __pyx_t_3 = __Pyx_PyInt_From_long(__Pyx_pow_long(__pyx_cur_scope->__pyx_v_g, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_long(__Pyx_pow_long(__pyx_cur_scope->__pyx_v_g, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyNumber_Multiply(__pyx_int_8, __pyx_cur_scope->__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_int_8, __pyx_cur_scope->__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = PyNumber_Add(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_8 = PyNumber_Add(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -12200,10 +12200,10 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_t_7 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 997, __pyx_L1_error)
+  if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = NULL;
@@ -12218,22 +12218,22 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_6 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 997, __pyx_L1_error)
+  if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = PyNumber_Add(__pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_7 = PyNumber_Add(__pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Multiply(__pyx_int_2, __pyx_cur_scope->__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_int_2, __pyx_cur_scope->__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = PyNumber_Add(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_6 = PyNumber_Add(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -12248,29 +12248,29 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 997, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_t_1, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_1, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 997, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 995, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 997, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 995, __pyx_L1_error)
   __pyx_v_Rmin = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":998
+  /* "riemann_theta/riemann_theta.pyx":996
  *     rho = (pi*rho).sqrt()
  *     Rmin = (((RR(g**2+8*N)).sqrt() + g + 2*N).sqrt() + rho)/2
  *     Yinv_norm=RR(1/min(Y.change_ring(RDF).SVD()[1].diagonal()).sqrt())             # <<<<<<<<<<<<<<
  * 
  *     gRR = RR(g)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_Y, __pyx_n_s_change_ring); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_Y, __pyx_n_s_change_ring); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_RDF); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_RDF); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __pyx_t_10 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -12285,10 +12285,10 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_t_8 = (__pyx_t_10) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_10, __pyx_t_9) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 998, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_SVD); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_SVD); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __pyx_t_8 = NULL;
@@ -12303,13 +12303,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_7 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 998, __pyx_L1_error)
+  if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_7, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_7, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_diagonal); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_diagonal); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -12324,13 +12324,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_6 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 998, __pyx_L1_error)
+  if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_min, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_min, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = NULL;
@@ -12345,10 +12345,10 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_4 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 998, __pyx_L1_error)
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyNumber_Divide(__pyx_int_1, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyNumber_Divide(__pyx_int_1, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_RR));
@@ -12365,20 +12365,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 996, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_Yinv_norm = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1000
+  /* "riemann_theta/riemann_theta.pyx":998
  *     Yinv_norm=RR(1/min(Y.change_ring(RDF).SVD()[1].diagonal()).sqrt())
  * 
  *     gRR = RR(g)             # <<<<<<<<<<<<<<
  *     g_over_two = gRR/2
  *     g_sqrt = gRR.sqrt()
  */
-  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1000, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 998, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_v_RR));
   __pyx_t_6 = ((PyObject *)__pyx_cur_scope->__pyx_v_RR); __pyx_t_7 = NULL;
@@ -12394,33 +12394,33 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_7, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_4);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_gRR = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1001
+  /* "riemann_theta/riemann_theta.pyx":999
  * 
  *     gRR = RR(g)
  *     g_over_two = gRR/2             # <<<<<<<<<<<<<<
  *     g_sqrt = gRR.sqrt()
  * 
  */
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_cur_scope->__pyx_v_gRR, __pyx_int_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1001, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_cur_scope->__pyx_v_gRR, __pyx_int_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 999, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_g_over_two = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1002
+  /* "riemann_theta/riemann_theta.pyx":1000
  *     gRR = RR(g)
  *     g_over_two = gRR/2
  *     g_sqrt = gRR.sqrt()             # <<<<<<<<<<<<<<
  * 
  *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_gRR, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1002, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_gRR, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1000, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -12434,33 +12434,33 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   }
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1002, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_v_g_sqrt = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1004
+  /* "riemann_theta/riemann_theta.pyx":1002
  *     g_sqrt = gRR.sqrt()
  * 
  *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]             # <<<<<<<<<<<<<<
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g
  *     def f(R):
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1004, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1002, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyInt_AddObjC(__pyx_cur_scope->__pyx_v_N, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1004, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_AddObjC(__pyx_cur_scope->__pyx_v_N, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1002, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1004, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
     __pyx_t_6 = __pyx_t_4; __Pyx_INCREF(__pyx_t_6); __pyx_t_11 = 0;
     __pyx_t_12 = NULL;
   } else {
-    __pyx_t_11 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_11 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_12 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_12 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1002, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   for (;;) {
@@ -12468,17 +12468,17 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
       if (likely(PyList_CheckExact(__pyx_t_6))) {
         if (__pyx_t_11 >= PyList_GET_SIZE(__pyx_t_6)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_11); __Pyx_INCREF(__pyx_t_4); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 1004, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_11); __Pyx_INCREF(__pyx_t_4); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 1002, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_6, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1004, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_6, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         if (__pyx_t_11 >= PyTuple_GET_SIZE(__pyx_t_6)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_11); __Pyx_INCREF(__pyx_t_4); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 1004, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_11); __Pyx_INCREF(__pyx_t_4); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 1002, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_6, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1004, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_6, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -12488,7 +12488,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 1004, __pyx_L1_error)
+          else __PYX_ERR(0, 1002, __pyx_L1_error)
         }
         break;
       }
@@ -12496,7 +12496,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
     }
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_4);
     __pyx_t_4 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_binom); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_binom); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __pyx_t_3 = NULL;
     __pyx_t_13 = 0;
@@ -12513,7 +12513,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_7)) {
       PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_cur_scope->__pyx_v_N, __pyx_v_i};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_13, 2+__pyx_t_13); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1004, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_13, 2+__pyx_t_13); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
@@ -12521,13 +12521,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
       PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_cur_scope->__pyx_v_N, __pyx_v_i};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_13, 2+__pyx_t_13); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1004, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_13, 2+__pyx_t_13); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(2+__pyx_t_13); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1004, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(2+__pyx_t_13); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1002, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (__pyx_t_3) {
         __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -12538,39 +12538,39 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
       __Pyx_INCREF(__pyx_v_i);
       __Pyx_GIVEREF(__pyx_v_i);
       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_13, __pyx_v_i);
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1004, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Negative(__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_7 = PyNumber_Negative(__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_t_7, __pyx_int_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_t_7, __pyx_int_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Power(((PyObject *)__pyx_v_pi), __pyx_t_8, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_7 = PyNumber_Power(((PyObject *)__pyx_v_pi), __pyx_t_8, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyNumber_Multiply(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_8 = PyNumber_Multiply(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Power(__pyx_v_Yinv_norm, __pyx_v_i, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_7 = PyNumber_Power(__pyx_v_Yinv_norm, __pyx_v_i, Py_None); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_4 = PyNumber_Multiply(__pyx_t_8, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_4 = PyNumber_Multiply(__pyx_t_8, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Subtract(__pyx_cur_scope->__pyx_v_N, __pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_7 = PyNumber_Subtract(__pyx_cur_scope->__pyx_v_N, __pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_8 = PyNumber_Power(__pyx_v_g_sqrt, __pyx_t_7, Py_None); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_8 = PyNumber_Power(__pyx_v_g_sqrt, __pyx_t_7, Py_None); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = PyNumber_Multiply(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_7 = PyNumber_Multiply(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 1004, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_7))) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -12578,30 +12578,30 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_cur_scope->__pyx_v_C = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1005
+  /* "riemann_theta/riemann_theta.pyx":1003
  * 
  *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g             # <<<<<<<<<<<<<<
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  */
-  __pyx_t_1 = PyNumber_Multiply(__pyx_int_2, ((PyObject *)__pyx_v_pi)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_int_2, ((PyObject *)__pyx_v_pi)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyNumber_Power(__pyx_t_1, __pyx_cur_scope->__pyx_v_N, Py_None); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_t_6 = PyNumber_Power(__pyx_t_1, __pyx_cur_scope->__pyx_v_N, Py_None); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1003, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_t_6, __pyx_v_g_over_two); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_t_6, __pyx_v_g_over_two); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyNumber_Divide(__pyx_int_2, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyNumber_Divide(__pyx_int_2, ((PyObject *)__pyx_cur_scope->__pyx_v_rho)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1003, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_v_g); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1003, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyNumber_Power(__pyx_t_6, __pyx_t_7, Py_None); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_t_8 = PyNumber_Power(__pyx_t_6, __pyx_t_7, Py_None); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1003, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = PyNumber_Multiply(__pyx_t_1, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_t_7 = PyNumber_Multiply(__pyx_t_1, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1003, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -12609,31 +12609,31 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_cur_scope->__pyx_v_LC = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1006
+  /* "riemann_theta/riemann_theta.pyx":1004
  *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g
  *     def f(R):             # <<<<<<<<<<<<<<
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_12Rbound_deriv_1f, 0, __pyx_n_s_Rbound_deriv_locals_f, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1006, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_12Rbound_deriv_1f, 0, __pyx_n_s_Rbound_deriv_locals_f, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1004, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_v_f = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1008
+  /* "riemann_theta/riemann_theta.pyx":1006
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
  *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_12Rbound_deriv_3df, 0, __pyx_n_s_Rbound_deriv_locals_df, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1008, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_13riemann_theta_13riemann_theta_12Rbound_deriv_3df, 0, __pyx_n_s_Rbound_deriv_locals_df, ((PyObject*)__pyx_cur_scope), __pyx_n_s_riemann_theta_riemann_theta, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1006, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_v_df = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1011
+  /* "riemann_theta/riemann_theta.pyx":1009
  *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
  * 
  *     R = Rmin             # <<<<<<<<<<<<<<
@@ -12643,32 +12643,32 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __Pyx_INCREF(((PyObject *)__pyx_v_Rmin));
   __pyx_v_R = __pyx_v_Rmin;
 
-  /* "riemann_theta/riemann_theta.pyx":1012
+  /* "riemann_theta/riemann_theta.pyx":1010
  * 
  *     R = Rmin
  *     fR = f(R)             # <<<<<<<<<<<<<<
  *     if fR > 0:
  *         while True:
  */
-  __pyx_t_7 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1012, __pyx_L1_error)
+  __pyx_t_7 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1010, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1012, __pyx_L1_error)
+  if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1010, __pyx_L1_error)
   __pyx_v_fR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1013
+  /* "riemann_theta/riemann_theta.pyx":1011
  *     R = Rmin
  *     fR = f(R)
  *     if fR > 0:             # <<<<<<<<<<<<<<
  *         while True:
  *             fRo = fR
  */
-  __pyx_t_7 = PyObject_RichCompare(((PyObject *)__pyx_v_fR), __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1013, __pyx_L1_error)
-  __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1013, __pyx_L1_error)
+  __pyx_t_7 = PyObject_RichCompare(((PyObject *)__pyx_v_fR), __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1011, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1011, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   if (__pyx_t_14) {
 
-    /* "riemann_theta/riemann_theta.pyx":1014
+    /* "riemann_theta/riemann_theta.pyx":1012
  *     fR = f(R)
  *     if fR > 0:
  *         while True:             # <<<<<<<<<<<<<<
@@ -12677,7 +12677,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
  */
     while (1) {
 
-      /* "riemann_theta/riemann_theta.pyx":1015
+      /* "riemann_theta/riemann_theta.pyx":1013
  *     if fR > 0:
  *         while True:
  *             fRo = fR             # <<<<<<<<<<<<<<
@@ -12687,67 +12687,67 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
       __Pyx_INCREF(((PyObject *)__pyx_v_fR));
       __Pyx_XDECREF_SET(__pyx_v_fRo, __pyx_v_fR);
 
-      /* "riemann_theta/riemann_theta.pyx":1016
+      /* "riemann_theta/riemann_theta.pyx":1014
  *         while True:
  *             fRo = fR
  *             dfR = df(R)             # <<<<<<<<<<<<<<
  *             R = R - fR/dfR
  *             fR = f(R)
  */
-      __pyx_t_7 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(__pyx_v_df, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1016, __pyx_L1_error)
+      __pyx_t_7 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_2df(__pyx_v_df, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1014, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1016, __pyx_L1_error)
+      if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1014, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_dfR, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_7));
       __pyx_t_7 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1017
+      /* "riemann_theta/riemann_theta.pyx":1015
  *             fRo = fR
  *             dfR = df(R)
  *             R = R - fR/dfR             # <<<<<<<<<<<<<<
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():
  */
-      __pyx_t_7 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_fR), ((PyObject *)__pyx_v_dfR)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1017, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_fR), ((PyObject *)__pyx_v_dfR)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1015, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_8 = PyNumber_Subtract(((PyObject *)__pyx_v_R), __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1017, __pyx_L1_error)
+      __pyx_t_8 = PyNumber_Subtract(((PyObject *)__pyx_v_R), __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1015, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1017, __pyx_L1_error)
+      if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1015, __pyx_L1_error)
       __Pyx_DECREF_SET(__pyx_v_R, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_8));
       __pyx_t_8 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1018
+      /* "riemann_theta/riemann_theta.pyx":1016
  *             dfR = df(R)
  *             R = R - fR/dfR
  *             fR = f(R)             # <<<<<<<<<<<<<<
  *             if fR.abs() >= fRo.abs():
  *                 break
  */
-      __pyx_t_8 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1018, __pyx_L1_error)
+      __pyx_t_8 = __pyx_pf_13riemann_theta_13riemann_theta_12Rbound_deriv_f(__pyx_v_f, ((PyObject *)__pyx_v_R)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1016, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1018, __pyx_L1_error)
+      if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1016, __pyx_L1_error)
       __Pyx_DECREF_SET(__pyx_v_fR, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_8));
       __pyx_t_8 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1019
+      /* "riemann_theta/riemann_theta.pyx":1017
  *             R = R - fR/dfR
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():             # <<<<<<<<<<<<<<
  *                 break
  *         assert R > Rmin
  */
-      __pyx_t_8 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fR->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fR)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1019, __pyx_L1_error)
+      __pyx_t_8 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fR->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fR)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1017, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_7 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fRo->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fRo)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1019, __pyx_L1_error)
+      __pyx_t_7 = ((PyObject *)((struct __pyx_vtabstruct_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_fRo->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->abs(__pyx_v_fRo)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1017, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_8, __pyx_t_7, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1019, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_8, __pyx_t_7, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1017, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1019, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1017, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_14) {
 
-        /* "riemann_theta/riemann_theta.pyx":1020
+        /* "riemann_theta/riemann_theta.pyx":1018
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():
  *                 break             # <<<<<<<<<<<<<<
@@ -12756,7 +12756,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
  */
         goto __pyx_L7_break;
 
-        /* "riemann_theta/riemann_theta.pyx":1019
+        /* "riemann_theta/riemann_theta.pyx":1017
  *             R = R - fR/dfR
  *             fR = f(R)
  *             if fR.abs() >= fRo.abs():             # <<<<<<<<<<<<<<
@@ -12767,7 +12767,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
     }
     __pyx_L7_break:;
 
-    /* "riemann_theta/riemann_theta.pyx":1021
+    /* "riemann_theta/riemann_theta.pyx":1019
  *             if fR.abs() >= fRo.abs():
  *                 break
  *         assert R > Rmin             # <<<<<<<<<<<<<<
@@ -12776,17 +12776,17 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
  */
     #ifndef CYTHON_WITHOUT_ASSERTIONS
     if (unlikely(!Py_OptimizeFlag)) {
-      __pyx_t_1 = PyObject_RichCompare(((PyObject *)__pyx_v_R), ((PyObject *)__pyx_v_Rmin), Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1021, __pyx_L1_error)
-      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1021, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(((PyObject *)__pyx_v_R), ((PyObject *)__pyx_v_Rmin), Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1019, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1019, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (unlikely(!__pyx_t_14)) {
         PyErr_SetNone(PyExc_AssertionError);
-        __PYX_ERR(0, 1021, __pyx_L1_error)
+        __PYX_ERR(0, 1019, __pyx_L1_error)
       }
     }
     #endif
 
-    /* "riemann_theta/riemann_theta.pyx":1013
+    /* "riemann_theta/riemann_theta.pyx":1011
  *     R = Rmin
  *     fR = f(R)
  *     if fR > 0:             # <<<<<<<<<<<<<<
@@ -12795,7 +12795,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1022
+  /* "riemann_theta/riemann_theta.pyx":1020
  *                 break
  *         assert R > Rmin
  *     return R             # <<<<<<<<<<<<<<
@@ -12807,7 +12807,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   __pyx_r = ((PyObject *)__pyx_v_R);
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":966
+  /* "riemann_theta/riemann_theta.pyx":964
  *     return R
  * 
  * def Rbound_deriv(Y, N, tol):             # <<<<<<<<<<<<<<
@@ -12846,7 +12846,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1024
+/* "riemann_theta/riemann_theta.pyx":1022
  *     return R
  * 
  * def cholesky_decomposition(G):             # <<<<<<<<<<<<<<
@@ -12856,7 +12856,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_8Rbound_deriv(CYTHON_U
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11cholesky_decomposition(PyObject *__pyx_self, PyObject *__pyx_v_G); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_10cholesky_decomposition[] = "Return Cholesky decomposition of a positive definite real matrix.\n\n    The Cholesky decomposition of a real positive definite matrix `G` is\n    a lower triangular matrix `G` such that `G = C C^T`.\n\n    This routine wraps the multiprecision implementation in the mp library.\n\n    INPUT:\n\n    - ``G`` -- real matrix. Positive definite.\n\n    OUTPUT: The cholesky decomposition ``C`` such that ``G == C * C.T``\n\n    EXAMPLE::\n\n        sage: from riemann_theta import cholesky_decomposition\n        sage: RR = RealField(100)\n        sage: G = matrix(RR, 3,3, [1,1/2,1/4,1/2,1,1/5,1/4,1/5,1])\n        sage: C = cholesky_decomposition(G)\n        sage: max(abs(a) for a in (C*C.T - G).list())\n        0.00000000000000000000000000000\n    ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_10cholesky_decomposition[] = "Return Cholesky decomposition of a positive definite real matrix.\n\n    The Cholesky decomposition of a real positive definite matrix `G` is\n    a lower triangular matrix `G` such that `G = C C^T`.\n\n    This routine wraps the multiprecision implementation in the mp library.\n\n    INPUT:\n\n    - ``G`` -- real matrix. Positive definite.\n\n    OUTPUT: The cholesky decomposition ``C`` such that ``G == C * C.T``\n\n    EXAMPLE::\n\n        sage: from riemann_theta.riemann_theta import cholesky_decomposition\n        sage: RR = RealField(100)\n        sage: G = matrix(RR, 3,3, [1,1/2,1/4,1/2,1,1/5,1/4,1/5,1])\n        sage: C = cholesky_decomposition(G)\n        sage: max(abs(a) for a in (C*C.T - G).list())\n        0.00000000000000000000000000000\n    ";
 static PyMethodDef __pyx_mdef_13riemann_theta_13riemann_theta_11cholesky_decomposition = {"cholesky_decomposition", (PyCFunction)__pyx_pw_13riemann_theta_13riemann_theta_11cholesky_decomposition, METH_O, __pyx_doc_13riemann_theta_13riemann_theta_10cholesky_decomposition};
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_11cholesky_decomposition(PyObject *__pyx_self, PyObject *__pyx_v_G) {
   PyObject *__pyx_r = 0;
@@ -12902,14 +12902,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cholesky_decomposition", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":1047
+  /* "riemann_theta/riemann_theta.pyx":1045
  *         0.00000000000000000000000000000
  *     """
  *     R=G.parent()             # <<<<<<<<<<<<<<
  *     prec=R.base_ring().prec()
  *     mpall.mp.prec=prec # set work precision in "mp library"
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_parent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1047, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_parent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1045, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -12923,20 +12923,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1047, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1045, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_R = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1048
+  /* "riemann_theta/riemann_theta.pyx":1046
  *     """
  *     R=G.parent()
  *     prec=R.base_ring().prec()             # <<<<<<<<<<<<<<
  *     mpall.mp.prec=prec # set work precision in "mp library"
  *     with mpall.workprec(prec):
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_base_ring); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1048, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_base_ring); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -12950,10 +12950,10 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1048, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_prec); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1048, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_prec); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -12968,28 +12968,28 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1048, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_prec = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1049
+  /* "riemann_theta/riemann_theta.pyx":1047
  *     R=G.parent()
  *     prec=R.base_ring().prec()
  *     mpall.mp.prec=prec # set work precision in "mp library"             # <<<<<<<<<<<<<<
  *     with mpall.workprec(prec):
  *         Cmp=mpall.matrix([mpall.sage_to_mpmath(list(c),prec) for c in G])
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_mpall); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1049, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_mpall); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_mp); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1049, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_mp); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_t_3, __pyx_n_s_prec, __pyx_v_prec) < 0) __PYX_ERR(0, 1049, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_t_3, __pyx_n_s_prec, __pyx_v_prec) < 0) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1050
+  /* "riemann_theta/riemann_theta.pyx":1048
  *     prec=R.base_ring().prec()
  *     mpall.mp.prec=prec # set work precision in "mp library"
  *     with mpall.workprec(prec):             # <<<<<<<<<<<<<<
@@ -12997,9 +12997,9 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
  *         M=mpall.cholesky(Cmp)
  */
   /*with:*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_mpall); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1050, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_mpall); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1048, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_workprec); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1050, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_workprec); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1048, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -13014,12 +13014,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_prec) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_prec);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1050, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1048, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1050, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1048, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1050, __pyx_L3_error)
+    __pyx_t_1 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1048, __pyx_L3_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -13033,7 +13033,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
     }
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1050, __pyx_L3_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1048, __pyx_L3_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -13048,44 +13048,44 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
         __Pyx_XGOTREF(__pyx_t_8);
         /*try:*/ {
 
-          /* "riemann_theta/riemann_theta.pyx":1051
+          /* "riemann_theta/riemann_theta.pyx":1049
  *     mpall.mp.prec=prec # set work precision in "mp library"
  *     with mpall.workprec(prec):
  *         Cmp=mpall.matrix([mpall.sage_to_mpmath(list(c),prec) for c in G])             # <<<<<<<<<<<<<<
  *         M=mpall.cholesky(Cmp)
  *         C=R([mpall.mpmath_to_sage(c,prec) for c in M])
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_mpall); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1051, __pyx_L7_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_mpall); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1049, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_matrix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1051, __pyx_L7_error)
+          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_matrix); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1049, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1051, __pyx_L7_error)
+          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1049, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
           if (likely(PyList_CheckExact(__pyx_v_G)) || PyTuple_CheckExact(__pyx_v_G)) {
             __pyx_t_4 = __pyx_v_G; __Pyx_INCREF(__pyx_t_4); __pyx_t_9 = 0;
             __pyx_t_10 = NULL;
           } else {
-            __pyx_t_9 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_v_G); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1051, __pyx_L7_error)
+            __pyx_t_9 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_v_G); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1049, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_4);
-            __pyx_t_10 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1051, __pyx_L7_error)
+            __pyx_t_10 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1049, __pyx_L7_error)
           }
           for (;;) {
             if (likely(!__pyx_t_10)) {
               if (likely(PyList_CheckExact(__pyx_t_4))) {
                 if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_4)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_11 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_9); __Pyx_INCREF(__pyx_t_11); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1051, __pyx_L7_error)
+                __pyx_t_11 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_9); __Pyx_INCREF(__pyx_t_11); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1049, __pyx_L7_error)
                 #else
-                __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1051, __pyx_L7_error)
+                __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1049, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_11);
                 #endif
               } else {
                 if (__pyx_t_9 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_11 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_9); __Pyx_INCREF(__pyx_t_11); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1051, __pyx_L7_error)
+                __pyx_t_11 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_9); __Pyx_INCREF(__pyx_t_11); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1049, __pyx_L7_error)
                 #else
-                __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1051, __pyx_L7_error)
+                __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1049, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_11);
                 #endif
               }
@@ -13095,7 +13095,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
                   if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                  else __PYX_ERR(0, 1051, __pyx_L7_error)
+                  else __PYX_ERR(0, 1049, __pyx_L7_error)
                 }
                 break;
               }
@@ -13103,12 +13103,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
             }
             __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_11);
             __pyx_t_11 = 0;
-            __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_mpall); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1051, __pyx_L7_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_mpall); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1049, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_12);
-            __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_sage_to_mpmath); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1051, __pyx_L7_error)
+            __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_sage_to_mpmath); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1049, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-            __pyx_t_12 = PySequence_List(__pyx_v_c); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1051, __pyx_L7_error)
+            __pyx_t_12 = PySequence_List(__pyx_v_c); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1049, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_12);
             __pyx_t_14 = NULL;
             __pyx_t_15 = 0;
@@ -13125,7 +13125,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
             #if CYTHON_FAST_PYCALL
             if (PyFunction_Check(__pyx_t_13)) {
               PyObject *__pyx_temp[3] = {__pyx_t_14, __pyx_t_12, __pyx_v_prec};
-              __pyx_t_11 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1051, __pyx_L7_error)
+              __pyx_t_11 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1049, __pyx_L7_error)
               __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
               __Pyx_GOTREF(__pyx_t_11);
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
@@ -13134,14 +13134,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
             #if CYTHON_FAST_PYCCALL
             if (__Pyx_PyFastCFunction_Check(__pyx_t_13)) {
               PyObject *__pyx_temp[3] = {__pyx_t_14, __pyx_t_12, __pyx_v_prec};
-              __pyx_t_11 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1051, __pyx_L7_error)
+              __pyx_t_11 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1049, __pyx_L7_error)
               __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
               __Pyx_GOTREF(__pyx_t_11);
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
             } else
             #endif
             {
-              __pyx_t_16 = PyTuple_New(2+__pyx_t_15); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 1051, __pyx_L7_error)
+              __pyx_t_16 = PyTuple_New(2+__pyx_t_15); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 1049, __pyx_L7_error)
               __Pyx_GOTREF(__pyx_t_16);
               if (__pyx_t_14) {
                 __Pyx_GIVEREF(__pyx_t_14); PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_14); __pyx_t_14 = NULL;
@@ -13152,12 +13152,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
               __Pyx_GIVEREF(__pyx_v_prec);
               PyTuple_SET_ITEM(__pyx_t_16, 1+__pyx_t_15, __pyx_v_prec);
               __pyx_t_12 = 0;
-              __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_16, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1051, __pyx_L7_error)
+              __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_16, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1049, __pyx_L7_error)
               __Pyx_GOTREF(__pyx_t_11);
               __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
             }
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_11))) __PYX_ERR(0, 1051, __pyx_L7_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_11))) __PYX_ERR(0, 1049, __pyx_L7_error)
             __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -13174,22 +13174,22 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
           __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2);
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1051, __pyx_L7_error)
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1049, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __pyx_v_Cmp = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "riemann_theta/riemann_theta.pyx":1052
+          /* "riemann_theta/riemann_theta.pyx":1050
  *     with mpall.workprec(prec):
  *         Cmp=mpall.matrix([mpall.sage_to_mpmath(list(c),prec) for c in G])
  *         M=mpall.cholesky(Cmp)             # <<<<<<<<<<<<<<
  *         C=R([mpall.mpmath_to_sage(c,prec) for c in M])
  *     return C
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_mpall); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1052, __pyx_L7_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_mpall); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1050, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_cholesky); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1052, __pyx_L7_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_cholesky); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1050, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __pyx_t_1 = NULL;
@@ -13204,45 +13204,45 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
           }
           __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_Cmp) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_Cmp);
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1052, __pyx_L7_error)
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1050, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __pyx_v_M = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "riemann_theta/riemann_theta.pyx":1053
+          /* "riemann_theta/riemann_theta.pyx":1051
  *         Cmp=mpall.matrix([mpall.sage_to_mpmath(list(c),prec) for c in G])
  *         M=mpall.cholesky(Cmp)
  *         C=R([mpall.mpmath_to_sage(c,prec) for c in M])             # <<<<<<<<<<<<<<
  *     return C
  * 
  */
-          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1053, __pyx_L7_error)
+          __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1051, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
           if (likely(PyList_CheckExact(__pyx_v_M)) || PyTuple_CheckExact(__pyx_v_M)) {
             __pyx_t_1 = __pyx_v_M; __Pyx_INCREF(__pyx_t_1); __pyx_t_9 = 0;
             __pyx_t_10 = NULL;
           } else {
-            __pyx_t_9 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_M); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1053, __pyx_L7_error)
+            __pyx_t_9 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_M); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1051, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_10 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1053, __pyx_L7_error)
+            __pyx_t_10 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1051, __pyx_L7_error)
           }
           for (;;) {
             if (likely(!__pyx_t_10)) {
               if (likely(PyList_CheckExact(__pyx_t_1))) {
                 if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_1)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_4); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1053, __pyx_L7_error)
+                __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_4); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1051, __pyx_L7_error)
                 #else
-                __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1053, __pyx_L7_error)
+                __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1051, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_4);
                 #endif
               } else {
                 if (__pyx_t_9 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_4); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1053, __pyx_L7_error)
+                __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_9); __Pyx_INCREF(__pyx_t_4); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 1051, __pyx_L7_error)
                 #else
-                __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1053, __pyx_L7_error)
+                __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1051, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_4);
                 #endif
               }
@@ -13252,7 +13252,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
                   if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                  else __PYX_ERR(0, 1053, __pyx_L7_error)
+                  else __PYX_ERR(0, 1051, __pyx_L7_error)
                 }
                 break;
               }
@@ -13260,9 +13260,9 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
             }
             __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_4);
             __pyx_t_4 = 0;
-            __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_mpall); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1053, __pyx_L7_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_mpall); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1051, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_11);
-            __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_mpmath_to_sage); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1053, __pyx_L7_error)
+            __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_mpmath_to_sage); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1051, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
             __pyx_t_11 = NULL;
@@ -13280,7 +13280,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
             #if CYTHON_FAST_PYCALL
             if (PyFunction_Check(__pyx_t_13)) {
               PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_v_c, __pyx_v_prec};
-              __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1053, __pyx_L7_error)
+              __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1051, __pyx_L7_error)
               __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
               __Pyx_GOTREF(__pyx_t_4);
             } else
@@ -13288,13 +13288,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
             #if CYTHON_FAST_PYCCALL
             if (__Pyx_PyFastCFunction_Check(__pyx_t_13)) {
               PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_v_c, __pyx_v_prec};
-              __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1053, __pyx_L7_error)
+              __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_15, 2+__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1051, __pyx_L7_error)
               __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
               __Pyx_GOTREF(__pyx_t_4);
             } else
             #endif
             {
-              __pyx_t_16 = PyTuple_New(2+__pyx_t_15); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 1053, __pyx_L7_error)
+              __pyx_t_16 = PyTuple_New(2+__pyx_t_15); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 1051, __pyx_L7_error)
               __Pyx_GOTREF(__pyx_t_16);
               if (__pyx_t_11) {
                 __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_11); __pyx_t_11 = NULL;
@@ -13305,12 +13305,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
               __Pyx_INCREF(__pyx_v_prec);
               __Pyx_GIVEREF(__pyx_v_prec);
               PyTuple_SET_ITEM(__pyx_t_16, 1+__pyx_t_15, __pyx_v_prec);
-              __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_16, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1053, __pyx_L7_error)
+              __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_16, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1051, __pyx_L7_error)
               __Pyx_GOTREF(__pyx_t_4);
               __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
             }
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 1053, __pyx_L7_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 1051, __pyx_L7_error)
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13328,13 +13328,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
           __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2);
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1053, __pyx_L7_error)
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1051, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __pyx_v_C = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "riemann_theta/riemann_theta.pyx":1050
+          /* "riemann_theta/riemann_theta.pyx":1048
  *     prec=R.base_ring().prec()
  *     mpall.mp.prec=prec # set work precision in "mp library"
  *     with mpall.workprec(prec):             # <<<<<<<<<<<<<<
@@ -13358,20 +13358,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("riemann_theta.riemann_theta.cholesky_decomposition", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_2) < 0) __PYX_ERR(0, 1050, __pyx_L9_except_error)
+          if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_2) < 0) __PYX_ERR(0, 1048, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_4 = PyTuple_Pack(3, __pyx_t_3, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1050, __pyx_L9_except_error)
+          __pyx_t_4 = PyTuple_Pack(3, __pyx_t_3, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1048, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_4);
           __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, NULL);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-          if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 1050, __pyx_L9_except_error)
+          if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 1048, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_17);
           __pyx_t_18 = __Pyx_PyObject_IsTrue(__pyx_t_17);
           __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-          if (__pyx_t_18 < 0) __PYX_ERR(0, 1050, __pyx_L9_except_error)
+          if (__pyx_t_18 < 0) __PYX_ERR(0, 1048, __pyx_L9_except_error)
           __pyx_t_19 = ((!(__pyx_t_18 != 0)) != 0);
           if (__pyx_t_19) {
             __Pyx_GIVEREF(__pyx_t_3);
@@ -13379,7 +13379,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
             __Pyx_XGIVEREF(__pyx_t_2);
             __Pyx_ErrRestoreWithState(__pyx_t_3, __pyx_t_1, __pyx_t_2);
             __pyx_t_3 = 0; __pyx_t_1 = 0; __pyx_t_2 = 0; 
-            __PYX_ERR(0, 1050, __pyx_L9_except_error)
+            __PYX_ERR(0, 1048, __pyx_L9_except_error)
           }
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13405,7 +13405,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
         if (__pyx_t_5) {
           __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__28, NULL);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1050, __pyx_L1_error)
+          if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1048, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         }
@@ -13420,7 +13420,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
     __pyx_L20:;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1054
+  /* "riemann_theta/riemann_theta.pyx":1052
  *         M=mpall.cholesky(Cmp)
  *         C=R([mpall.mpmath_to_sage(c,prec) for c in M])
  *     return C             # <<<<<<<<<<<<<<
@@ -13428,12 +13428,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
  * cdef class RiemannTheta:
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_C)) { __Pyx_RaiseUnboundLocalError("C"); __PYX_ERR(0, 1054, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_C)) { __Pyx_RaiseUnboundLocalError("C"); __PYX_ERR(0, 1052, __pyx_L1_error) }
   __Pyx_INCREF(__pyx_v_C);
   __pyx_r = __pyx_v_C;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":1024
+  /* "riemann_theta/riemann_theta.pyx":1022
  *     return R
  * 
  * def cholesky_decomposition(G):             # <<<<<<<<<<<<<<
@@ -13466,7 +13466,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1154
+/* "riemann_theta/riemann_theta.pyx":1156
  *     cdef dict Rbound_dict
  * 
  *     def __init__(self, Matrix_generic_dense Omega):             # <<<<<<<<<<<<<<
@@ -13476,7 +13476,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_10cholesky_decompositi
 
 /* Python wrapper */
 static int __pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_12RiemannTheta___init__[] = "Initialize object.\n\n        INPUT:\n        - ``Omega`` -- complex matrix. The Riemann matrix.\n\n        EXAMPLE::\n\n            sage: from riemann_theta import RiemannTheta\n            sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))\n\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_12RiemannTheta___init__[] = "Initialize object.\n\n        INPUT:\n        - ``Omega`` -- complex matrix. The Riemann matrix.\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import RiemannTheta\n            sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))\n\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_12RiemannTheta___init__;
 #endif
@@ -13507,7 +13507,7 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_1__init__(PyO
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 1154, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 1156, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -13518,13 +13518,13 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_1__init__(PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1154, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1156, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.RiemannTheta.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_Omega), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "Omega", 0))) __PYX_ERR(0, 1154, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_Omega), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "Omega", 0))) __PYX_ERR(0, 1156, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(((struct __pyx_obj_13riemann_theta_13riemann_theta_RiemannTheta *)__pyx_v_self), __pyx_v_Omega);
 
   /* function exit code */
@@ -13548,14 +13548,14 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":1166
+  /* "riemann_theta/riemann_theta.pyx":1168
  * 
  *         """
  *         self.CC = Omega.base_ring()             # <<<<<<<<<<<<<<
  *         self.pi = self.RR.pi()
  *         self.Yinv = numerical_inverse(self.Y)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Omega), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1166, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Omega), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1168, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -13569,7 +13569,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1166, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1168, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_GIVEREF(__pyx_t_1);
@@ -13578,14 +13578,14 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_v_self->CC = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1167
+  /* "riemann_theta/riemann_theta.pyx":1169
  *         """
  *         self.CC = Omega.base_ring()
  *         self.pi = self.RR.pi()             # <<<<<<<<<<<<<<
  *         self.Yinv = numerical_inverse(self.Y)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->RR), __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1167, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->RR), __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -13599,24 +13599,24 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1167, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1167, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1169, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->pi);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->pi));
   __pyx_v_self->pi = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1168
+  /* "riemann_theta/riemann_theta.pyx":1170
  *         self.CC = Omega.base_ring()
  *         self.pi = self.RR.pi()
  *         self.Yinv = numerical_inverse(self.Y)             # <<<<<<<<<<<<<<
  * 
  *         #be careful: we scale the cholesky decomposition to already have the pi in it.
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_numerical_inverse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1168, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_numerical_inverse); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -13630,26 +13630,26 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_self->Y)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_self->Y));
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1168, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1168, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1170, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->Yinv);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Yinv));
   __pyx_v_self->Yinv = ((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1171
+  /* "riemann_theta/riemann_theta.pyx":1173
  * 
  *         #be careful: we scale the cholesky decomposition to already have the pi in it.
  *         self.T = cholesky_decomposition(self.pi*self.Y)             # <<<<<<<<<<<<<<
  *         self.Ynorm = NormCholesky.from_cholesky_matrix(self.T)
  *         self.Xnorm_dict = {1: NormGramInt.from_gram_matrix(self.X)}
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_cholesky_decomposition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1171, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_cholesky_decomposition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Multiply(((PyObject *)__pyx_v_self->pi), ((PyObject *)__pyx_v_self->Y)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1171, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(((PyObject *)__pyx_v_self->pi), ((PyObject *)__pyx_v_self->Y)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -13664,17 +13664,17 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1171, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1171, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1173, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->T);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->T));
   __pyx_v_self->T = ((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1172
+  /* "riemann_theta/riemann_theta.pyx":1174
  *         #be careful: we scale the cholesky decomposition to already have the pi in it.
  *         self.T = cholesky_decomposition(self.pi*self.Y)
  *         self.Ynorm = NormCholesky.from_cholesky_matrix(self.T)             # <<<<<<<<<<<<<<
@@ -13683,7 +13683,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
  */
   __pyx_t_1 = ((PyObject *)__pyx_v_self->T);
   __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_2 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_from_cholesky_matrix(((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1172, __pyx_L1_error)
+  __pyx_t_2 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_from_cholesky_matrix(((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -13692,21 +13692,21 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_v_self->Ynorm = ((struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1173
+  /* "riemann_theta/riemann_theta.pyx":1175
  *         self.T = cholesky_decomposition(self.pi*self.Y)
  *         self.Ynorm = NormCholesky.from_cholesky_matrix(self.T)
  *         self.Xnorm_dict = {1: NormGramInt.from_gram_matrix(self.X)}             # <<<<<<<<<<<<<<
  *         self.Rbound_dict = {}
  *         self.MPCC = MPComplexField_class(self.RR.__prec)
  */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1173, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = ((PyObject *)__pyx_v_self->X);
   __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_3 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_from_gram_matrix(((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1173, __pyx_L1_error)
+  __pyx_t_3 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_from_gram_matrix(((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_int_1, __pyx_t_3) < 0) __PYX_ERR(0, 1173, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_int_1, __pyx_t_3) < 0) __PYX_ERR(0, 1175, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
   __Pyx_GOTREF(__pyx_v_self->Xnorm_dict);
@@ -13714,14 +13714,14 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_v_self->Xnorm_dict = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1174
+  /* "riemann_theta/riemann_theta.pyx":1176
  *         self.Ynorm = NormCholesky.from_cholesky_matrix(self.T)
  *         self.Xnorm_dict = {1: NormGramInt.from_gram_matrix(self.X)}
  *         self.Rbound_dict = {}             # <<<<<<<<<<<<<<
  *         self.MPCC = MPComplexField_class(self.RR.__prec)
  *         self.ZZg = ZZ**(self.g)
  */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1174, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1176, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_2);
   __Pyx_GOTREF(__pyx_v_self->Rbound_dict);
@@ -13729,16 +13729,16 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_v_self->Rbound_dict = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1175
+  /* "riemann_theta/riemann_theta.pyx":1177
  *         self.Xnorm_dict = {1: NormGramInt.from_gram_matrix(self.X)}
  *         self.Rbound_dict = {}
  *         self.MPCC = MPComplexField_class(self.RR.__prec)             # <<<<<<<<<<<<<<
  *         self.ZZg = ZZ**(self.g)
  *         self.CCg = (self.CC)**self.g
  */
-  __pyx_t_2 = __Pyx_PyInt_From_mpfr_prec_t(__pyx_v_self->RR->__pyx___prec); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1175, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_mpfr_prec_t(__pyx_v_self->RR->__pyx___prec); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_4sage_5rings_11complex_mpc_MPComplexField_class), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1175, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_4sage_5rings_11complex_mpc_MPComplexField_class), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1177, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_GIVEREF(__pyx_t_3);
@@ -13747,18 +13747,18 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_v_self->MPCC = ((struct __pyx_obj_4sage_5rings_11complex_mpc_MPComplexField_class *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1176
+  /* "riemann_theta/riemann_theta.pyx":1178
  *         self.Rbound_dict = {}
  *         self.MPCC = MPComplexField_class(self.RR.__prec)
  *         self.ZZg = ZZ**(self.g)             # <<<<<<<<<<<<<<
  *         self.CCg = (self.CC)**self.g
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ZZ); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1176, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ZZ); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1176, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_self->g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Power(__pyx_t_3, __pyx_t_2, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1176, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Power(__pyx_t_3, __pyx_t_2, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -13768,16 +13768,16 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_v_self->ZZg = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1177
+  /* "riemann_theta/riemann_theta.pyx":1179
  *         self.MPCC = MPComplexField_class(self.RR.__prec)
  *         self.ZZg = ZZ**(self.g)
  *         self.CCg = (self.CC)**self.g             # <<<<<<<<<<<<<<
  * 
  *     def __cinit__(self, Matrix_generic_dense Omega):
  */
-  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_self->g); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1177, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_self->g); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Power(__pyx_v_self->CC, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1177, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Power(__pyx_v_self->CC, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_GIVEREF(__pyx_t_2);
@@ -13786,7 +13786,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   __pyx_v_self->CCg = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1154
+  /* "riemann_theta/riemann_theta.pyx":1156
  *     cdef dict Rbound_dict
  * 
  *     def __init__(self, Matrix_generic_dense Omega):             # <<<<<<<<<<<<<<
@@ -13809,7 +13809,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta___init__(stru
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1179
+/* "riemann_theta/riemann_theta.pyx":1181
  *         self.CCg = (self.CC)**self.g
  * 
  *     def __cinit__(self, Matrix_generic_dense Omega):             # <<<<<<<<<<<<<<
@@ -13846,7 +13846,7 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_3__cinit__(Py
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 1179, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 1181, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -13857,13 +13857,13 @@ static int __pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_3__cinit__(Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1179, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1181, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.RiemannTheta.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_Omega), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "Omega", 0))) __PYX_ERR(0, 1179, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_Omega), __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense, 1, "Omega", 0))) __PYX_ERR(0, 1181, __pyx_L1_error)
   __pyx_r = __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(((struct __pyx_obj_13riemann_theta_13riemann_theta_RiemannTheta *)__pyx_v_self), __pyx_v_Omega);
 
   /* function exit code */
@@ -13888,16 +13888,16 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":1189
+  /* "riemann_theta/riemann_theta.pyx":1191
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         self.Y = Omega.apply_map(imag_func)             # <<<<<<<<<<<<<<
  *         self.X = Omega.apply_map(real_func)
  *         self.RR = self.Y.base_ring()
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Omega), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1189, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Omega), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_imag_func); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1189, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_imag_func); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -13912,26 +13912,26 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1189, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1189, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1191, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->Y);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->Y));
   __pyx_v_self->Y = ((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1190
+  /* "riemann_theta/riemann_theta.pyx":1192
  *         """
  *         self.Y = Omega.apply_map(imag_func)
  *         self.X = Omega.apply_map(real_func)             # <<<<<<<<<<<<<<
  *         self.RR = self.Y.base_ring()
  *         self.g = self.Y.nrows()
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Omega), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1190, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Omega), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_real_func); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1190, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_real_func); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -13946,24 +13946,24 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1190, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1190, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense))))) __PYX_ERR(0, 1192, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->X);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->X));
   __pyx_v_self->X = ((struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1191
+  /* "riemann_theta/riemann_theta.pyx":1193
  *         self.Y = Omega.apply_map(imag_func)
  *         self.X = Omega.apply_map(real_func)
  *         self.RR = self.Y.base_ring()             # <<<<<<<<<<<<<<
  *         self.g = self.Y.nrows()
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1191, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_base_ring); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1193, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -13977,24 +13977,24 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1191, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1193, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class))))) __PYX_ERR(0, 1191, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_4sage_5rings_9real_mpfr_RealField_class))))) __PYX_ERR(0, 1193, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->RR);
   __Pyx_DECREF(((PyObject *)__pyx_v_self->RR));
   __pyx_v_self->RR = ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealField_class *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1192
+  /* "riemann_theta/riemann_theta.pyx":1194
  *         self.X = Omega.apply_map(real_func)
  *         self.RR = self.Y.base_ring()
  *         self.g = self.Y.nrows()             # <<<<<<<<<<<<<<
  * 
  *         mpfr_init2(self.r1, self.RR.__prec)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_nrows); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1192, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->Y), __pyx_n_s_nrows); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -14008,14 +14008,14 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1192, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_5 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_5 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1192, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_5 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1194, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_self->g = __pyx_t_5;
 
-  /* "riemann_theta/riemann_theta.pyx":1194
+  /* "riemann_theta/riemann_theta.pyx":1196
  *         self.g = self.Y.nrows()
  * 
  *         mpfr_init2(self.r1, self.RR.__prec)             # <<<<<<<<<<<<<<
@@ -14024,7 +14024,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
  */
   mpfr_init2(__pyx_v_self->r1, __pyx_v_self->RR->__pyx___prec);
 
-  /* "riemann_theta/riemann_theta.pyx":1195
+  /* "riemann_theta/riemann_theta.pyx":1197
  * 
  *         mpfr_init2(self.r1, self.RR.__prec)
  *         mpfr_init2(self.r2, self.RR.__prec)             # <<<<<<<<<<<<<<
@@ -14033,7 +14033,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
  */
   mpfr_init2(__pyx_v_self->r2, __pyx_v_self->RR->__pyx___prec);
 
-  /* "riemann_theta/riemann_theta.pyx":1196
+  /* "riemann_theta/riemann_theta.pyx":1198
  *         mpfr_init2(self.r1, self.RR.__prec)
  *         mpfr_init2(self.r2, self.RR.__prec)
  *         mpfr_init2(self.r3, self.RR.__prec)             # <<<<<<<<<<<<<<
@@ -14042,7 +14042,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
  */
   mpfr_init2(__pyx_v_self->r3, __pyx_v_self->RR->__pyx___prec);
 
-  /* "riemann_theta/riemann_theta.pyx":1197
+  /* "riemann_theta/riemann_theta.pyx":1199
  *         mpfr_init2(self.r2, self.RR.__prec)
  *         mpfr_init2(self.r3, self.RR.__prec)
  *         mpc_init2(self.c1, self.RR.__prec)             # <<<<<<<<<<<<<<
@@ -14051,7 +14051,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
  */
   mpc_init2(__pyx_v_self->c1, __pyx_v_self->RR->__pyx___prec);
 
-  /* "riemann_theta/riemann_theta.pyx":1198
+  /* "riemann_theta/riemann_theta.pyx":1200
  *         mpfr_init2(self.r3, self.RR.__prec)
  *         mpc_init2(self.c1, self.RR.__prec)
  *         mpc_init2(self.c2, self.RR.__prec)             # <<<<<<<<<<<<<<
@@ -14060,7 +14060,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
  */
   mpc_init2(__pyx_v_self->c2, __pyx_v_self->RR->__pyx___prec);
 
-  /* "riemann_theta/riemann_theta.pyx":1179
+  /* "riemann_theta/riemann_theta.pyx":1181
  *         self.CCg = (self.CC)**self.g
  * 
  *     def __cinit__(self, Matrix_generic_dense Omega):             # <<<<<<<<<<<<<<
@@ -14083,7 +14083,7 @@ static int __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_2__cinit__(st
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1200
+/* "riemann_theta/riemann_theta.pyx":1202
  *         mpc_init2(self.c2, self.RR.__prec)
  * 
  *     def _dealloc__(self):             # <<<<<<<<<<<<<<
@@ -14110,7 +14110,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_4_deall
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_dealloc__", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":1205
+  /* "riemann_theta/riemann_theta.pyx":1207
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         mpfr_clear(self.r1)             # <<<<<<<<<<<<<<
@@ -14119,7 +14119,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_4_deall
  */
   mpfr_clear(__pyx_v_self->r1);
 
-  /* "riemann_theta/riemann_theta.pyx":1206
+  /* "riemann_theta/riemann_theta.pyx":1208
  *         """
  *         mpfr_clear(self.r1)
  *         mpfr_clear(self.r2)             # <<<<<<<<<<<<<<
@@ -14128,7 +14128,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_4_deall
  */
   mpfr_clear(__pyx_v_self->r2);
 
-  /* "riemann_theta/riemann_theta.pyx":1207
+  /* "riemann_theta/riemann_theta.pyx":1209
  *         mpfr_clear(self.r1)
  *         mpfr_clear(self.r2)
  *         mpfr_clear(self.r3)             # <<<<<<<<<<<<<<
@@ -14137,7 +14137,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_4_deall
  */
   mpfr_clear(__pyx_v_self->r3);
 
-  /* "riemann_theta/riemann_theta.pyx":1208
+  /* "riemann_theta/riemann_theta.pyx":1210
  *         mpfr_clear(self.r2)
  *         mpfr_clear(self.r3)
  *         mpc_clear(self.c1)             # <<<<<<<<<<<<<<
@@ -14146,7 +14146,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_4_deall
  */
   mpc_clear(__pyx_v_self->c1);
 
-  /* "riemann_theta/riemann_theta.pyx":1209
+  /* "riemann_theta/riemann_theta.pyx":1211
  *         mpfr_clear(self.r3)
  *         mpc_clear(self.c1)
  *         mpc_clear(self.c2)             # <<<<<<<<<<<<<<
@@ -14155,7 +14155,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_4_deall
  */
   mpc_clear(__pyx_v_self->c2);
 
-  /* "riemann_theta/riemann_theta.pyx":1200
+  /* "riemann_theta/riemann_theta.pyx":1202
  *         mpc_init2(self.c2, self.RR.__prec)
  * 
  *     def _dealloc__(self):             # <<<<<<<<<<<<<<
@@ -14170,7 +14170,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_4_deall
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1211
+/* "riemann_theta/riemann_theta.pyx":1213
  *         mpc_clear(self.c2)
  * 
  *     cdef NormGramInt scaled_Xnorm(self, long N):             # <<<<<<<<<<<<<<
@@ -14196,7 +14196,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("scaled_Xnorm", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":1226
+  /* "riemann_theta/riemann_theta.pyx":1228
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -14212,7 +14212,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "riemann_theta/riemann_theta.pyx":1227
+      /* "riemann_theta/riemann_theta.pyx":1229
  *         """
  *         try:
  *             return self.Xnorm_dict[N]             # <<<<<<<<<<<<<<
@@ -14222,19 +14222,19 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       if (unlikely(__pyx_v_self->Xnorm_dict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 1227, __pyx_L3_error)
+        __PYX_ERR(0, 1229, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1227, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1229, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_self->Xnorm_dict, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1227, __pyx_L3_error)
+      __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_self->Xnorm_dict, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1229, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt))))) __PYX_ERR(0, 1227, __pyx_L3_error)
+      if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt))))) __PYX_ERR(0, 1229, __pyx_L3_error)
       __pyx_r = ((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_5);
       __pyx_t_5 = 0;
       goto __pyx_L7_try_return;
 
-      /* "riemann_theta/riemann_theta.pyx":1226
+      /* "riemann_theta/riemann_theta.pyx":1228
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -14246,7 +14246,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1228
+    /* "riemann_theta/riemann_theta.pyx":1230
  *         try:
  *             return self.Xnorm_dict[N]
  *         except KeyError:             # <<<<<<<<<<<<<<
@@ -14256,12 +14256,12 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
     __pyx_t_6 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_6) {
       __Pyx_AddTraceback("riemann_theta.riemann_theta.RiemannTheta.scaled_Xnorm", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_7) < 0) __PYX_ERR(0, 1228, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_7) < 0) __PYX_ERR(0, 1230, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "riemann_theta/riemann_theta.pyx":1229
+      /* "riemann_theta/riemann_theta.pyx":1231
  *             return self.Xnorm_dict[N]
  *         except KeyError:
  *             r = (<NormGramInt> self.Xnorm_dict[1]).scaled_by(N*N)             # <<<<<<<<<<<<<<
@@ -14270,17 +14270,17 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
  */
       if (unlikely(__pyx_v_self->Xnorm_dict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 1229, __pyx_L5_except_error)
+        __PYX_ERR(0, 1231, __pyx_L5_except_error)
       }
-      __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_self->Xnorm_dict, __pyx_int_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1229, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_self->Xnorm_dict, __pyx_int_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1231, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = ((PyObject *)((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_8)->__pyx_vtab)->scaled_by(((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_8), (__pyx_v_N * __pyx_v_N))); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1229, __pyx_L5_except_error)
+      __pyx_t_9 = ((PyObject *)((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_8)->__pyx_vtab)->scaled_by(((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_8), (__pyx_v_N * __pyx_v_N))); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1231, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_v_r = ((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_9);
       __pyx_t_9 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1230
+      /* "riemann_theta/riemann_theta.pyx":1232
  *         except KeyError:
  *             r = (<NormGramInt> self.Xnorm_dict[1]).scaled_by(N*N)
  *             self.Xnorm_dict[N] = r             # <<<<<<<<<<<<<<
@@ -14289,14 +14289,14 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
  */
       if (unlikely(__pyx_v_self->Xnorm_dict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 1230, __pyx_L5_except_error)
+        __PYX_ERR(0, 1232, __pyx_L5_except_error)
       }
-      __pyx_t_9 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1230, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1232, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (unlikely(PyDict_SetItem(__pyx_v_self->Xnorm_dict, __pyx_t_9, ((PyObject *)__pyx_v_r)) < 0)) __PYX_ERR(0, 1230, __pyx_L5_except_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_self->Xnorm_dict, __pyx_t_9, ((PyObject *)__pyx_v_r)) < 0)) __PYX_ERR(0, 1232, __pyx_L5_except_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1231
+      /* "riemann_theta/riemann_theta.pyx":1233
  *             r = (<NormGramInt> self.Xnorm_dict[1]).scaled_by(N*N)
  *             self.Xnorm_dict[N] = r
  *             return r             # <<<<<<<<<<<<<<
@@ -14314,7 +14314,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "riemann_theta/riemann_theta.pyx":1226
+    /* "riemann_theta/riemann_theta.pyx":1228
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -14340,7 +14340,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
     goto __pyx_L0;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1211
+  /* "riemann_theta/riemann_theta.pyx":1213
  *         mpc_clear(self.c2)
  * 
  *     cdef NormGramInt scaled_Xnorm(self, long N):             # <<<<<<<<<<<<<<
@@ -14364,7 +14364,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1233
+/* "riemann_theta/riemann_theta.pyx":1235
  *             return r
  * 
  *     def __call__(self, z = None, object char = None, derivs = [], tol=None):             # <<<<<<<<<<<<<<
@@ -14374,7 +14374,7 @@ static struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *__pyx_f_13r
 
 /* Python wrapper */
 static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_7__call__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13riemann_theta_13riemann_theta_12RiemannTheta_6__call__[] = "Evaluate Riemann theta function with characteristic and derivatives.\n\n        INPUT:\n        - ``z`` -- vector; optional (default 0). Point to evaluate theta function at.\n        - ``char`` -- list or vector; optional (default 0). Characteristic.\n            The characteristic can either be specified as a list\n            ``[[delta_1, ..., delta_g],[eps_1, ...,eps_g],N]``, where ``N`` is the level\n            of the characteristic and the ``delta_i, eps_j`` are integers describing the\n            characteristic, or as a ``2*g`-dimensional vector over ``ZZ/ N*ZZ``. In the latter case,\n            the level ``N`` is read off from the base ring and the vector is taken to be\n            ``[delta_1, ..., delta_g, eps_1, ..., eps_g]``.\n        - ``derivs`` -- list; optional (default []). Derivatives. It can be a list\n            of integers ``[i_1,...,i_n]``, in which case it is taken to mean the derivative of\n            order ``n``, obtained by taking the partial derivative with respect to\n            ``z[i_1], ..., z[i_n]``. Alternatively, it can be a list of lists of integers,\n            in which case the values of the derivatives indicated by the members of the list\n            are returned as a tuple, in order.\n        - ``tol`` -- real number; optional. Tolerance allowed in approximation. The default is\n            the tolerance indicated by the precision of the base ring. Note that the tolerance\n            controlled is the tolerance in the approximation of the periodic part of the Riemann\n            Theta function (see [DHBvHS2004]_). Furthermore, floating point rounding in iterated\n            summations may perturb the lower bits.\n\n        OUTPUT: A complex number of a tuple of them; the value(s) of the indicated Riemann\n        Theta function(s).\n\n        EXAMPLE::\n\n            sage: from riemann_theta import RiemannTheta\n            sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))\n            sage: RT(z=(0,0),char=[[1,0],[0"",1],2],derivs=[0,0,0]).abs() # abs_tol = 1e-15\n            2.88494706892332e-16\n        ";
+static char __pyx_doc_13riemann_theta_13riemann_theta_12RiemannTheta_6__call__[] = "Evaluate Riemann theta function with characteristic and derivatives.\n\n        INPUT:\n        - ``z`` -- vector; optional (default 0). Point to evaluate theta function at.\n        - ``char`` -- list or vector; optional (default 0). Characteristic.\n            The characteristic can either be specified as a list\n            ``[[delta_1, ..., delta_g],[eps_1, ...,eps_g],N]``, where ``N`` is the level\n            of the characteristic and the ``delta_i, eps_j`` are integers describing the\n            characteristic, or as a ``2*g`-dimensional vector over ``ZZ/ N*ZZ``. In the latter case,\n            the level ``N`` is read off from the base ring and the vector is taken to be\n            ``[delta_1, ..., delta_g, eps_1, ..., eps_g]``.\n        - ``derivs`` -- list; optional (default []). Derivatives. It can be a list\n            of integers ``[i_1,...,i_n]``, in which case it is taken to mean the derivative of\n            order ``n``, obtained by taking the partial derivative with respect to\n            ``z[i_1], ..., z[i_n]``. Alternatively, it can be a list of lists of integers,\n            in which case the values of the derivatives indicated by the members of the list\n            are returned as a tuple, in order.\n        - ``tol`` -- real number; optional. Tolerance allowed in approximation. The default is\n            the tolerance indicated by the precision of the base ring. Note that the tolerance\n            controlled is the tolerance in the approximation of the periodic part of the Riemann\n            Theta function (see [DHBvHS2004]_). Furthermore, floating point rounding in iterated\n            summations may perturb the lower bits.\n\n        OUTPUT: A complex number of a tuple of them; the value(s) of the indicated Riemann\n        Theta function(s).\n\n        EXAMPLE::\n\n            sage: from riemann_theta.riemann_theta import RiemannTheta\n            sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))\n            sage: RT(z=(0,0),""char=[[1,0],[0,1],2],derivs=[0,0,0]).abs() # abs_tol = 1e-15\n            2.88494706892332e-16\n        ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_13riemann_theta_13riemann_theta_12RiemannTheta_6__call__;
 #endif
@@ -14438,7 +14438,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_7__call
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) __PYX_ERR(0, 1233, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__call__") < 0)) __PYX_ERR(0, 1235, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -14461,7 +14461,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_7__call
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__call__", 0, 0, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1233, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__call__", 0, 0, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1235, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("riemann_theta.riemann_theta.RiemannTheta.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -14475,7 +14475,7 @@ static PyObject *__pyx_pw_13riemann_theta_13riemann_theta_12RiemannTheta_7__call
 }
 static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call___2generator2(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "riemann_theta/riemann_theta.pyx":1303
+/* "riemann_theta/riemann_theta.pyx":1305
  *                 derivs=[derivs]
  * 
  *         if any( d<0 or d>=self.g for l in derivs for d in l):             # <<<<<<<<<<<<<<
@@ -14495,7 +14495,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1303, __pyx_L1_error)
+    __PYX_ERR(0, 1305, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -14503,7 +14503,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call___2generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_call___locals_genexpr, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1303, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call___2generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_call___locals_genexpr, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1305, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -14545,32 +14545,32 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1303, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs)) { __Pyx_RaiseClosureNameError("derivs"); __PYX_ERR(0, 1303, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1305, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs)) { __Pyx_RaiseClosureNameError("derivs"); __PYX_ERR(0, 1305, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1303, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1303, __pyx_L1_error)
+    __pyx_t_3 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1305, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 1303, __pyx_L1_error)
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1303, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1305, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       } else {
         if (__pyx_t_2 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 1303, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
         #else
-        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1303, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1305, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
       }
@@ -14580,7 +14580,7 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 1303, __pyx_L1_error)
+          else __PYX_ERR(0, 1305, __pyx_L1_error)
         }
         break;
       }
@@ -14594,26 +14594,26 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
       __pyx_t_4 = __pyx_cur_scope->__pyx_v_l; __Pyx_INCREF(__pyx_t_4); __pyx_t_5 = 0;
       __pyx_t_6 = NULL;
     } else {
-      __pyx_t_5 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_cur_scope->__pyx_v_l); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1303, __pyx_L1_error)
+      __pyx_t_5 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_cur_scope->__pyx_v_l); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1305, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1303, __pyx_L1_error)
+      __pyx_t_6 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1305, __pyx_L1_error)
     }
     for (;;) {
       if (likely(!__pyx_t_6)) {
         if (likely(PyList_CheckExact(__pyx_t_4))) {
           if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_7 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1303, __pyx_L1_error)
+          __pyx_t_7 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
           #else
-          __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1303, __pyx_L1_error)
+          __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1305, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           #endif
         } else {
           if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_7 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1303, __pyx_L1_error)
+          __pyx_t_7 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
           #else
-          __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1303, __pyx_L1_error)
+          __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1305, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           #endif
         }
@@ -14623,7 +14623,7 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 1303, __pyx_L1_error)
+            else __PYX_ERR(0, 1305, __pyx_L1_error)
           }
           break;
         }
@@ -14633,20 +14633,20 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
       __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_d, __pyx_t_7);
       __Pyx_GIVEREF(__pyx_t_7);
       __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_d, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1303, __pyx_L1_error)
-      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 1303, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_d, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1305, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (!__pyx_t_9) {
       } else {
         __pyx_t_8 = __pyx_t_9;
         goto __pyx_L9_bool_binop_done;
       }
-      if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 1303, __pyx_L1_error) }
-      __pyx_t_7 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self->g); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1303, __pyx_L1_error)
+      if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 1305, __pyx_L1_error) }
+      __pyx_t_7 = __Pyx_PyInt_From_long(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_self->g); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1305, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_10 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_d, __pyx_t_7, Py_GE); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1303, __pyx_L1_error)
+      __pyx_t_10 = PyObject_RichCompare(__pyx_cur_scope->__pyx_v_d, __pyx_t_7, Py_GE); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1305, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 1303, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_t_8 = __pyx_t_9;
       __pyx_L9_bool_binop_done:;
@@ -14690,7 +14690,7 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_8__call
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1233
+/* "riemann_theta/riemann_theta.pyx":1235
  *             return r
  * 
  *     def __call__(self, z = None, object char = None, derivs = [], tol=None):             # <<<<<<<<<<<<<<
@@ -14731,7 +14731,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__ *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1233, __pyx_L1_error)
+    __PYX_ERR(0, 1235, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -14744,7 +14744,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   __Pyx_INCREF(__pyx_v_z);
   __Pyx_INCREF(__pyx_v_tol);
 
-  /* "riemann_theta/riemann_theta.pyx":1267
+  /* "riemann_theta/riemann_theta.pyx":1269
  *             2.88494706892332e-16
  *         """
  *         if z is None:             # <<<<<<<<<<<<<<
@@ -14755,14 +14755,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "riemann_theta/riemann_theta.pyx":1268
+    /* "riemann_theta/riemann_theta.pyx":1270
  *         """
  *         if z is None:
  *             z = self.CCg.zero()             # <<<<<<<<<<<<<<
  *         else:
  *             z = self.CCg(z)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->CCg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1268, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->CCg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1270, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -14776,13 +14776,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1268, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1270, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF_SET(__pyx_v_z, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1267
+    /* "riemann_theta/riemann_theta.pyx":1269
  *             2.88494706892332e-16
  *         """
  *         if z is None:             # <<<<<<<<<<<<<<
@@ -14792,7 +14792,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     goto __pyx_L3;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1270
+  /* "riemann_theta/riemann_theta.pyx":1272
  *             z = self.CCg.zero()
  *         else:
  *             z = self.CCg(z)             # <<<<<<<<<<<<<<
@@ -14813,7 +14813,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_z) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_z);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1270, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF_SET(__pyx_v_z, __pyx_t_3);
@@ -14821,7 +14821,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   }
   __pyx_L3:;
 
-  /* "riemann_theta/riemann_theta.pyx":1272
+  /* "riemann_theta/riemann_theta.pyx":1274
  *             z = self.CCg(z)
  * 
  *         if char is None:             # <<<<<<<<<<<<<<
@@ -14832,14 +14832,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "riemann_theta/riemann_theta.pyx":1273
+    /* "riemann_theta/riemann_theta.pyx":1275
  * 
  *         if char is None:
  *             eps = self.ZZg.zero()             # <<<<<<<<<<<<<<
  *             delta = self.ZZg.zero()
  *             N = 1
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1273, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1275, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -14853,20 +14853,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1273, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1275, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_eps = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1274
+    /* "riemann_theta/riemann_theta.pyx":1276
  *         if char is None:
  *             eps = self.ZZg.zero()
  *             delta = self.ZZg.zero()             # <<<<<<<<<<<<<<
  *             N = 1
  *         elif isinstance(char, FreeModuleElement):
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1274, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1276, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -14880,13 +14880,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1274, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1276, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_delta = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1275
+    /* "riemann_theta/riemann_theta.pyx":1277
  *             eps = self.ZZg.zero()
  *             delta = self.ZZg.zero()
  *             N = 1             # <<<<<<<<<<<<<<
@@ -14896,7 +14896,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     __Pyx_INCREF(__pyx_int_1);
     __pyx_v_N = __pyx_int_1;
 
-    /* "riemann_theta/riemann_theta.pyx":1272
+    /* "riemann_theta/riemann_theta.pyx":1274
  *             z = self.CCg(z)
  * 
  *         if char is None:             # <<<<<<<<<<<<<<
@@ -14906,7 +14906,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     goto __pyx_L4;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1276
+  /* "riemann_theta/riemann_theta.pyx":1278
  *             delta = self.ZZg.zero()
  *             N = 1
  *         elif isinstance(char, FreeModuleElement):             # <<<<<<<<<<<<<<
@@ -14917,14 +14917,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "riemann_theta/riemann_theta.pyx":1277
+    /* "riemann_theta/riemann_theta.pyx":1279
  *             N = 1
  *         elif isinstance(char, FreeModuleElement):
  *             R = char.base_ring()             # <<<<<<<<<<<<<<
  *             rnk = char.parent().rank()
  *             #note R.characteristic is different
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_char, __pyx_n_s_base_ring); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1277, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_char, __pyx_n_s_base_ring); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -14938,20 +14938,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1277, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_R = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1278
+    /* "riemann_theta/riemann_theta.pyx":1280
  *         elif isinstance(char, FreeModuleElement):
  *             R = char.base_ring()
  *             rnk = char.parent().rank()             # <<<<<<<<<<<<<<
  *             #note R.characteristic is different
  *             if R.characteristic() != R.order() or rnk != 2*self.g:
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_char, __pyx_n_s_parent); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1278, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_char, __pyx_n_s_parent); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1280, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -14965,39 +14965,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1278, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1280, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_rank); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1278, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_rank); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1280, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
-      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_5);
-      if (likely(__pyx_t_4)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
-        __Pyx_INCREF(__pyx_t_4);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_5, function);
-      }
-    }
-    __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
-    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1278, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_v_rnk = __pyx_t_3;
-    __pyx_t_3 = 0;
-
-    /* "riemann_theta/riemann_theta.pyx":1280
- *             rnk = char.parent().rank()
- *             #note R.characteristic is different
- *             if R.characteristic() != R.order() or rnk != 2*self.g:             # <<<<<<<<<<<<<<
- *                 raise TypeError("Invalid characteristic specification")
- *             eps = self.ZZg(char[:self.g])
- */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_characteristic); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1280, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
       __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_5);
@@ -15013,7 +14986,34 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1280, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_order); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1280, __pyx_L1_error)
+    __pyx_v_rnk = __pyx_t_3;
+    __pyx_t_3 = 0;
+
+    /* "riemann_theta/riemann_theta.pyx":1282
+ *             rnk = char.parent().rank()
+ *             #note R.characteristic is different
+ *             if R.characteristic() != R.order() or rnk != 2*self.g:             # <<<<<<<<<<<<<<
+ *                 raise TypeError("Invalid characteristic specification")
+ *             eps = self.ZZg(char[:self.g])
+ */
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_characteristic); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1282, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_4 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
+      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_5);
+      if (likely(__pyx_t_4)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_5, function);
+      }
+    }
+    __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1282, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_order); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -15027,43 +15027,43 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1280, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_3, __pyx_t_5, Py_NE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1280, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_3, __pyx_t_5, Py_NE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1282, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 1280, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 1282, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (!__pyx_t_1) {
     } else {
       __pyx_t_2 = __pyx_t_1;
       goto __pyx_L6_bool_binop_done;
     }
-    __pyx_t_4 = __Pyx_PyInt_From_long((2 * __pyx_cur_scope->__pyx_v_self->g)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1280, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_long((2 * __pyx_cur_scope->__pyx_v_self->g)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyObject_RichCompare(__pyx_v_rnk, __pyx_t_4, Py_NE); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1280, __pyx_L1_error)
+    __pyx_t_5 = PyObject_RichCompare(__pyx_v_rnk, __pyx_t_4, Py_NE); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1282, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 1280, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 1282, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_2 = __pyx_t_1;
     __pyx_L6_bool_binop_done:;
     if (unlikely(__pyx_t_2)) {
 
-      /* "riemann_theta/riemann_theta.pyx":1281
+      /* "riemann_theta/riemann_theta.pyx":1283
  *             #note R.characteristic is different
  *             if R.characteristic() != R.order() or rnk != 2*self.g:
  *                 raise TypeError("Invalid characteristic specification")             # <<<<<<<<<<<<<<
  *             eps = self.ZZg(char[:self.g])
  *             delta = self.ZZg(char[self.g:])
  */
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__30, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1281, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__30, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1283, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_Raise(__pyx_t_5, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __PYX_ERR(0, 1281, __pyx_L1_error)
+      __PYX_ERR(0, 1283, __pyx_L1_error)
 
-      /* "riemann_theta/riemann_theta.pyx":1280
+      /* "riemann_theta/riemann_theta.pyx":1282
  *             rnk = char.parent().rank()
  *             #note R.characteristic is different
  *             if R.characteristic() != R.order() or rnk != 2*self.g:             # <<<<<<<<<<<<<<
@@ -15072,14 +15072,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
     }
 
-    /* "riemann_theta/riemann_theta.pyx":1282
+    /* "riemann_theta/riemann_theta.pyx":1284
  *             if R.characteristic() != R.order() or rnk != 2*self.g:
  *                 raise TypeError("Invalid characteristic specification")
  *             eps = self.ZZg(char[:self.g])             # <<<<<<<<<<<<<<
  *             delta = self.ZZg(char[self.g:])
  *             N = R.order()
  */
-    __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_v_char, 0, __pyx_cur_scope->__pyx_v_self->g, NULL, NULL, NULL, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1282, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_v_char, 0, __pyx_cur_scope->__pyx_v_self->g, NULL, NULL, NULL, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self->ZZg);
     __pyx_t_3 = __pyx_cur_scope->__pyx_v_self->ZZg; __pyx_t_6 = NULL;
@@ -15095,20 +15095,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_6, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1282, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_eps = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1283
+    /* "riemann_theta/riemann_theta.pyx":1285
  *                 raise TypeError("Invalid characteristic specification")
  *             eps = self.ZZg(char[:self.g])
  *             delta = self.ZZg(char[self.g:])             # <<<<<<<<<<<<<<
  *             N = R.order()
  *         else:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_v_char, __pyx_cur_scope->__pyx_v_self->g, 0, NULL, NULL, NULL, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1283, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_v_char, __pyx_cur_scope->__pyx_v_self->g, 0, NULL, NULL, NULL, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1285, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self->ZZg);
     __pyx_t_4 = __pyx_cur_scope->__pyx_v_self->ZZg; __pyx_t_6 = NULL;
@@ -15124,20 +15124,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_6, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1283, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1285, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_delta = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1284
+    /* "riemann_theta/riemann_theta.pyx":1286
  *             eps = self.ZZg(char[:self.g])
  *             delta = self.ZZg(char[self.g:])
  *             N = R.order()             # <<<<<<<<<<<<<<
  *         else:
  *             if len(char) != 3 or len(char[0]) != self.g or len(char[1]) != self.g:
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_order); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1284, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_R, __pyx_n_s_order); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1286, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -15151,13 +15151,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_5 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1284, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1286, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_N = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1276
+    /* "riemann_theta/riemann_theta.pyx":1278
  *             delta = self.ZZg.zero()
  *             N = 1
  *         elif isinstance(char, FreeModuleElement):             # <<<<<<<<<<<<<<
@@ -15167,7 +15167,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     goto __pyx_L4;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1286
+  /* "riemann_theta/riemann_theta.pyx":1288
  *             N = R.order()
  *         else:
  *             if len(char) != 3 or len(char[0]) != self.g or len(char[1]) != self.g:             # <<<<<<<<<<<<<<
@@ -15175,16 +15175,16 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  *             eps = self.ZZg(char[0])
  */
   /*else*/ {
-    __pyx_t_7 = PyObject_Length(__pyx_v_char); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1286, __pyx_L1_error)
+    __pyx_t_7 = PyObject_Length(__pyx_v_char); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1288, __pyx_L1_error)
     __pyx_t_1 = ((__pyx_t_7 != 3) != 0);
     if (!__pyx_t_1) {
     } else {
       __pyx_t_2 = __pyx_t_1;
       goto __pyx_L9_bool_binop_done;
     }
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_char, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1286, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_char, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1286, __pyx_L1_error)
+    __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1288, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_1 = ((__pyx_t_7 != __pyx_cur_scope->__pyx_v_self->g) != 0);
     if (!__pyx_t_1) {
@@ -15192,29 +15192,29 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
       __pyx_t_2 = __pyx_t_1;
       goto __pyx_L9_bool_binop_done;
     }
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_char, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1286, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_char, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1286, __pyx_L1_error)
+    __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1288, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_1 = ((__pyx_t_7 != __pyx_cur_scope->__pyx_v_self->g) != 0);
     __pyx_t_2 = __pyx_t_1;
     __pyx_L9_bool_binop_done:;
     if (unlikely(__pyx_t_2)) {
 
-      /* "riemann_theta/riemann_theta.pyx":1287
+      /* "riemann_theta/riemann_theta.pyx":1289
  *         else:
  *             if len(char) != 3 or len(char[0]) != self.g or len(char[1]) != self.g:
  *                 raise TypeError("Invalid characteristic specification")             # <<<<<<<<<<<<<<
  *             eps = self.ZZg(char[0])
  *             delta = self.ZZg(char[1])
  */
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__30, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1287, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__30, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1289, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_Raise(__pyx_t_5, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __PYX_ERR(0, 1287, __pyx_L1_error)
+      __PYX_ERR(0, 1289, __pyx_L1_error)
 
-      /* "riemann_theta/riemann_theta.pyx":1286
+      /* "riemann_theta/riemann_theta.pyx":1288
  *             N = R.order()
  *         else:
  *             if len(char) != 3 or len(char[0]) != self.g or len(char[1]) != self.g:             # <<<<<<<<<<<<<<
@@ -15223,14 +15223,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
     }
 
-    /* "riemann_theta/riemann_theta.pyx":1288
+    /* "riemann_theta/riemann_theta.pyx":1290
  *             if len(char) != 3 or len(char[0]) != self.g or len(char[1]) != self.g:
  *                 raise TypeError("Invalid characteristic specification")
  *             eps = self.ZZg(char[0])             # <<<<<<<<<<<<<<
  *             delta = self.ZZg(char[1])
  *             N = int(char[2])
  */
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_char, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1288, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_char, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1290, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self->ZZg);
     __pyx_t_3 = __pyx_cur_scope->__pyx_v_self->ZZg; __pyx_t_6 = NULL;
@@ -15246,20 +15246,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_6, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1288, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1290, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_eps = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1289
+    /* "riemann_theta/riemann_theta.pyx":1291
  *                 raise TypeError("Invalid characteristic specification")
  *             eps = self.ZZg(char[0])
  *             delta = self.ZZg(char[1])             # <<<<<<<<<<<<<<
  *             N = int(char[2])
  * 
  */
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_char, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1289, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_char, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1291, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self->ZZg);
     __pyx_t_4 = __pyx_cur_scope->__pyx_v_self->ZZg; __pyx_t_6 = NULL;
@@ -15275,22 +15275,22 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     __pyx_t_5 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_6, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1289, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1291, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_delta = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1290
+    /* "riemann_theta/riemann_theta.pyx":1292
  *             eps = self.ZZg(char[0])
  *             delta = self.ZZg(char[1])
  *             N = int(char[2])             # <<<<<<<<<<<<<<
  * 
  *         if len(derivs)==0:
  */
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_char, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1290, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_char, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1290, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_N = __pyx_t_4;
@@ -15298,7 +15298,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   }
   __pyx_L4:;
 
-  /* "riemann_theta/riemann_theta.pyx":1292
+  /* "riemann_theta/riemann_theta.pyx":1294
  *             N = int(char[2])
  * 
  *         if len(derivs)==0:             # <<<<<<<<<<<<<<
@@ -15307,12 +15307,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
   __pyx_t_4 = __pyx_cur_scope->__pyx_v_derivs;
   __Pyx_INCREF(__pyx_t_4);
-  __pyx_t_7 = PyObject_Length(__pyx_t_4); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1292, __pyx_L1_error)
+  __pyx_t_7 = PyObject_Length(__pyx_t_4); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1294, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_2 = ((__pyx_t_7 == 0) != 0);
   if (__pyx_t_2) {
 
-    /* "riemann_theta/riemann_theta.pyx":1293
+    /* "riemann_theta/riemann_theta.pyx":1295
  * 
  *         if len(derivs)==0:
  *             vecresult = False             # <<<<<<<<<<<<<<
@@ -15321,16 +15321,16 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
     __pyx_v_vecresult = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1294
+    /* "riemann_theta/riemann_theta.pyx":1296
  *         if len(derivs)==0:
  *             vecresult = False
  *             derivs = [[]]             # <<<<<<<<<<<<<<
  *         else:
  *             try:
  */
-    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1294, __pyx_L1_error)
+    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1296, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyList_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1294, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1296, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_4);
     PyList_SET_ITEM(__pyx_t_5, 0, __pyx_t_4);
@@ -15340,7 +15340,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1292
+    /* "riemann_theta/riemann_theta.pyx":1294
  *             N = int(char[2])
  * 
  *         if len(derivs)==0:             # <<<<<<<<<<<<<<
@@ -15350,7 +15350,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     goto __pyx_L12;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1296
+  /* "riemann_theta/riemann_theta.pyx":1298
  *             derivs = [[]]
  *         else:
  *             try:             # <<<<<<<<<<<<<<
@@ -15367,20 +15367,20 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
       __Pyx_XGOTREF(__pyx_t_10);
       /*try:*/ {
 
-        /* "riemann_theta/riemann_theta.pyx":1297
+        /* "riemann_theta/riemann_theta.pyx":1299
  *         else:
  *             try:
  *                 len(derivs[0])>0             # <<<<<<<<<<<<<<
  *                 vecresult = True
  *             except TypeError:
  */
-        __pyx_t_5 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_derivs, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1297, __pyx_L13_error)
+        __pyx_t_5 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_derivs, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1299, __pyx_L13_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1297, __pyx_L13_error)
+        __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1299, __pyx_L13_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         (void)((__pyx_t_7 > 0));
 
-        /* "riemann_theta/riemann_theta.pyx":1298
+        /* "riemann_theta/riemann_theta.pyx":1300
  *             try:
  *                 len(derivs[0])>0
  *                 vecresult = True             # <<<<<<<<<<<<<<
@@ -15389,7 +15389,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
         __pyx_v_vecresult = 1;
 
-        /* "riemann_theta/riemann_theta.pyx":1296
+        /* "riemann_theta/riemann_theta.pyx":1298
  *             derivs = [[]]
  *         else:
  *             try:             # <<<<<<<<<<<<<<
@@ -15407,7 +15407,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1299
+      /* "riemann_theta/riemann_theta.pyx":1301
  *                 len(derivs[0])>0
  *                 vecresult = True
  *             except TypeError:             # <<<<<<<<<<<<<<
@@ -15417,12 +15417,12 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
       __pyx_t_11 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_TypeError);
       if (__pyx_t_11) {
         __Pyx_AddTraceback("riemann_theta.riemann_theta.RiemannTheta.__call__", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_3) < 0) __PYX_ERR(0, 1299, __pyx_L15_except_error)
+        if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_3) < 0) __PYX_ERR(0, 1301, __pyx_L15_except_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GOTREF(__pyx_t_3);
 
-        /* "riemann_theta/riemann_theta.pyx":1300
+        /* "riemann_theta/riemann_theta.pyx":1302
  *                 vecresult = True
  *             except TypeError:
  *                 vecresult = False             # <<<<<<<<<<<<<<
@@ -15431,14 +15431,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
         __pyx_v_vecresult = 0;
 
-        /* "riemann_theta/riemann_theta.pyx":1301
+        /* "riemann_theta/riemann_theta.pyx":1303
  *             except TypeError:
  *                 vecresult = False
  *                 derivs=[derivs]             # <<<<<<<<<<<<<<
  * 
  *         if any( d<0 or d>=self.g for l in derivs for d in l):
  */
-        __pyx_t_6 = PyList_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1301, __pyx_L15_except_error)
+        __pyx_t_6 = PyList_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1303, __pyx_L15_except_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_INCREF(__pyx_cur_scope->__pyx_v_derivs);
         __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_derivs);
@@ -15455,7 +15455,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
       goto __pyx_L15_except_error;
       __pyx_L15_except_error:;
 
-      /* "riemann_theta/riemann_theta.pyx":1296
+      /* "riemann_theta/riemann_theta.pyx":1298
  *             derivs = [[]]
  *         else:
  *             try:             # <<<<<<<<<<<<<<
@@ -15477,36 +15477,36 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   }
   __pyx_L12:;
 
-  /* "riemann_theta/riemann_theta.pyx":1303
+  /* "riemann_theta/riemann_theta.pyx":1305
  *                 derivs=[derivs]
  * 
  *         if any( d<0 or d>=self.g for l in derivs for d in l):             # <<<<<<<<<<<<<<
  *             raise ValueError("Invalid value in derivative list")
  *         derivs = [Vector_long.from_list(d) for d in derivs]
  */
-  __pyx_t_3 = __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_8__call___genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1303, __pyx_L1_error)
+  __pyx_t_3 = __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_8__call___genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1305, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Generator_Next(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1303, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Generator_Next(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1305, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1303, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (unlikely(__pyx_t_2)) {
 
-    /* "riemann_theta/riemann_theta.pyx":1304
+    /* "riemann_theta/riemann_theta.pyx":1306
  * 
  *         if any( d<0 or d>=self.g for l in derivs for d in l):
  *             raise ValueError("Invalid value in derivative list")             # <<<<<<<<<<<<<<
  *         derivs = [Vector_long.from_list(d) for d in derivs]
  * 
  */
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__31, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1304, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__31, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_Raise(__pyx_t_4, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 1304, __pyx_L1_error)
+    __PYX_ERR(0, 1306, __pyx_L1_error)
 
-    /* "riemann_theta/riemann_theta.pyx":1303
+    /* "riemann_theta/riemann_theta.pyx":1305
  *                 derivs=[derivs]
  * 
  *         if any( d<0 or d>=self.g for l in derivs for d in l):             # <<<<<<<<<<<<<<
@@ -15515,39 +15515,39 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1305
+  /* "riemann_theta/riemann_theta.pyx":1307
  *         if any( d<0 or d>=self.g for l in derivs for d in l):
  *             raise ValueError("Invalid value in derivative list")
  *         derivs = [Vector_long.from_list(d) for d in derivs]             # <<<<<<<<<<<<<<
  * 
  *         if tol is None:
  */
-  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1305, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1307, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_v_derivs)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_v_derivs)) {
     __pyx_t_3 = __pyx_cur_scope->__pyx_v_derivs; __Pyx_INCREF(__pyx_t_3); __pyx_t_7 = 0;
     __pyx_t_12 = NULL;
   } else {
-    __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_cur_scope->__pyx_v_derivs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1305, __pyx_L1_error)
+    __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_cur_scope->__pyx_v_derivs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1307, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_12 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1305, __pyx_L1_error)
+    __pyx_t_12 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1307, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_12)) {
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
+        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 1307, __pyx_L1_error)
         #else
-        __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1305, __pyx_L1_error)
+        __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1307, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         #endif
       } else {
         if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 1305, __pyx_L1_error)
+        __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_5); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 1307, __pyx_L1_error)
         #else
-        __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1305, __pyx_L1_error)
+        __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1307, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         #endif
       }
@@ -15557,7 +15557,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 1305, __pyx_L1_error)
+          else __PYX_ERR(0, 1307, __pyx_L1_error)
         }
         break;
       }
@@ -15565,9 +15565,9 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __Pyx_XDECREF_SET(__pyx_v_d, __pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_5 = __pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list(__pyx_v_d); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1305, __pyx_L1_error)
+    __pyx_t_5 = __pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list(__pyx_v_d); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1307, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 1305, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 1307, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -15576,7 +15576,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1307
+  /* "riemann_theta/riemann_theta.pyx":1309
  *         derivs = [Vector_long.from_list(d) for d in derivs]
  * 
  *         if tol is None:             # <<<<<<<<<<<<<<
@@ -15587,7 +15587,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "riemann_theta/riemann_theta.pyx":1308
+    /* "riemann_theta/riemann_theta.pyx":1310
  * 
  *         if tol is None:
  *             tol = self.RR(2)**(-self.RR.__prec)             # <<<<<<<<<<<<<<
@@ -15607,19 +15607,19 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
     }
     __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_int_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_int_2);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1308, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_mpfr_prec_t((-__pyx_cur_scope->__pyx_v_self->RR->__pyx___prec)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1308, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_mpfr_prec_t((-__pyx_cur_scope->__pyx_v_self->RR->__pyx___prec)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = PyNumber_Power(__pyx_t_4, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1308, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_Power(__pyx_t_4, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF_SET(__pyx_v_tol, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1307
+    /* "riemann_theta/riemann_theta.pyx":1309
  *         derivs = [Vector_long.from_list(d) for d in derivs]
  * 
  *         if tol is None:             # <<<<<<<<<<<<<<
@@ -15628,28 +15628,28 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1309
+  /* "riemann_theta/riemann_theta.pyx":1311
  *         if tol is None:
  *             tol = self.RR(2)**(-self.RR.__prec)
  *         result = self._eval_vector_(z, eps, delta, N, derivs, tol)             # <<<<<<<<<<<<<<
  *         if vecresult:
  *             return tuple(result)
  */
-  if (!(likely(((__pyx_v_z) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_z, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1309, __pyx_L1_error)
-  if (!(likely(((__pyx_v_eps) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_eps, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1309, __pyx_L1_error)
-  if (!(likely(((__pyx_v_delta) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_delta, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1309, __pyx_L1_error)
-  __pyx_t_13 = __Pyx_PyInt_As_long(__pyx_v_N); if (unlikely((__pyx_t_13 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1309, __pyx_L1_error)
-  if (!(likely(PyList_CheckExact(__pyx_cur_scope->__pyx_v_derivs))||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_cur_scope->__pyx_v_derivs)->tp_name), 0))) __PYX_ERR(0, 1309, __pyx_L1_error)
+  if (!(likely(((__pyx_v_z) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_z, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1311, __pyx_L1_error)
+  if (!(likely(((__pyx_v_eps) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_eps, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1311, __pyx_L1_error)
+  if (!(likely(((__pyx_v_delta) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_delta, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1311, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyInt_As_long(__pyx_v_N); if (unlikely((__pyx_t_13 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1311, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_cur_scope->__pyx_v_derivs))||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_cur_scope->__pyx_v_derivs)->tp_name), 0))) __PYX_ERR(0, 1311, __pyx_L1_error)
   __pyx_t_5 = __pyx_cur_scope->__pyx_v_derivs;
   __Pyx_INCREF(__pyx_t_5);
-  if (!(likely(((__pyx_v_tol) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_tol, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1309, __pyx_L1_error)
-  __pyx_t_3 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_RiemannTheta *)__pyx_cur_scope->__pyx_v_self->__pyx_vtab)->_eval_vector_(__pyx_cur_scope->__pyx_v_self, ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_v_z), ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_v_eps), ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_v_delta), __pyx_t_13, ((PyObject*)__pyx_t_5), ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_tol)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1309, __pyx_L1_error)
+  if (!(likely(((__pyx_v_tol) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_tol, __pyx_ptype_4sage_5rings_9real_mpfr_RealNumber))))) __PYX_ERR(0, 1311, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_RiemannTheta *)__pyx_cur_scope->__pyx_v_self->__pyx_vtab)->_eval_vector_(__pyx_cur_scope->__pyx_v_self, ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_v_z), ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_v_eps), ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_v_delta), __pyx_t_13, ((PyObject*)__pyx_t_5), ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_v_tol)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_result = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1310
+  /* "riemann_theta/riemann_theta.pyx":1312
  *             tol = self.RR(2)**(-self.RR.__prec)
  *         result = self._eval_vector_(z, eps, delta, N, derivs, tol)
  *         if vecresult:             # <<<<<<<<<<<<<<
@@ -15659,7 +15659,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   __pyx_t_1 = (__pyx_v_vecresult != 0);
   if (__pyx_t_1) {
 
-    /* "riemann_theta/riemann_theta.pyx":1311
+    /* "riemann_theta/riemann_theta.pyx":1313
  *         result = self._eval_vector_(z, eps, delta, N, derivs, tol)
  *         if vecresult:
  *             return tuple(result)             # <<<<<<<<<<<<<<
@@ -15667,13 +15667,13 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  *             return result[0]
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = __Pyx_PySequence_Tuple(__pyx_v_result); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1311, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PySequence_Tuple(__pyx_v_result); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1313, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "riemann_theta/riemann_theta.pyx":1310
+    /* "riemann_theta/riemann_theta.pyx":1312
  *             tol = self.RR(2)**(-self.RR.__prec)
  *         result = self._eval_vector_(z, eps, delta, N, derivs, tol)
  *         if vecresult:             # <<<<<<<<<<<<<<
@@ -15682,7 +15682,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1313
+  /* "riemann_theta/riemann_theta.pyx":1315
  *             return tuple(result)
  *         else:
  *             return result[0]             # <<<<<<<<<<<<<<
@@ -15691,14 +15691,14 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
  */
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_result, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1313, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_result, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1315, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
     goto __pyx_L0;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1233
+  /* "riemann_theta/riemann_theta.pyx":1235
  *             return r
  * 
  *     def __call__(self, z = None, object char = None, derivs = [], tol=None):             # <<<<<<<<<<<<<<
@@ -15730,7 +15730,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_6__call
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1315
+/* "riemann_theta/riemann_theta.pyx":1317
  *             return result[0]
  * 
  *     cdef double Rbound(self, maxnderiv, tol):             # <<<<<<<<<<<<<<
@@ -15758,14 +15758,14 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("Rbound", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":1328
+  /* "riemann_theta/riemann_theta.pyx":1330
  *         This method is cdef only, so cannot be tested from python.
  *         """
  *         key = (maxnderiv, tol)             # <<<<<<<<<<<<<<
  *         try:
  *             return self.Rbound_dict[key]
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1328, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1330, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_maxnderiv);
   __Pyx_GIVEREF(__pyx_v_maxnderiv);
@@ -15776,7 +15776,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
   __pyx_v_key = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1329
+  /* "riemann_theta/riemann_theta.pyx":1331
  *         """
  *         key = (maxnderiv, tol)
  *         try:             # <<<<<<<<<<<<<<
@@ -15792,7 +15792,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     __Pyx_XGOTREF(__pyx_t_4);
     /*try:*/ {
 
-      /* "riemann_theta/riemann_theta.pyx":1330
+      /* "riemann_theta/riemann_theta.pyx":1332
  *         key = (maxnderiv, tol)
  *         try:
  *             return self.Rbound_dict[key]             # <<<<<<<<<<<<<<
@@ -15801,16 +15801,16 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
  */
       if (unlikely(__pyx_v_self->Rbound_dict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 1330, __pyx_L3_error)
+        __PYX_ERR(0, 1332, __pyx_L3_error)
       }
-      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->Rbound_dict, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1330, __pyx_L3_error)
+      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->Rbound_dict, __pyx_v_key); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1332, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 1330, __pyx_L3_error)
+      __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 1332, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_r = __pyx_t_5;
       goto __pyx_L7_try_return;
 
-      /* "riemann_theta/riemann_theta.pyx":1329
+      /* "riemann_theta/riemann_theta.pyx":1331
  *         """
  *         key = (maxnderiv, tol)
  *         try:             # <<<<<<<<<<<<<<
@@ -15821,7 +15821,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1331
+    /* "riemann_theta/riemann_theta.pyx":1333
  *         try:
  *             return self.Rbound_dict[key]
  *         except KeyError:             # <<<<<<<<<<<<<<
@@ -15836,7 +15836,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "riemann_theta/riemann_theta.pyx":1329
+    /* "riemann_theta/riemann_theta.pyx":1331
  *         """
  *         key = (maxnderiv, tol)
  *         try:             # <<<<<<<<<<<<<<
@@ -15861,27 +15861,27 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     __Pyx_ExceptionReset(__pyx_t_2, __pyx_t_3, __pyx_t_4);
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1333
+  /* "riemann_theta/riemann_theta.pyx":1335
  *         except KeyError:
  *             pass
  *         if maxnderiv == 0:             # <<<<<<<<<<<<<<
  *             R = Rbound(self.Y, tol)
  *         else:
  */
-  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_maxnderiv, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1333, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_maxnderiv, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1335, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 1333, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 1335, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_7) {
 
-    /* "riemann_theta/riemann_theta.pyx":1334
+    /* "riemann_theta/riemann_theta.pyx":1336
  *             pass
  *         if maxnderiv == 0:
  *             R = Rbound(self.Y, tol)             # <<<<<<<<<<<<<<
  *         else:
  *             R = Rbound_deriv(self.Y, maxnderiv, tol)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Rbound); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1334, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Rbound); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1336, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_9 = NULL;
     __pyx_t_6 = 0;
@@ -15898,7 +15898,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[3] = {__pyx_t_9, ((PyObject *)__pyx_v_self->Y), __pyx_v_tol};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1334, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1336, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -15906,13 +15906,13 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[3] = {__pyx_t_9, ((PyObject *)__pyx_v_self->Y), __pyx_v_tol};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1334, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1336, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_10 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1334, __pyx_L1_error)
+      __pyx_t_10 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1336, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       if (__pyx_t_9) {
         __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -15923,7 +15923,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
       __Pyx_INCREF(__pyx_v_tol);
       __Pyx_GIVEREF(__pyx_v_tol);
       PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_6, __pyx_v_tol);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1334, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1336, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     }
@@ -15931,7 +15931,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     __pyx_v_R = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1333
+    /* "riemann_theta/riemann_theta.pyx":1335
  *         except KeyError:
  *             pass
  *         if maxnderiv == 0:             # <<<<<<<<<<<<<<
@@ -15941,7 +15941,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     goto __pyx_L9;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1336
+  /* "riemann_theta/riemann_theta.pyx":1338
  *             R = Rbound(self.Y, tol)
  *         else:
  *             R = Rbound_deriv(self.Y, maxnderiv, tol)             # <<<<<<<<<<<<<<
@@ -15949,7 +15949,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
  *         return R
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Rbound_deriv); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1336, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_Rbound_deriv); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1338, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_10 = NULL;
     __pyx_t_6 = 0;
@@ -15966,7 +15966,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[4] = {__pyx_t_10, ((PyObject *)__pyx_v_self->Y), __pyx_v_maxnderiv, __pyx_v_tol};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 3+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1336, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 3+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1338, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -15974,13 +15974,13 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[4] = {__pyx_t_10, ((PyObject *)__pyx_v_self->Y), __pyx_v_maxnderiv, __pyx_v_tol};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 3+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1336, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_6, 3+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1338, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_9 = PyTuple_New(3+__pyx_t_6); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1336, __pyx_L1_error)
+      __pyx_t_9 = PyTuple_New(3+__pyx_t_6); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1338, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       if (__pyx_t_10) {
         __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_10); __pyx_t_10 = NULL;
@@ -15994,7 +15994,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
       __Pyx_INCREF(__pyx_v_tol);
       __Pyx_GIVEREF(__pyx_v_tol);
       PyTuple_SET_ITEM(__pyx_t_9, 2+__pyx_t_6, __pyx_v_tol);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1336, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1338, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     }
@@ -16004,7 +16004,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
   }
   __pyx_L9:;
 
-  /* "riemann_theta/riemann_theta.pyx":1337
+  /* "riemann_theta/riemann_theta.pyx":1339
  *         else:
  *             R = Rbound_deriv(self.Y, maxnderiv, tol)
  *         self.Rbound_dict[key] = R             # <<<<<<<<<<<<<<
@@ -16013,22 +16013,22 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
  */
   if (unlikely(__pyx_v_self->Rbound_dict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 1337, __pyx_L1_error)
+    __PYX_ERR(0, 1339, __pyx_L1_error)
   }
-  if (unlikely(PyDict_SetItem(__pyx_v_self->Rbound_dict, __pyx_v_key, __pyx_v_R) < 0)) __PYX_ERR(0, 1337, __pyx_L1_error)
+  if (unlikely(PyDict_SetItem(__pyx_v_self->Rbound_dict, __pyx_v_key, __pyx_v_R) < 0)) __PYX_ERR(0, 1339, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":1338
+  /* "riemann_theta/riemann_theta.pyx":1340
  *             R = Rbound_deriv(self.Y, maxnderiv, tol)
  *         self.Rbound_dict[key] = R
  *         return R             # <<<<<<<<<<<<<<
  * 
  *     cdef _eval_vector_(self, FreeModuleElement_generic_dense z, Vector_integer_dense eps, Vector_integer_dense delta, long N, list derivs, RealNumber tol):
  */
-  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 1338, __pyx_L1_error)
+  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 1340, __pyx_L1_error)
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":1315
+  /* "riemann_theta/riemann_theta.pyx":1317
  *             return result[0]
  * 
  *     cdef double Rbound(self, maxnderiv, tol):             # <<<<<<<<<<<<<<
@@ -16052,7 +16052,7 @@ static double __pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound(stru
 }
 static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval_vector__2generator3(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "riemann_theta/riemann_theta.pyx":1400
+/* "riemann_theta/riemann_theta.pyx":1402
  * 
  *         #compute the enumeration radius
  *         cdef long maxnderiv = max((<Vector_long> l).n for l in derivs)             # <<<<<<<<<<<<<<
@@ -16072,7 +16072,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_9_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1400, __pyx_L1_error)
+    __PYX_ERR(0, 1402, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -16080,7 +16080,7 @@ static PyObject *__pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval_vector__2generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_RiemannTheta__eval_vector__local, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1400, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval_vector__2generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_RiemannTheta__eval_vector__local, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!gen)) __PYX_ERR(0, 1402, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -16116,26 +16116,26 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1400, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs)) { __Pyx_RaiseClosureNameError("derivs"); __PYX_ERR(0, 1400, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1402, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs)) { __Pyx_RaiseClosureNameError("derivs"); __PYX_ERR(0, 1402, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 1400, __pyx_L1_error)
+    __PYX_ERR(0, 1402, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_derivs; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 1400, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 1402, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1400, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1402, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_l);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_l, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_long(((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_cur_scope->__pyx_v_l)->n); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1400, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_long(((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_cur_scope->__pyx_v_l)->n); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1402, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -16153,7 +16153,7 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval
     __pyx_cur_scope->__pyx_t_0 = 0;
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1400, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1402, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -16176,7 +16176,7 @@ static PyObject *__pyx_gb_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval
   return __pyx_r;
 }
 
-/* "riemann_theta/riemann_theta.pyx":1340
+/* "riemann_theta/riemann_theta.pyx":1342
  *         return R
  * 
  *     cdef _eval_vector_(self, FreeModuleElement_generic_dense z, Vector_integer_dense eps, Vector_integer_dense delta, long N, list derivs, RealNumber tol):             # <<<<<<<<<<<<<<
@@ -16244,7 +16244,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vector_ *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 1340, __pyx_L1_error)
+    __PYX_ERR(0, 1342, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -16254,7 +16254,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __Pyx_INCREF((PyObject *)__pyx_v_eps);
   __Pyx_INCREF((PyObject *)__pyx_v_delta);
 
-  /* "riemann_theta/riemann_theta.pyx":1361
+  /* "riemann_theta/riemann_theta.pyx":1363
  *         #allocations and unpacking to local variables
  *         cdef RealNumber RRtol
  *         cdef long g = self.g             # <<<<<<<<<<<<<<
@@ -16264,7 +16264,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __pyx_t_1 = __pyx_v_self->g;
   __pyx_v_g = __pyx_t_1;
 
-  /* "riemann_theta/riemann_theta.pyx":1362
+  /* "riemann_theta/riemann_theta.pyx":1364
  *         cdef RealNumber RRtol
  *         cdef long g = self.g
  *         cdef mpfr_rnd_t rnd = self.RR.rnd             # <<<<<<<<<<<<<<
@@ -16274,7 +16274,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __pyx_t_2 = __pyx_v_self->RR->rnd;
   __pyx_v_rnd = __pyx_t_2;
 
-  /* "riemann_theta/riemann_theta.pyx":1363
+  /* "riemann_theta/riemann_theta.pyx":1365
  *         cdef long g = self.g
  *         cdef mpfr_rnd_t rnd = self.RR.rnd
  *         cdef mpc_rnd_t mpc_rnd = self.MPCC.__rnd             # <<<<<<<<<<<<<<
@@ -16284,31 +16284,31 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __pyx_t_3 = __pyx_v_self->MPCC->__pyx___rnd;
   __pyx_v_mpc_rnd = __pyx_t_3;
 
-  /* "riemann_theta/riemann_theta.pyx":1364
+  /* "riemann_theta/riemann_theta.pyx":1366
  *         cdef mpfr_rnd_t rnd = self.RR.rnd
  *         cdef mpc_rnd_t mpc_rnd = self.MPCC.__rnd
  *         cdef Vector_long nvec = Vector_long(g)             # <<<<<<<<<<<<<<
  *         cdef Vector_mpfr wvec = Vector_mpfr(self.RR, g)
  *         cdef Vector_long derivvec
  */
-  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1364, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_long), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1364, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_long), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_nvec = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1365
+  /* "riemann_theta/riemann_theta.pyx":1367
  *         cdef mpc_rnd_t mpc_rnd = self.MPCC.__rnd
  *         cdef Vector_long nvec = Vector_long(g)
  *         cdef Vector_mpfr wvec = Vector_mpfr(self.RR, g)             # <<<<<<<<<<<<<<
  *         cdef Vector_long derivvec
  *         cdef long npoints, i,j,k, flag
  */
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1365, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_g); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1365, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->RR));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->RR));
@@ -16316,13 +16316,13 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpfr), __pyx_t_4, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1365, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpfr), __pyx_t_4, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_wvec = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1368
+  /* "riemann_theta/riemann_theta.pyx":1370
  *         cdef Vector_long derivvec
  *         cdef long npoints, i,j,k, flag
  *         if eps is None:             # <<<<<<<<<<<<<<
@@ -16333,14 +16333,14 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __pyx_t_7 = (__pyx_t_6 != 0);
   if (__pyx_t_7) {
 
-    /* "riemann_theta/riemann_theta.pyx":1369
+    /* "riemann_theta/riemann_theta.pyx":1371
  *         cdef long npoints, i,j,k, flag
  *         if eps is None:
  *             eps = self.ZZg.zero()             # <<<<<<<<<<<<<<
  *         else:
  *             eps = self.ZZg(eps)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1369, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1371, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_8 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -16354,14 +16354,14 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     }
     __pyx_t_5 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1369, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1371, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1369, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1371, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_eps, ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1368
+    /* "riemann_theta/riemann_theta.pyx":1370
  *         cdef Vector_long derivvec
  *         cdef long npoints, i,j,k, flag
  *         if eps is None:             # <<<<<<<<<<<<<<
@@ -16371,7 +16371,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     goto __pyx_L3;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1371
+  /* "riemann_theta/riemann_theta.pyx":1373
  *             eps = self.ZZg.zero()
  *         else:
  *             eps = self.ZZg(eps)             # <<<<<<<<<<<<<<
@@ -16392,16 +16392,16 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     }
     __pyx_t_5 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_8, ((PyObject *)__pyx_v_eps)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_eps));
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1371, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1373, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1371, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1373, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_eps, ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_t_5));
     __pyx_t_5 = 0;
   }
   __pyx_L3:;
 
-  /* "riemann_theta/riemann_theta.pyx":1372
+  /* "riemann_theta/riemann_theta.pyx":1374
  *         else:
  *             eps = self.ZZg(eps)
  *         if delta is None:             # <<<<<<<<<<<<<<
@@ -16412,14 +16412,14 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __pyx_t_6 = (__pyx_t_7 != 0);
   if (__pyx_t_6) {
 
-    /* "riemann_theta/riemann_theta.pyx":1373
+    /* "riemann_theta/riemann_theta.pyx":1375
  *             eps = self.ZZg(eps)
  *         if delta is None:
  *             delta = self.ZZg.zero()             # <<<<<<<<<<<<<<
  *         else:
  *             delta = self.ZZg(delta)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1373, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->ZZg, __pyx_n_s_zero); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1375, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_8 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -16433,14 +16433,14 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     }
     __pyx_t_5 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1373, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1375, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1373, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1375, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_delta, ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1372
+    /* "riemann_theta/riemann_theta.pyx":1374
  *         else:
  *             eps = self.ZZg(eps)
  *         if delta is None:             # <<<<<<<<<<<<<<
@@ -16450,7 +16450,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     goto __pyx_L4;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1375
+  /* "riemann_theta/riemann_theta.pyx":1377
  *             delta = self.ZZg.zero()
  *         else:
  *             delta = self.ZZg(delta)             # <<<<<<<<<<<<<<
@@ -16471,37 +16471,37 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     }
     __pyx_t_5 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_8, ((PyObject *)__pyx_v_delta)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_delta));
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1375, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1377, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1375, __pyx_L1_error)
+    if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1377, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_delta, ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_t_5));
     __pyx_t_5 = 0;
   }
   __pyx_L4:;
 
-  /* "riemann_theta/riemann_theta.pyx":1377
+  /* "riemann_theta/riemann_theta.pyx":1379
  *             delta = self.ZZg(delta)
  * 
  *         cdef NormGramInt Xnorm = self.scaled_Xnorm(N)             # <<<<<<<<<<<<<<
  * 
  *         #first unpacking and set-up computations
  */
-  __pyx_t_5 = ((PyObject *)((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_RiemannTheta *)__pyx_v_self->__pyx_vtab)->scaled_Xnorm(__pyx_v_self, __pyx_v_N)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1377, __pyx_L1_error)
+  __pyx_t_5 = ((PyObject *)((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_RiemannTheta *)__pyx_v_self->__pyx_vtab)->scaled_Xnorm(__pyx_v_self, __pyx_v_N)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_Xnorm = ((struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1380
+  /* "riemann_theta/riemann_theta.pyx":1382
  * 
  *         #first unpacking and set-up computations
  *         cdef FreeModuleElement_generic_dense x = z.apply_map(real_func)             # <<<<<<<<<<<<<<
  *         cdef FreeModuleElement_generic_dense y = z.apply_map(imag_func)
  *         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_z), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1380, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_z), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1382, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_real_func); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1380, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_real_func); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1382, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __pyx_t_9 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -16516,67 +16516,23 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __pyx_t_5 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_9, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1380, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1382, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1380, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1382, __pyx_L1_error)
   __pyx_v_x = ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1381
+  /* "riemann_theta/riemann_theta.pyx":1383
  *         #first unpacking and set-up computations
  *         cdef FreeModuleElement_generic_dense x = z.apply_map(real_func)
  *         cdef FreeModuleElement_generic_dense y = z.apply_map(imag_func)             # <<<<<<<<<<<<<<
  *         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)
  *         cdef Vector_integer_dense roundYinv_y = Yinv_y.apply_map(round_func)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_z), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1381, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_z), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1383, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_imag_func); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1381, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_9)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_9);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-    }
-  }
-  __pyx_t_5 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_9, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1381, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1381, __pyx_L1_error)
-  __pyx_v_y = ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_5);
-  __pyx_t_5 = 0;
-
-  /* "riemann_theta/riemann_theta.pyx":1382
- *         cdef FreeModuleElement_generic_dense x = z.apply_map(real_func)
- *         cdef FreeModuleElement_generic_dense y = z.apply_map(imag_func)
- *         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)             # <<<<<<<<<<<<<<
- *         cdef Vector_integer_dense roundYinv_y = Yinv_y.apply_map(round_func)
- *         cdef FreeModuleElement_generic_dense fracYinv_y = Yinv_y - roundYinv_y
- */
-  __pyx_t_5 = PyNumber_Multiply(((PyObject *)__pyx_v_self->Yinv), ((PyObject *)__pyx_v_y)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1382, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1382, __pyx_L1_error)
-  __pyx_v_Yinv_y = ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_5);
-  __pyx_t_5 = 0;
-
-  /* "riemann_theta/riemann_theta.pyx":1383
- *         cdef FreeModuleElement_generic_dense y = z.apply_map(imag_func)
- *         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)
- *         cdef Vector_integer_dense roundYinv_y = Yinv_y.apply_map(round_func)             # <<<<<<<<<<<<<<
- *         cdef FreeModuleElement_generic_dense fracYinv_y = Yinv_y - roundYinv_y
- *         cdef FreeModuleElement_generic_dense c = fracYinv_y + eps/N
- */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Yinv_y), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1383, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_round_func); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1383, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_imag_func); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1383, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __pyx_t_9 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -16594,43 +16550,87 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1383, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1383, __pyx_L1_error)
-  __pyx_v_roundYinv_y = ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_t_5);
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1383, __pyx_L1_error)
+  __pyx_v_y = ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_5);
   __pyx_t_5 = 0;
 
   /* "riemann_theta/riemann_theta.pyx":1384
+ *         cdef FreeModuleElement_generic_dense x = z.apply_map(real_func)
+ *         cdef FreeModuleElement_generic_dense y = z.apply_map(imag_func)
+ *         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)             # <<<<<<<<<<<<<<
+ *         cdef Vector_integer_dense roundYinv_y = Yinv_y.apply_map(round_func)
+ *         cdef FreeModuleElement_generic_dense fracYinv_y = Yinv_y - roundYinv_y
+ */
+  __pyx_t_5 = PyNumber_Multiply(((PyObject *)__pyx_v_self->Yinv), ((PyObject *)__pyx_v_y)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1384, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1384, __pyx_L1_error)
+  __pyx_v_Yinv_y = ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_5);
+  __pyx_t_5 = 0;
+
+  /* "riemann_theta/riemann_theta.pyx":1385
+ *         cdef FreeModuleElement_generic_dense y = z.apply_map(imag_func)
+ *         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)
+ *         cdef Vector_integer_dense roundYinv_y = Yinv_y.apply_map(round_func)             # <<<<<<<<<<<<<<
+ *         cdef FreeModuleElement_generic_dense fracYinv_y = Yinv_y - roundYinv_y
+ *         cdef FreeModuleElement_generic_dense c = fracYinv_y + eps/N
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_Yinv_y), __pyx_n_s_apply_map); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1385, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_round_func); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1385, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_8);
+  __pyx_t_9 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_9)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_9);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  __pyx_t_5 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_9, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1385, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_20vector_integer_dense_Vector_integer_dense))))) __PYX_ERR(0, 1385, __pyx_L1_error)
+  __pyx_v_roundYinv_y = ((struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *)__pyx_t_5);
+  __pyx_t_5 = 0;
+
+  /* "riemann_theta/riemann_theta.pyx":1386
  *         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)
  *         cdef Vector_integer_dense roundYinv_y = Yinv_y.apply_map(round_func)
  *         cdef FreeModuleElement_generic_dense fracYinv_y = Yinv_y - roundYinv_y             # <<<<<<<<<<<<<<
  *         cdef FreeModuleElement_generic_dense c = fracYinv_y + eps/N
  * 
  */
-  __pyx_t_5 = PyNumber_Subtract(((PyObject *)__pyx_v_Yinv_y), ((PyObject *)__pyx_v_roundYinv_y)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1384, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Subtract(((PyObject *)__pyx_v_Yinv_y), ((PyObject *)__pyx_v_roundYinv_y)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1386, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1384, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1386, __pyx_L1_error)
   __pyx_v_fracYinv_y = ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1385
+  /* "riemann_theta/riemann_theta.pyx":1387
  *         cdef Vector_integer_dense roundYinv_y = Yinv_y.apply_map(round_func)
  *         cdef FreeModuleElement_generic_dense fracYinv_y = Yinv_y - roundYinv_y
  *         cdef FreeModuleElement_generic_dense c = fracYinv_y + eps/N             # <<<<<<<<<<<<<<
  * 
  *         #store some quantities for fast access
  */
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1385, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1387, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_eps), __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1385, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_eps), __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1387, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Add(((PyObject *)__pyx_v_fracYinv_y), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1385, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Add(((PyObject *)__pyx_v_fracYinv_y), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1387, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1385, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1387, __pyx_L1_error)
   __pyx_v_c = ((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1390
+  /* "riemann_theta/riemann_theta.pyx":1392
  *         #note that xvec is actually (2/N)*(x+delta). This is the scaling
  *         #with which it gets used later.
  *         cdef Vector_mpfr xvec = Vector_mpfr.from_vector((2/N)*(x+delta/N))             # <<<<<<<<<<<<<<
@@ -16639,68 +16639,68 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   if (unlikely(__pyx_v_N == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-    __PYX_ERR(0, 1390, __pyx_L1_error)
+    __PYX_ERR(0, 1392, __pyx_L1_error)
   }
   else if (sizeof(long) == sizeof(long) && (!(((long)-1) > 0)) && unlikely(__pyx_v_N == (long)-1)  && unlikely(UNARY_NEG_WOULD_OVERFLOW(2))) {
     PyErr_SetString(PyExc_OverflowError, "value too large to perform division");
-    __PYX_ERR(0, 1390, __pyx_L1_error)
+    __PYX_ERR(0, 1392, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyInt_From_long(__Pyx_div_long(2, __pyx_v_N)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1390, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long(__Pyx_div_long(2, __pyx_v_N)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1390, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_delta), __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1390, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyNumber_Divide(((PyObject *)__pyx_v_delta), __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(((PyObject *)__pyx_v_x), __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1390, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(((PyObject *)__pyx_v_x), __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = PyNumber_Multiply(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1390, __pyx_L1_error)
+  __pyx_t_8 = PyNumber_Multiply(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1390, __pyx_L1_error)
-  __pyx_t_4 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_from_vector(((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_8))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1390, __pyx_L1_error)
+  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense))))) __PYX_ERR(0, 1392, __pyx_L1_error)
+  __pyx_t_4 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_from_vector(((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_t_8))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __pyx_v_xvec = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1391
+  /* "riemann_theta/riemann_theta.pyx":1393
  *         #with which it gets used later.
  *         cdef Vector_mpfr xvec = Vector_mpfr.from_vector((2/N)*(x+delta/N))
  *         cdef Vector_mpfr cvec = Vector_mpfr.from_vector(c)             # <<<<<<<<<<<<<<
  *         cdef Vector_long Netavec = Vector_long.from_list(N*roundYinv_y-eps)
  * 
  */
-  __pyx_t_4 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_from_vector(__pyx_v_c)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1391, __pyx_L1_error)
+  __pyx_t_4 = ((PyObject *)__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_from_vector(__pyx_v_c)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1393, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_cvec = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1392
+  /* "riemann_theta/riemann_theta.pyx":1394
  *         cdef Vector_mpfr xvec = Vector_mpfr.from_vector((2/N)*(x+delta/N))
  *         cdef Vector_mpfr cvec = Vector_mpfr.from_vector(c)
  *         cdef Vector_long Netavec = Vector_long.from_list(N*roundYinv_y-eps)             # <<<<<<<<<<<<<<
  * 
  *         #allocate space for return values
  */
-  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1392, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_N); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = PyNumber_Multiply(__pyx_t_4, ((PyObject *)__pyx_v_roundYinv_y)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1392, __pyx_L1_error)
+  __pyx_t_8 = PyNumber_Multiply(__pyx_t_4, ((PyObject *)__pyx_v_roundYinv_y)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Subtract(__pyx_t_8, ((PyObject *)__pyx_v_eps)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1392, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Subtract(__pyx_t_8, ((PyObject *)__pyx_v_eps)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1392, __pyx_L1_error)
+  __pyx_t_8 = __pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 1392, __pyx_L1_error)
+  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 1394, __pyx_L1_error)
   __pyx_v_Netavec = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1395
+  /* "riemann_theta/riemann_theta.pyx":1397
  * 
  *         #allocate space for return values
  *         cdef Vector_mpc s = Vector_mpc(self.CC, len(derivs))             # <<<<<<<<<<<<<<
@@ -16711,13 +16711,13 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __Pyx_INCREF(__pyx_t_8);
   if (unlikely(__pyx_t_8 == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 1395, __pyx_L1_error)
+    __PYX_ERR(0, 1397, __pyx_L1_error)
   }
-  __pyx_t_10 = PyList_GET_SIZE(__pyx_t_8); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1395, __pyx_L1_error)
+  __pyx_t_10 = PyList_GET_SIZE(__pyx_t_8); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1397, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = PyInt_FromSsize_t(__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1395, __pyx_L1_error)
+  __pyx_t_8 = PyInt_FromSsize_t(__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1395, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_self->CC);
   __Pyx_GIVEREF(__pyx_v_self->CC);
@@ -16725,13 +16725,13 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __Pyx_GIVEREF(__pyx_t_8);
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_8);
   __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpc), __pyx_t_4, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1395, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpc), __pyx_t_4, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_s = ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpc *)__pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1396
+  /* "riemann_theta/riemann_theta.pyx":1398
  *         #allocate space for return values
  *         cdef Vector_mpc s = Vector_mpc(self.CC, len(derivs))
  *         for i in range(s.n):             # <<<<<<<<<<<<<<
@@ -16743,7 +16743,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
     __pyx_v_i = __pyx_t_12;
 
-    /* "riemann_theta/riemann_theta.pyx":1397
+    /* "riemann_theta/riemann_theta.pyx":1399
  *         cdef Vector_mpc s = Vector_mpc(self.CC, len(derivs))
  *         for i in range(s.n):
  *             mpc_set_si(s.vec[i],0,mpc_rnd)             # <<<<<<<<<<<<<<
@@ -16753,35 +16753,35 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     (void)(mpc_set_si((__pyx_v_s->vec[__pyx_v_i]), 0, __pyx_v_mpc_rnd));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1400
+  /* "riemann_theta/riemann_theta.pyx":1402
  * 
  *         #compute the enumeration radius
  *         cdef long maxnderiv = max((<Vector_long> l).n for l in derivs)             # <<<<<<<<<<<<<<
  *         cdef double R = self.Rbound(maxnderiv, tol)
  *         cdef double Rsqr = R**2
  */
-  __pyx_t_8 = __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval_vector__genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1400, __pyx_L1_error)
+  __pyx_t_8 = __pyx_pf_13riemann_theta_13riemann_theta_12RiemannTheta_13_eval_vector__genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1402, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1400, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1402, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_1 = __Pyx_PyInt_As_long(__pyx_t_4); if (unlikely((__pyx_t_1 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1400, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_long(__pyx_t_4); if (unlikely((__pyx_t_1 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1402, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_maxnderiv = __pyx_t_1;
 
-  /* "riemann_theta/riemann_theta.pyx":1401
+  /* "riemann_theta/riemann_theta.pyx":1403
  *         #compute the enumeration radius
  *         cdef long maxnderiv = max((<Vector_long> l).n for l in derivs)
  *         cdef double R = self.Rbound(maxnderiv, tol)             # <<<<<<<<<<<<<<
  *         cdef double Rsqr = R**2
  * 
  */
-  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_maxnderiv); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1401, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_maxnderiv); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_R = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_RiemannTheta *)__pyx_v_self->__pyx_vtab)->Rbound(__pyx_v_self, __pyx_t_4, ((PyObject *)__pyx_v_tol));
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1402
+  /* "riemann_theta/riemann_theta.pyx":1404
  *         cdef long maxnderiv = max((<Vector_long> l).n for l in derivs)
  *         cdef double R = self.Rbound(maxnderiv, tol)
  *         cdef double Rsqr = R**2             # <<<<<<<<<<<<<<
@@ -16790,26 +16790,26 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   __pyx_v_Rsqr = pow(__pyx_v_R, 2.0);
 
-  /* "riemann_theta/riemann_theta.pyx":1411
+  /* "riemann_theta/riemann_theta.pyx":1413
  *         cdef long count_included, count_excluded
  *         cdef Gen V
  *         npoints, _, V = pari.qfminim(self.Y, B = (R+(self.Ynorm(c)/self.pi).sqrt())**2/double_pi, flag=2)             # <<<<<<<<<<<<<<
  *         npoints = npoints//2
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_pari); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_pari); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_qfminim); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_qfminim); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->Y));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self->Y));
   PyTuple_SET_ITEM(__pyx_t_4, 0, ((PyObject *)__pyx_v_self->Y));
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_INCREF(((PyObject *)__pyx_v_self->Ynorm));
   __pyx_t_15 = ((PyObject *)__pyx_v_self->Ynorm); __pyx_t_16 = NULL;
@@ -16824,13 +16824,13 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   }
   __pyx_t_14 = (__pyx_t_16) ? __Pyx_PyObject_Call2Args(__pyx_t_15, __pyx_t_16, ((PyObject *)__pyx_v_c)) : __Pyx_PyObject_CallOneArg(__pyx_t_15, ((PyObject *)__pyx_v_c));
   __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
-  if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-  __pyx_t_15 = __Pyx_PyNumber_Divide(__pyx_t_14, ((PyObject *)__pyx_v_self->pi)); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyNumber_Divide(__pyx_t_14, ((PyObject *)__pyx_v_self->pi)); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-  __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __pyx_t_15 = NULL;
@@ -16845,26 +16845,26 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   }
   __pyx_t_13 = (__pyx_t_15) ? __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_t_15) : __Pyx_PyObject_CallNoArg(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
-  if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-  __pyx_t_14 = PyNumber_Add(__pyx_t_9, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_14 = PyNumber_Add(__pyx_t_9, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = PyNumber_Power(__pyx_t_14, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_13 = PyNumber_Power(__pyx_t_14, __pyx_int_2, Py_None); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_double_pi); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_double_pi); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_9 = __Pyx_PyNumber_Divide(__pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyNumber_Divide(__pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_B, __pyx_t_9) < 0) __PYX_ERR(0, 1411, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_B, __pyx_t_9) < 0) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_flag, __pyx_int_2) < 0) __PYX_ERR(0, 1411, __pyx_L1_error)
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1411, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_flag, __pyx_int_2) < 0) __PYX_ERR(0, 1413, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -16875,7 +16875,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 1411, __pyx_L1_error)
+      __PYX_ERR(0, 1413, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -16891,17 +16891,17 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     __Pyx_INCREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_t_8);
     #else
-    __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1411, __pyx_L1_error)
+    __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1413, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1411, __pyx_L1_error)
+    __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1413, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_8 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1411, __pyx_L1_error)
+    __pyx_t_8 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1413, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     #endif
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_14 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1411, __pyx_L1_error)
+    __pyx_t_14 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 1413, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_17 = Py_TYPE(__pyx_t_14)->tp_iternext;
@@ -16911,7 +16911,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     __Pyx_GOTREF(__pyx_t_4);
     index = 2; __pyx_t_8 = __pyx_t_17(__pyx_t_14); if (unlikely(!__pyx_t_8)) goto __pyx_L7_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_8);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_17(__pyx_t_14), 3) < 0) __PYX_ERR(0, 1411, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_17(__pyx_t_14), 3) < 0) __PYX_ERR(0, 1413, __pyx_L1_error)
     __pyx_t_17 = NULL;
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     goto __pyx_L8_unpacking_done;
@@ -16919,19 +16919,19 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_t_17 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 1411, __pyx_L1_error)
+    __PYX_ERR(0, 1413, __pyx_L1_error)
     __pyx_L8_unpacking_done:;
   }
-  __pyx_t_1 = __Pyx_PyInt_As_long(__pyx_t_5); if (unlikely((__pyx_t_1 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1411, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_long(__pyx_t_5); if (unlikely((__pyx_t_1 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1413, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_7cypari2_3gen_Gen))))) __PYX_ERR(0, 1411, __pyx_L1_error)
+  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_7cypari2_3gen_Gen))))) __PYX_ERR(0, 1413, __pyx_L1_error)
   __pyx_v_npoints = __pyx_t_1;
   __pyx_v__ = __pyx_t_4;
   __pyx_t_4 = 0;
   __pyx_v_V = ((struct __pyx_obj_7cypari2_3gen_Gen *)__pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1412
+  /* "riemann_theta/riemann_theta.pyx":1414
  *         cdef Gen V
  *         npoints, _, V = pari.qfminim(self.Y, B = (R+(self.Ynorm(c)/self.pi).sqrt())**2/double_pi, flag=2)
  *         npoints = npoints//2             # <<<<<<<<<<<<<<
@@ -16940,7 +16940,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   __pyx_v_npoints = __Pyx_div_long(__pyx_v_npoints, 2);
 
-  /* "riemann_theta/riemann_theta.pyx":1418
+  /* "riemann_theta/riemann_theta.pyx":1420
  *         #and keep track of the sign we looked at with a flag that will toggle
  *         #through each iteration.
  *         for i in range(g):             # <<<<<<<<<<<<<<
@@ -16952,7 +16952,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
     __pyx_v_i = __pyx_t_12;
 
-    /* "riemann_theta/riemann_theta.pyx":1419
+    /* "riemann_theta/riemann_theta.pyx":1421
  *         #through each iteration.
  *         for i in range(g):
  *             nvec.vec[i] = 0             # <<<<<<<<<<<<<<
@@ -16962,7 +16962,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     (__pyx_v_nvec->vec[__pyx_v_i]) = 0;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1420
+  /* "riemann_theta/riemann_theta.pyx":1422
  *         for i in range(g):
  *             nvec.vec[i] = 0
  *         j = 0             # <<<<<<<<<<<<<<
@@ -16971,7 +16971,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   __pyx_v_j = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1421
+  /* "riemann_theta/riemann_theta.pyx":1423
  *             nvec.vec[i] = 0
  *         j = 0
  *         flag = 1             # <<<<<<<<<<<<<<
@@ -16980,7 +16980,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   __pyx_v_flag = 1;
 
-  /* "riemann_theta/riemann_theta.pyx":1427
+  /* "riemann_theta/riemann_theta.pyx":1429
  *         #(it saves us allocation overhead, because we are using preallocated
  *         #memory).
  *         while True:             # <<<<<<<<<<<<<<
@@ -16989,29 +16989,29 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   while (1) {
 
-    /* "riemann_theta/riemann_theta.pyx":1429
+    /* "riemann_theta/riemann_theta.pyx":1431
  *         while True:
  *             #w = n + c, where c = [[Y^(-1)y]] + epsilon
  *             wvec.assign_sum_si(cvec,nvec)             # <<<<<<<<<<<<<<
  *             #r1 = w*Y*w
  *             self.Ynorm.mpfr_norm(self.r1, wvec.vec)
  */
-    __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_v_wvec->__pyx_vtab)->assign_sum_si(__pyx_v_wvec, __pyx_v_cvec, __pyx_v_nvec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1429, __pyx_L1_error)
+    __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_mpfr *)__pyx_v_wvec->__pyx_vtab)->assign_sum_si(__pyx_v_wvec, __pyx_v_cvec, __pyx_v_nvec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1431, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1431
+    /* "riemann_theta/riemann_theta.pyx":1433
  *             wvec.assign_sum_si(cvec,nvec)
  *             #r1 = w*Y*w
  *             self.Ynorm.mpfr_norm(self.r1, wvec.vec)             # <<<<<<<<<<<<<<
  *             #based on the norm of r1, we can tell if the point lies in our ball.
  *             if mpfr_get_d(self.r1, rnd) <= Rsqr:
  */
-    __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_self->Ynorm->__pyx_vtab)->mpfr_norm(__pyx_v_self->Ynorm, __pyx_v_self->r1, __pyx_v_wvec->vec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1431, __pyx_L1_error)
+    __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormCholesky *)__pyx_v_self->Ynorm->__pyx_vtab)->mpfr_norm(__pyx_v_self->Ynorm, __pyx_v_self->r1, __pyx_v_wvec->vec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1433, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1433
+    /* "riemann_theta/riemann_theta.pyx":1435
  *             self.Ynorm.mpfr_norm(self.r1, wvec.vec)
  *             #based on the norm of r1, we can tell if the point lies in our ball.
  *             if mpfr_get_d(self.r1, rnd) <= Rsqr:             # <<<<<<<<<<<<<<
@@ -17021,7 +17021,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     __pyx_t_6 = ((mpfr_get_d(__pyx_v_self->r1, __pyx_v_rnd) <= __pyx_v_Rsqr) != 0);
     if (__pyx_t_6) {
 
-      /* "riemann_theta/riemann_theta.pyx":1435
+      /* "riemann_theta/riemann_theta.pyx":1437
  *             if mpfr_get_d(self.r1, rnd) <= Rsqr:
  *                 #r1 = -w*Y*w
  *                 mpfr_neg(self.r1, self.r1, rnd)             # <<<<<<<<<<<<<<
@@ -17030,29 +17030,29 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       (void)(mpfr_neg(__pyx_v_self->r1, __pyx_v_self->r1, __pyx_v_rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":1437
+      /* "riemann_theta/riemann_theta.pyx":1439
  *                 mpfr_neg(self.r1, self.r1, rnd)
  *                 #nvec = N*n - N*eta = N*(n - [Y^-1y] + epsilon)
  *                 nvec.assign_scaled_diff(N, nvec, Netavec)             # <<<<<<<<<<<<<<
  *                 #r2 = (n-eta)*X*(n-eta) [note: Xnorm is scaled by 1/N^2]
  *                 Xnorm.mpfr_norm(self.r2, nvec.vec)
  */
-      __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_long *)__pyx_v_nvec->__pyx_vtab)->assign_scaled_diff(__pyx_v_nvec, __pyx_v_N, __pyx_v_nvec, __pyx_v_Netavec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1437, __pyx_L1_error)
+      __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_Vector_long *)__pyx_v_nvec->__pyx_vtab)->assign_scaled_diff(__pyx_v_nvec, __pyx_v_N, __pyx_v_nvec, __pyx_v_Netavec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1439, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1439
+      /* "riemann_theta/riemann_theta.pyx":1441
  *                 nvec.assign_scaled_diff(N, nvec, Netavec)
  *                 #r2 = (n-eta)*X*(n-eta) [note: Xnorm is scaled by 1/N^2]
  *                 Xnorm.mpfr_norm(self.r2, nvec.vec)             # <<<<<<<<<<<<<<
  * 
  *                 #r2 = (n-eta)*X*(n-eta) + 2*(x+delta)*(n-eta) [note: xvec is scaled for this]
  */
-      __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_v_Xnorm->__pyx_vtab)->mpfr_norm(__pyx_v_Xnorm, __pyx_v_self->r2, __pyx_v_nvec->vec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1439, __pyx_L1_error)
+      __pyx_t_9 = ((struct __pyx_vtabstruct_13riemann_theta_13riemann_theta_NormGramInt *)__pyx_v_Xnorm->__pyx_vtab)->mpfr_norm(__pyx_v_Xnorm, __pyx_v_self->r2, __pyx_v_nvec->vec); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1441, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1442
+      /* "riemann_theta/riemann_theta.pyx":1444
  * 
  *                 #r2 = (n-eta)*X*(n-eta) + 2*(x+delta)*(n-eta) [note: xvec is scaled for this]
  *                 for i in range(self.g):             # <<<<<<<<<<<<<<
@@ -17064,7 +17064,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
       for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
         __pyx_v_i = __pyx_t_12;
 
-        /* "riemann_theta/riemann_theta.pyx":1443
+        /* "riemann_theta/riemann_theta.pyx":1445
  *                 #r2 = (n-eta)*X*(n-eta) + 2*(x+delta)*(n-eta) [note: xvec is scaled for this]
  *                 for i in range(self.g):
  *                     mpfr_mul_si(self.r3, xvec.vec[i], nvec.vec[i], rnd)             # <<<<<<<<<<<<<<
@@ -17073,7 +17073,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
         (void)(mpfr_mul_si(__pyx_v_self->r3, (__pyx_v_xvec->vec[__pyx_v_i]), (__pyx_v_nvec->vec[__pyx_v_i]), __pyx_v_rnd));
 
-        /* "riemann_theta/riemann_theta.pyx":1444
+        /* "riemann_theta/riemann_theta.pyx":1446
  *                 for i in range(self.g):
  *                     mpfr_mul_si(self.r3, xvec.vec[i], nvec.vec[i], rnd)
  *                     mpfr_add(self.r2, self.r2, self.r3, rnd)             # <<<<<<<<<<<<<<
@@ -17083,7 +17083,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
         (void)(mpfr_add(__pyx_v_self->r2, __pyx_v_self->r2, __pyx_v_self->r3, __pyx_v_rnd));
       }
 
-      /* "riemann_theta/riemann_theta.pyx":1447
+      /* "riemann_theta/riemann_theta.pyx":1449
  * 
  *                 # r3 = pi*((n-eta)*X*(n-eta) + 2*(x+delta)*(n-eta))
  *                 mpfr_mul(self.r3, self.r2, self.pi.value, rnd)             # <<<<<<<<<<<<<<
@@ -17092,7 +17092,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       (void)(mpfr_mul(__pyx_v_self->r3, __pyx_v_self->r2, __pyx_v_self->pi->value, __pyx_v_rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":1450
+      /* "riemann_theta/riemann_theta.pyx":1452
  * 
  *                 # c1 = exp(pi*i*((n-eta)*X*(n-eta) + 2*(x+delta)*(n-eta)))
  *                 mpfr_sin_cos(self.c1.im, self.c1.re, self.r3, rnd)             # <<<<<<<<<<<<<<
@@ -17101,7 +17101,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       (void)(mpfr_sin_cos(__pyx_v_self->c1->im, __pyx_v_self->c1->re, __pyx_v_self->r3, __pyx_v_rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":1453
+      /* "riemann_theta/riemann_theta.pyx":1455
  * 
  *                 # r2 = exp(r1) = exp (-w*Y*w)
  *                 mpfr_exp(self.r2, self.r1, rnd)             # <<<<<<<<<<<<<<
@@ -17110,7 +17110,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       (void)(mpfr_exp(__pyx_v_self->r2, __pyx_v_self->r1, __pyx_v_rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":1456
+      /* "riemann_theta/riemann_theta.pyx":1458
  * 
  *                 # c1 = c1*r2 [note: this is the summation term for no derivatives]
  *                 mpc_mul_fr(self.c1, self.c1, self.r2, mpc_rnd)             # <<<<<<<<<<<<<<
@@ -17119,7 +17119,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       (void)(mpc_mul_fr(__pyx_v_self->c1, __pyx_v_self->c1, __pyx_v_self->r2, __pyx_v_mpc_rnd));
 
-      /* "riemann_theta/riemann_theta.pyx":1459
+      /* "riemann_theta/riemann_theta.pyx":1461
  * 
  *                 # loop through the derivative descriptions
  *                 for k in range(s.n):             # <<<<<<<<<<<<<<
@@ -17131,7 +17131,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
       for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
         __pyx_v_k = __pyx_t_12;
 
-        /* "riemann_theta/riemann_theta.pyx":1460
+        /* "riemann_theta/riemann_theta.pyx":1462
  *                 # loop through the derivative descriptions
  *                 for k in range(s.n):
  *                     derivvec = derivs[k]             # <<<<<<<<<<<<<<
@@ -17140,15 +17140,15 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
         if (unlikely(__pyx_cur_scope->__pyx_v_derivs == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 1460, __pyx_L1_error)
+          __PYX_ERR(0, 1462, __pyx_L1_error)
         }
-        __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_cur_scope->__pyx_v_derivs, __pyx_v_k, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1460, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_cur_scope->__pyx_v_derivs, __pyx_v_k, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1462, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        if (!(likely(((__pyx_t_9) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_9, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 1460, __pyx_L1_error)
+        if (!(likely(((__pyx_t_9) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_9, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 1462, __pyx_L1_error)
         __Pyx_XDECREF_SET(__pyx_v_derivvec, ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_t_9));
         __pyx_t_9 = 0;
 
-        /* "riemann_theta/riemann_theta.pyx":1461
+        /* "riemann_theta/riemann_theta.pyx":1463
  *                 for k in range(s.n):
  *                     derivvec = derivs[k]
  *                     mpc_set(self.c2, self.c1, mpc_rnd)             # <<<<<<<<<<<<<<
@@ -17157,7 +17157,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
         (void)(mpc_set(__pyx_v_self->c2, __pyx_v_self->c1, __pyx_v_mpc_rnd));
 
-        /* "riemann_theta/riemann_theta.pyx":1463
+        /* "riemann_theta/riemann_theta.pyx":1465
  *                     mpc_set(self.c2, self.c1, mpc_rnd)
  *                     # multiply with appropriate product.
  *                     for i in range(derivvec.n):             # <<<<<<<<<<<<<<
@@ -17169,21 +17169,21 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
         for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
           __pyx_v_i = __pyx_t_20;
 
-          /* "riemann_theta/riemann_theta.pyx":1464
+          /* "riemann_theta/riemann_theta.pyx":1466
  *                     # multiply with appropriate product.
  *                     for i in range(derivvec.n):
  *                         mpc_mul_si(self.c2, self.c2, nvec[derivvec.vec[i]], mpc_rnd)             # <<<<<<<<<<<<<<
  * 
  *                     # add c1 to the running sum s
  */
-          __pyx_t_9 = __Pyx_GetItemInt(((PyObject *)__pyx_v_nvec), (__pyx_v_derivvec->vec[__pyx_v_i]), long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1464, __pyx_L1_error)
+          __pyx_t_9 = __Pyx_GetItemInt(((PyObject *)__pyx_v_nvec), (__pyx_v_derivvec->vec[__pyx_v_i]), long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1466, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
-          __pyx_t_21 = __Pyx_PyInt_As_long(__pyx_t_9); if (unlikely((__pyx_t_21 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1464, __pyx_L1_error)
+          __pyx_t_21 = __Pyx_PyInt_As_long(__pyx_t_9); if (unlikely((__pyx_t_21 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1466, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
           (void)(mpc_mul_si(__pyx_v_self->c2, __pyx_v_self->c2, __pyx_t_21, __pyx_v_mpc_rnd));
         }
 
-        /* "riemann_theta/riemann_theta.pyx":1467
+        /* "riemann_theta/riemann_theta.pyx":1469
  * 
  *                     # add c1 to the running sum s
  *                     mpc_add(s.vec[k], s.vec[k], self.c2, mpc_rnd)             # <<<<<<<<<<<<<<
@@ -17193,7 +17193,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
         (void)(mpc_add((__pyx_v_s->vec[__pyx_v_k]), (__pyx_v_s->vec[__pyx_v_k]), __pyx_v_self->c2, __pyx_v_mpc_rnd));
       }
 
-      /* "riemann_theta/riemann_theta.pyx":1433
+      /* "riemann_theta/riemann_theta.pyx":1435
  *             self.Ynorm.mpfr_norm(self.r1, wvec.vec)
  *             #based on the norm of r1, we can tell if the point lies in our ball.
  *             if mpfr_get_d(self.r1, rnd) <= Rsqr:             # <<<<<<<<<<<<<<
@@ -17202,7 +17202,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     }
 
-    /* "riemann_theta/riemann_theta.pyx":1470
+    /* "riemann_theta/riemann_theta.pyx":1472
  *             #go to next iteration:
  *             #if flag == 1, go to next point; otherwise negate current point.
  *             if flag:             # <<<<<<<<<<<<<<
@@ -17212,7 +17212,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     __pyx_t_6 = (__pyx_v_flag != 0);
     if (__pyx_t_6) {
 
-      /* "riemann_theta/riemann_theta.pyx":1471
+      /* "riemann_theta/riemann_theta.pyx":1473
  *             #if flag == 1, go to next point; otherwise negate current point.
  *             if flag:
  *                 j += 1             # <<<<<<<<<<<<<<
@@ -17221,7 +17221,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       __pyx_v_j = (__pyx_v_j + 1);
 
-      /* "riemann_theta/riemann_theta.pyx":1472
+      /* "riemann_theta/riemann_theta.pyx":1474
  *             if flag:
  *                 j += 1
  *                 if j > npoints:             # <<<<<<<<<<<<<<
@@ -17231,7 +17231,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
       __pyx_t_6 = ((__pyx_v_j > __pyx_v_npoints) != 0);
       if (__pyx_t_6) {
 
-        /* "riemann_theta/riemann_theta.pyx":1473
+        /* "riemann_theta/riemann_theta.pyx":1475
  *                 j += 1
  *                 if j > npoints:
  *                     break             # <<<<<<<<<<<<<<
@@ -17240,7 +17240,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
         goto __pyx_L12_break;
 
-        /* "riemann_theta/riemann_theta.pyx":1472
+        /* "riemann_theta/riemann_theta.pyx":1474
  *             if flag:
  *                 j += 1
  *                 if j > npoints:             # <<<<<<<<<<<<<<
@@ -17249,7 +17249,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       }
 
-      /* "riemann_theta/riemann_theta.pyx":1474
+      /* "riemann_theta/riemann_theta.pyx":1476
  *                 if j > npoints:
  *                     break
  *                 flag = 0             # <<<<<<<<<<<<<<
@@ -17258,7 +17258,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
       __pyx_v_flag = 0;
 
-      /* "riemann_theta/riemann_theta.pyx":1475
+      /* "riemann_theta/riemann_theta.pyx":1477
  *                     break
  *                 flag = 0
  *                 for i in range(g):             # <<<<<<<<<<<<<<
@@ -17270,7 +17270,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
       for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
         __pyx_v_i = __pyx_t_12;
 
-        /* "riemann_theta/riemann_theta.pyx":1476
+        /* "riemann_theta/riemann_theta.pyx":1478
  *                 flag = 0
  *                 for i in range(g):
  *                     nvec.vec[i] =  itos(gcoeff(V.g,i+1,j))             # <<<<<<<<<<<<<<
@@ -17280,7 +17280,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
         (__pyx_v_nvec->vec[__pyx_v_i]) = itos(gcoeff(__pyx_v_V->__pyx_base.g, (__pyx_v_i + 1), __pyx_v_j));
       }
 
-      /* "riemann_theta/riemann_theta.pyx":1470
+      /* "riemann_theta/riemann_theta.pyx":1472
  *             #go to next iteration:
  *             #if flag == 1, go to next point; otherwise negate current point.
  *             if flag:             # <<<<<<<<<<<<<<
@@ -17290,7 +17290,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
       goto __pyx_L20;
     }
 
-    /* "riemann_theta/riemann_theta.pyx":1478
+    /* "riemann_theta/riemann_theta.pyx":1480
  *                     nvec.vec[i] =  itos(gcoeff(V.g,i+1,j))
  *             else:
  *                 flag = 1             # <<<<<<<<<<<<<<
@@ -17300,7 +17300,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     /*else*/ {
       __pyx_v_flag = 1;
 
-      /* "riemann_theta/riemann_theta.pyx":1479
+      /* "riemann_theta/riemann_theta.pyx":1481
  *             else:
  *                 flag = 1
  *                 for i in range(g):             # <<<<<<<<<<<<<<
@@ -17312,7 +17312,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
       for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
         __pyx_v_i = __pyx_t_12;
 
-        /* "riemann_theta/riemann_theta.pyx":1480
+        /* "riemann_theta/riemann_theta.pyx":1482
  *                 flag = 1
  *                 for i in range(g):
  *                     nvec.vec[i] =  -itos(gcoeff(V.g,i+1,j))             # <<<<<<<<<<<<<<
@@ -17326,7 +17326,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   }
   __pyx_L12_break:;
 
-  /* "riemann_theta/riemann_theta.pyx":1484
+  /* "riemann_theta/riemann_theta.pyx":1486
  *         #compute inner product y*Yinv_y
  *         # set r1 = 0
  *         mpfr_set_si(self.r1, 0, rnd)             # <<<<<<<<<<<<<<
@@ -17335,7 +17335,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   (void)(mpfr_set_si(__pyx_v_self->r1, 0, __pyx_v_rnd));
 
-  /* "riemann_theta/riemann_theta.pyx":1485
+  /* "riemann_theta/riemann_theta.pyx":1487
  *         # set r1 = 0
  *         mpfr_set_si(self.r1, 0, rnd)
  *         for i in range(g):             # <<<<<<<<<<<<<<
@@ -17347,23 +17347,23 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
     __pyx_v_i = __pyx_t_12;
 
-    /* "riemann_theta/riemann_theta.pyx":1487
+    /* "riemann_theta/riemann_theta.pyx":1489
  *         for i in range(g):
  *             #r1 += y[i]*Yinv_y[i]
  *             mpfr_fma(self.r1, (<RealNumber>y.get_unsafe(i)).value, (<RealNumber>Yinv_y.get_unsafe(i)).value, self.r1, rnd)             # <<<<<<<<<<<<<<
  *         # r2 = r1*pi = pi*y*Yinv_y
  *         mpfr_mul(self.r2, self.r1, self.pi.value, rnd)
  */
-    __pyx_t_9 = ((struct __pyx_vtabstruct_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_v_y->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.get_unsafe(((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement *)__pyx_v_y), __pyx_v_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1487, __pyx_L1_error)
+    __pyx_t_9 = ((struct __pyx_vtabstruct_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_v_y->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.get_unsafe(((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement *)__pyx_v_y), __pyx_v_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1489, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_8 = ((struct __pyx_vtabstruct_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_v_Yinv_y->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.get_unsafe(((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement *)__pyx_v_Yinv_y), __pyx_v_i); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1487, __pyx_L1_error)
+    __pyx_t_8 = ((struct __pyx_vtabstruct_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *)__pyx_v_Yinv_y->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->__pyx_base.get_unsafe(((struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement *)__pyx_v_Yinv_y), __pyx_v_i); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1489, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     (void)(mpfr_fma(__pyx_v_self->r1, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_9)->value, ((struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *)__pyx_t_8)->value, __pyx_v_self->r1, __pyx_v_rnd));
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1489
+  /* "riemann_theta/riemann_theta.pyx":1491
  *             mpfr_fma(self.r1, (<RealNumber>y.get_unsafe(i)).value, (<RealNumber>Yinv_y.get_unsafe(i)).value, self.r1, rnd)
  *         # r2 = r1*pi = pi*y*Yinv_y
  *         mpfr_mul(self.r2, self.r1, self.pi.value, rnd)             # <<<<<<<<<<<<<<
@@ -17372,7 +17372,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   (void)(mpfr_mul(__pyx_v_self->r2, __pyx_v_self->r1, __pyx_v_self->pi->value, __pyx_v_rnd));
 
-  /* "riemann_theta/riemann_theta.pyx":1491
+  /* "riemann_theta/riemann_theta.pyx":1493
  *         mpfr_mul(self.r2, self.r1, self.pi.value, rnd)
  *         # r1 = exp (pi*y*Yinv_y)
  *         mpfr_exp(self.r1, self.r2, rnd)             # <<<<<<<<<<<<<<
@@ -17381,7 +17381,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
   (void)(mpfr_exp(__pyx_v_self->r1, __pyx_v_self->r2, __pyx_v_rnd));
 
-  /* "riemann_theta/riemann_theta.pyx":1493
+  /* "riemann_theta/riemann_theta.pyx":1495
  *         mpfr_exp(self.r1, self.r2, rnd)
  *         # s *= r1
  *         for k in range(s.n):             # <<<<<<<<<<<<<<
@@ -17393,7 +17393,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
     __pyx_v_k = __pyx_t_12;
 
-    /* "riemann_theta/riemann_theta.pyx":1494
+    /* "riemann_theta/riemann_theta.pyx":1496
  *         # s *= r1
  *         for k in range(s.n):
  *             derivvec = derivs[k]             # <<<<<<<<<<<<<<
@@ -17402,15 +17402,15 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     if (unlikely(__pyx_cur_scope->__pyx_v_derivs == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 1494, __pyx_L1_error)
+      __PYX_ERR(0, 1496, __pyx_L1_error)
     }
-    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_cur_scope->__pyx_v_derivs, __pyx_v_k, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1494, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_cur_scope->__pyx_v_derivs, __pyx_v_k, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1496, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 1494, __pyx_L1_error)
+    if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long))))) __PYX_ERR(0, 1496, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_derivvec, ((struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *)__pyx_t_8));
     __pyx_t_8 = 0;
 
-    /* "riemann_theta/riemann_theta.pyx":1495
+    /* "riemann_theta/riemann_theta.pyx":1497
  *         for k in range(s.n):
  *             derivvec = derivs[k]
  *             mpc_mul_fr(s.vec[k], s.vec[k], self.r1, mpc_rnd)             # <<<<<<<<<<<<<<
@@ -17419,7 +17419,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     (void)(mpc_mul_fr((__pyx_v_s->vec[__pyx_v_k]), (__pyx_v_s->vec[__pyx_v_k]), __pyx_v_self->r1, __pyx_v_mpc_rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":1497
+    /* "riemann_theta/riemann_theta.pyx":1499
  *             mpc_mul_fr(s.vec[k], s.vec[k], self.r1, mpc_rnd)
  *             # r3 = 2*pi
  *             mpfr_mul_si(self.r3, self.pi.value, 2, rnd)             # <<<<<<<<<<<<<<
@@ -17428,7 +17428,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     (void)(mpfr_mul_si(__pyx_v_self->r3, __pyx_v_self->pi->value, 2, __pyx_v_rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":1499
+    /* "riemann_theta/riemann_theta.pyx":1501
  *             mpfr_mul_si(self.r3, self.pi.value, 2, rnd)
  *             # r2 = (2*pi)/N
  *             mpfr_div_si(self.r2, self.r3, N, rnd)             # <<<<<<<<<<<<<<
@@ -17437,7 +17437,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     (void)(mpfr_div_si(__pyx_v_self->r2, __pyx_v_self->r3, __pyx_v_N, __pyx_v_rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":1501
+    /* "riemann_theta/riemann_theta.pyx":1503
  *             mpfr_div_si(self.r2, self.r3, N, rnd)
  *             # r3 = (2*pi/N)^nderiv
  *             mpfr_pow_si(self.r3, self.r2, derivvec.n, rnd)             # <<<<<<<<<<<<<<
@@ -17446,7 +17446,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     (void)(mpfr_pow_si(__pyx_v_self->r3, __pyx_v_self->r2, __pyx_v_derivvec->n, __pyx_v_rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":1503
+    /* "riemann_theta/riemann_theta.pyx":1505
  *             mpfr_pow_si(self.r3, self.r2, derivvec.n, rnd)
  *             # c1 = i^nderiv
  *             mpc_rootofunity(self.c1, 4, derivvec.n % 4, mpc_rnd)             # <<<<<<<<<<<<<<
@@ -17455,7 +17455,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     (void)(mpc_rootofunity(__pyx_v_self->c1, 4, __Pyx_mod_long(__pyx_v_derivvec->n, 4), __pyx_v_mpc_rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":1505
+    /* "riemann_theta/riemann_theta.pyx":1507
  *             mpc_rootofunity(self.c1, 4, derivvec.n % 4, mpc_rnd)
  *             # c2 = (2*pi*i/N)^nderiv
  *             mpc_mul_fr(self.c2, self.c1, self.r3, mpc_rnd)             # <<<<<<<<<<<<<<
@@ -17464,7 +17464,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
  */
     (void)(mpc_mul_fr(__pyx_v_self->c2, __pyx_v_self->c1, __pyx_v_self->r3, __pyx_v_mpc_rnd));
 
-    /* "riemann_theta/riemann_theta.pyx":1507
+    /* "riemann_theta/riemann_theta.pyx":1509
  *             mpc_mul_fr(self.c2, self.c1, self.r3, mpc_rnd)
  *             # s *= c2
  *             mpc_mul(s.vec[k], s.vec[k], self.c2, mpc_rnd)             # <<<<<<<<<<<<<<
@@ -17473,7 +17473,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
     (void)(mpc_mul((__pyx_v_s->vec[__pyx_v_k]), (__pyx_v_s->vec[__pyx_v_k]), __pyx_v_self->c2, __pyx_v_mpc_rnd));
   }
 
-  /* "riemann_theta/riemann_theta.pyx":1508
+  /* "riemann_theta/riemann_theta.pyx":1510
  *             # s *= c2
  *             mpc_mul(s.vec[k], s.vec[k], self.c2, mpc_rnd)
  *         return s             # <<<<<<<<<<<<<<
@@ -17483,7 +17483,7 @@ static PyObject *__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_ve
   __pyx_r = ((PyObject *)__pyx_v_s);
   goto __pyx_L0;
 
-  /* "riemann_theta/riemann_theta.pyx":1340
+  /* "riemann_theta/riemann_theta.pyx":1342
  *         return R
  * 
  *     cdef _eval_vector_(self, FreeModuleElement_generic_dense z, Vector_integer_dense eps, Vector_integer_dense delta, long N, list derivs, RealNumber tol):             # <<<<<<<<<<<<<<
@@ -20698,7 +20698,7 @@ static PyTypeObject __pyx_type_13riemann_theta_13riemann_theta_RiemannTheta = {
   0, /*tp_setattro*/
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
-  "Object for numerical computation of Riemann Theta functions with characteristics and derivatives\n\n    INPUT:\n    - ``Omega`` -- Complex matrix. The Riemann matrix for which to compute\n        Riemann Theta functions. The precision of the base ring determines the default\n        tolerance used in computing Riemann Theta function values.\n\n    EXAMPLES:\n\n    We go through a very simple example that illustrates the basic features.\n    First we define the Riemann matrix and its RiemannTheta object::\n\n        sage: from riemann_theta import RiemannTheta\n        sage: CC=ComplexField(80)\n        sage: Omega = matrix(CC,2,2,[3*I,0,0,5*I])\n        sage: RT=RiemannTheta(Omega)\n\n    By default, the object evaluates the theta nullwerte, but we can specify\n    the value of `z` at which we want to evaluate. Theta functions are fully\n    periodic under translation by integer vectors::\n\n        sage: RT()\n        1.000161700487241998...\n        sage: RT(z=(1,1))\n        1.000161700487241998...\n\n    The Riemann theta function is even, so its first order partial derivatives\n    are zero. We also demonstrate we can compute them as a vector in one go.\n    Note that partial derivatives are indicated by the index with respect to which\n    the partial derivative should be taken::\n\n        sage: RT(derivs=[0])\n        0.00000000000000000000000\n        sage: RT(derivs=[1])\n        0.00000000000000000000000\n        sage: RT(derivs=[[0],[1]])\n        (0.00000000000000000000000, 0.00000000000000000000000)\n\n    We can also compute higher order derivatives, so the following gives us the\n    hessian matrix at ``z=0``::\n\n        sage: matrix(2,2,RT(derivs=[[0,0],[0,1],[1,0],[1,1]]))\n        [  -0.0063717804307107830675222     -0.00000000000000000000000]\n        [    -0.00000000000000000000000 -0.000011900851943023954077279]\n\n    Characteristics can be given as ``[[delta_1,...,delta_g],[eps_1,...,eps_g],N]]``,\n    where ``N`` gives the level and the ``d""elta_i, eps_i`` are integers specifying\n    the characteristic. Alternatively, one can give the characteristic as a\n    ``2g``-dimensional vector over ``Z/NZ``::\n\n        sage: c = [[1,0],[1,0],2]\n        sage: v = vector(GF(2),[1,0,1,0])\n        sage: RT(char=c)  # abs_tol = 1e-24\n        1.2071813646649472697563e-25 - 2.8725542860550068599620e-26*I\n        sage: RT(char=v)  # abs_tol = 1e-24\n        1.2071813646649472697563e-25 - 2.8725542860550068599620e-26*I\n        sage: RT(char=c, derivs=[[0],[1]]) # abs_tol = 1e-24\n        (-0.59552188399685576910149 - 1.1412196198763623205771e-49*I, -3.5185834728040112058953e-32 + 2.5226254523149252440284e-56*I)\n\n    We check that for the genus 2 curve `C: y^2=(x-2)*(x-3)*(x-5)*(x-7)*(x-11)*(x-13)`,\n    the gradients of the odd theta characteristics of level 2 are proportional to the\n    roots `2, 3, 5, 7, 11, 13`. We give a period matrix for this curve relative to a\n    cohomology basis that is defined over `Q`, derive the Riemann matrix, compute the\n    gradients of the odd characteristics (with respect to the original cohomology basis!)\n    and check that the ratios give us back the roots listed::\n\n        sage: from riemann_theta import RiemannTheta\n        sage: from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse\n        sage: A = matrix(CC,2,4,[ -0.100985221999616*I, -0.0576741242160428*I, 0.170602500958820, 0.137052375058957, -0.257755342052576*I, -0.684089137456259*I, 0.685128296898840, 1.18843441146637])\n        sage: Omega1 = A[:, :2]\n        sage: Omega2 = A[:, 2:]\n        sage: Omega1i = numerical_inverse(Omega1)\n        sage: Omega = Omega1i*Omega2\n        sage: odd = [v for v in GF(2)^4 if v[:2]*v[2:] == 1]\n        sage: RT = RiemannTheta(Omega)\n        sage: gradients = [vector(RT(derivs=[[0],[1]],char=c))*Omega1i for c in odd]\n        sage: sorted([(-v[0]/v[1]).algdep(1) for v in gradients])\n        [x - 13, x - 11, x - 7, x - 5, x - 3, x - 2]\n\n    ", /*tp_doc*/
+  "Object for numerical computation of Riemann Theta functions with characteristics and derivatives\n\n    INPUT:\n    - ``Omega`` -- Complex matrix. The Riemann matrix for which to compute\n        Riemann Theta functions. The precision of the base ring determines the default\n        tolerance used in computing Riemann Theta function values.\n\n    EXAMPLES:\n\n    We go through a very simple example that illustrates the basic features.\n    First we define the Riemann matrix and its RiemannTheta object::\n\n        sage: from riemann_theta.riemann_theta import RiemannTheta\n        sage: CC=ComplexField(80)\n        sage: Omega = matrix(CC,2,2,[3*I,0,0,5*I])\n        sage: RT=RiemannTheta(Omega)\n\n    By default, the object evaluates the theta nullwerte, but we can specify\n    the value of `z` at which we want to evaluate. Theta functions are fully\n    periodic under translation by integer vectors::\n\n        sage: RT()\n        1.000161700487241998...\n        sage: RT(z=(1,1))\n        1.000161700487241998...\n\n    The Riemann theta function is even, so its first order partial derivatives\n    are zero. We also demonstrate we can compute them as a vector in one go.\n    Note that partial derivatives are indicated by the index with respect to which\n    the partial derivative should be taken::\n\n        sage: RT(derivs=[0])\n        0.00000000000000000000000\n        sage: RT(derivs=[1])\n        0.00000000000000000000000\n        sage: RT(derivs=[[0],[1]])\n        (0.00000000000000000000000, 0.00000000000000000000000)\n\n    We can also compute higher order derivatives, so the following gives us the\n    hessian matrix at ``z=0``::\n\n        sage: matrix(2,2,RT(derivs=[[0,0],[0,1],[1,0],[1,1]]))\n        [  -0.0063717804307107830675222     -0.00000000000000000000000]\n        [    -0.00000000000000000000000 -0.000011900851943023954077279]\n\n    Characteristics can be given as ``[[delta_1,...,delta_g],[eps_1,...,eps_g],N]]``,\n    where ``N`` gives the lev""el and the ``delta_i, eps_i`` are integers specifying\n    the characteristic. Alternatively, one can give the characteristic as a\n    ``2g``-dimensional vector over ``Z/NZ``::\n\n        sage: c = [[1,0],[1,0],2]\n        sage: v = vector(GF(2),[1,0,1,0])\n        sage: RT(char=c)  # abs_tol = 1e-24\n        1.2071813646649472697563e-25 - 2.8725542860550068599620e-26*I\n        sage: RT(char=v)  # abs_tol = 1e-24\n        1.2071813646649472697563e-25 - 2.8725542860550068599620e-26*I\n        sage: RT(char=c, derivs=[[0],[1]]) # abs_tol = 1e-24\n        (-0.59552188399685576910149 - 1.1412196198763623205771e-49*I, -3.5185834728040112058953e-32 + 2.5226254523149252440284e-56*I)\n\n    We check that for the genus 2 curve\n    \n    .. MATH::\n        C: y^2=(x-2)(x-3)(x-5)(x-7)(x-11)(x-13),\n\n    the gradients of the odd theta characteristics of level 2 are proportional to the\n    roots `2, 3, 5, 7, 11, 13`. We give a period matrix for this curve relative to a\n    cohomology basis that is defined over `Q`, derive the Riemann matrix, compute the\n    gradients of the odd characteristics (with respect to the original cohomology basis!)\n    and check that the ratios give us back the roots listed::\n\n        sage: from riemann_theta.riemann_theta import RiemannTheta\n        sage: from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse\n        sage: A = matrix(CC,2,4,[ -0.100985221999616*I, -0.0576741242160428*I, 0.170602500958820, 0.137052375058957, -0.257755342052576*I, -0.684089137456259*I, 0.685128296898840, 1.18843441146637])\n        sage: Omega1 = A[:, :2]\n        sage: Omega2 = A[:, 2:]\n        sage: Omega1i = numerical_inverse(Omega1)\n        sage: Omega = Omega1i*Omega2\n        sage: odd = [v for v in GF(2)^4 if v[:2]*v[2:] == 1]\n        sage: RT = RiemannTheta(Omega)\n        sage: gradients = [vector(RT(derivs=[[0],[1]],char=c))*Omega1i for c in odd]\n        sage: sorted([(-v[0]/v[1]).algdep(1) for v in gradients])\n        [x ""- 13, x - 11, x - 7, x - 5, x - 3, x - 2]\n\n    ", /*tp_doc*/
   __pyx_tp_traverse_13riemann_theta_13riemann_theta_RiemannTheta, /*tp_traverse*/
   __pyx_tp_clear_13riemann_theta_13riemann_theta_RiemannTheta, /*tp_clear*/
   0, /*tp_richcompare*/
@@ -22173,15 +22173,15 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_staticmethod = __Pyx_GetBuiltinName(__pyx_n_s_staticmethod); if (!__pyx_builtin_staticmethod) __PYX_ERR(0, 601, __pyx_L1_error)
-  __pyx_builtin_IndexError = __Pyx_GetBuiltinName(__pyx_n_s_IndexError); if (!__pyx_builtin_IndexError) __PYX_ERR(0, 177, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 191, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_builtin_staticmethod = __Pyx_GetBuiltinName(__pyx_n_s_staticmethod); if (!__pyx_builtin_staticmethod) __PYX_ERR(0, 599, __pyx_L1_error)
+  __pyx_builtin_IndexError = __Pyx_GetBuiltinName(__pyx_n_s_IndexError); if (!__pyx_builtin_IndexError) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 190, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
-  __pyx_builtin_min = __Pyx_GetBuiltinName(__pyx_n_s_min); if (!__pyx_builtin_min) __PYX_ERR(0, 998, __pyx_L1_error)
-  __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 1007, __pyx_L1_error)
-  __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) __PYX_ERR(0, 1228, __pyx_L1_error)
-  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 1400, __pyx_L1_error)
+  __pyx_builtin_min = __Pyx_GetBuiltinName(__pyx_n_s_min); if (!__pyx_builtin_min) __PYX_ERR(0, 996, __pyx_L1_error)
+  __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 1005, __pyx_L1_error)
+  __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) __PYX_ERR(0, 1230, __pyx_L1_error)
+  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 1402, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(5, 947, __pyx_L1_error)
   __pyx_builtin_SystemError = __Pyx_GetBuiltinName(__pyx_n_s_SystemError); if (!__pyx_builtin_SystemError) __PYX_ERR(7, 5348, __pyx_L1_error)
   return 0;
@@ -22193,36 +22193,36 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "riemann_theta/riemann_theta.pyx":177
+  /* "riemann_theta/riemann_theta.pyx":175
  * 
  *         if i < 0 or i >= self.n:
  *             raise IndexError("Index out of range")             # <<<<<<<<<<<<<<
  *         else:
  *             return self.vec[i]
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Index_out_of_range); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_Index_out_of_range); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "riemann_theta/riemann_theta.pyx":191
+  /* "riemann_theta/riemann_theta.pyx":189
  *         """
  *         if len(L) != self.n:
  *             raise ValueError("Mismatch in length")             # <<<<<<<<<<<<<<
  *         for i in range(self.n):
  *             self.vec[i] = L[i]
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Mismatch_in_length); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_Mismatch_in_length); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "riemann_theta/riemann_theta.pyx":229
+  /* "riemann_theta/riemann_theta.pyx":227
  *         """
  *         if self.n != v.n or self.n != w.n:
  *             raise ValueError("Dimension mismatch")             # <<<<<<<<<<<<<<
  *         cdef long i
  *         for i in range(self.n):
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_Dimension_mismatch); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_Dimension_mismatch); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
@@ -22245,14 +22245,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "riemann_theta/riemann_theta.pyx":357
+  /* "riemann_theta/riemann_theta.pyx":355
  *         cdef RealNumber a
  *         if self.RR is not L.base_ring():
  *             raise ValueError("Parent mismatch")             # <<<<<<<<<<<<<<
  *         if self.n != len(L):
  *             raise ValueError("Dimension mismatch")
  */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_Parent_mismatch); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 357, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_Parent_mismatch); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 355, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
@@ -22275,14 +22275,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "riemann_theta/riemann_theta.pyx":484
+  /* "riemann_theta/riemann_theta.pyx":482
  *         """
  *         if i < 0 or i >= self.n:
  *             raise IndexError("Index out of bounds")             # <<<<<<<<<<<<<<
  *         cdef ComplexNumber r = self.z._new()
  *         mpfr_set(r.__re, self.vec[i].re,self.rnd)
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_s_Index_out_of_bounds); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_s_Index_out_of_bounds); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
@@ -22305,25 +22305,25 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "riemann_theta/riemann_theta.pyx":575
+  /* "riemann_theta/riemann_theta.pyx":573
  * 
  *         if self.RR is not C.base_ring():
  *             raise ValueError("parent mismatch")             # <<<<<<<<<<<<<<
  *         if C.nrows() != self.n or C.ncols() != self.n:
  *             raise ValueError("matrix not square or not of right dimension")
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_s_parent_mismatch); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 575, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_s_parent_mismatch); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 573, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "riemann_theta/riemann_theta.pyx":577
+  /* "riemann_theta/riemann_theta.pyx":575
  *             raise ValueError("parent mismatch")
  *         if C.nrows() != self.n or C.ncols() != self.n:
  *             raise ValueError("matrix not square or not of right dimension")             # <<<<<<<<<<<<<<
  * 
  *         k = 0
  */
-  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_kp_s_matrix_not_square_or_not_of_righ); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_kp_s_matrix_not_square_or_not_of_righ); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 575, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
@@ -22346,25 +22346,25 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "riemann_theta/riemann_theta.pyx":741
+  /* "riemann_theta/riemann_theta.pyx":739
  *         """
  *         if self.RR is not G.base_ring():
  *             raise ValueError("Base ring mismatch")             # <<<<<<<<<<<<<<
  *         if G.nrows() != self.n or G.ncols() != self.n:
  *             raise ValueError("Dimension mismatch")
  */
-  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_s_Base_ring_mismatch); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 741, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_s_Base_ring_mismatch); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 739, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "riemann_theta/riemann_theta.pyx":856
+  /* "riemann_theta/riemann_theta.pyx":854
  *         """
  *         if len(w) != self.n:
  *             raise ValueError("Vector dimension mismatch")             # <<<<<<<<<<<<<<
  *         cdef Vector_long v = Vector_long.from_list(w)
  *         cdef RealNumber s = self.RR._new() #reserve space for our sum
  */
-  __pyx_tuple__17 = PyTuple_Pack(1, __pyx_kp_s_Vector_dimension_mismatch); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 856, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(1, __pyx_kp_s_Vector_dimension_mismatch); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
@@ -22387,84 +22387,84 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
 
-  /* "riemann_theta/riemann_theta.pyx":944
+  /* "riemann_theta/riemann_theta.pyx":942
  *     rho = RR(pari.qfminim(Y,flag=2)[1])
  *     rho = (pi*rho).sqrt()
  *     def f(R):             # <<<<<<<<<<<<<<
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  *     def df(R):
  */
-  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_n_s_R); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 944, __pyx_L1_error)
+  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_n_s_R); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 942, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_f, 944, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 944, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_f, 942, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 942, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":946
+  /* "riemann_theta/riemann_theta.pyx":944
  *     def f(R):
  *         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
  *         return -2*(2*R-rho)**(g-1) *g* ( -(2*R-rho)**2/4).exp()/rho**g
  * 
  */
-  __pyx_tuple__22 = PyTuple_Pack(1, __pyx_n_s_R); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 946, __pyx_L1_error)
+  __pyx_tuple__22 = PyTuple_Pack(1, __pyx_n_s_R); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 944, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_df, 946, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 946, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_df, 944, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 944, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":1006
+  /* "riemann_theta/riemann_theta.pyx":1004
  *     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
  *     LC = (2*pi)**N * g_over_two * (2/rho)**g
  *     def f(R):             # <<<<<<<<<<<<<<
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):
  */
-  __pyx_tuple__24 = PyTuple_Pack(3, __pyx_n_s_R, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 1006, __pyx_L1_error)
+  __pyx_tuple__24 = PyTuple_Pack(3, __pyx_n_s_R, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 1004, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_f, 1006, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 1006, __pyx_L1_error)
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_f, 1004, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 1004, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":1008
+  /* "riemann_theta/riemann_theta.pyx":1006
  *     def f(R):
  *         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
  *     def df(R):             # <<<<<<<<<<<<<<
  *         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
  * 
  */
-  __pyx_tuple__26 = PyTuple_Pack(3, __pyx_n_s_R, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 1008, __pyx_L1_error)
+  __pyx_tuple__26 = PyTuple_Pack(3, __pyx_n_s_R, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 1006, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_df, 1008, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 1008, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_df, 1006, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 1006, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":1050
+  /* "riemann_theta/riemann_theta.pyx":1048
  *     prec=R.base_ring().prec()
  *     mpall.mp.prec=prec # set work precision in "mp library"
  *     with mpall.workprec(prec):             # <<<<<<<<<<<<<<
  *         Cmp=mpall.matrix([mpall.sage_to_mpmath(list(c),prec) for c in G])
  *         M=mpall.cholesky(Cmp)
  */
-  __pyx_tuple__28 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 1050, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 1048, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
 
-  /* "riemann_theta/riemann_theta.pyx":1281
+  /* "riemann_theta/riemann_theta.pyx":1283
  *             #note R.characteristic is different
  *             if R.characteristic() != R.order() or rnk != 2*self.g:
  *                 raise TypeError("Invalid characteristic specification")             # <<<<<<<<<<<<<<
  *             eps = self.ZZg(char[:self.g])
  *             delta = self.ZZg(char[self.g:])
  */
-  __pyx_tuple__30 = PyTuple_Pack(1, __pyx_kp_s_Invalid_characteristic_specifica); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 1281, __pyx_L1_error)
+  __pyx_tuple__30 = PyTuple_Pack(1, __pyx_kp_s_Invalid_characteristic_specifica); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 1283, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
 
-  /* "riemann_theta/riemann_theta.pyx":1304
+  /* "riemann_theta/riemann_theta.pyx":1306
  * 
  *         if any( d<0 or d>=self.g for l in derivs for d in l):
  *             raise ValueError("Invalid value in derivative list")             # <<<<<<<<<<<<<<
  *         derivs = [Vector_long.from_list(d) for d in derivs]
  * 
  */
-  __pyx_tuple__31 = PyTuple_Pack(1, __pyx_kp_s_Invalid_value_in_derivative_list); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 1304, __pyx_L1_error)
+  __pyx_tuple__31 = PyTuple_Pack(1, __pyx_kp_s_Invalid_value_in_derivative_list); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 1306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
 
@@ -22519,101 +22519,101 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
 
-  /* "riemann_theta/riemann_theta.pyx":602
+  /* "riemann_theta/riemann_theta.pyx":600
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense C):             # <<<<<<<<<<<<<<
  *         r"""Allocate and initialize norm from lower triangular Cholesky decomposition.
  * 
  */
-  __pyx_tuple__38 = PyTuple_Pack(1, __pyx_n_s_C); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 602, __pyx_L1_error)
+  __pyx_tuple__38 = PyTuple_Pack(1, __pyx_n_s_C); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 600, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_init, 602, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 602, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_init, 600, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 600, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":774
+  /* "riemann_theta/riemann_theta.pyx":772
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense G):             # <<<<<<<<<<<<<<
  *         r"""Allocate and initialize norm from Gram matrix.
  * 
  */
-  __pyx_tuple__40 = PyTuple_Pack(1, __pyx_n_s_G); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 774, __pyx_L1_error)
+  __pyx_tuple__40 = PyTuple_Pack(1, __pyx_n_s_G); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_init, 774, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 774, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_init, 772, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 772, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":862
+  /* "riemann_theta/riemann_theta.pyx":860
  *         return s
  * 
  * def imag_func(a):             # <<<<<<<<<<<<<<
  *     r"""Return result of calling ``imag`` method on argument.
  * 
  */
-  __pyx_tuple__42 = PyTuple_Pack(1, __pyx_n_s_a); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 862, __pyx_L1_error)
+  __pyx_tuple__42 = PyTuple_Pack(1, __pyx_n_s_a); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 860, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_imag_func, 862, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 862, __pyx_L1_error)
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_imag_func, 860, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 860, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":879
+  /* "riemann_theta/riemann_theta.pyx":877
  *     return a.imag()
  * 
  * def real_func(a):             # <<<<<<<<<<<<<<
  *     r"""Return result of calling ``real`` method on argument.
  * 
  */
-  __pyx_tuple__44 = PyTuple_Pack(1, __pyx_n_s_a); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 879, __pyx_L1_error)
+  __pyx_tuple__44 = PyTuple_Pack(1, __pyx_n_s_a); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 877, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__44);
   __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_real_func, 879, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 879, __pyx_L1_error)
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_real_func, 877, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 877, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":896
+  /* "riemann_theta/riemann_theta.pyx":894
  *     return a.real()
  * 
  * def round_func(a):             # <<<<<<<<<<<<<<
  *     r"""Return result of calling ``round`` method on argument.
  * 
  */
-  __pyx_tuple__46 = PyTuple_Pack(1, __pyx_n_s_a); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_tuple__46 = PyTuple_Pack(1, __pyx_n_s_a); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 894, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__46);
   __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_round_func, 896, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_round_func, 894, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 894, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":914
+  /* "riemann_theta/riemann_theta.pyx":912
  *     return a.round()
  * 
  * def Rbound(Y, tol):             # <<<<<<<<<<<<<<
  *     r"""Compute radius for Riemann theta function summation.
  * 
  */
-  __pyx_tuple__48 = PyTuple_Pack(16, __pyx_n_s_Y, __pyx_n_s_tol, __pyx_n_s_RR, __pyx_n_s_rho, __pyx_n_s_Rmin, __pyx_n_s_R, __pyx_n_s_fR, __pyx_n_s_dfR, __pyx_n_s_fRo, __pyx_n_s_half_g, __pyx_n_s_pi, __pyx_n_s_g, __pyx_n_s_f, __pyx_n_s_f, __pyx_n_s_df, __pyx_n_s_df); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 914, __pyx_L1_error)
+  __pyx_tuple__48 = PyTuple_Pack(16, __pyx_n_s_Y, __pyx_n_s_tol, __pyx_n_s_RR, __pyx_n_s_rho, __pyx_n_s_Rmin, __pyx_n_s_R, __pyx_n_s_fR, __pyx_n_s_dfR, __pyx_n_s_fRo, __pyx_n_s_half_g, __pyx_n_s_pi, __pyx_n_s_g, __pyx_n_s_f, __pyx_n_s_f, __pyx_n_s_df, __pyx_n_s_df); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 912, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__48);
   __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_Rbound, 914, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 914, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_Rbound, 912, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 912, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":966
+  /* "riemann_theta/riemann_theta.pyx":964
  *     return R
  * 
  * def Rbound_deriv(Y, N, tol):             # <<<<<<<<<<<<<<
  *     r"""Compute radius for Riemann theta function summation with derivatives.
  * 
  */
-  __pyx_tuple__50 = PyTuple_Pack(24, __pyx_n_s_Y, __pyx_n_s_N, __pyx_n_s_tol, __pyx_n_s_RR, __pyx_n_s_rho, __pyx_n_s_Rmin, __pyx_n_s_R, __pyx_n_s_fR, __pyx_n_s_dfR, __pyx_n_s_fRo, __pyx_n_s_half_g, __pyx_n_s_pi, __pyx_n_s_g, __pyx_n_s_Yinv_norm, __pyx_n_s_gRR, __pyx_n_s_g_over_two, __pyx_n_s_g_sqrt, __pyx_n_s_C, __pyx_n_s_LC, __pyx_n_s_f, __pyx_n_s_f, __pyx_n_s_df, __pyx_n_s_df, __pyx_n_s_i); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 966, __pyx_L1_error)
+  __pyx_tuple__50 = PyTuple_Pack(24, __pyx_n_s_Y, __pyx_n_s_N, __pyx_n_s_tol, __pyx_n_s_RR, __pyx_n_s_rho, __pyx_n_s_Rmin, __pyx_n_s_R, __pyx_n_s_fR, __pyx_n_s_dfR, __pyx_n_s_fRo, __pyx_n_s_half_g, __pyx_n_s_pi, __pyx_n_s_g, __pyx_n_s_Yinv_norm, __pyx_n_s_gRR, __pyx_n_s_g_over_two, __pyx_n_s_g_sqrt, __pyx_n_s_C, __pyx_n_s_LC, __pyx_n_s_f, __pyx_n_s_f, __pyx_n_s_df, __pyx_n_s_df, __pyx_n_s_i); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 964, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
-  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(3, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_Rbound_deriv, 966, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 966, __pyx_L1_error)
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(3, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_Rbound_deriv, 964, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 964, __pyx_L1_error)
 
-  /* "riemann_theta/riemann_theta.pyx":1024
+  /* "riemann_theta/riemann_theta.pyx":1022
  *     return R
  * 
  * def cholesky_decomposition(G):             # <<<<<<<<<<<<<<
  *     r"""Return Cholesky decomposition of a positive definite real matrix.
  * 
  */
-  __pyx_tuple__52 = PyTuple_Pack(7, __pyx_n_s_G, __pyx_n_s_R, __pyx_n_s_prec, __pyx_n_s_Cmp, __pyx_n_s_M, __pyx_n_s_C, __pyx_n_s_c); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 1024, __pyx_L1_error)
+  __pyx_tuple__52 = PyTuple_Pack(7, __pyx_n_s_G, __pyx_n_s_R, __pyx_n_s_prec, __pyx_n_s_Cmp, __pyx_n_s_M, __pyx_n_s_C, __pyx_n_s_c); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 1022, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_cholesky_decomposition, 1024, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 1024, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_riemann_theta_riemann_theta_pyx, __pyx_n_s_cholesky_decomposition, 1022, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 1022, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -22677,7 +22677,7 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_13riemann_theta_13riemann_theta_Vector_long.assign = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *, PyObject *))__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign;
   __pyx_vtable_13riemann_theta_13riemann_theta_Vector_long.from_list = (PyObject *(*)(PyObject *))__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_from_list;
   __pyx_vtable_13riemann_theta_13riemann_theta_Vector_long.assign_scaled_diff = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *, long, struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *, struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *))__pyx_f_13riemann_theta_13riemann_theta_11Vector_long_assign_scaled_diff;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta_Vector_long.tp_print = 0;
   #endif
@@ -22686,7 +22686,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long, "__len__"); if (unlikely(!wrapper)) __PYX_ERR(0, 88, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long, "__len__"); if (unlikely(!wrapper)) __PYX_ERR(0, 86, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_4__len__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_4__len__.doc = __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_4__len__;
@@ -22696,7 +22696,7 @@ static int __Pyx_modinit_type_init_code(void) {
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long, "__repr__"); if (unlikely(!wrapper)) __PYX_ERR(0, 88, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long, "__repr__"); if (unlikely(!wrapper)) __PYX_ERR(0, 86, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_6__repr__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_6__repr__.doc = __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_6__repr__;
@@ -22706,7 +22706,7 @@ static int __Pyx_modinit_type_init_code(void) {
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long, "__getitem__"); if (unlikely(!wrapper)) __PYX_ERR(0, 88, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long, "__getitem__"); if (unlikely(!wrapper)) __PYX_ERR(0, 86, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_8__getitem__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_long_8__getitem__.doc = __pyx_doc_13riemann_theta_13riemann_theta_11Vector_long_8__getitem__;
@@ -22714,15 +22714,15 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_Vector_long.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Vector_long_2, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_Vector_long.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Vector_long_2, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_Vector_long) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
   __pyx_ptype_13riemann_theta_13riemann_theta_Vector_long = &__pyx_type_13riemann_theta_13riemann_theta_Vector_long;
   __pyx_vtabptr_13riemann_theta_13riemann_theta_Vector_mpfr = &__pyx_vtable_13riemann_theta_13riemann_theta_Vector_mpfr;
   __pyx_vtable_13riemann_theta_13riemann_theta_Vector_mpfr.assign = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *, struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *))__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign;
   __pyx_vtable_13riemann_theta_13riemann_theta_Vector_mpfr.from_vector = (struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *(*)(struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *))__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_from_vector;
   __pyx_vtable_13riemann_theta_13riemann_theta_Vector_mpfr.assign_sum_si = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *, struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_mpfr *, struct __pyx_obj_13riemann_theta_13riemann_theta_Vector_long *))__pyx_f_13riemann_theta_13riemann_theta_11Vector_mpfr_assign_sum_si;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 234, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr.tp_print = 0;
   #endif
@@ -22731,7 +22731,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr, "__len__"); if (unlikely(!wrapper)) __PYX_ERR(0, 234, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr, "__len__"); if (unlikely(!wrapper)) __PYX_ERR(0, 232, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len__.doc = __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_4__len__;
@@ -22741,7 +22741,7 @@ static int __Pyx_modinit_type_init_code(void) {
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr, "__getitem__"); if (unlikely(!wrapper)) __PYX_ERR(0, 234, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr, "__getitem__"); if (unlikely(!wrapper)) __PYX_ERR(0, 232, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getitem__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getitem__.doc = __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_6__getitem__;
@@ -22751,7 +22751,7 @@ static int __Pyx_modinit_type_init_code(void) {
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr, "__repr__"); if (unlikely(!wrapper)) __PYX_ERR(0, 234, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr, "__repr__"); if (unlikely(!wrapper)) __PYX_ERR(0, 232, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr__.doc = __pyx_doc_13riemann_theta_13riemann_theta_11Vector_mpfr_8__repr__;
@@ -22759,11 +22759,11 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 234, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Vector_mpfr_2, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 234, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 234, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Vector_mpfr_2, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
   __pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpfr = &__pyx_type_13riemann_theta_13riemann_theta_Vector_mpfr;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc) < 0) __PYX_ERR(0, 399, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta_Vector_mpc.tp_print = 0;
   #endif
@@ -22772,7 +22772,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc, "__len__"); if (unlikely(!wrapper)) __PYX_ERR(0, 401, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc, "__len__"); if (unlikely(!wrapper)) __PYX_ERR(0, 399, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__.doc = __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_4__len__;
@@ -22782,7 +22782,7 @@ static int __Pyx_modinit_type_init_code(void) {
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc, "__getitem__"); if (unlikely(!wrapper)) __PYX_ERR(0, 401, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc, "__getitem__"); if (unlikely(!wrapper)) __PYX_ERR(0, 399, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_6__getitem__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_6__getitem__.doc = __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_6__getitem__;
@@ -22792,7 +22792,7 @@ static int __Pyx_modinit_type_init_code(void) {
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc, "__repr__"); if (unlikely(!wrapper)) __PYX_ERR(0, 401, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc, "__repr__"); if (unlikely(!wrapper)) __PYX_ERR(0, 399, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__.doc = __pyx_doc_13riemann_theta_13riemann_theta_10Vector_mpc_8__repr__;
@@ -22800,14 +22800,14 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Vector_mpc_2, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Vector_mpc_2, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc) < 0) __PYX_ERR(0, 399, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc) < 0) __PYX_ERR(0, 399, __pyx_L1_error)
   __pyx_ptype_13riemann_theta_13riemann_theta_Vector_mpc = &__pyx_type_13riemann_theta_13riemann_theta_Vector_mpc;
   __pyx_vtabptr_13riemann_theta_13riemann_theta_NormCholesky = &__pyx_vtable_13riemann_theta_13riemann_theta_NormCholesky;
   __pyx_vtable_13riemann_theta_13riemann_theta_NormCholesky.assign = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *, struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *))__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_assign;
   __pyx_vtable_13riemann_theta_13riemann_theta_NormCholesky.from_cholesky_matrix = (struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *(*)(struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *))__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_from_cholesky_matrix;
   __pyx_vtable_13riemann_theta_13riemann_theta_NormCholesky.mpfr_norm = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_NormCholesky *, __mpfr_struct *, mpfr_t *))__pyx_f_13riemann_theta_13riemann_theta_12NormCholesky_mpfr_norm;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 502, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta_NormCholesky.tp_print = 0;
   #endif
@@ -22816,7 +22816,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky, "__call__"); if (unlikely(!wrapper)) __PYX_ERR(0, 504, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky, "__call__"); if (unlikely(!wrapper)) __PYX_ERR(0, 502, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_12NormCholesky_6__call__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_12NormCholesky_6__call__.doc = __pyx_doc_13riemann_theta_13riemann_theta_12NormCholesky_6__call__;
@@ -22824,16 +22824,16 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_NormCholesky.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_NormCholesky, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_NormCholesky.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 502, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_NormCholesky, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 502, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_NormCholesky) < 0) __PYX_ERR(0, 502, __pyx_L1_error)
   __pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky = &__pyx_type_13riemann_theta_13riemann_theta_NormCholesky;
   __pyx_vtabptr_13riemann_theta_13riemann_theta_NormGramInt = &__pyx_vtable_13riemann_theta_13riemann_theta_NormGramInt;
   __pyx_vtable_13riemann_theta_13riemann_theta_NormGramInt.assign = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *, struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *))__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_assign;
   __pyx_vtable_13riemann_theta_13riemann_theta_NormGramInt.from_gram_matrix = (struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *(*)(struct __pyx_obj_4sage_6matrix_20matrix_generic_dense_Matrix_generic_dense *))__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_from_gram_matrix;
   __pyx_vtable_13riemann_theta_13riemann_theta_NormGramInt.scaled_by = (struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *, long))__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_scaled_by;
   __pyx_vtable_13riemann_theta_13riemann_theta_NormGramInt.mpfr_norm = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *, __mpfr_struct *, long *))__pyx_f_13riemann_theta_13riemann_theta_11NormGramInt_mpfr_norm;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 673, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 671, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta_NormGramInt.tp_print = 0;
   #endif
@@ -22842,7 +22842,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt, "__call__"); if (unlikely(!wrapper)) __PYX_ERR(0, 673, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt, "__call__"); if (unlikely(!wrapper)) __PYX_ERR(0, 671, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11NormGramInt_6__call__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_11NormGramInt_6__call__.doc = __pyx_doc_13riemann_theta_13riemann_theta_11NormGramInt_6__call__;
@@ -22850,15 +22850,15 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_NormGramInt.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 673, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_NormGramInt, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 673, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 673, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_NormGramInt.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 671, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_NormGramInt, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 671, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_NormGramInt) < 0) __PYX_ERR(0, 671, __pyx_L1_error)
   __pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt = &__pyx_type_13riemann_theta_13riemann_theta_NormGramInt;
   __pyx_vtabptr_13riemann_theta_13riemann_theta_RiemannTheta = &__pyx_vtable_13riemann_theta_13riemann_theta_RiemannTheta;
   __pyx_vtable_13riemann_theta_13riemann_theta_RiemannTheta.scaled_Xnorm = (struct __pyx_obj_13riemann_theta_13riemann_theta_NormGramInt *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_RiemannTheta *, long))__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_scaled_Xnorm;
   __pyx_vtable_13riemann_theta_13riemann_theta_RiemannTheta.Rbound = (double (*)(struct __pyx_obj_13riemann_theta_13riemann_theta_RiemannTheta *, PyObject *, PyObject *))__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta_Rbound;
   __pyx_vtable_13riemann_theta_13riemann_theta_RiemannTheta._eval_vector_ = (PyObject *(*)(struct __pyx_obj_13riemann_theta_13riemann_theta_RiemannTheta *, struct __pyx_obj_4sage_7modules_19free_module_element_FreeModuleElement_generic_dense *, struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *, struct __pyx_obj_4sage_7modules_20vector_integer_dense_Vector_integer_dense *, long, PyObject *, struct __pyx_obj_4sage_5rings_9real_mpfr_RealNumber *))__pyx_f_13riemann_theta_13riemann_theta_12RiemannTheta__eval_vector_;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1056, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1054, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta_RiemannTheta.tp_print = 0;
   #endif
@@ -22867,7 +22867,7 @@ static int __Pyx_modinit_type_init_code(void) {
   }
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 1056, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta, "__init__"); if (unlikely(!wrapper)) __PYX_ERR(0, 1054, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_12RiemannTheta___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_12RiemannTheta___init__.doc = __pyx_doc_13riemann_theta_13riemann_theta_12RiemannTheta___init__;
@@ -22877,7 +22877,7 @@ static int __Pyx_modinit_type_init_code(void) {
   #endif
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta, "__call__"); if (unlikely(!wrapper)) __PYX_ERR(0, 1056, __pyx_L1_error)
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta, "__call__"); if (unlikely(!wrapper)) __PYX_ERR(0, 1054, __pyx_L1_error)
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_12RiemannTheta_6__call__ = *((PyWrapperDescrObject *)wrapper)->d_base;
       __pyx_wrapperbase_13riemann_theta_13riemann_theta_12RiemannTheta_6__call__.doc = __pyx_doc_13riemann_theta_13riemann_theta_12RiemannTheta_6__call__;
@@ -22885,11 +22885,11 @@ static int __Pyx_modinit_type_init_code(void) {
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1056, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_RiemannTheta, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1056, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1056, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta.tp_dict, __pyx_vtabptr_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1054, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_RiemannTheta, (PyObject *)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1054, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta) < 0) __PYX_ERR(0, 1054, __pyx_L1_error)
   __pyx_ptype_13riemann_theta_13riemann_theta_RiemannTheta = &__pyx_type_13riemann_theta_13riemann_theta_RiemannTheta;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound) < 0) __PYX_ERR(0, 914, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound) < 0) __PYX_ERR(0, 912, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound.tp_print = 0;
   #endif
@@ -22897,7 +22897,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct__Rbound;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv) < 0) __PYX_ERR(0, 966, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv) < 0) __PYX_ERR(0, 964, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv.tp_print = 0;
   #endif
@@ -22905,7 +22905,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_1_Rbound_deriv;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f) < 0) __PYX_ERR(0, 1006, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f) < 0) __PYX_ERR(0, 1004, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f.tp_print = 0;
   #endif
@@ -22913,7 +22913,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_2_f;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 1007, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 1005, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr.tp_print = 0;
   #endif
@@ -22921,7 +22921,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_3_genexpr;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df) < 0) __PYX_ERR(0, 1008, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df) < 0) __PYX_ERR(0, 1006, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df.tp_print = 0;
   #endif
@@ -22929,7 +22929,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_4_df;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr) < 0) __PYX_ERR(0, 1009, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr) < 0) __PYX_ERR(0, 1007, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr.tp_print = 0;
   #endif
@@ -22937,7 +22937,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_5_genexpr;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__) < 0) __PYX_ERR(0, 1233, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__) < 0) __PYX_ERR(0, 1235, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__.tp_print = 0;
   #endif
@@ -22945,7 +22945,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__ = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_6___call__;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr) < 0) __PYX_ERR(0, 1303, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr) < 0) __PYX_ERR(0, 1305, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr.tp_print = 0;
   #endif
@@ -22953,7 +22953,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_7_genexpr;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vector_) < 0) __PYX_ERR(0, 1340, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vector_) < 0) __PYX_ERR(0, 1342, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vector_.tp_print = 0;
   #endif
@@ -22961,7 +22961,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vector_.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vector_ = &__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_8__eval_vector_;
-  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_9_genexpr) < 0) __PYX_ERR(0, 1400, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_9_genexpr) < 0) __PYX_ERR(0, 1402, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_13riemann_theta_13riemann_theta___pyx_scope_struct_9_genexpr.tp_print = 0;
   #endif
@@ -23519,351 +23519,351 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "riemann_theta/riemann_theta.pyx":77
+  /* "riemann_theta/riemann_theta.pyx":75
  * from cypari2.paridecl cimport *
  * 
  * from sage.libs.pari import pari             # <<<<<<<<<<<<<<
  * from math import pi as double_pi
  * from math import sqrt as double_sqrt
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_pari);
   __Pyx_GIVEREF(__pyx_n_s_pari);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_pari);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_libs_pari, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_libs_pari, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_pari); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_pari); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pari, __pyx_t_1) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pari, __pyx_t_1) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":78
+  /* "riemann_theta/riemann_theta.pyx":76
  * 
  * from sage.libs.pari import pari
  * from math import pi as double_pi             # <<<<<<<<<<<<<<
  * from math import sqrt as double_sqrt
  * from math import exp as double_exp
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_pi);
   __Pyx_GIVEREF(__pyx_n_s_pi);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_pi);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_math, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_math, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_double_pi, __pyx_t_2) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_double_pi, __pyx_t_2) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":79
+  /* "riemann_theta/riemann_theta.pyx":77
  * from sage.libs.pari import pari
  * from math import pi as double_pi
  * from math import sqrt as double_sqrt             # <<<<<<<<<<<<<<
  * from math import exp as double_exp
  * from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_sqrt);
   __Pyx_GIVEREF(__pyx_n_s_sqrt);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_sqrt);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_math, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_math, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_double_sqrt, __pyx_t_1) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_double_sqrt, __pyx_t_1) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":80
+  /* "riemann_theta/riemann_theta.pyx":78
  * from math import pi as double_pi
  * from math import sqrt as double_sqrt
  * from math import exp as double_exp             # <<<<<<<<<<<<<<
  * from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse
  * import sage.libs.mpmath.all as mpall
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_exp);
   __Pyx_GIVEREF(__pyx_n_s_exp);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_exp);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_math, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_math, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_exp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_exp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_double_exp, __pyx_t_2) < 0) __PYX_ERR(0, 80, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_double_exp, __pyx_t_2) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":81
+  /* "riemann_theta/riemann_theta.pyx":79
  * from math import sqrt as double_sqrt
  * from math import exp as double_exp
  * from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse             # <<<<<<<<<<<<<<
  * import sage.libs.mpmath.all as mpall
  * from sage.rings.integer_ring import ZZ
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_numerical_inverse);
   __Pyx_GIVEREF(__pyx_n_s_numerical_inverse);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_numerical_inverse);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_schemes_riemann_surfaces_ri, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_schemes_riemann_surfaces_ri, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_numerical_inverse); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_numerical_inverse); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_numerical_inverse, __pyx_t_1) < 0) __PYX_ERR(0, 81, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_numerical_inverse, __pyx_t_1) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":82
+  /* "riemann_theta/riemann_theta.pyx":80
  * from math import exp as double_exp
  * from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse
  * import sage.libs.mpmath.all as mpall             # <<<<<<<<<<<<<<
  * from sage.rings.integer_ring import ZZ
  * from sage.rings.real_double import RDF
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s__37);
   __Pyx_GIVEREF(__pyx_n_s__37);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s__37);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_sage_libs_mpmath_all, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_sage_libs_mpmath_all, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_mpall, __pyx_t_1) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_mpall, __pyx_t_1) < 0) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":83
+  /* "riemann_theta/riemann_theta.pyx":81
  * from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse
  * import sage.libs.mpmath.all as mpall
  * from sage.rings.integer_ring import ZZ             # <<<<<<<<<<<<<<
  * from sage.rings.real_double import RDF
  * from sage.arith.misc import binomial as binom
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_ZZ);
   __Pyx_GIVEREF(__pyx_n_s_ZZ);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_ZZ);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_rings_integer_ring, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_rings_integer_ring, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_ZZ); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_ZZ); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ZZ, __pyx_t_1) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ZZ, __pyx_t_1) < 0) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":84
+  /* "riemann_theta/riemann_theta.pyx":82
  * import sage.libs.mpmath.all as mpall
  * from sage.rings.integer_ring import ZZ
  * from sage.rings.real_double import RDF             # <<<<<<<<<<<<<<
  * from sage.arith.misc import binomial as binom
  * from sage.modules.vector_modn_dense import Vector_modn_dense
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_RDF);
   __Pyx_GIVEREF(__pyx_n_s_RDF);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_RDF);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_sage_rings_real_double, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_sage_rings_real_double, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_RDF); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_RDF); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_RDF, __pyx_t_2) < 0) __PYX_ERR(0, 84, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_RDF, __pyx_t_2) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":85
+  /* "riemann_theta/riemann_theta.pyx":83
  * from sage.rings.integer_ring import ZZ
  * from sage.rings.real_double import RDF
  * from sage.arith.misc import binomial as binom             # <<<<<<<<<<<<<<
  * from sage.modules.vector_modn_dense import Vector_modn_dense
  * 
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_binomial);
   __Pyx_GIVEREF(__pyx_n_s_binomial);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_binomial);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_arith_misc, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_sage_arith_misc, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_binomial); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_binomial); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_binom, __pyx_t_1) < 0) __PYX_ERR(0, 85, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_binom, __pyx_t_1) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":86
+  /* "riemann_theta/riemann_theta.pyx":84
  * from sage.rings.real_double import RDF
  * from sage.arith.misc import binomial as binom
  * from sage.modules.vector_modn_dense import Vector_modn_dense             # <<<<<<<<<<<<<<
  * 
  * cdef class Vector_long:
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_Vector_modn_dense);
   __Pyx_GIVEREF(__pyx_n_s_Vector_modn_dense);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_Vector_modn_dense);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_sage_modules_vector_modn_dense, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_sage_modules_vector_modn_dense, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_Vector_modn_dense); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_Vector_modn_dense); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Vector_modn_dense, __pyx_t_2) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Vector_modn_dense, __pyx_t_2) < 0) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":602
+  /* "riemann_theta/riemann_theta.pyx":600
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense C):             # <<<<<<<<<<<<<<
  *         r"""Allocate and initialize norm from lower triangular Cholesky decomposition.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_12NormCholesky_5init, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 602, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_12NormCholesky_5init, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 600, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky->tp_dict, __pyx_n_s_init, __pyx_t_1) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky->tp_dict, __pyx_n_s_init, __pyx_t_1) < 0) __PYX_ERR(0, 600, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky);
 
-  /* "riemann_theta/riemann_theta.pyx":601
+  /* "riemann_theta/riemann_theta.pyx":599
  *         return NC
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def init(Matrix_generic_dense C):
  *         r"""Allocate and initialize norm from lower triangular Cholesky decomposition.
  */
-  __Pyx_GetNameInClass(__pyx_t_1, (PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky, __pyx_n_s_init); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 602, __pyx_L1_error)
+  __Pyx_GetNameInClass(__pyx_t_1, (PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky, __pyx_n_s_init); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 600, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 601, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 599, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky->tp_dict, __pyx_n_s_init, __pyx_t_2) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky->tp_dict, __pyx_n_s_init, __pyx_t_2) < 0) __PYX_ERR(0, 600, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_13riemann_theta_13riemann_theta_NormCholesky);
 
-  /* "riemann_theta/riemann_theta.pyx":774
+  /* "riemann_theta/riemann_theta.pyx":772
  * 
  *     @staticmethod
  *     def init(Matrix_generic_dense G):             # <<<<<<<<<<<<<<
  *         r"""Allocate and initialize norm from Gram matrix.
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_11NormGramInt_5init, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 774, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_11NormGramInt_5init, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt->tp_dict, __pyx_n_s_init, __pyx_t_2) < 0) __PYX_ERR(0, 774, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt->tp_dict, __pyx_n_s_init, __pyx_t_2) < 0) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   PyType_Modified(__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt);
 
-  /* "riemann_theta/riemann_theta.pyx":773
+  /* "riemann_theta/riemann_theta.pyx":771
  *         return NG
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def init(Matrix_generic_dense G):
  *         r"""Allocate and initialize norm from Gram matrix.
  */
-  __Pyx_GetNameInClass(__pyx_t_2, (PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 774, __pyx_L1_error)
+  __Pyx_GetNameInClass(__pyx_t_2, (PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt, __pyx_n_s_init); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 773, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 771, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt->tp_dict, __pyx_n_s_init, __pyx_t_1) < 0) __PYX_ERR(0, 774, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt->tp_dict, __pyx_n_s_init, __pyx_t_1) < 0) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_13riemann_theta_13riemann_theta_NormGramInt);
 
-  /* "riemann_theta/riemann_theta.pyx":862
+  /* "riemann_theta/riemann_theta.pyx":860
  *         return s
  * 
  * def imag_func(a):             # <<<<<<<<<<<<<<
  *     r"""Return result of calling ``imag`` method on argument.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_1imag_func, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 862, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_1imag_func, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 860, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_imag_func, __pyx_t_1) < 0) __PYX_ERR(0, 862, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_imag_func, __pyx_t_1) < 0) __PYX_ERR(0, 860, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":879
+  /* "riemann_theta/riemann_theta.pyx":877
  *     return a.imag()
  * 
  * def real_func(a):             # <<<<<<<<<<<<<<
  *     r"""Return result of calling ``real`` method on argument.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_3real_func, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 879, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_3real_func, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 877, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_real_func, __pyx_t_1) < 0) __PYX_ERR(0, 879, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_real_func, __pyx_t_1) < 0) __PYX_ERR(0, 877, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":896
+  /* "riemann_theta/riemann_theta.pyx":894
  *     return a.real()
  * 
  * def round_func(a):             # <<<<<<<<<<<<<<
  *     r"""Return result of calling ``round`` method on argument.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_5round_func, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_5round_func, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 894, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_round_func, __pyx_t_1) < 0) __PYX_ERR(0, 896, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_round_func, __pyx_t_1) < 0) __PYX_ERR(0, 894, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":914
+  /* "riemann_theta/riemann_theta.pyx":912
  *     return a.round()
  * 
  * def Rbound(Y, tol):             # <<<<<<<<<<<<<<
  *     r"""Compute radius for Riemann theta function summation.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_7Rbound, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 914, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_7Rbound, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 912, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Rbound, __pyx_t_1) < 0) __PYX_ERR(0, 914, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Rbound, __pyx_t_1) < 0) __PYX_ERR(0, 912, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":966
+  /* "riemann_theta/riemann_theta.pyx":964
  *     return R
  * 
  * def Rbound_deriv(Y, N, tol):             # <<<<<<<<<<<<<<
  *     r"""Compute radius for Riemann theta function summation with derivatives.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_9Rbound_deriv, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 966, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_9Rbound_deriv, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 964, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Rbound_deriv, __pyx_t_1) < 0) __PYX_ERR(0, 966, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Rbound_deriv, __pyx_t_1) < 0) __PYX_ERR(0, 964, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1024
+  /* "riemann_theta/riemann_theta.pyx":1022
  *     return R
  * 
  * def cholesky_decomposition(G):             # <<<<<<<<<<<<<<
  *     r"""Return Cholesky decomposition of a positive definite real matrix.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_11cholesky_decomposition, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1024, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13riemann_theta_13riemann_theta_11cholesky_decomposition, NULL, __pyx_n_s_riemann_theta_riemann_theta); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1022, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cholesky_decomposition, __pyx_t_1) < 0) __PYX_ERR(0, 1024, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cholesky_decomposition, __pyx_t_1) < 0) __PYX_ERR(0, 1022, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "riemann_theta/riemann_theta.pyx":1233
+  /* "riemann_theta/riemann_theta.pyx":1235
  *             return r
  * 
  *     def __call__(self, z = None, object char = None, derivs = [], tol=None):             # <<<<<<<<<<<<<<
  *         r"""Evaluate Riemann theta function with characteristic and derivatives.
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1233, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_k__29 = __pyx_t_1;
   __Pyx_GIVEREF(__pyx_t_1);
