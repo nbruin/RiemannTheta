@@ -24,6 +24,9 @@ better performance.
 which minimizes numerical inversion of matrices to improve numerical
 stability.
 
+See http://www.cecm.sfu.ca/~nbruin/RiemannTheta for an online version
+of the documentation.
+
 ## Installation
 
 This package requires a functional installation of
@@ -31,12 +34,27 @@ This package requires a functional installation of
 and that you have write-permission on the sagemath install, you should
 be able to install this package into sage with something like
 
-    sage --pip install git+https://github.com/nbruin/riemann_theta
+    sage --pip install git+https://github.com/nbruin/RiemannTheta
 
-If you do not have write permission on the sagemath install itself,
-then you may be able to install it on a per-user basis with
+If you do not have write permission on the sagemath install itself, you
+can get a copy of the repository by something like
 
-    sage --pip install git+https://github.com/nbruin/riemann_theta --user
+    git clone https://github.com/nbruin/RiemannTheta.git
+    
+With a command like
+
+    sage --python setup.py build
+
+it is still possible to build the module. You will just have to make sure
+that in Sagemath, the variable `sys.path` contains a path that allows the built
+`riemann_theta` directory to be found. The `PYTHONPATH` environment variable
+may be useful for this. One can also install the package as a "user" package
+by executing
+
+    sage --python setup.py install --user
+    
+but pay attention to the warning: sage is by default configured to not
+look at per-user environments. 
 
 ## Usage
 
