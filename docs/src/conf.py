@@ -138,7 +138,7 @@ html_theme_options = {}
 html_theme_path = [os.path.join(SAGE_DOC_SRC, 'common', 'themes')]
 
 # The name for this set of Sphinx documents.
-html_title = "Computing with adèles and idèles"
+html_title = "Numerical evaluation of Riemann Theta function in Sagemath"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = "Home"
