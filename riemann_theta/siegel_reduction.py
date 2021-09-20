@@ -64,8 +64,14 @@ AUTHORS:
 from sage.matrix.constructor import matrix
 from sage.matrix.special import diagonal_matrix, block_matrix
 from sage.schemes.riemann_surfaces.riemann_surface import numerical_inverse
-from riemann_theta.riemann_theta import cholesky_decomposition, imag_func, real_func, round_func
+from riemann_theta.riemann_theta import (
+    cholesky_decomposition,
+    imag_func,
+    real_func,
+    round_func,
+)
 from sage.libs.pari import pari
+
 
 def _siegel_big_period_matrix(big_omega):
     """
@@ -114,39 +120,41 @@ def _siegel_big_period_matrix(big_omega):
     half = CC(0.5)
     g = big_omega.nrows()
     I_g = matrix.identity(g)
-    gamma_matrix = matrix.identity(2*g)
+    gamma_matrix = matrix.identity(2 * g)
     zero_matrix = matrix.zero(g)
 
-    A = diagonal_matrix([0] + [1 for i in range(g-1)])
-    B = diagonal_matrix([-1] + [0 for i in range(g-1)])
-    AB_block_matrix = block_matrix(2,2,[A,B,-B,A])
+    A = diagonal_matrix([0] + [1 for i in range(g - 1)])
+    B = diagonal_matrix([-1] + [0 for i in range(g - 1)])
+    AB_block_matrix = block_matrix(2, 2, [A, B, -B, A])
 
     while True:
-        M_siegel = numerical_inverse(big_omega_hat[:,:g]) * big_omega_hat[:,g:]
+        M_siegel = numerical_inverse(big_omega_hat[:, :g]) * big_omega_hat[:, g:]
         M_siegel = half * (M_siegel + M_siegel.transpose())
 
         T = cholesky_decomposition(M_siegel.apply_map(imag_func))
         U = pari.qflll(T).sage()
-        TU = T*U
+        TU = T * U
         TU_norm = [v.norm() for v in TU.columns()]
         min_index = TU_norm.index(min(TU_norm))
 
         if min_index != 0:
-            temp = U[:,min_index]
-            U[:,min_index] = U[:,0]
-            U[:,0] = temp
+            temp = U[:, min_index]
+            U[:, min_index] = U[:, 0]
+            U[:, 0] = temp
 
         L = T * U
 
         M_siegel = U.transpose() * M_siegel * U
-        gamma_matrix = gamma_matrix * block_matrix(2,2,[U.transpose().inverse(),zero_matrix,zero_matrix,U])
+        gamma_matrix = gamma_matrix * block_matrix(
+            2, 2, [U.transpose().inverse(), zero_matrix, zero_matrix, U]
+        )
         X = M_siegel.apply_map(real_func)
         x = X.apply_map(round_func)
 
         M_siegel = M_siegel - x
-        gamma_matrix = gamma_matrix * block_matrix(2,2, [I_g, -x, zero_matrix, I_g])
+        gamma_matrix = gamma_matrix * block_matrix(2, 2, [I_g, -x, zero_matrix, I_g])
 
-        if 1 <= M_siegel[0,0].abs():
+        if 1 <= M_siegel[0, 0].abs():
             big_omega_hat = big_omega * gamma_matrix
             break
 
@@ -154,6 +162,7 @@ def _siegel_big_period_matrix(big_omega):
         big_omega_hat = big_omega * gamma_matrix
 
     return big_omega_hat, gamma_matrix
+
 
 def siegel_reduction(M):
     """
@@ -201,16 +210,18 @@ def siegel_reduction(M):
     g = M.nrows()
     n = M.ncols()
 
-    if g==n:
+    if g == n:
         g = M.nrows()
         CC = M.base_ring()
         big_omega = matrix.identity(CC, g).augment(M)
         big_omega_hat, gamma_matrix = _siegel_big_period_matrix(big_omega)
-        omega = numerical_inverse(big_omega_hat[:,:g])*big_omega_hat[:,g:]
+        omega = numerical_inverse(big_omega_hat[:, :g]) * big_omega_hat[:, g:]
         return omega, gamma_matrix
 
-    elif 2*g == n:
+    elif 2 * g == n:
         return _siegel_big_period_matrix(M)
 
     else:
-        raise ValueError("Input matrix should either be a gxg Riemann matrix or a gx2g big period matrix")
+        raise ValueError(
+            "Input matrix should either be a gxg Riemann matrix or a gx2g big period matrix"
+        )
