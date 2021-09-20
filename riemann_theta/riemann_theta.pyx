@@ -1410,7 +1410,7 @@ cdef class RiemannTheta:
         #We later throw out the points we do not need.
         cdef long count_included, count_excluded
         cdef Gen V
-        npoints, _, V = pari.qfminim(self.Y, B = (R+(self.Ynorm(c)/self.pi).sqrt())**2/double_pi, flag=2)
+        npoints, _, V = pari.qfminim(self.Y, (R+(self.Ynorm(c)/self.pi).sqrt())**2/double_pi, flag=2)
         npoints = npoints//2
 
         #note that Pari's Finke-Pohst only returns one representative for each
