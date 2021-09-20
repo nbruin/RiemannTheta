@@ -8,14 +8,14 @@
             "/usr/local/sage/sage-git/local/lib64/python3.9/site-packages/sage/cpython/cython_metaclass.h"
         ],
         "include_dirs": [
-            "/usr/local/sage/sage-git/local/lib64/python3.9/site-packages/sage/cpython",
-            "/usr/local/sage/sage-git/local/lib64/python3.9/site-packages/cypari2"
+            "/usr/local/sage/sage-git/local/lib64/python3.9/site-packages/cypari2",
+            "/usr/local/sage/sage-git/local/lib64/python3.9/site-packages/sage/cpython"
         ],
         "libraries": [
             "gmp",
             "mpfr",
-            "mpc",
-            "pari"
+            "pari",
+            "mpc"
         ],
         "name": "riemann_theta.riemann_theta",
         "sources": [
