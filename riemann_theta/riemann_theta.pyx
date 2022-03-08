@@ -1097,8 +1097,8 @@ cdef class RiemannTheta:
         [  -0.0063717804307107830675222     -0.00000000000000000000000]
         [    -0.00000000000000000000000 -0.000011900851943023954077279]
 
-    Characteristics can be given as ``[[delta_1,...,delta_g],[eps_1,...,eps_g],N]]``,
-    where ``N`` gives the level and the ``delta_i, eps_i`` are integers specifying
+    Characteristics can be given as ``[[eps_1,...,eps_g],[delta_1,...,delta_g],N]]``,
+    where ``N`` gives the level and the ``eps_i, delta_j`` are integers specifying
     the characteristic. Alternatively, one can give the characteristic as a
     ``2g``-dimensional vector over ``Z/NZ``::
 
@@ -1239,11 +1239,11 @@ cdef class RiemannTheta:
         - ``z`` -- vector; optional (default 0). Point to evaluate theta function at.
         - ``char`` -- list or vector; optional (default 0). Characteristic.
             The characteristic can either be specified as a list
-            ``[[delta_1, ..., delta_g],[eps_1, ...,eps_g],N]``, where ``N`` is the level
-            of the characteristic and the ``delta_i, eps_j`` are integers describing the
+            ``[[eps_1, ...,eps_g],[delta_1, ..., delta_g],N]``, where ``N`` is the level
+            of the characteristic and the ``eps_i, delta_j`` are integers describing the
             characteristic, or as a ``2*g`-dimensional vector over ``ZZ/ N*ZZ``. In the latter case,
             the level ``N`` is read off from the base ring and the vector is taken to be
-            ``[delta_1, ..., delta_g, eps_1, ..., eps_g]``.
+            ``[eps_1, ..., eps_g, delta_1, ..., delta_g]``.
         - ``derivs`` -- list; optional (default []). Derivatives. It can be a list
             of integers ``[i_1,...,i_n]``, in which case it is taken to mean the derivative of
             order ``n``, obtained by taking the partial derivative with respect to
