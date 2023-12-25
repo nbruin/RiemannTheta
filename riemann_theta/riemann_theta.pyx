@@ -263,7 +263,7 @@ cdef class Vector_mpfr:
         cdef long i
         self.RR = RR
         self.rnd = RR.rnd
-        self.prec = RR.prec()
+        self.prec = RR._prec
         self.n = n
         self.vec = <mpfr_t *> PyMem_Malloc(n * sizeof(mpfr_t))
         for i in range(self.n):
@@ -532,7 +532,7 @@ cdef class NormCholesky:
         cdef long Clength
         self.n = n
         self.RR = RR
-        self.prec = RR.prec()
+        self.prec = RR._prec
         self.rnd = RR.rnd
         mpfr_init2(self.r1, self.prec) #initialize two registers r1,r2
         mpfr_init2(self.r2, self.prec)
@@ -701,7 +701,7 @@ cdef class NormGramInt:
         self.n = n
         self.RR = RR
         self.rnd = RR.rnd
-        self.prec = RR.prec()
+        self.prec = RR._prec
         mpfr_init2(self.r, self.prec)
         Glength = (n*(n+1))//2
         self.Glist = <mpfr_t*> PyMem_Malloc(Glength * sizeof(mpfr_t))
@@ -1192,7 +1192,7 @@ cdef class RiemannTheta:
         self.Y = Omega.apply_map(imag_func)
         self.X = Omega.apply_map(real_func)
         self.RR = self.Y.base_ring()
-        self.prec = self.RR.prec()
+        self.prec = self.RR._prec
         self.g = self.Y.nrows()
 
         mpfr_init2(self.r1, self.prec)
