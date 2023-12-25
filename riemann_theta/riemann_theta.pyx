@@ -1192,8 +1192,8 @@ cdef class RiemannTheta:
         self.Y = Omega.apply_map(imag_func)
         self.X = Omega.apply_map(real_func)
         self.RR = self.Y.base_ring()
+        self.prec = self.RR.prec()
         self.g = self.Y.nrows()
-        self.prec = RR.prec()
 
         mpfr_init2(self.r1, self.prec)
         mpfr_init2(self.r2, self.prec)
