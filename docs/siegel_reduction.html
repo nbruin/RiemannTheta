@@ -63,8 +63,8 @@ if the associated Riemann matrix is.</p>
 <p>This module implements a routine to compute a Siegel reduced form, together
 with the transformation matrix.</p>
 <p>EXAMPLES:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.siegel_reduction</span> <span class="k">import</span> <span class="n">siegel_reduction</span>
-<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.schemes.riemann_surfaces.riemann_surface</span> <span class="k">import</span> <span class="n">numerical_inverse</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.siegel_reduction</span> <span class="kn">import</span> <span class="n">siegel_reduction</span>
+<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.schemes.riemann_surfaces.riemann_surface</span> <span class="kn">import</span> <span class="n">numerical_inverse</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">CC</span> <span class="o">=</span> <span class="n">ComplexField</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">P</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">CC</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="mi">12</span><span class="o">+</span><span class="mi">10</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="mi">4</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">I</span><span class="p">])</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">Phat</span><span class="p">,</span> <span class="n">Gamma</span> <span class="o">=</span> <span class="n">siegel_reduction</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
@@ -114,7 +114,7 @@ The former happens when the input matrix is gxg, and the latter occurs when the 
 <li><p><code class="docutils literal notranslate"><span class="pre">gamma_matrix</span></code> – 2gx2g transformation matrix</p></li>
 </ul>
 <p>EXAMPLES:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.siegel_reduction</span> <span class="k">import</span> <span class="n">siegel_reduction</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.siegel_reduction</span> <span class="kn">import</span> <span class="n">siegel_reduction</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">omega</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">CC</span><span class="o">.</span><span class="n">pi</span><span class="p">()</span><span class="o">*</span><span class="n">CC</span><span class="o">.</span><span class="n">gen</span><span class="p">()))</span> <span class="o">*</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">CC</span><span class="p">,</span> <span class="p">[[</span><span class="mf">111.207</span><span class="p">,</span> <span class="mf">96.616</span><span class="p">],[</span><span class="mf">96.616</span><span class="p">,</span> <span class="mf">83.943</span><span class="p">]])</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">M</span><span class="p">,</span> <span class="n">G</span> <span class="o">=</span> <span class="n">siegel_reduction</span><span class="p">(</span><span class="n">omega</span><span class="p">)</span>
 </pre></div>
@@ -154,7 +154,7 @@ The former happens when the input matrix is gxg, and the latter occurs when the 
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -187,7 +187,7 @@ The former happens when the input matrix is gxg, and the latter occurs when the 
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Nils Bruin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
     <script type="text/javascript">
 /*global jQuery, window */

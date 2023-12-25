@@ -60,7 +60,7 @@ from sage.matrix.matrix_generic_dense cimport Matrix_generic_dense
 from sage.modules.free_module_element cimport FreeModuleElement, FreeModuleElement_generic_dense
 from sage.modules.vector_integer_dense cimport Vector_integer_dense
 from sage.rings.real_mpfr cimport RealNumber, RealField_class, RealField
-from sage.libs.mpfr.types cimport mpfr_rnd_t, mpfr_t
+from sage.libs.mpfr.types cimport mpfr_rnd_t, mpfr_t, mpfr_prec_t
 from sage.libs.mpfr cimport *
 from cpython.mem cimport PyMem_Malloc, PyMem_Realloc, PyMem_Free
 from sage.modules.vector_real_double_dense cimport Vector_real_double_dense
@@ -241,7 +241,7 @@ cdef class Vector_mpfr:
     cdef mpfr_t* vec
     cdef mpfr_rnd_t rnd
     cdef RealField_class RR
-    cdef long prec
+    cdef mpfr_prec_t prec
 
     def __cinit__(self, RealField_class RR, long n):
         r"""Allocate vector.
@@ -263,7 +263,7 @@ cdef class Vector_mpfr:
         cdef long i
         self.RR = RR
         self.rnd = RR.rnd
-        self.prec = RR.__prec
+        self.prec = RR.prec()
         self.n = n
         self.vec = <mpfr_t *> PyMem_Malloc(n * sizeof(mpfr_t))
         for i in range(self.n):
@@ -510,7 +510,7 @@ cdef class NormCholesky:
     cdef long n
     cdef RealField_class RR
     cdef mpfr_t r1,r2
-    cdef long prec
+    cdef mpfr_prec_t prec
     cdef mpfr_rnd_t rnd
     cdef mpfr_t *Clist
 
@@ -532,7 +532,7 @@ cdef class NormCholesky:
         cdef long Clength
         self.n = n
         self.RR = RR
-        self.prec = RR.__prec
+        self.prec = RR.prec()
         self.rnd = RR.rnd
         mpfr_init2(self.r1, self.prec) #initialize two registers r1,r2
         mpfr_init2(self.r2, self.prec)
@@ -678,7 +678,7 @@ cdef class NormGramInt:
     cdef long n
     cdef RealField_class RR
     cdef mpfr_t r
-    cdef long prec
+    cdef mpfr_prec_t prec
     cdef Matrix_generic_dense G
     cdef mpfr_rnd_t rnd
     cdef mpfr_t *Glist
@@ -701,7 +701,7 @@ cdef class NormGramInt:
         self.n = n
         self.RR = RR
         self.rnd = RR.rnd
-        self.prec = RR.__prec
+        self.prec = RR.prec()
         mpfr_init2(self.r, self.prec)
         Glength = (n*(n+1))//2
         self.Glist = <mpfr_t*> PyMem_Malloc(Glength * sizeof(mpfr_t))
@@ -1141,6 +1141,7 @@ cdef class RiemannTheta:
     cdef Matrix_generic_dense Y
     cdef Matrix_generic_dense X
     cdef RealField_class RR
+    cdef mpfr_prec_t prec
     cdef object CC
     cdef RealNumber pi
     cdef Matrix_generic_dense Yinv
@@ -1174,7 +1175,7 @@ cdef class RiemannTheta:
         self.Ynorm = NormCholesky.from_cholesky_matrix(self.T)
         self.Xnorm_dict = {1: NormGramInt.from_gram_matrix(self.X)}
         self.Rbound_dict = {}
-        self.MPCC = MPComplexField_class(self.RR.__prec)
+        self.MPCC = MPComplexField_class(self.prec)
         self.ZZg = ZZ**(self.g)
         self.CCg = (self.CC)**self.g
 
@@ -1192,12 +1193,13 @@ cdef class RiemannTheta:
         self.X = Omega.apply_map(real_func)
         self.RR = self.Y.base_ring()
         self.g = self.Y.nrows()
+        self.prec = RR.prec()
 
-        mpfr_init2(self.r1, self.RR.__prec)
-        mpfr_init2(self.r2, self.RR.__prec)
-        mpfr_init2(self.r3, self.RR.__prec)
-        mpc_init2(self.c1, self.RR.__prec)
-        mpc_init2(self.c2, self.RR.__prec)
+        mpfr_init2(self.r1, self.prec)
+        mpfr_init2(self.r2, self.prec)
+        mpfr_init2(self.r3, self.prec)
+        mpc_init2(self.c1, self.prec)
+        mpc_init2(self.c2, self.prec)
 
     def _dealloc__(self):
         r"""Deallocate object.
@@ -1307,7 +1309,7 @@ cdef class RiemannTheta:
         derivs = [Vector_long.from_list(d) for d in derivs]
 
         if tol is None:
-            tol = self.RR(2)**(-self.RR.__prec)
+            tol = self.RR(2)**(-self.prec)
         result = self._eval_vector_(z, eps, delta, N, derivs, tol)
         if vecresult:
             return tuple(result)

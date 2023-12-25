@@ -110,9 +110,9 @@ and determine the associated Riemann matrix. We use the function
 <code class="docutils literal notranslate"><span class="pre">siegel_reduction</span></code> implemented in this package. Note that the Siegel-reduced
 Riemann matrix is (up to numerical noise) purely imaginary. This corresponds
 to the fact that the Jacobian of <code class="docutils literal notranslate"><span class="pre">C</span></code> has fully real 2-torsion:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.riemann_theta</span> <span class="k">import</span> <span class="n">RiemannTheta</span>
-<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.siegel_reduction</span> <span class="k">import</span> <span class="n">siegel_reduction</span>
-<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.schemes.riemann_surfaces.riemann_surface</span> <span class="k">import</span> <span class="n">numerical_inverse</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.riemann_theta</span> <span class="kn">import</span> <span class="n">RiemannTheta</span>
+<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">riemann_theta.siegel_reduction</span> <span class="kn">import</span> <span class="n">siegel_reduction</span>
+<span class="n">sage</span><span class="p">:</span> <span class="kn">from</span> <span class="nn">sage.schemes.riemann_surfaces.riemann_surface</span> <span class="kn">import</span> <span class="n">numerical_inverse</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">Phat</span><span class="p">,</span><span class="n">_</span><span class="o">=</span><span class="n">siegel_reduction</span><span class="p">(</span><span class="n">S</span><span class="o">.</span><span class="n">period_matrix</span><span class="p">())</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">Omega1</span><span class="o">=</span><span class="n">Phat</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">sage</span><span class="p">:</span> <span class="n">Omega2</span><span class="o">=</span><span class="n">Phat</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span>
@@ -209,7 +209,7 @@ these vectors:</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -242,7 +242,7 @@ these vectors:</p>
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Nils Bruin.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
     <script type="text/javascript">
 /*global jQuery, window */
