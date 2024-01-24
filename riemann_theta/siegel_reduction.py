@@ -142,8 +142,6 @@ def _siegel_big_period_matrix(big_omega):
             U[:, min_index] = U[:, 0]
             U[:, 0] = temp
 
-        L = T * U
-
         M_siegel = U.transpose() * M_siegel * U
         gamma_matrix = gamma_matrix * block_matrix(
             2, 2, [U.transpose().inverse(), zero_matrix, zero_matrix, U]

@@ -84,7 +84,8 @@ from sage.arith.misc import binomial as binom
 from sage.modules.vector_modn_dense import Vector_modn_dense
 
 cdef class Vector_long:
-    r"""Vector of system "long" integers
+    r"""
+    Vector of system "long" integers
 
     This is only a very thin wrapper to give Cython code efficient access
     to an array of "long" that can be placed in Python data structures,
@@ -95,7 +96,8 @@ cdef class Vector_long:
     cdef long *vec
 
     def __cinit__(self, long n):
-        r"""Allocate vector.
+        r"""
+        Allocate vector.
 
         INPUT:
 
@@ -103,7 +105,7 @@ cdef class Vector_long:
 
         OUTPUT: The allocated (but uninitialized!) vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
         sage: from riemann_theta.riemann_theta import Vector_long
         sage: V = Vector_long(10)
@@ -113,9 +115,10 @@ cdef class Vector_long:
         self.vec = <long *> PyMem_Malloc(n * sizeof(long))
 
     def __dealloc__(self):
-        r"""Deallocate vector.
+        r"""
+        Deallocate vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(10)
@@ -125,11 +128,12 @@ cdef class Vector_long:
         PyMem_Free(self.vec)
 
     def __len__(self):
-        r"""Return length of vector.
+        r"""
+        Return length of vector.
 
         OUTPUT: Length of vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(10)
@@ -140,11 +144,12 @@ cdef class Vector_long:
         return self.n
 
     def __repr__(self):
-        r"""Return string representation of vector.
+        r"""
+        Return string representation of vector.
 
         OUTPUT: String representation of vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(4)
@@ -155,7 +160,8 @@ cdef class Vector_long:
         return "<Vector_long {}>".format(list(self))
 
     def __getitem__(self, i):
-        r"""Return an entry from vector.
+        r"""
+        Return an entry from vector.
 
         INPUT:
 
@@ -163,7 +169,8 @@ cdef class Vector_long:
 
         OUTPUT: entry value.
 
-        EXAMPLE::
+        EXAMPLES::
+
             sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(4)
             sage: V[0] # random
@@ -177,7 +184,8 @@ cdef class Vector_long:
             return self.vec[i]
 
     cdef assign(self, L):
-        r"""Assign values from a sequence-type.
+        r"""
+        Assign values from a sequence-type.
 
         INPUT:
 
@@ -192,7 +200,8 @@ cdef class Vector_long:
 
     @staticmethod
     cdef from_list(object L):
-        r"""Return vector initialized from sequence-type.
+        r"""
+        Return vector initialized from sequence-type.
 
         INPUT:
 
@@ -211,7 +220,8 @@ cdef class Vector_long:
         return v
 
     cdef assign_scaled_diff(self, long scaling, Vector_long v, Vector_long w):
-        r"""Store the difference of scaled difference of two vectors
+        r"""
+        Store the difference of scaled difference of two vectors
 
         Stores ``scaling*v-w`` in this vector.
 
@@ -230,7 +240,8 @@ cdef class Vector_long:
             self.vec[i]=scaling*v.vec[i]-w.vec[i]
 
 cdef class Vector_mpfr:
-    r"""Vector of mpfr reals.
+    r"""
+    Vector of mpfr reals.
 
     This is only a very thin wrapper to give Cython code efficient access
     to an array of "mpfr_t" that can be placed in Python data structures,
@@ -244,17 +255,18 @@ cdef class Vector_mpfr:
     cdef mpfr_prec_t prec
 
     def __cinit__(self, RealField_class RR, long n):
-        r"""Allocate vector.
+        r"""
+        Allocate vector.
 
         INPUT:
 
         - ``R`` RealField_class -- Field to inherit precision and rounding from
         - ``n`` integer -- length of vector
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: V
             <Vector_mpfr [NaN, NaN, NaN]>
@@ -270,12 +282,13 @@ cdef class Vector_mpfr:
             mpfr_init2(self.vec[i], self.prec)
 
     def __dealloc__(self):
-        r"""Deallocate vector.
+        r"""
+        Deallocate vector.
 
-         EXAMPLE::
+         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: del V
 
@@ -288,10 +301,10 @@ cdef class Vector_mpfr:
     def __len__(self):
         r"""Return length of vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: len(V)
             3
@@ -308,9 +321,10 @@ cdef class Vector_mpfr:
 
         OUTPUT: entry value.
 
-        EXAMPLE::
+        EXAMPLES::
+
             sage: from riemann_theta.riemann_theta import Vector_mpfr
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: V[0]
             NaN
@@ -330,9 +344,10 @@ cdef class Vector_mpfr:
 
         OUTPUT: string representation
 
-        EXAMPLE::
+        EXAMPLES::
+
             sage: from riemann_theta.riemann_theta import Vector_mpfr
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: repr(V)
             '<Vector_mpfr [NaN, NaN, NaN]>'
@@ -417,10 +432,10 @@ cdef class Vector_mpc:
         - ``CC`` -- ComplexField. Field to inherit precision and rounding from.
         - ``n`` -- integer. Length of vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: V=Vector_mpfr(RR,3)
             sage: V
             <Vector_mpfr [NaN, NaN, NaN]>
@@ -436,7 +451,7 @@ cdef class Vector_mpc:
     def __dealloc__(self):
         r"""Deallocate vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
@@ -451,7 +466,7 @@ cdef class Vector_mpc:
     def __len__(self):
         r"""Return length of vector
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
@@ -470,7 +485,7 @@ cdef class Vector_mpc:
 
         OUTPUT: entry value.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
@@ -490,7 +505,8 @@ cdef class Vector_mpc:
 
         OUTPUT: string representation
 
-        EXAMPLE::
+        EXAMPLES::
+
             sage: from riemann_theta.riemann_theta import Vector_mpc
             sage: CC=ComplexField(40)
             sage: V=Vector_mpc(CC,3)
@@ -522,10 +538,10 @@ cdef class NormCholesky:
         - ``RR`` -- RealField. Field to inherit precision and rounding from.
         - ``n`` -- integer. Dimension of space on which the norm is defined.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormCholesky
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: nm=NormCholesky(RR,3)
         """
         cdef long k
@@ -544,10 +560,10 @@ cdef class NormCholesky:
     def __dealloc__(self):
         r"""Deallocate object.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormCholesky
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: nm=NormCholesky(RR,3)
             sage: del nm
         """
@@ -606,10 +622,10 @@ cdef class NormCholesky:
 
         - ``C`` -- real matrix. Matrix is assumed to be lower triangular.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormCholesky
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: C=matrix(RR,2,2,[1,0,1,1])
             sage: nm=NormCholesky.init(C)
 
@@ -649,10 +665,10 @@ cdef class NormCholesky:
 
         OUTPUT: Norm of vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormCholesky
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: C=matrix(RR,2,2,[1,0,1,1])
             sage: nm=NormCholesky.init(C)
             sage: v=vector(RR,2,[2,3])
@@ -691,10 +707,10 @@ cdef class NormGramInt:
         - ``RR`` -- RealField. Field to inherit precision and rounding from.
         - ``n`` -- integer. Dimension of space on which the norm is defined.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormGramInt
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: nm=NormGramInt(RR,3)
         """
         cdef long k, Glength
@@ -711,10 +727,10 @@ cdef class NormGramInt:
     def __dealloc__(self):
         r"""Deallocate object.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormGramInt
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: nm=NormGramInt(RR,3)
             sage: del nm
         """
@@ -778,10 +794,10 @@ cdef class NormGramInt:
 
         - ``G`` -- real matrix. Matrix is assumed to be lower triangular.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormGramInt
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: G=matrix(RR,2,2,[1,2,2,1])
             sage: nm=NormGramInt.init(G)
 
@@ -792,6 +808,7 @@ cdef class NormGramInt:
         r"""Return new norm object, scaled by `1/C`.
 
         INPUT:
+
         - ``C`` -- integer. Scaling factor
 
         OUTPUT: New norm object, with Gram matrix divided by ``C``.
@@ -830,7 +847,8 @@ cdef class NormGramInt:
                 mpfr_add(result, result, self.r, rnd)
 
     def __call__(self, w):
-        r"""Return norm of vector.
+        r"""
+        Return norm of vector.
 
         INPUT:
 
@@ -838,10 +856,10 @@ cdef class NormGramInt:
 
         OUTPUT: Norm of vector.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormGramInt
-            sage: RR=RealField(40)
+            sage: RR = RealField(40)
             sage: G=matrix(RR,2,2,[1,2,2,1])
             sage: nm=NormGramInt.init(G)
             sage: v=vector(ZZ,2,[2,3])
@@ -866,7 +884,7 @@ def imag_func(a):
 
     OUTPUT: ``a.imag()``
 
-    EXAMPLE::
+    EXAMPLES::
 
         sage: from riemann_theta.riemann_theta import imag_func
         sage: imag_func(CC.0)
@@ -883,7 +901,7 @@ def real_func(a):
 
     OUTPUT: ``a.real()``
 
-    EXAMPLE::
+    EXAMPLES::
 
         sage: from riemann_theta.riemann_theta import real_func
         sage: real_func(CC.0)
@@ -900,7 +918,7 @@ def round_func(a):
 
     OUTPUT: ``a.round()``
 
-    EXAMPLE::
+    EXAMPLES::
 
         sage: from riemann_theta.riemann_theta import round_func
         sage: round_func(2.7)
@@ -921,7 +939,7 @@ def Rbound(Y, tol):
 
     OUTPUT: radius for summation to restrict error term to be within specified tolerance.
 
-    EXAMPLE::
+    EXAMPLES::
 
         sage: from riemann_theta.riemann_theta import Rbound
         sage: Y = matrix(RR,2,2,[1,0,0,1])
@@ -939,8 +957,10 @@ def Rbound(Y, tol):
     half_g = RR(g)/2
     rho = RR(pari.qfminim(Y,flag=2)[1])
     rho = (pi*rho).sqrt()
+
     def f(R):
         return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
+
     def df(R):
         return -2*(2*R-rho)**(g-1) *g* ( -(2*R-rho)**2/4).exp()/rho**g
 
@@ -974,7 +994,7 @@ def Rbound_deriv(Y, N, tol):
 
     OUTPUT: radius for summation to restrict error term to be within specified tolerance.
 
-    EXAMPLE::
+    EXAMPLES::
 
         sage: from riemann_theta.riemann_theta import Rbound_deriv
         sage: Y = matrix(RR,2,2,[1,0,0,1])
@@ -1001,8 +1021,10 @@ def Rbound_deriv(Y, N, tol):
 
     C = [binom(N, i)*pi**(-i/2) * (Yinv_norm)**i * g_sqrt**(N-i) for i in range(N+1)]
     LC = (2*pi)**N * g_over_two * (2/rho)**g
+
     def f(R):
         return (LC * sum(C[i] * RR(pari.incgam((gRR+i)/2, (R-rho/2)**2)) for i in range(N+1))) - tol
+
     def df(R):
         return -2* LC * (-(R-rho/2)**2).exp() * sum(C[i] * (R-rho/2)**(g+i-1) for i in range(N+1))
 
@@ -1033,7 +1055,7 @@ def cholesky_decomposition(G):
 
     OUTPUT: The cholesky decomposition ``C`` such that ``G == C * C.T``
 
-    EXAMPLE::
+    EXAMPLES::
 
         sage: from riemann_theta.riemann_theta import cholesky_decomposition
         sage: RR = RealField(100)
@@ -1055,6 +1077,7 @@ cdef class RiemannTheta:
     r"""Object for numerical computation of Riemann Theta functions with characteristics and derivatives
 
     INPUT:
+
     - ``Omega`` -- Complex matrix. The Riemann matrix for which to compute
         Riemann Theta functions. The precision of the base ring determines the default
         tolerance used in computing Riemann Theta function values.
@@ -1112,8 +1135,9 @@ cdef class RiemannTheta:
         (-0.59552188399685576910149 - 1.1412196198763623205771e-49*I, -3.5185834728040112058953e-32 + 2.5226254523149252440284e-56*I)
 
     We check that for the genus 2 curve
-    
+
     .. MATH::
+
         C: y^2=(x-2)(x-3)(x-5)(x-7)(x-11)(x-13),
 
     the gradients of the odd theta characteristics of level 2 are proportional to the
@@ -1158,9 +1182,10 @@ cdef class RiemannTheta:
         r"""Initialize object.
 
         INPUT:
+
         - ``Omega`` -- complex matrix. The Riemann matrix.
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import RiemannTheta
             sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
@@ -1170,7 +1195,7 @@ cdef class RiemannTheta:
         self.pi = self.RR.pi()
         self.Yinv = numerical_inverse(self.Y)
 
-        #be careful: we scale the cholesky decomposition to already have the pi in it.
+        # be careful: we scale the cholesky decomposition to already have the pi in it.
         self.T = cholesky_decomposition(self.pi*self.Y)
         self.Ynorm = NormCholesky.from_cholesky_matrix(self.T)
         self.Xnorm_dict = {1: NormGramInt.from_gram_matrix(self.X)}
@@ -1183,6 +1208,7 @@ cdef class RiemannTheta:
         r"""Initialize object.
 
         INPUT:
+
         - ``Omega`` -- complex matrix. The Riemann matrix.
 
         Cython level initialization (mainly allocation)
@@ -1221,6 +1247,7 @@ cdef class RiemannTheta:
         This routine caches the objects for efficiency.
 
         INPUT:
+
         - ``N`` -- scaling factor
 
         OUTPUT: a ``GramNormInt`` object scaled by 1/N^2
@@ -1238,6 +1265,7 @@ cdef class RiemannTheta:
         r"""Evaluate Riemann theta function with characteristic and derivatives.
 
         INPUT:
+
         - ``z`` -- vector; optional (default 0). Point to evaluate theta function at.
         - ``char`` -- list or vector; optional (default 0). Characteristic.
             The characteristic can either be specified as a list
@@ -1261,7 +1289,7 @@ cdef class RiemannTheta:
         OUTPUT: A complex number of a tuple of them; the value(s) of the indicated Riemann
         Theta function(s).
 
-        EXAMPLE::
+        EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import RiemannTheta
             sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
@@ -1322,6 +1350,7 @@ cdef class RiemannTheta:
         Value is cached for efficiency.
 
         INPUT:
+
         - ``maxnderiv`` -- integer. (Maximal) order of derivative for which to compute bound.
         - ``tol`` -- real number. Tolerance allowed.
 
@@ -1342,12 +1371,14 @@ cdef class RiemannTheta:
         return R
 
     cdef _eval_vector_(self, FreeModuleElement_generic_dense z, Vector_integer_dense eps, Vector_integer_dense delta, long N, list derivs, RealNumber tol):
-        r"""Return computed evaluation(s)
+        r"""
+        Return computed evaluation(s)
 
         This routine implements the actual computation. You should probably call
         it through the ``__call__`` wrapper instead of directly.
 
         INPUT:
+
         - ``z`` -- vector over complex field. Evaluation point.
         - ``eps`` -- integer vector. Part of characteristic.
         - ``delta`` -- integer vector. Part of characteristic.
