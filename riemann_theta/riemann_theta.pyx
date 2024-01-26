@@ -107,10 +107,9 @@ cdef class Vector_long:
 
         EXAMPLES::
 
-        sage: from riemann_theta.riemann_theta import Vector_long
-        sage: V = Vector_long(10)
+            sage: from riemann_theta.riemann_theta import Vector_long
+            sage: V = Vector_long(10)
         """
-        cdef long i
         self.n = n
         self.vec = <long *> PyMem_Malloc(n * sizeof(long))
 
@@ -123,7 +122,6 @@ cdef class Vector_long:
             sage: from riemann_theta.riemann_theta import Vector_long
             sage: V = Vector_long(10)
             sage: del V
-
         """
         PyMem_Free(self.vec)
 
@@ -179,7 +177,7 @@ cdef class Vector_long:
         """
 
         if i < 0 or i >= self.n:
-            raise IndexError("Index out of range")
+            raise IndexError("index out of range")
         else:
             return self.vec[i]
 
@@ -194,7 +192,7 @@ cdef class Vector_long:
         This method is cdef only, so cannot be tested from python.
         """
         if len(L) != self.n:
-            raise ValueError("Mismatch in length")
+            raise ValueError("mismatch in length")
         for i in range(self.n):
             self.vec[i] = L[i]
 
@@ -234,10 +232,11 @@ cdef class Vector_long:
         This method is cdef only, so cannot be tested from python.
         """
         if self.n != v.n or self.n != w.n:
-            raise ValueError("Dimension mismatch")
+            raise ValueError("dimension mismatch")
         cdef long i
         for i in range(self.n):
             self.vec[i]=scaling*v.vec[i]-w.vec[i]
+
 
 cdef class Vector_mpfr:
     r"""
@@ -267,7 +266,7 @@ cdef class Vector_mpfr:
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR = RealField(40)
-            sage: V=Vector_mpfr(RR,3)
+            sage: V = Vector_mpfr(RR,3)
             sage: V
             <Vector_mpfr [NaN, NaN, NaN]>
 
@@ -289,7 +288,7 @@ cdef class Vector_mpfr:
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR = RealField(40)
-            sage: V=Vector_mpfr(RR,3)
+            sage: V = Vector_mpfr(RR,3)
             sage: del V
 
         """
@@ -305,7 +304,7 @@ cdef class Vector_mpfr:
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR = RealField(40)
-            sage: V=Vector_mpfr(RR,3)
+            sage: V = Vector_mpfr(RR,3)
             sage: len(V)
             3
 
@@ -313,7 +312,8 @@ cdef class Vector_mpfr:
         return self.n
 
     def __getitem__(self, i):
-        r"""Return an entry from vector.
+        r"""
+        Return an entry from vector.
 
         INPUT:
 
@@ -325,7 +325,7 @@ cdef class Vector_mpfr:
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR = RealField(40)
-            sage: V=Vector_mpfr(RR,3)
+            sage: V = Vector_mpfr(RR,3)
             sage: V[0]
             NaN
 
@@ -333,14 +333,15 @@ cdef class Vector_mpfr:
 
         cdef RealNumber a
         if i < 0 or i >= self.n:
-            raise IndexError("Index out of range")
+            raise IndexError("index out of range")
         else:
             a = self.RR._new()
-            mpfr_set(a.value,self.vec[i],self.rnd)
+            mpfr_set(a.value, self.vec[i], self.rnd)
             return a
 
     def __repr__(self):
-        r"""Return string representation of vector
+        r"""
+        Return string representation of vector
 
         OUTPUT: string representation
 
@@ -348,7 +349,7 @@ cdef class Vector_mpfr:
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR = RealField(40)
-            sage: V=Vector_mpfr(RR,3)
+            sage: V = Vector_mpfr(RR,3)
             sage: repr(V)
             '<Vector_mpfr [NaN, NaN, NaN]>'
 
@@ -356,7 +357,8 @@ cdef class Vector_mpfr:
         return "<Vector_mpfr {}>".format(list(self))
 
     cdef assign(self, FreeModuleElement_generic_dense L):
-        r"""Assign vector from sage vector.
+        r"""
+        Assign vector from sage vector.
 
         INPUT:
 
@@ -367,16 +369,17 @@ cdef class Vector_mpfr:
         cdef long i
         cdef RealNumber a
         if self.RR is not L.base_ring():
-            raise ValueError("Parent mismatch")
+            raise ValueError("parent mismatch")
         if self.n != len(L):
-            raise ValueError("Dimension mismatch")
+            raise ValueError("dimension mismatch")
         for i in range(self.n):
             a = L[i]
             mpfr_set(self.vec[i], a.value, self.rnd)
 
     @staticmethod
     cdef Vector_mpfr from_vector(FreeModuleElement_generic_dense L):
-        r"""Return vector initialized from sage vector.
+        r"""
+        Return vector initialized from sage vector.
 
         INPUT:
 
@@ -390,13 +393,13 @@ cdef class Vector_mpfr:
 
         This method is cdef only, so cannot be tested from python.
         """
-
-        cdef Vector_mpfr v = Vector_mpfr(L.base_ring(),len(L))
+        cdef Vector_mpfr v = Vector_mpfr(L.base_ring(), len(L))
         v.assign(L)
         return v
 
     cdef assign_sum_si(self, Vector_mpfr v, Vector_long w):
-        r"""Store sum ``v+w`` of a real and integer vector
+        r"""
+        Store sum ``v+w`` of a real and integer vector
 
         INPUT:
 
@@ -407,12 +410,14 @@ cdef class Vector_mpfr:
         """
         cdef long i
         if self.n != v.n or self.n != w.n:
-            raise ValueError("Dimension mismatch")
+            raise ValueError("dimension mismatch")
         for i in range(self.n):
             mpfr_add_si(self.vec[i], v.vec[i], w.vec[i], self.rnd)
 
+
 cdef class Vector_mpc:
-    r"""Vector of mpc complex numbers.
+    r"""
+    Vector of mpc complex numbers.
 
     This is only a very thin wrapper to give Cython code efficient access
     to an array of "mpc_t" that can be placed in Python data structures,
@@ -425,7 +430,8 @@ cdef class Vector_mpc:
     cdef ComplexNumber z
 
     def __cinit__(self, CC, long n):
-        r"""Allocate vector.
+        r"""
+        Allocate vector.
 
         INPUT:
 
@@ -436,7 +442,7 @@ cdef class Vector_mpc:
 
             sage: from riemann_theta.riemann_theta import Vector_mpfr
             sage: RR = RealField(40)
-            sage: V=Vector_mpfr(RR,3)
+            sage: V = Vector_mpfr(RR,3)
             sage: V
             <Vector_mpfr [NaN, NaN, NaN]>
         """
@@ -449,13 +455,14 @@ cdef class Vector_mpc:
             mpc_init2(self.vec[i], self.z._prec)
 
     def __dealloc__(self):
-        r"""Deallocate vector.
+        r"""
+        Deallocate vector.
 
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpc
-            sage: CC=ComplexField(40)
-            sage: V=Vector_mpc(CC,3)
+            sage: CC = ComplexField(40)
+            sage: V = Vector_mpc(CC,3)
             sage: del V
         """
         cdef long i
@@ -464,20 +471,22 @@ cdef class Vector_mpc:
         PyMem_Free(self.vec)
 
     def __len__(self):
-        r"""Return length of vector
+        r"""
+        Return length of vector
 
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpc
-            sage: CC=ComplexField(40)
-            sage: V=Vector_mpc(CC,3)
+            sage: CC = ComplexField(40)
+            sage: V = Vector_mpc(CC,3)
             sage: len(V)
             3
         """
         return self.n
 
     def __getitem__(self, long i):
-        r"""Return an entry from vector.
+        r"""
+        Return an entry from vector.
 
         INPUT:
 
@@ -488,32 +497,34 @@ cdef class Vector_mpc:
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpc
-            sage: CC=ComplexField(40)
-            sage: V=Vector_mpc(CC,3)
+            sage: CC = ComplexField(40)
+            sage: V = Vector_mpc(CC,3)
             sage: V[0]
             NaN + NaN*I
         """
         if i < 0 or i >= self.n:
-            raise IndexError("Index out of bounds")
+            raise IndexError("index out of bounds")
         cdef ComplexNumber r = self.z._new()
-        mpfr_set(r.__re, self.vec[i].re,self.rnd)
-        mpfr_set(r.__im, self.vec[i].im,self.rnd)
+        mpfr_set(r.__re, self.vec[i].re, self.rnd)
+        mpfr_set(r.__im, self.vec[i].im, self.rnd)
         return r
 
     def __repr__(self):
-        r"""Return string representation of vector
+        r"""
+        Return string representation of vector
 
         OUTPUT: string representation
 
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import Vector_mpc
-            sage: CC=ComplexField(40)
-            sage: V=Vector_mpc(CC,3)
+            sage: CC = ComplexField(40)
+            sage: V = Vector_mpc(CC,3)
             sage: repr(V)
             '<Vector_mpc [NaN + NaN*I, NaN + NaN*I, NaN + NaN*I]>'
         """
         return "<Vector_mpc {}>".format(list(self))
+
 
 cdef class NormCholesky:
     r"""Class for evaluating positive-definite norms.
@@ -525,13 +536,14 @@ cdef class NormCholesky:
     """
     cdef long n
     cdef RealField_class RR
-    cdef mpfr_t r1,r2
+    cdef mpfr_t r1, r2
     cdef mpfr_prec_t prec
     cdef mpfr_rnd_t rnd
     cdef mpfr_t *Clist
 
     def __cinit__(self, RealField_class RR, long n):
-        r"""Allocate object.
+        r"""
+        Allocate object.
 
         INPUT:
 
@@ -542,7 +554,7 @@ cdef class NormCholesky:
 
             sage: from riemann_theta.riemann_theta import NormCholesky
             sage: RR = RealField(40)
-            sage: nm=NormCholesky(RR,3)
+            sage: nm = NormCholesky(RR,3)
         """
         cdef long k
         cdef long Clength
@@ -550,21 +562,22 @@ cdef class NormCholesky:
         self.RR = RR
         self.prec = RR._prec
         self.rnd = RR.rnd
-        mpfr_init2(self.r1, self.prec) #initialize two registers r1,r2
+        mpfr_init2(self.r1, self.prec)  # initialize two registers r1,r2
         mpfr_init2(self.r2, self.prec)
         Clength = (n*(n+1))//2
         self.Clist = <mpfr_t*> PyMem_Malloc(Clength * sizeof(mpfr_t))
         for k in range(Clength):
-            mpfr_init2(self.Clist[k],self.prec)
+            mpfr_init2(self.Clist[k], self.prec)
 
     def __dealloc__(self):
-        r"""Deallocate object.
+        r"""
+        Deallocate object.
 
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import NormCholesky
             sage: RR = RealField(40)
-            sage: nm=NormCholesky(RR,3)
+            sage: nm = NormCholesky(RR,3)
             sage: del nm
         """
         cdef long k
@@ -575,7 +588,8 @@ cdef class NormCholesky:
         PyMem_Free(self.Clist)
 
     cdef assign(self, Matrix_generic_dense C):
-        r"""Initialize norm from lower triangular Cholesky decomposition
+        r"""
+        Initialize norm from lower triangular Cholesky decomposition
 
         INPUT:
 
@@ -583,7 +597,7 @@ cdef class NormCholesky:
 
         This method is cdef only, so cannot be tested from python.
         """
-        cdef long i,j,k
+        cdef long i, j, k
 
         if self.RR is not C.base_ring():
             raise ValueError("parent mismatch")
@@ -592,13 +606,14 @@ cdef class NormCholesky:
 
         k = 0
         for j in range(self.n):
-            for i in range(j,self.n):
-                mpfr_set(self.Clist[k],(<RealNumber> C.get_unsafe(i,j)).value, self.rnd)
-                k+=1
+            for i in range(j, self.n):
+                mpfr_set(self.Clist[k], (<RealNumber> C.get_unsafe(i, j)).value, self.rnd)
+                k += 1
 
     @staticmethod
     cdef NormCholesky from_cholesky_matrix(Matrix_generic_dense C):
-        r"""Allocate and initialize norm from lower triangular Cholesky decomposition.
+        r"""
+        Allocate and initialize norm from lower triangular Cholesky decomposition.
 
         Cython-level method.
 
@@ -614,7 +629,8 @@ cdef class NormCholesky:
 
     @staticmethod
     def init(Matrix_generic_dense C):
-        r"""Allocate and initialize norm from lower triangular Cholesky decomposition.
+        r"""
+        Allocate and initialize norm from lower triangular Cholesky decomposition.
 
         Python-level wrapper.
 
@@ -632,9 +648,9 @@ cdef class NormCholesky:
         """
         return NormCholesky.from_cholesky_matrix(C)
 
-
     cdef mpfr_norm(self, mpfr_t s, mpfr_t *v):
-        r"""Compute norm of a vector and place in preallocated mpfr_t.
+        r"""
+        Compute norm of a vector and place in preallocated mpfr_t.
 
         INPUT:
 
@@ -643,21 +659,22 @@ cdef class NormCholesky:
 
         This method is cdef only, so cannot be tested from python.
         """
-        cdef long i,j,k
+        cdef long i, j, k
 
-        mpfr_set_zero(s,+1)
-        k=0
+        mpfr_set_zero(s, 1)
+        k = 0
         for j in range(self.n):
-            mpfr_set_zero(self.r2,+1)
-            for i in range(j,self.n):
-                mpfr_mul(self.r1,v[i],self.Clist[k],self.rnd)
-                k+=1
-                mpfr_add(self.r2, self.r2 ,self.r1, self.rnd)
+            mpfr_set_zero(self.r2, 1)
+            for i in range(j, self.n):
+                mpfr_mul(self.r1, v[i], self.Clist[k], self.rnd)
+                k += 1
+                mpfr_add(self.r2, self.r2, self.r1, self.rnd)
             mpfr_sqr(self.r1, self.r2, self.rnd)
             mpfr_add(s, s, self.r1, self.rnd)
 
     def __call__(self, FreeModuleElement_generic_dense v):
-        r"""Return norm of vector.
+        r"""
+        Return norm of vector.
 
         INPUT:
 
@@ -684,8 +701,10 @@ cdef class NormCholesky:
         self.mpfr_norm(s.value, w.vec)
         return s
 
+
 cdef class NormGramInt:
-    r"""Class for computation of norms of integer vectors given by a real-valued Gram matrix.
+    r"""
+    Class for computation of norms of integer vectors given by a real-valued Gram matrix.
 
     The class is aimed at providing highly optimized action from
     cython, so functionality on python level is limited.
@@ -700,7 +719,8 @@ cdef class NormGramInt:
     cdef mpfr_t *Glist
 
     def __cinit__(self, RealField_class RR, long n):
-        r"""Allocate object.
+        r"""
+        Allocate object.
 
         INPUT:
 
@@ -722,10 +742,11 @@ cdef class NormGramInt:
         Glength = (n*(n+1))//2
         self.Glist = <mpfr_t*> PyMem_Malloc(Glength * sizeof(mpfr_t))
         for k in range(Glength):
-            mpfr_init2(self.Glist[k],self.prec)
+            mpfr_init2(self.Glist[k], self.prec)
 
     def __dealloc__(self):
-        r"""Deallocate object.
+        r"""
+        Deallocate object.
 
         EXAMPLES::
 
@@ -736,12 +757,13 @@ cdef class NormGramInt:
         """
         cdef long k
         mpfr_clear(self.r)
-        for k in range( (self.n*(self.n+1))//2):
+        for k in range((self.n*(self.n+1)) // 2):
             mpfr_clear(self.Glist[k])
         PyMem_Free(self.Glist)
 
     cdef assign(self, Matrix_generic_dense G):
-        r"""Initialize norm from Gram matrix.
+        r"""
+        Initialize norm from Gram matrix.
 
         INPUT:
 
@@ -752,23 +774,24 @@ cdef class NormGramInt:
         This method is cdef only, so cannot be tested from python.
         """
         if self.RR is not G.base_ring():
-            raise ValueError("Base ring mismatch")
+            raise ValueError("base ring mismatch")
         if G.nrows() != self.n or G.ncols() != self.n:
-            raise ValueError("Dimension mismatch")
+            raise ValueError("dimension mismatch")
         cdef long k = 0
         for i in range(self.n):
-            mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i,i)).value, self.rnd)
+            mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i, i)).value, self.rnd)
             k += 1
         for i in range(1, self.n):
             for j in range(i):
-                mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i,j)).value, self.rnd)
-                #note that we multiply the off-diagonal coefficients by 2
+                mpfr_set(self.Glist[k], (<RealNumber>G.get_unsafe(i, j)).value, self.rnd)
+                # note that we multiply the off-diagonal coefficients by 2
                 mpfr_mul_si(self.Glist[k], self.Glist[k], 2, self.rnd)
                 k += 1
 
     @staticmethod
     cdef NormGramInt from_gram_matrix(Matrix_generic_dense G):
-        r"""Allocate and initialize norm from Gram matrix.
+        r"""
+        Allocate and initialize norm from Gram matrix.
 
         Cython-level method.
 
@@ -786,7 +809,8 @@ cdef class NormGramInt:
 
     @staticmethod
     def init(Matrix_generic_dense G):
-        r"""Allocate and initialize norm from Gram matrix.
+        r"""
+        Allocate and initialize norm from Gram matrix.
 
         Python-level wrapper.
 
@@ -805,7 +829,8 @@ cdef class NormGramInt:
         return NormGramInt.from_gram_matrix(G)
 
     cdef NormGramInt scaled_by(self, long C):
-        r"""Return new norm object, scaled by `1/C`.
+        r"""
+        Return new norm object, scaled by `1/C`.
 
         INPUT:
 
@@ -817,12 +842,13 @@ cdef class NormGramInt:
         """
         cdef NormGramInt NG = NormGramInt(self.RR, self.n)
         cdef long k
-        for k in range( (self.n*(self.n+1))//2 ):
-            mpfr_div_si(NG.Glist[k],self.Glist[k], C, self.rnd)
+        for k in range((self.n*(self.n+1)) // 2):
+            mpfr_div_si(NG.Glist[k], self.Glist[k], C, self.rnd)
         return NG
 
     cdef mpfr_norm(self, mpfr_t result, long* v):
-        r"""Compute norm of a vector and place in preallocated mpfr_t.
+        r"""
+        Compute norm of a vector and place in preallocated mpfr_t.
 
         INPUT:
 
@@ -831,19 +857,19 @@ cdef class NormGramInt:
 
         This method is cdef only, so cannot be tested from python.
         """
-        cdef long i,j,k
+        cdef long i, j, k
         cdef mpfr_t * Glist = self.Glist
         cdef mpfr_rnd_t rnd = self.rnd
-        mpfr_set_zero(result,+1)
-        k=0
+        mpfr_set_zero(result, 1)
+        k = 0
         for i in range(self.n):
             mpfr_mul_si(self.r, Glist[k], v[i]**2, rnd)
-            k+=1
+            k += 1
             mpfr_add(result, result, self.r, rnd)
-        for i in range(1,self.n):
+        for i in range(1, self.n):
             for j in range(i):
                 mpfr_mul_si(self.r, Glist[k], v[i]*v[j], rnd)
-                k+=1
+                k += 1
                 mpfr_add(result, result, self.r, rnd)
 
     def __call__(self, w):
@@ -869,14 +895,16 @@ cdef class NormGramInt:
             37.000000000
         """
         if len(w) != self.n:
-            raise ValueError("Vector dimension mismatch")
+            raise ValueError("vector dimension mismatch")
         cdef Vector_long v = Vector_long.from_list(w)
-        cdef RealNumber s = self.RR._new() #reserve space for our sum
+        cdef RealNumber s = self.RR._new()  # reserve space for our sum
         self.mpfr_norm(s.value, v.vec)
         return s
 
+
 def imag_func(a):
-    r"""Return result of calling ``imag`` method on argument.
+    r"""
+    Return result of calling ``imag`` method on argument.
 
     INPUT:
 
@@ -892,8 +920,10 @@ def imag_func(a):
     """
     return a.imag()
 
+
 def real_func(a):
-    r"""Return result of calling ``real`` method on argument.
+    r"""
+    Return result of calling ``real`` method on argument.
 
     INPUT:
 
@@ -909,8 +939,10 @@ def real_func(a):
     """
     return a.real()
 
+
 def round_func(a):
-    r"""Return result of calling ``round`` method on argument.
+    r"""
+    Return result of calling ``round`` method on argument.
 
     INPUT:
 
@@ -927,8 +959,10 @@ def round_func(a):
     """
     return a.round()
 
+
 def Rbound(Y, tol):
-    r"""Compute radius for Riemann theta function summation.
+    r"""
+    Compute radius for Riemann theta function summation.
 
     See Theorem 2 in [DHBvHS2004]_.
 
@@ -955,21 +989,21 @@ def Rbound(Y, tol):
     pi = RR.pi()
     g = Y.nrows()
     half_g = RR(g)/2
-    rho = RR(pari.qfminim(Y,flag=2)[1])
+    rho = RR(pari.qfminim(Y, flag=2)[1])
     rho = (pi*rho).sqrt()
 
     def f(R):
-        return (g*2**(g-1)* (RR(pari.incgam(half_g,(R-rho/2)**2))/rho**g)) - tol
+        return (g*2**(g-1)* (RR(pari.incgam(half_g, (R-rho/2)**2))/rho**g)) - tol
 
     def df(R):
-        return -2*(2*R-rho)**(g-1) *g* ( -(2*R-rho)**2/4).exp()/rho**g
+        return -2*(2*R-rho)**(g-1) * g * (-(2*R-rho)**2/4).exp()/rho**g
 
-    Rmin = (RR(2*g).sqrt()+rho)/2
+    Rmin = (RR(2*g).sqrt()+rho) / 2
     R = Rmin
     fR = f(R)
-    #because the Gamma function is so highly convex, newton iteration rather severely underestimates where the
-    #zero lies. That means Newton iteration is actually pretty slow. It would help if we could start
-    #with a much better initial approximation.
+    # because the Gamma function is so highly convex, Newton iteration rather severely underestimates where the
+    # zero lies. That means Newton iteration is actually pretty slow. It would help if we could start
+    # with a much better initial approximation.
     if fR > 0:
         while True:
             fRo = fR
@@ -981,8 +1015,10 @@ def Rbound(Y, tol):
         assert R > Rmin
     return R
 
+
 def Rbound_deriv(Y, N, tol):
-    r"""Compute radius for Riemann theta function summation with derivatives.
+    r"""
+    Compute radius for Riemann theta function summation with derivatives.
 
     See Theorem 3.1 in [AC2019]_.
 
@@ -1000,20 +1036,19 @@ def Rbound_deriv(Y, N, tol):
         sage: Y = matrix(RR,2,2,[1,0,0,1])
         sage: Rbound_deriv(Y,3,10^(-10))
         6.6689474473...
-
     """
     cdef RealField_class RR
-    cdef RealNumber rho, Rmin, R, fR, dfR, fRo, half_g, pi
+    cdef RealNumber rho, Rmin, R, fR, dfR, fRo, pi
     cdef long g
 
     RR = RealField(53)
     pi = RR.pi()
     g = Y.nrows()
 
-    rho = RR(pari.qfminim(Y,flag=2)[1])
+    rho = RR(pari.qfminim(Y, flag=2)[1])
     rho = (pi*rho).sqrt()
     Rmin = (((RR(g**2+8*N)).sqrt() + g + 2*N).sqrt() + rho)/2
-    Yinv_norm=RR(1/min(Y.change_ring(RDF).SVD()[1].diagonal()).sqrt())
+    Yinv_norm = RR(1/min(Y.change_ring(RDF).SVD()[1].diagonal()).sqrt())
 
     gRR = RR(g)
     g_over_two = gRR/2
@@ -1041,8 +1076,10 @@ def Rbound_deriv(Y, N, tol):
         assert R > Rmin
     return R
 
+
 def cholesky_decomposition(G):
-    r"""Return Cholesky decomposition of a positive definite real matrix.
+    r"""
+    Return Cholesky decomposition of a positive definite real matrix.
 
     The Cholesky decomposition of a real positive definite matrix `G` is
     a lower triangular matrix `G` such that `G = C C^T`.
@@ -1064,17 +1101,19 @@ def cholesky_decomposition(G):
         sage: max(abs(a) for a in (C*C.T - G).list())
         0.00000000000000000000000000000
     """
-    R=G.parent()
-    prec=R.base_ring().prec()
-    mpall.mp.prec=prec # set work precision in "mp library"
+    R = G.parent()
+    prec = R.base_ring().prec()
+    mpall.mp.prec = prec  # set work precision in "mp library"
     with mpall.workprec(prec):
-        Cmp=mpall.matrix([mpall.sage_to_mpmath(list(c),prec) for c in G])
-        M=mpall.cholesky(Cmp)
-        C=R([mpall.mpmath_to_sage(c,prec) for c in M])
+        Cmp = mpall.matrix([mpall.sage_to_mpmath(list(c), prec) for c in G])
+        M = mpall.cholesky(Cmp)
+        C = R([mpall.mpmath_to_sage(c, prec) for c in M])
     return C
 
+
 cdef class RiemannTheta:
-    r"""Object for numerical computation of Riemann Theta functions with characteristics and derivatives
+    r"""
+    Object for numerical computation of Riemann Theta functions with characteristics and derivatives
 
     INPUT:
 
@@ -1088,9 +1127,9 @@ cdef class RiemannTheta:
     First we define the Riemann matrix and its RiemannTheta object::
 
         sage: from riemann_theta.riemann_theta import RiemannTheta
-        sage: CC=ComplexField(80)
+        sage: CC = ComplexField(80)
         sage: Omega = matrix(CC,2,2,[3*I,0,0,5*I])
-        sage: RT=RiemannTheta(Omega)
+        sage: RT = RiemannTheta(Omega)
 
     By default, the object evaluates the theta nullwerte, but we can specify
     the value of `z` at which we want to evaluate. Theta functions are fully
@@ -1179,7 +1218,8 @@ cdef class RiemannTheta:
     cdef dict Rbound_dict
 
     def __init__(self, Matrix_generic_dense Omega):
-        r"""Initialize object.
+        r"""
+        Initialize object.
 
         INPUT:
 
@@ -1188,7 +1228,7 @@ cdef class RiemannTheta:
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import RiemannTheta
-            sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
+            sage: RT = RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
 
         """
         self.CC = Omega.base_ring()
@@ -1205,7 +1245,8 @@ cdef class RiemannTheta:
         self.CCg = (self.CC)**self.g
 
     def __cinit__(self, Matrix_generic_dense Omega):
-        r"""Initialize object.
+        r"""
+        Initialize object.
 
         INPUT:
 
@@ -1228,7 +1269,8 @@ cdef class RiemannTheta:
         mpc_init2(self.c2, self.prec)
 
     def _dealloc__(self):
-        r"""Deallocate object.
+        r"""
+        Deallocate object.
 
         This method is cdef only, so cannot be tested from python.
         """
@@ -1239,7 +1281,8 @@ cdef class RiemannTheta:
         mpc_clear(self.c2)
 
     cdef NormGramInt scaled_Xnorm(self, long N):
-        r"""Return a scaled X-GramNormInt object.
+        r"""
+        Return a scaled X-GramNormInt object.
 
         When computing characteristics of level ``N`` we end up scaling
         the denominator of our characteristics into the Gram matrices we
@@ -1261,8 +1304,9 @@ cdef class RiemannTheta:
             self.Xnorm_dict[N] = r
             return r
 
-    def __call__(self, z = None, object char = None, derivs = [], tol=None):
-        r"""Evaluate Riemann theta function with characteristic and derivatives.
+    def __call__(self, z=None, object char=None, derivs=[], tol=None):
+        r"""
+        Evaluate Riemann theta function with characteristic and derivatives.
 
         INPUT:
 
@@ -1292,7 +1336,7 @@ cdef class RiemannTheta:
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import RiemannTheta
-            sage: RT=RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
+            sage: RT = RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
             sage: RT(z=(0,0),char=[[1,0],[0,1],2],derivs=[0,0,0]).abs() # abs_tol = 1e-15
             2.88494706892332e-16
         """
@@ -1308,32 +1352,32 @@ cdef class RiemannTheta:
         elif isinstance(char, FreeModuleElement):
             R = char.base_ring()
             rnk = char.parent().rank()
-            #note R.characteristic is different
+            # note R.characteristic is different
             if R.characteristic() != R.order() or rnk != 2*self.g:
-                raise TypeError("Invalid characteristic specification")
+                raise TypeError("invalid characteristic specification")
             eps = self.ZZg(char[:self.g])
             delta = self.ZZg(char[self.g:])
             N = R.order()
         else:
             if len(char) != 3 or len(char[0]) != self.g or len(char[1]) != self.g:
-                raise TypeError("Invalid characteristic specification")
+                raise TypeError("invalid characteristic specification")
             eps = self.ZZg(char[0])
             delta = self.ZZg(char[1])
             N = int(char[2])
 
-        if len(derivs)==0:
+        if len(derivs) == 0:
             vecresult = False
             derivs = [[]]
         else:
             try:
-                len(derivs[0])>0
+                len(derivs[0]) > 0
                 vecresult = True
             except TypeError:
                 vecresult = False
                 derivs=[derivs]
 
-        if any( d<0 or d>=self.g for l in derivs for d in l):
-            raise ValueError("Invalid value in derivative list")
+        if any(d < 0 or d >= self.g for l in derivs for d in l):
+            raise ValueError("invalid value in derivative list")
         derivs = [Vector_long.from_list(d) for d in derivs]
 
         if tol is None:
@@ -1345,7 +1389,8 @@ cdef class RiemannTheta:
             return result[0]
 
     cdef double Rbound(self, maxnderiv, tol):
-        r"""Return radius bound for summation
+        r"""
+        Return radius bound for summation
 
         Value is cached for efficiency.
 
@@ -1391,15 +1436,14 @@ cdef class RiemannTheta:
         This method is cdef only, so cannot be tested from python.
 
         """
-        #allocations and unpacking to local variables
-        cdef RealNumber RRtol
+        # allocations and unpacking to local variables
         cdef long g = self.g
         cdef mpfr_rnd_t rnd = self.RR.rnd
         cdef mpc_rnd_t mpc_rnd = self.MPCC.__rnd
         cdef Vector_long nvec = Vector_long(g)
         cdef Vector_mpfr wvec = Vector_mpfr(self.RR, g)
         cdef Vector_long derivvec
-        cdef long npoints, i,j,k, flag
+        cdef long npoints, i, j, k, flag
         if eps is None:
             eps = self.ZZg.zero()
         else:
@@ -1411,7 +1455,7 @@ cdef class RiemannTheta:
 
         cdef NormGramInt Xnorm = self.scaled_Xnorm(N)
 
-        #first unpacking and set-up computations
+        # first unpacking and set-up computations
         cdef FreeModuleElement_generic_dense x = z.apply_map(real_func)
         cdef FreeModuleElement_generic_dense y = z.apply_map(imag_func)
         cdef FreeModuleElement_generic_dense Yinv_y = (self.Yinv * y)
@@ -1419,61 +1463,62 @@ cdef class RiemannTheta:
         cdef FreeModuleElement_generic_dense fracYinv_y = Yinv_y - roundYinv_y
         cdef FreeModuleElement_generic_dense c = fracYinv_y + eps/N
 
-        #store some quantities for fast access
-        #note that xvec is actually (2/N)*(x+delta). This is the scaling
-        #with which it gets used later.
+        # store some quantities for fast access
+        # note that xvec is actually (2/N)*(x+delta). This is the scaling
+        # with which it gets used later.
         cdef Vector_mpfr xvec = Vector_mpfr.from_vector((2/N)*(x+delta/N))
         cdef Vector_mpfr cvec = Vector_mpfr.from_vector(c)
         cdef Vector_long Netavec = Vector_long.from_list(N*roundYinv_y-eps)
 
-        #allocate space for return values
+        # allocate space for return values
         cdef Vector_mpc s = Vector_mpc(self.CC, len(derivs))
         for i in range(s.n):
-            mpc_set_si(s.vec[i],0,mpc_rnd)
+            mpc_set_si(s.vec[i], 0, mpc_rnd)
 
-        #compute the enumeration radius
+        # compute the enumeration radius
         cdef long maxnderiv = max((<Vector_long> l).n for l in derivs)
         cdef double R = self.Rbound(maxnderiv, tol)
         cdef double Rsqr = R**2
 
-        #use pari's Finke-Pohst implementation to get lattice points.
-        #we need points enumerated in a ball centered at c, but
-        #the implementation only supports balls centered at 0. Hence we
-        #increase the radius to make sure we include the ball we want.
-        #We later throw out the points we do not need.
-        cdef long count_included, count_excluded
+        # use pari's Finke-Pohst implementation to get lattice points.
+        # we need points enumerated in a ball centered at c, but
+        # the implementation only supports balls centered at 0. Hence we
+        # increase the radius to make sure we include the ball we want.
+        # We later throw out the points we do not need.
         cdef Gen V
         npoints, _, V = pari.qfminim(self.Y, (R+(self.Ynorm(c)/self.pi).sqrt())**2/double_pi, flag=2)
-        npoints = npoints//2
+        npoints = npoints // 2
 
-        #note that Pari's Finke-Pohst only returns one representative for each
+        # note that Pari's Finke-Pohst only returns one representative for each
         # {v,-v} pair and leaves out the 0 vector. So we do the 0-vector separately
-        #and keep track of the sign we looked at with a flag that will toggle
-        #through each iteration.
+        # and keep track of the sign we looked at with a flag that will toggle
+        # through each iteration.
         for i in range(g):
             nvec.vec[i] = 0
         j = 0
         flag = 1
 
-        #The following loop does the actual summation. The arithmetic is
-        #written out in explicit mpfr-calls for optimized performance
-        #(it saves us allocation overhead, because we are using preallocated
-        #memory).
+        # The following loop does the actual summation. The arithmetic is
+        # written out in explicit mpfr-calls for optimized performance
+        # (it saves us allocation overhead, because we are using preallocated
+        # memory).
         while True:
-            #w = n + c, where c = [[Y^(-1)y]] + epsilon
-            wvec.assign_sum_si(cvec,nvec)
-            #r1 = w*Y*w
+            # w = n + c, where c = [[Y^(-1)y]] + epsilon
+            wvec.assign_sum_si(cvec, nvec)
+            # r1 = w*Y*w
             self.Ynorm.mpfr_norm(self.r1, wvec.vec)
-            #based on the norm of r1, we can tell if the point lies in our ball.
+            # based on the norm of r1, we can tell
+            # if the point lies in our ball.
             if mpfr_get_d(self.r1, rnd) <= Rsqr:
-                #r1 = -w*Y*w
+                # r1 = -w*Y*w
                 mpfr_neg(self.r1, self.r1, rnd)
-                #nvec = N*n - N*eta = N*(n - [Y^-1y] + epsilon)
+                # nvec = N*n - N*eta = N*(n - [Y^-1y] + epsilon)
                 nvec.assign_scaled_diff(N, nvec, Netavec)
-                #r2 = (n-eta)*X*(n-eta) [note: Xnorm is scaled by 1/N^2]
+                # r2 = (n-eta)*X*(n-eta) [note: Xnorm is scaled by 1/N^2]
                 Xnorm.mpfr_norm(self.r2, nvec.vec)
 
-                #r2 = (n-eta)*X*(n-eta) + 2*(x+delta)*(n-eta) [note: xvec is scaled for this]
+                # r2 = (n-eta)*X*(n-eta) + 2*(x+delta)*(n-eta)
+                # [note: xvec is scaled for this]
                 for i in range(self.g):
                     mpfr_mul_si(self.r3, xvec.vec[i], nvec.vec[i], rnd)
                     mpfr_add(self.r2, self.r2, self.r3, rnd)
@@ -1500,25 +1545,25 @@ cdef class RiemannTheta:
 
                     # add c1 to the running sum s
                     mpc_add(s.vec[k], s.vec[k], self.c2, mpc_rnd)
-            #go to next iteration:
-            #if flag == 1, go to next point; otherwise negate current point.
+            # go to next iteration:
+            # if flag == 1, go to next point; otherwise negate current point.
             if flag:
                 j += 1
                 if j > npoints:
                     break
                 flag = 0
                 for i in range(g):
-                    nvec.vec[i] =  itos(gcoeff(V.g,i+1,j))
+                    nvec.vec[i] = itos(gcoeff(V.g, i+1, j))
             else:
                 flag = 1
                 for i in range(g):
-                    nvec.vec[i] =  -itos(gcoeff(V.g,i+1,j))
+                    nvec.vec[i] = -itos(gcoeff(V.g, i+1, j))
 
-        #compute inner product y*Yinv_y
+        # compute inner product y*Yinv_y
         # set r1 = 0
         mpfr_set_si(self.r1, 0, rnd)
         for i in range(g):
-            #r1 += y[i]*Yinv_y[i]
+            # r1 += y[i]*Yinv_y[i]
             mpfr_fma(self.r1, (<RealNumber>y.get_unsafe(i)).value, (<RealNumber>Yinv_y.get_unsafe(i)).value, self.r1, rnd)
         # r2 = r1*pi = pi*y*Yinv_y
         mpfr_mul(self.r2, self.r1, self.pi.value, rnd)
