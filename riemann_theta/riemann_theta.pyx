@@ -1,3 +1,4 @@
+#distutils: libraries = pari
 r"""
 Numerical computation of Riemann theta functions
 ================================================
