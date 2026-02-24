@@ -1,6 +1,7 @@
 import setuptools
 from Cython.Build import cythonize
 import numpy
+import sage.config
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -16,7 +17,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="",
     packages=setuptools.find_packages(),
-    ext_modules=cythonize("riemann_theta/riemann_theta.pyx"),
+    ext_modules=cythonize("riemann_theta/riemann_theta.pyx", include_path = sage.config.get_include_dirs()),
     include_dirs=[numpy.get_include()],
     zip_safe=False,
 )
