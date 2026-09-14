@@ -1467,7 +1467,7 @@ cdef class RiemannTheta:
         # store some quantities for fast access
         # note that xvec is actually (2/N)*(x+delta). This is the scaling
         # with which it gets used later.
-        cdef Vector_mpfr xvec = Vector_mpfr.from_vector((2/N)*(x+delta/N))
+        cdef Vector_mpfr xvec = Vector_mpfr.from_vector((ZZ(2)/N)*(x+delta/N))
         cdef Vector_mpfr cvec = Vector_mpfr.from_vector(c)
         cdef Vector_long Netavec = Vector_long.from_list(N*roundYinv_y-eps)
 
