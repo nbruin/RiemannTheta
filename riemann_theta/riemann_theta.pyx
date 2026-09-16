@@ -441,11 +441,11 @@ cdef class Vector_mpc:
 
         EXAMPLES::
 
-            sage: from riemann_theta.riemann_theta import Vector_mpfr
-            sage: RR = RealField(40)
-            sage: V = Vector_mpfr(RR,3)
+            sage: from sage.numerical.riemann_theta import Vector_mpc
+            sage: CC = ComplexField(40)
+            sage: V = Vector_mpc(CC,3)
             sage: V
-            <Vector_mpfr [NaN, NaN, NaN]>
+            <Vector_mpc [NaN + NaN*I, NaN + NaN*I, NaN + NaN*I]>
         """
         cdef long i
         self.n = n
@@ -1167,11 +1167,11 @@ cdef class RiemannTheta:
 
         sage: c = [[1,0],[1,0],2]
         sage: v = vector(GF(2),[1,0,1,0])
-        sage: RT(char=c)  # abs_tol = 1e-24
+        sage: RT(char=c)  # abs tol = 1e-24
         1.2071813646649472697563e-25 + 1.9090264090908082850844e-32*I
-        sage: RT(char=v)  # abs_tol = 1e-24
+        sage: RT(char=v)  # abs tol = 1e-24
         1.2071813646649472697563e-25 + 1.9090264090908082850844e-32*I
-        sage: RT(char=c, derivs=[[0],[1]]) # abs_tol = 1e-24
+        sage: RT(char=c, derivs=[[0],[1]]) # abs tol = 1e-24
         (-0.59552188399685576910148 - 3.8217163546690040145772e-57*I,
          0.00000000000000000000000)
 
@@ -1270,7 +1270,7 @@ cdef class RiemannTheta:
         mpc_init2(self.c1, self.prec)
         mpc_init2(self.c2, self.prec)
 
-    def _dealloc__(self):
+    def __dealloc__(self):
         r"""
         Deallocate object.
 
@@ -1332,14 +1332,14 @@ cdef class RiemannTheta:
             Theta function (see [DHBvHS2004]_). Furthermore, floating point rounding in iterated
             summations may perturb the lower bits.
 
-        OUTPUT: A complex number of a tuple of them; the value(s) of the indicated Riemann
+        OUTPUT: A complex number or a tuple of them; the value(s) of the indicated Riemann
         Theta function(s).
 
         EXAMPLES::
 
             sage: from riemann_theta.riemann_theta import RiemannTheta
             sage: RT = RiemannTheta(matrix(CC,2,2,[2*I,0,0,3*I]))
-            sage: RT(z=(0,0),char=[[1,0],[0,1],2],derivs=[0,0,0]).abs() # abs_tol = 1e-15
+            sage: RT(z=(0,0),char=[[1,0],[0,1],2],derivs=[0,0,0]).abs() # abs tol = 1e-15
             3.63935364793918e-20
         """
         if z is None:
