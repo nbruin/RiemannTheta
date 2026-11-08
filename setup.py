@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='RiemannTheta',
-    version="1.1.1",
+    version="1.2.0",
     author="Nils Bruin, Sohrab Ganjian",
     author_email="nbruin@sfu.ca",
     license="GPL2+",
